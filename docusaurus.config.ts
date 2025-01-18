@@ -6,8 +6,8 @@ const config: Config = {
   tagline: undefined,
   favicon: "img/favicon.ico",
 
-  url: "https://hanabi.github.io",
-  baseUrl: "/",
+  url: "https://trcyx.github.io",
+  baseUrl: "/H-Group/",
 
   organizationName: "hanabi",
   projectName: "hanabi.github.io",
@@ -35,7 +35,7 @@ const config: Config = {
         docs: {
           routeBasePath: "/", // Serve the docs at the site's root.
           sidebarPath: "./sidebars.ts",
-          editUrl: "https://github.com/hanabi/hanabi.github.io/edit/main/",
+          editUrl: "https://github.com/trcyx/H-Group/edit/main/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -81,7 +81,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://github.com/hanabi/hanabi.github.io/",
+          href: "https://github.com/trcyx/H-Group/",
           className: "header-github-link",
           position: "right",
         },
