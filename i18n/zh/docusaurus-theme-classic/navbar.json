@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "H-Group 约定",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "H-Group 图标",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Beginner": {
+    "message": "入门",
+    "description": "Navbar item with label Beginner"
+  },
+  "item.label.Learning Path": {
+    "message": "学习路径",
+    "description": "Navbar item with label Learning Path"
+  },
+  "item.label.Reference": {
+    "message": "参考",
+    "description": "Navbar item with label Reference"
+  },
+  "item.label.Variant-Specific": {
+    "message": "变种特定",
+    "description": "Navbar item with label Variant-Specific"
+  }
+}

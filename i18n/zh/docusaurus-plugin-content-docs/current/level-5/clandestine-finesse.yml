@@ -1,0 +1,30 @@
+stacks:
+  - r: 1
+  - y: 1
+  - g: 1
+  - b: 1
+  - p: 1
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+        above: Blue 2
+      - type: x
+        above: Red 2
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+      - type: 3
+        clue: 3
+        middleNote: (R)
+      - type: x
+      - type: x
+      - type: x

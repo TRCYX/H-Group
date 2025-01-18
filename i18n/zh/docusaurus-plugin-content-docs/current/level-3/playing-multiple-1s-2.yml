@@ -1,0 +1,37 @@
+stacks:
+  - r: 1
+  - y: 0
+  - g: 0
+  - b: 0
+  - p: 0
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: 1
+        clue: 1
+        middleNote: 1st
+        below: Fresh
+      - type: x
+      - type: 1
+        clue: 1
+        retouched: true
+        middleNote: 3rd
+        below:
+          text:
+            - Already
+            - clued
+      - type: 1
+        clue: 1
+        retouched: true
+        middleNote: 2nd
+        below:
+          text:
+            - Already
+            - clued
+      - type: x

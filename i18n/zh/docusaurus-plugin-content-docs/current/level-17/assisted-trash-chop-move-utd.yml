@@ -1,0 +1,44 @@
+stacks:
+  - r: 0
+  - y: 0
+  - g: 0
+  - b: 1
+  - p: 0
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: y1
+      - type: x
+  - cards:
+      - type: x
+      - type: x
+      - type: x
+        above: Yellow 1
+        middleNote: (f)
+        below: plays
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+      - type: b
+        clue: b
+        above: Blue 1
+      - type: x
+      - type: x
+      - type: x
+  - text: After Bob discharges yellow 1...
+  - name: Cathy
+    cards:
+      - type: x
+      - type: b
+        middleNote: b1
+        trash: true
+      - type: x
+        middleNote: cm
+      - type: x
+        middleNote: cm
+      - type: x
+        middleNote: cm

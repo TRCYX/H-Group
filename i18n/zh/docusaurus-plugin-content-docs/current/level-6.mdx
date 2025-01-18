@@ -1,0 +1,102 @@
+---
+title: Level 6 - Tempo Clues
+---
+
+import TempoClueChopMovePart1 from "./level-6/tempo-clue-chop-move-part-1.yml";
+import TempoClueChopMovePart2 from "./level-6/tempo-clue-chop-move-part-2.yml";
+import DiscardModulation from "./level-6/discard-modulation.yml";
+
+## Special Moves
+
+### The Tempo Clue
+
+- _Tempo Clues_ are defined as clues that "get" no new cards. The purpose of a _Tempo Clue_ is to get a card played that **already** had a clue on it.
+  - If a clue is given to a card that is **already** known to be playable, then that would **not** count as a _Tempo Clue_. It would instead be a _Burn Clue_ (i.e. a clue that accomplishes nothing).
+- As explained in the beginner's guide, we do not typically perform _Tempo Clues_, because they do not meet _[Minimum Clue Value Principle](beginner/minimum-clue-value-principle)_.
+- When a _Tempo Clue_ touches multiple cards, the focus is on the leftmost card. The non-focused cards are not promised to be playable.
+- We treat _Tempo Clues_ differently depending on whether they are valuable or not valuable. See the next two sections below.
+
+### The Valuable Tempo Clue
+
+- In some special situations, _Tempo Clues_ have enough value to justify giving them:
+  1. When everyone knows it gets two or more clued cards to play (in total across all hands).
+  1. When the clued card is not a 5 and it is "out of order" (meaning that it is not possible for a _Prompt_ to get the card played at this moment in time).
+  1. When playing the clued card would "unlock" someone's hand. (For level 9 players, see the section on [_Locked Hands_](level-9.mdx#the-locked-hand-save-lhs).)
+- If a _Tempo Clue_ is given in any of these situations, it is considered to be "valuable".
+- _Valuable Tempo Clues_ can be given at any time. They don't have any special rules associated with them and they are treated in exactly the same way a "normal" _Play Clue_ is.
+- When determining if a _Tempo Clue_ is _Valuable_, it should only be evaluated on the turn immediately after the clue is given. (This helps keeps things simple and prevents desynchronization.)
+
+### The Tempo Clue Stall (A Non-Valuable Tempo Clue)
+
+- If a player gives a _Tempo Clue_ that does **not** meet any of the criteria for being "valuable", it is treated differently and given a different name.
+- Sometimes, players are in "stalling situations" where it would be illegal for them to discard (like when they have a hand that is completely clued). In some specific stalling situations, it is okay to give a _Tempo Clue_ that doesn't meet the criteria for being valuable. This is called a _Tempo Clue Stall_. Since everyone sees that the player giving the clue was in a stalling situation, they can understand what is going on.
+- For level 9 players, see the _[Allowable Stall Clues](level-9.mdx#allowable-stall-clues-stall-table)_ section for the specific times when _Tempo Clue Stalls_ are okay to give. If you are lower than level 9, the details are not important right now.
+- Obviously, players are **only** allowed to give a _Tempo Clue Stall_ in a valid stalling situation. If a player gives a _Tempo Clue_ that does not meet the criteria to be valuable in an otherwise ordinary situation, then they must be intending to send a deeper message. See the _Tempo Clue Chop Moves_ section below.
+
+### The Tempo Clue Chop Move (TCCM)
+
+- First, see the section on the _[Tempo Clue Stall](#the-tempo-clue-stall-a-non-valuable-tempo-clue)_.
+- A _Tempo Clue Stall_ that is given in non-stalling situation can't be a stall - the cluer must be intending to send a deeper message.
+- We agree that _Tempo Clues_ of this nature cause a _Chop Move_ in addition to getting the focus of the card to play.
+- For example, in a 3-player game:
+  - It is the first turn and nothing is played on the stacks.
+  - Alice clues red to Bob, which touches two cards on slot 1 and slot 2.
+  - Bob plays red 1 from slot 1. The red card in slot 2 could be red 2, red 3, red 4, or red 5.
+  - Cathy clues number 2 to Bob, which does not introduce any new cards, but it does "fill in" his slot 2 card.
+  - Bob now knows that he has exactly red 2 on slot 2 and that this was a _Tempo Clue_. Since it does not get any new cards and only get _Tempo_ on one card in total, he knows that he should also _Chop Move_ his slot 5 card.
+
+<TempoClueChopMovePart1 />
+
+<hr />
+
+<TempoClueChopMovePart2 />
+
+## General Principles
+
+### Chop Moves & Tempo Clues
+
+- _Chop Moves_ interact with _Tempo Clues_ in a potentially confusing way. When a _Play Clue_ is given that touches a _Chop Moved_ card for the first time, it is **not** considered to be _Tempo Clue_, even though _Chop Moved_ cards are imagined to have an "invisible" clue on them. Instead, this would be categorized a normal _Play Clue_.
+  - The reason for this is kind of technical. A _Tempo Clue_ is defined as a 0-for-1 because all clued cards will "automatically" play on the stacks from _Good Touch Principle_. However, there is not an analogous principle for _Chop Moved_ cards - they will not automatically play on the stacks. Thus, a _Play Clue_ to a _Chop Moved_ card would be a 1-for-1.
+- In the _Early Game_, players must exhaust all _Play Clues_ and _Save Clues_ that satisfy _Minimum Clue Value Principle_. Since clues to playable _Chop Moved_ cards count as normal _Play Clues_, it follows that players are are obligated to give these kinds of clues before ending the _Early Game_.
+
+### Focus Shifting
+
+- Sometimes, the normally-focused card of a clue would not make sense. We agree that:
+  - When two or more cards are touched as part of a _Play Clue_,
+  - and the normally-focused card is already known to be playable,
+  - and one or more of the touched cards are not already known to be playable,
+  - then the focus always shifts to the next left-most card that is not already known to be playable.
+
+### Discard Modulation
+
+- Often times, either you or the player who comes after you can perform a clue. And the clue would have the same result if done by either player. So who should do it?
+- One way to decide is to look at the next player's chop. Is their chop high-value, low-value, or useless? If it is high-value, then you should discard and let them give the clue. If it is low-value or useless, then you should give the clue and let them discard.
+- "Stealing" clues in this way is called _Discard Modulation_. If other players are discarding to let you give all of the clues, you might have a high-value chop.
+- For example, in a 3-player game:
+  - All the 1's are played on the stacks.
+  - It is the _Mid-Game_.
+  - Bob has a red 3 on chop. This is a _one-away-from-playable_ card that is valuable to the team. However, it would be illegal to clue the card directly with a _Play Clue_ or a _Save Clue_.
+  - Cathy has a (playable) blue 2 in her hand.
+  - Alice decides to discard instead of giving a _Play Clue_ herself.
+  - Bob clues blue to Cathy as a _Play Clue_.
+  - Alice has smartly prevented the discard of the red 3, at least for a little while.
+
+<DiscardModulation />
+
+### The Value of One-Away-From-Playable Cards
+
+- In general, 3's are pretty high value, and 4's are pretty low value.
+- But combined with this, cards that are _one-away-from-playable_ are pretty high value, and cards that are two-away (or more) are pretty low value.
+- Thus, in some situations, a _one-away-from-playable_ 4 may be more valuable than a _two-away-from-playable_ 3.
+- According to our conventions, it is illegal to clue a _one-away-from-playable_ card as the focus of the clue without it being some kind of special move like a _Finesse_. However, sometimes we still want to "save" these cards. Thus, they are prime targets for indirect saves like the _Trash Chop Move_ or the _5's Chop Move_.
+- However, in most cases, _Chop Moving_ the valuable card just won't be possible. So in general, you should try to construct lines that protect high-value cards from being discarded for as long as possible.
+
+### Clarity Principle
+
+- In the H-Group, we like to find the "best" move for every turn in the post-game review. This is fun and helps everybody improve. But this can be taken too far.
+- Sometimes, players will give clues that are very complicated. Maybe the clue looks like it could be two different moves. Or, maybe the clue relies on non-obvious contextual factors.
+- Often, these kinds of complicated clues end up in misplays and lost games. And in the post-game review, the person who gave the clue gets defensive: "If you guys just played perfectly, then my clue would have worked!"
+- It's natural for people to feel this way, because normally, if Alice performs a _Finesse_, and Bob is not paying attention and misses it, then we would say that Bob is at fault.
+- On the other hand, things are a little different when Alice gives a really complicated clue that Bob should _technically_ be able to figure out, but doesn't. In this case, Bob shares a little of the blame. **But it is mostly Alice that is at fault**.
+- Part of being good at Hanabi is recognizing when you should **not** try to do the most-optimal clue for the turn, because it would be confusing for your teammates. Clue clarity is really important and you should prioritize it! In the post-game review, you can always say: "On turn X, I considered this more-efficient clue, but it did not seem very clear. So I did this other, more-clear clue instead. What do you guys think?" That gives everyone a chance to discuss the theoretical move together and find out if it really was the best move, without introducing a huge chance of failure into the actual game.
+- **Don't give confusing clues.** If you do decide to give a confusing clue, and it doesn't work out, then **you are at fault**. This principle is more important than all other principles.

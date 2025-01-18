@@ -1,0 +1,22 @@
+stacks:
+  - r: 0
+  - y: 0
+  - g: 0
+  - b: 0
+  - p: 0
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+      - type: r
+        clue: r
+        middleNote: (1)
+      - type: x
+      - type: x
+      - type: x

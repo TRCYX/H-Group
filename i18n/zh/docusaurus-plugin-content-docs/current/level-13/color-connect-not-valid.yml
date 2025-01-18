@@ -1,0 +1,42 @@
+stacks:
+  - r: 0
+  - y: 0
+  - g: 0
+  - b: 0
+  - p: 0
+bigText:
+  text: Illegal!
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+        above: Red 1
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+      - type: r
+        clue: r
+        middleNote: (3)
+      - type: x
+      - type: x
+      - type: x
+  - text: After Bob blind-plays the red 1...
+  - name: Cathy
+    cards:
+      - type: x
+      - type: r
+        below: Red 2
+        above: Misplays!
+        middleNote: (3)
+      - type: x
+      - type: x
+      - type: x

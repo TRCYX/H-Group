@@ -1,0 +1,36 @@
+stacks:
+  - r: 1
+  - b: 1
+  - m: 1
+players:
+  - cards:
+      - type: 4
+        middleNote: (B)
+      - type: r
+        middleNote: (2)
+      - type: x
+        middleNote: (CM)
+        below:
+          text: Bar
+          color: yellow
+  - cards:
+      - type: x
+        above: Red 1
+      - type: x
+        below: Focus
+      - type: x
+        above: Rainbow 4
+        below: Chop
+  - cards:
+      - type: x
+        above:
+          text:
+            - Foo
+            - Bar
+          color: rainbow
+      - type: x
+        above:
+          text: Foo
+          color: indigo
+      - type: x
+        above: Save

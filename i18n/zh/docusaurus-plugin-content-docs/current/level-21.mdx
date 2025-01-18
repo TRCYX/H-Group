@@ -1,0 +1,148 @@
+---
+title: Level 21 - Ignition
+---
+
+import ChopMoveIgnitionOneCard from "./level-21/chop-move-ignition-one-card.yml";
+import ChopMoveIgnitionInteraction from "./level-21/chop-move-ignition-interaction.yml";
+import ChopMoveIgnitionTwoCards from "./level-21/chop-move-ignition-two-cards.yml";
+
+## Conventions
+
+### Ignition
+
+- An _Ignition_ is a type of move that makes someone blind-play a card from their _Finesse Position_.
+- An _Ignition_ is different from a _Finesse_ and a _Bluff_ because the blind-play from an _Ignition_ is:
+  - unrelated to the clue that was given
+    - i.e. It does not "connect", which is unlike a _Finesse_, but like a _Bluff_.
+  - unrelated to the _playability_ of the clued card
+    - i.e. Nothing needs to be "proved" to the player who got clued, which is unlike a _Finesse_, and unlike a _Bluff_.
+
+### Double Ignition (DI)
+
+- Several types of "useless" clues trigger a _Double Ignition_. These different types are listed below.
+- When a _Double Ignition_ is triggered, it means that two players on the team need to blind-play their _Finesse Position_ as any playable card.
+- Similar to an _Ambiguous Finesse_, an _Ambiguous Double Ignition_ is possible. Specifically, this means that three or more players have a playable card on _Finesse Position_. In this situation, we strongly define who is supposed to be blind-playing:
+  - The first _Ignition_ **must always be on Bob**, unless Bob has a known-playable card already. Then, it would be on the first player that does not already have a known-playable card.
+  - The second _Ignition_ **must always be on the last player with a playable card**.
+
+## Special Moves
+
+### The Replay Double Ignition (RDI)
+
+- When a player re-clues a globally known playable card, it is a "useless" clue.
+- Usually, when this occurs, it is because a player is in a [stalling situation](level-9.mdx#allowable-stall-clues-stall-table) and cannot discard. (This is most common in [the _End-Game_](level-8.mdx#burning-end-game-stalling).)
+- If a player is not in a stalling situation, then they must be trying to send a deeper message - a _Double Ignition_. This is called a _Replay Double Ignition_ because you are re-giving a _Play Clue_.
+- The _Replay Double Ignition_ must not introduce any new cards as part of the clue.
+- The _Replay Double Ignition_ can be performed all throughout the game. (Conversely, the _Trash Double Ignition_ can only be performed towards the end of the game.)
+- Also, see the section on [Replay Ejection](extras/ejections.mdx#the-replay-ejection).
+
+### The Trash Double Ignition (TDI)
+
+- If a player clues one or more new trash cards, and the cards are known to be trash, then there are usually 2 possible interpretations:
+
+#### 1) A _Trash Chop Move_
+
+- Sometimes, players perform a _Trash Chop Move_ by cluing known-trash in another player's hand (off chop).
+- However, players can know that _Trash Chop Move_ is impossible if:
+  - they are not the clue-receiver and they can see that the _Chop Moved_ card is bad
+  - they are the clue-receiver and they can determine that they are no cards left to _Chop Move_ (meaning that all of the cards are accounted for, or all of the remaining cards could be given a direct _Play Clue_ or a direct _Save Clue_).
+
+#### 2) A _Trash Push_ (or a _Trash Push Finesse_)
+
+- Sometimes, players perform a _Trash Push_ (or a _Trash Push Finesse_) by cluing known-trash in another player's hand (on chop).
+- However, players can know that a _Trash Push_ is impossible if:
+  - they are not the clue-receiver and they can see that the "pushed" card is bad
+  - they are the clue-receiver and they can determine that they are no more cards left to _Trash Push_
+
+#### Otherwise, a Trash Double Ignition
+
+- If the known-trash clue cannot be either of these two things, then it communicates a _Trash Double Ignition_.
+- Players should always assume a _Trash Double Ignition_ over a _Bad Trash Chop Move Ejection_, since the latter is very rare. (_Bad Trash Chop Move Ejection_ is an advanced move that is covered later on.)
+- Also, see the section on [Trash Ejection](extras/ejections.mdx#the-trash-ejection).
+
+### The Poke Double Ignition (PDI)
+
+- When a player re-clues a globally known-trash card, it is a "useless" clue.
+- Usually, when this occurs, it is because a player is in a [stalling situation](level-9.mdx#allowable-stall-clues-stall-table) and cannot discard.
+- If a player is not in a stalling situation, then they must be trying to send a deeper message - a _Double Ignition_. This is called a _Poke Double Ignition_ because by re-touching a trash card, it is like you are poking the player.
+- The _Poke Double Ignition_ must not introduce any new cards as part of the clue.
+- The _Poke Double Ignition_ can be performed all throughout the game. (Conversely, the _Trash Double Ignition_ can only be performed towards the end of the game.)
+- Also, see the section on [Poke Ejection](extras/ejections.mdx#the-poke-ejection).
+
+### The Chop Move Ignition (CMI) (with 1 card Chop Moved)
+
+- If a playable card is on chop, the natural thing to do is to give it a _Chop-Focus Play Clue_. If a player _Chop Moves_ the playable card instead, this is very strange. If there is not a good reason to do so, then the cluer is trying to communicate something extra.
+- In this situation, they intend for an _Ignition_ on the next player. Since a _Chop Move_ causes a blind-play, the _Chop Moved_ player will know that the _Chop Moved_ card is playable.
+- For example, in a 4-player game:
+  - It is the first turn and nothing is played on the stacks.
+  - Cathy's hand is, from newest to oldest: blue 4, blue 4, blue 5, red 1
+  - Alice clues number 5 to Cathy, touching a blue 5 on slot 3.
+  - It is now Bob's turn. Bob sees that since there were other _Play Clues_ for Alice to give, Cathy will interpret this as an _Early 5's Chop Move_.
+  - Bob also knows that it is nonsensical to _Chop Move_ a playable red 1 - Alice could have just give a red _Chop-Focus Play Clue_ to the red 1.
+  - Thus, this must be a _Chop Move Ignition_. Bob blind-plays his _Finesse Position_ card. It is blue 1 and it successfully plays.
+  - At first, Cathy thought that Alice's clue was a _Early 5's Chop Move_. However, if that was the case, then Bob would not have blind-played anything. Since he blind-played his _Finesse Position_ card, this must be a _Chop Move Ignition_. Cathy blind-plays her slot 4 card (the card to the right of the clued 5).
+
+<ChopMoveIgnitionOneCard />
+
+- Sometimes, it can be useful to _Chop Move_ a playable card. Something is only a _Chop Move Ignition_ if there is not some other good reason for the _Chop Move_. Specifically, the player might want to:
+  - Avoid violating _Good Touch Principle_.
+  - Save a _Delayed Playable_ card that is followed by a critical card.
+  - Get a blind-play from _Elimination_ when the duplicate is visible.
+- In general, _Chop Move_-related clues are turned off as soon as there are no cards left to _Chop Move_. Specifically, this means _one-away-from-playable_ cards that cannot be given a direct _Play Clue_ or _Save Clue_. Thus, if there are no cards left to _Chop Move_, a _Chop Move Ignition_ would transform into something else, like a _Play Clue_ or a _Double Ignition_ of some sort.
+
+#### Interaction Between the Chop Move Ignition and 5 Rank Clues
+
+- Normally, a number 5 rank clue to a 5 that is one-away-from-chop would be either:
+  - a _5 Stall_
+  - a _5's Chop Move_
+  - a _Play Clue_ on the 5
+- If a _5 Stall_ is impossible (i.e. it is not a stalling situation), then a _5's Chop Move_ on a playable card would normally be treated as a _Play Clue_ on the 5.
+- However, for level 21 players, _Play Clues_ like this are **turned off**. In other words, every number 5 clue that focuses a 5 that is exactly one-away-from-chop would always be a _5's Chop Move_. This is referred to as the _Chop Move Ignition Interaction_.
+- The _Chop Move Ignition Interaction_ can be tricky for players, since _Chop Move Ignitions_ can look like normal _Finesses_. Players need to remember that the blind-play relates to the card being _Chop Moved_, not the 5 directly.
+- For example, in a 3-player game:
+  - It is the _Mid-Game_.
+  - Red 3 is played on the stacks.
+  - Cathy's hand is, from newest to oldest: blue 4, green 3, blue 4, blue 5, blue 1
+  - Alice clues number 5 to Cathy, touching the blue 5 on slot 4.
+  - Bob expected Alice to clue number 1 to Cathy. Thus, this must be a _Chop Move Ignition_. Bob blind-plays his _Finesse Position_ card. It is red 4 and it successfully plays.
+  - From Cathy's perspective, she first thought that Alice's clue was a _5's Chop Move_. However, if that were the case, Bob would not have blind-played anything.
+  - Furthermore, Cathy knows that _Play Clues_ on 5's one-away-from-chop using rank clues are turned off. Thus, Bob's blind-play must indicate a _Chop Move Ignition_.
+  - Thus, Cathy's 5 can be any color (including red). Cathy blind-plays her slot 5 card.
+
+<ChopMoveIgnitionInteraction />
+
+- Importantly, this interaction is **turned off** in the _End-Game_.
+- Note that sometimes, players will use a rank 5 clue to touch an actual playable 5 that is exactly one-away-from-chop. Regardless of whether or not the 5 is playable, the next player needs to react as if it wasn't playable. (This is because it is agreed that all _Play Clue_ interpretations are turned off.)
+
+### The Chop Move Ignition (CMI) (with 2+ cards Chop Moved)
+
+- First, see the previous section on [_Chop Move Ignition_ with one card _Chop Moved_](#the-chop-move-ignition-cmi-with-1-card-chop-moved).
+- It is also possible to perform a _Chop Move Ignition_ that _Chop Moves_ two or more cards, but this is more complicated.
+- This kind of _Chop Move Ignition_ is only valid if both of the following conditions are true:
+  1. The leftmost _Chop Moved_ card is playable.
+  2. The rightmost _Chop Moved_ card is trash or is a copy of an unclued card in the same hand.
+- For example, in a 4-player game:
+  - All the 1's are played on the stacks.
+  - Cathy's hand is, from newest to oldest: blue 4, blue 1, red 2, blue 4
+  - Alice clues number 1 to Cathy, touching a blue 1 on slot 2.
+  - It is now Bob's turn. Bob sees that Cathy will interpret this as a _Trash Chop Move_ on slot 3 and slot 4.
+  - Bob also knows that it is nonsensical to _Chop Move_ a playable red 2 - Alice could have just give a direct red _Play Clue_ to the red 2.
+  - Thus, this must be a _Chop Move Ignition_. Bob blind-plays his _Finesse Position_ card. It is blue 2 and it successfully plays.
+  - At first, Cathy thought that Alice's clue was a _Trash Chop Move_. However, if that was the case, then Bob would not have blind-played anything. Since he blind-played his _Finesse Position_ card, this must be a _Chop Move Ignition_. Cathy blind-plays her slot 3 card (the card to the right of the clued 1). It is a red 2 and successfully plays.
+  - At the same time that Cathy marked her slot 3 card as playable, she also marked her slot 4 card as known trash.
+  - Later on, Cathy discards her slot 4 card, and discovers that it is a blue 4. Since blue 4 was not trash at the time that the _Chop Move Ignition_ was given, Cathy marks _Elimination Notes_ in her hand for the other copy of the blue 4. (The rest of the team also marks _Elimination Notes_ in the same way.)
+
+<ChopMoveIgnitionTwoCards />
+
+- If three or more cards are _Chop Moved_, nothing is promised about the middle cards.
+
+### Bomb Double Ignition
+
+- Normally, when a player has a globally known trash card in their hand, they can safely discard it.
+- In rare cases, a player might decide to intentionally misplay the trash card as a means of communicating a particular slot number as a _Positional Misplay_. This kind of thing almost always happens on either the last round of the game, or the second to last round of the game.
+- However, what if a player intentionally misplays a trash card before that point? Wasting a strike for no reason is "useless" in much the same way that the kinds of clues that cause _Double Ignition_ are. Thus, we agree that bombing a card in this way should trigger two blind-plays as a _Bomb Double Ignition_.
+
+### Bomb Triple Ignition
+
+- Using a clue instead of using a strike is almost always preferable. Thus, players should prefer to use the more-ordinary forms of _Double Ignition_ (like e.g. _Replay Double Ignition_) before resorting to a _Bomb Double Ignition_.
+- If the team can see that a player who initiated a _Bomb Double Ignition_ could have obviously used a clue-based form of _Double Ignition_, then this signals an extra message: a _Triple Ignition_.

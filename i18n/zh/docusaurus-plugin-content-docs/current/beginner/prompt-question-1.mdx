@@ -1,0 +1,35 @@
+---
+title: The Prompt (Question 1)
+---
+
+import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import PromptQuestion1 from "./prompt-question-1.yml";
+
+<BeginnersGuideProgress id="prompt-question-1" />
+
+<Tabs
+  defaultValue="question"
+  values={[
+    {label: 'Question', value: 'question'},
+    {label: 'Solution', value: 'solution'},
+  ]}>
+<TabItem value="question">
+
+- Bob has two unknown 2's previously clued in his hand.
+- Cathy has an unknown 5 and an unknown 4 previously clued in her hand.
+- Alice clues red to Cathy.
+- What is Bob's interpretation of Alice's clue?
+
+</TabItem>
+<TabItem value="solution">
+
+- Since the red 3 is in this trash, this is a _Critical Save_ on the red 3 (i.e. a _Save Clue_).
+- Bob should therefore not react in any way.
+- If the red 3 were not in the trash, then it would be a _Prompt_ on Bob's leftmost 2.
+
+</TabItem>
+</Tabs>
+
+<PromptQuestion1 />

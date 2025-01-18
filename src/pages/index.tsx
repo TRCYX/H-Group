@@ -1,6 +1,7 @@
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { translate } from "@docusaurus/Translate";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "../components/HomepageFeatures";
 import styles from "./styles.module.css";
@@ -41,8 +42,8 @@ function HomepageHeader() {
 function Home(): React.JSX.Element {
   return (
     <Layout
-      title="Home"
-      description="Strategies for Hanabi, a cooperative card game of logic and reasoning"
+      title={translate({ message: "Home" })}
+      description={translate({ message: "Strategies for Hanabi, a cooperative card game of logic and reasoning" })}
     >
       <HomepageHeader />
       <main>

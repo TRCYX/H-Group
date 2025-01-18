@@ -1,0 +1,39 @@
+stacks:
+  - r: 0
+  - y: 0
+  - g: 0
+  - b: 0
+  - p: 0
+bigText:
+  text: first turn
+  color: black
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: r1
+        border: false
+      - type: g1
+        border: false
+      - type: g4
+        border: false
+      - type: g4
+        border: false
+      - type: g5
+        border: false
+  - cards:
+      - type: b4
+        border: false
+      - type: b1
+        border: false
+      - type: b5
+        clue: 5
+      - type: g2
+        border: false
+      - type: b2
+        border: false

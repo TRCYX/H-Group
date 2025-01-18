@@ -1,0 +1,40 @@
+stacks:
+  - r: 1
+  - y: 0
+  - g: 1
+  - b: 1
+  - p: 0
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+      - type: 2
+        clue: 2
+        above: Red 2
+        below: plays
+      - type: g2
+        clue: 2
+        retouched: true
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: r2
+      - type: x
+  - text: After Bob plays red 2...
+  - name: Bob
+    cards:
+      - type: x
+      - type: x
+      - type: g2
+      - type: x
+      - type: x
+        middleNote: cm

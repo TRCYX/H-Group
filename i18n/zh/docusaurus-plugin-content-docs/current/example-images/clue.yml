@@ -1,0 +1,18 @@
+stacks:
+  - y: 0
+  - p: 0
+players:
+  - clueGiver: true
+    cards:
+      - type: p
+        clue: p
+      - type: x
+  - cards:
+      - type: x
+      - type: yp5
+        clue: 5
+  - cards:
+      - type: p1
+        clue: 1
+        retouched: true
+      - type: x

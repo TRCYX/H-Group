@@ -1,0 +1,37 @@
+stacks:
+  - r: 1
+  - b: 1
+  - m: 1
+players:
+  - cards:
+      - type: x
+      - type: xrbm125
+      - type: r4
+  - cards:
+      - type: m
+      - type: b124
+      - type: 5
+  - cards:
+      - type: rm24
+      - type: bm3
+      - type: rm
+  - cards:
+      - type: x
+        border: true
+      - type: m4
+        border: false
+      - type: xr3
+  - cards:
+      - type: 134
+      - type: rbm12345
+        crossedOut: m35
+      - type: xrbm12345
+        crossedOut: r4
+  - name: F
+    cards:
+      - type: rb2
+        crossedOut: b
+      - type: b345
+        trash: true
+        orange: 34
+      - type: x

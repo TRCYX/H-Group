@@ -1,0 +1,53 @@
+stacks:
+  - r: 1
+  - y: 1
+  - g: 1
+  - b: 1
+  - p: 1
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+      - type: x
+      - type: x
+        above: Chop
+      - type: 1
+        clue: 1
+        trash: true
+      - type: x
+        above:
+          text:
+            - Chop
+            - Moved
+  - text: After discarding the 1...
+  - name: Alice
+    clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - name: Bob
+    cards:
+      - type: b
+        middleNote: (2)
+        clue: b
+        below: Focus
+      - type: x
+      - type: x
+      - type: x
+        above: Chop
+      - type: b
+        clue: b
+        below:
+          text:
+            - Formerly
+            - Chop
+            - Moved

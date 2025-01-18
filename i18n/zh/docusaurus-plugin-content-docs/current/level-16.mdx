@@ -1,0 +1,140 @@
+---
+title: Level 16 - Ejections & Discharges
+---
+
+import FiveColorEjection from "./level-16/five-color-ejection.yml";
+import IllegalTrashBluff from "./level-16/illegal-trash-bluff.yml";
+import UnknownTrashDischarge from "./level-16/unknown-trash-discharge.yml";
+import UnknownTrashDischargeTwoForOne from "./level-16/unknown-trash-discharge-two-for-one.yml";
+import UnknownTrashDischargeTwoForOne2 from "./level-16/unknown-trash-discharge-two-for-one-2.yml";
+import UnknownDupeDischarge from "./level-16/unknown-dupe-discharge.yml";
+
+## Conventions
+
+### Ejections
+
+- _Ejection_ refers to a move like a _Bluff_, but instead of playing an unrelated card from _Finesse Position_, someone plays an unrelated card from their _Second Finesse Position_. For example, if a player's hand is completely unclued, their _Second Finesse Position_ is slot 2.
+- Just like a _Bluff_, an _Ejection_ can only be performed on the very next player.
+- Several different kinds of moves can cause an _Ejection_. The most common one is the _5 Color Ejection_.
+
+### Discharges
+
+- _Discharge_ is similar to _Ejection_, except instead of blind-playing the _Second Finesse Position_ card, the player plays the _Third Finesse Position_ card.
+- Just like a _Bluff_, a _Discharge_ can only be performed on the very next player.
+- Several different kinds of moves can cause a _Discharge_. The most common one is the _Unknown Trash Discharge_.
+
+## Special Moves
+
+### The 5 Color Ejection (5CE)
+
+- Normally, if a player gives a color _Play Clue_ to a previously untouched 5, it would mean that it is a _Finesse_ on the 5 and all of the cards leading up to the 5 are playable.
+- If the very next player sees that they will only have to **blind-play one card** in their hand to fulfill the _Finesse_, then they should assume that it is a _Finesse_ and blind-play their _Finesse Position_.
+- If the very next player sees that they would have to **blind-play two or more cards** in their hand to fulfill the _Finesse_, then a _Finesse_ is unlikely. Instead, players agree that this signals an _Ejection_ and that the next player should play their _Second Finesse Position_.
+  - _Prompts_ don't factor into the "two or more blind-plays" rule. Players only count the number of blind-plays.
+- After the blind-play, the player who received the clue will know that they must have a 5.
+- Note that _5 Color Ejection_ only applies if the 5 did not have any clues on it already. If a 5 is re-clued, it signals a _Finesse_ on all of the cards leading up to the 5.
+  - However, the "invisible" clue from a _Chop Move_ does not count. In other words, you **can** perform a _5 Color Ejection_ with a _Chop Moved_ 5, as long as the card does not have any positive clues on it.
+- For example, in a 3-player game:
+  - It is the first turn and nothing is played on the stacks.
+  - Alice clues red to Cathy, touching a red 5 on slot 3.
+  - Bob knows that normally, this would be a _Finesse_ on the 5, indicating to Bob that he has the red 1, the red 2, the red 3, and the red 4. However, since this calls for more than one blind card, he knows that _5 Color Ejection_ should take precedence, so he knows to play his _Second Finesse Position_ card. It is a red 1 and it successfully plays.
+  - From Cathy's perspective, if Bob had played his _Finesse Position_ card in response to the red clue, then Cathy would know that it was a _Finesse_ or a _Bluff_. But since Bob blind-played his _Second Finesse Position_ card, it must be a _5 Color Ejection_. Cathy marks the red card as red 5.
+
+<FiveColorEjection />
+
+- In the previous example, a _5 Color Ejection_ was preformed with the 5 being the only new card introduced with the color clue. However, it is also possible to perform a _5 Color Ejection_ with more than one card introduced.
+  - For players playing at level 20, this kind of thing would normally signal an _[Out-of-Order Finesse](level-20.mdx#the-out-of-order-finesse)_, but the _5 Color Ejection_ interpretation takes precedence as long as the next player would have to blind-play two or more cards.
+
+### The Unknown Trash Discharge (1-for-1 Form) (UTD)
+
+- In general, _Bluffs_ work because the blind-play tells the person who was clued that they have a _one-away-from-playable_ card of that color.
+- In general, _Trash Bluffs_ work because the blind-play tells the person who was clued that they have a trash card.
+- Players must be careful to not give a _Trash Bluff_ that looks like a _Bluff_ - that will desynchronize the team.
+- For example, in a 3-player game:
+  - All the 1's are played on the stacks.
+  - Alice clues red to Cathy, touching a red 1 as a _Play Clue_.
+  - Bob blind-plays his _Finesse Position_ and it successfully plays as blue 2.
+  - Cathy knows that a _Bluff_ has occurred and marks her red card as red 3 (the _one-away-from-playable_ red card).
+  - Of course, this is not true, because Cathy's red card is actually a red 1. The team will likely get a misplay at some point in the future.
+
+<IllegalTrashBluff />
+
+- If the above example happens and Alice is not making a mistake, then Alice must be trying to communicate something extra. This should signal an _Discharge_ on the very next player.
+- Since the _Third Finesse Position_ card was played instead of the _Finesse Position_ card, then the player who received the clue will know that the card is trash.
+- For example, in a 3-player game:
+  - All the 1's are played on the stacks.
+  - Alice clues red to Cathy, touching a red 1 as a _Play Clue_.
+  - Bob knows that if he played his _First Finesse Position_, then Cathy would write a note of red 3 on the card (as a _Bluff_), which would be a _Lie_.
+  - Bob knows that if he played his _Second Finesse Position_, then Cathy would write a note of red 5 on the card (as a _5 Color Ejection_), which would be a _Lie_.
+  - Bob blind-plays his _Third Finesse Position_. It is a blue 2 and it successfully plays.
+  - Cathy knows that a _Discharge_ has occurred from Alice's red clue. This must be an _Unknown Trash Discharge_, so the focus of the clue must be trash.
+  - Cathy marks her red card as a red 1 (since that is the only possible trash red card) and discards it.
+
+<UnknownTrashDischarge />
+
+- In summary:
+  - For a _Trash Bluff_:
+    - The empathy on the clued card **only** contains possibilities that are _Playable_, _Delayed Playable_, or trash.
+    - Thus, a normal blind-play is enough to prove it is trash.
+  - For an _Unknown Trash Discharge_:
+    - The empathy on the clued card contains one or more possibilities that are useful and currently unplayable.
+    - Thus, something extra is needed to prove it is trash.
+  - Other than this, don't use more complicated factors to prefer a _Trash Bluff_ over an _Unknown Trash Discharge_ (like Bob having to wait on some other card).
+
+### The Unknown Trash Discharge (2-for-1 Form) (UTD)
+
+- When multiple cards are clued with an _Unknown Trash Discharge_, **only the focus of the clue is considered to be trash**. This means that _Good Touch Principle_ applies to the non-focused cards.
+- Note that this is **the opposite of the _Trash Bluff_**. (In a _Trash Bluff_, when multiple cards are clued, all of the touched cards are considered to be trash.)
+- This means that while most _Unknown Trash Discharges_ are 1-for-1 clues, you can also perform an _Unknown Trash Discharge_ as a 2-for-1, a 3-for-1, and so forth.
+- For example, in a 3-player game:
+  - (This is almost exactly the same as the previous example.)
+  - All the 1's are played on the stacks.
+  - Alice clues red to Cathy, touching a red 1 on slot 2 and a red 5 on slot 3. The red 1 is focused. This looks like a _Play Clue_ on the red 1.
+  - Bob knows that this must be an _Unknown Trash Discharge_, so he blind-plays his _Third Finesse Position_. It is a blue 2 and it successfully plays.
+  - Cathy knows that a _Discharge_ has occurred from Alice's red clue. This must be an _Unknown Trash Discharge_, so the focus of the clue must be trash.
+  - Cathy marks her slot 2 card as a red 1 (since that is the only possible trash red card) and discards it.
+  - Cathy also knows that non-focused cards touched in an _Unknown Trash Discharge_ are supposed to be useful. Thus, Cathy marks her slot 3 card as a red 2, a red 3, a red 4, or a red 5.
+
+<UnknownTrashDischargeTwoForOne />
+
+- Rarely, it is also possible to perform a _Discharge_ using a clue that would normally look like a _Trash Bluff_, by cluing other non-trash cards.
+- For example, in a 3-player game:
+  - All the 1's except for red 1 are played on the stacks.
+  - Alice clues number 1 to Cathy, touching a green 1 on slot 1 and a red 1 on slot 2. The focus is on the green 1 as a _Play Clue_.
+  - From Bob's perspective, this looks like it could be a _Trash Finesse_. In other words, if Bob blind-played his _Finesse Position_, then Cathy would write the correct note on the green 1. However, a _Trash Finesse_ promises that all the cards touched are trash. In this case, the red 1 is not a trash card, so playing slot 1 would lie to Cathy about the identity of the red 1.
+  - Thus, Bob interprets the clue as a _Unknown Trash Discharge_ and blind-plays his _Third Finesse Position_. It is a blue 2 and successfully plays.
+
+<UnknownTrashDischargeTwoForOne2 />
+
+### The Unknown Dupe Discharge (UDD)
+
+- First, see the section on _[Unknown Trash Discharge](#the-unknown-trash-discharge-1-for-1-form-utd)_.
+- Typically, players closely follow _Good Touch Principle_, since duplicating cards is confusing and wastes efficiency on follow-up _Fix Clues_.
+- However, there are still plenty of situations where players will intentionally duplicate a card:
+  1. When it is the first turn of the game (and there is nothing else to do).
+  1. When the team is at 8 clues (and there is nothing else to do).
+  1. When a player is in a _Double Discard Situation_ (and there is nothing else to do).
+  1. When the team is losing and nearing the _End-Game_ (and _Tempo_ on playable cards is really important).
+- If a player uses a clue to duplicate a card, and these criteria do not apply, then they must be trying to send an additional message.
+- In this case, they intend for a _Discharge_ to communicate the "badness" of the focused card. This is called an _Unknown Dupe Discharge_ (and works in a very similar way to the _Unknown Trash Discharge_).
+- After an _Unknown Dupe Discharge_, the focus of the clue can be any unknown duplicated card. The player will only know which specific duplicated card it is after they discard it.
+- For example, in a 3-player game:
+  - It is the first turn of the game and nothing is played on the stacks.
+  - Alice clues number 5 to Bob as a _5 Save_.
+  - Bob's hand is as follows: `red 2, red 2, red 4, blue 4, blue [5]`
+  - Bob clues green to Cathy as a play clue.
+  - Cathy clues red to Bob, touching the red 2 on slot 1, the red 2 on slot 2, and the red 4 on slot 3.
+  - Alice knows that Cathy is violating _Good Touch Principle_ and duplicating the red 2. There doesn't seem to be a very good reason for this, so this must be an _Unknown Dupe Discharge_.
+  - Alice blind-plays her _Third Finesse Position_. It is a blue 1 and it successfully plays on the stacks.
+  - Normally, Bob would think that this was an _Unknown Trash Discharge_. However, no red trash cards exist. Thus, this must have been an _Unknown Dupe Discharge_.
+  - Bob discards his slot 1 card (the focus of the clue). It is revealed to be a red 2. Now, Bob writes _Elimination Notes_ for the red 2 on his slot 2 and his slot 3.
+
+<UnknownDupeDischarge />
+
+- _Unknown Dupe Discharges_ can be initiated with either color clues or number clues.
+- _Unknown Dupe Discharges_ only apply if **the two duplicated cards are in the same person's hand**.
+  - It is explicitly illegal to perform an _Unknown Dupe Discharge_ that duplicates a card in someone else's hand. If this happens, the clue must have some other meaning.
+- Remember that after an _Unknown Dupe Discharge_, the player who received the clue is supposed to _discard the focus of the clue_, even before other known trash to the left of it.
+  - However, in the case where only two new cards are touched, then the player who received the clue may know that both of these cards must be the same. In this special case, they can discard the non-focused card to cause a _Trash Order Chop Move_.
+  - Note that if the _Unknown Dupe Discharge_ was initiated by a chop-focus clue, this means that the expected discard order is thus different from the usual 'left to right' order, since in that case, the focus of the clue will be rightmost.
+  - Players are also expected to discard focus-first even in the case where it is globally known that the clued cards are duplicated cards. This is because in general, it can be hard to tell if the clue receiver knows that an _Unknown Dupe Discharge_ has occurred, because it could have been an _Unknown Trash Discharge_, in which case only the focus is discardable. Discarding focus-first in all cases avoids desync on whether the clue receiver knows they hold dupes or simply trash.

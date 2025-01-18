@@ -1,0 +1,66 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.mainSidebar.category.Beginner's Guide": {
+    "message": "入门指南",
+    "description": "The label for category Beginner's Guide in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.The Chop": {
+    "message": "弃牌位",
+    "description": "The label for category The Chop in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.1 - Play Clues": {
+    "message": "1 - 打牌提示",
+    "description": "The label for category 1 - Play Clues in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.2 - Save Clues": {
+    "message": "2 - 留牌提示",
+    "description": "The label for category 2 - Save Clues in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Clue Interpretation": {
+    "message": "提示解读",
+    "description": "The label for category Clue Interpretation in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.1 - Good Touch Principle": {
+    "message": "1 - Good Touch Principle",
+    "description": "The label for category 1 - Good Touch Principle in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.2 - Save Principle": {
+    "message": "2 - Save Principle",
+    "description": "The label for category 2 - Save Principle in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.3 - Minimum Clue Value Principle": {
+    "message": "3 - Minimum Clue Value Principle",
+    "description": "The label for category 3 - Minimum Clue Value Principle in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.The Early Game": {
+    "message": "The Early Game",
+    "description": "The label for category The Early Game in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.General Strategy": {
+    "message": "一般策略",
+    "description": "The label for category General Strategy in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Special Moves": {
+    "message": "特殊行动",
+    "description": "The label for category Special Moves in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Basic Strategies": {
+    "message": "基本约定",
+    "description": "The label for category Basic Strategies in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Advanced Strategies": {
+    "message": "高级约定",
+    "description": "The label for category Advanced Strategies in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Variant Specific": {
+    "message": "变体特定",
+    "description": "The label for category Variant Specific in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Challenge Questions": {
+    "message": "习题",
+    "description": "The label for category Challenge Questions in sidebar mainSidebar"
+  }
+}

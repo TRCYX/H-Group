@@ -1,0 +1,33 @@
+stacks:
+  - r: 2
+  - y: 0
+  - g: 0
+  - b: 0
+  - p: 0
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+        above: Blue 1
+      - type: r1245
+        clue: r
+        above: Red 5
+        middleNote: r4
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: x
+        above: Blue 2
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - text: Cathy blind-plays slot 1, since Bob has Red 5 on slot 2
+  - text: Bob marks slot 2 as Red 5

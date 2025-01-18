@@ -19,7 +19,13 @@ const config: Config = {
 
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "zh"],
+    localeConfigs: {
+      zh: {
+        label: "中文",
+        htmlLang: "zh-Hans"
+      }
+    }
   },
 
   presets: [
@@ -69,6 +75,10 @@ const config: Config = {
           activeBasePath: "docs",
           label: "Variant-Specific",
           position: "left",
+        },
+        {
+          type: "localeDropdown",
+          position: "right",
         },
         {
           href: "https://github.com/hanabi/hanabi.github.io/",
