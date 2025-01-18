@@ -8,15 +8,15 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.Beginner": {
-    "message": "入门",
+    "message": "入门指南",
     "description": "Navbar item with label Beginner"
   },
   "item.label.Learning Path": {
-    "message": "学习路径",
+    "message": "学习阶梯",
     "description": "Navbar item with label Learning Path"
   },
   "item.label.Reference": {
-    "message": "参考",
+    "message": "参考文档",
     "description": "Navbar item with label Reference"
   },
   "item.label.Variant-Specific": {

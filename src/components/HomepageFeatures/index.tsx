@@ -1,3 +1,4 @@
+import Translate, { translate } from "@docusaurus/Translate";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 
@@ -13,23 +14,35 @@ interface FeatureItem {
 const FeatureList: FeatureItem[] = [
   {
     num: 1,
-    title: "Beginner's Guide",
+    title: translate({ message: "Beginner's Guide" }),
     iconName: "baby",
-    description: <>Start here to learn the fundamentals.</>,
+    description: (
+      <>
+        <Translate>Start here to learn the fundamentals.</Translate>
+      </>
+    ),
     link: "beginner",
   },
   {
     num: 2,
-    title: "Learning Path",
+    title: translate({ message: "Learning Path" }),
     iconName: "school",
-    description: <>Learn our strategies gradually, level by level.</>,
+    description: (
+      <>
+        <Translate>Learn our strategies gradually, level by level.</Translate>
+      </>
+    ),
     link: "learning-path",
   },
   {
     num: 3,
-    title: "Reference Document",
+    title: translate({ message: "Reference Document" }),
     iconName: "list-ul",
-    description: <>Look up something specific.</>,
+    description: (
+      <>
+        <Translate>Look up something specific.</Translate>
+      </>
+    ),
     link: "reference",
   },
 ];

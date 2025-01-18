@@ -18,14 +18,14 @@ const config: Config = {
   onDuplicateRoutes: "throw",
 
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "zh",
     locales: ["en", "zh"],
     localeConfigs: {
       zh: {
         label: "中文",
-        htmlLang: "zh-Hans"
-      }
-    }
+        htmlLang: "zh-Hans",
+      },
+    },
   },
 
   presets: [

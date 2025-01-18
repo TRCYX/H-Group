@@ -1,6 +1,6 @@
 {
   "Home": {
-    "message": "Home"
+    "message": "首页"
   },
   "Strategies for Hanabi, a cooperative card game of logic and reasoning": {
     "message": "花火游戏策略Strategies for Hanabi, a cooperative card game of logic and reasoning"
@@ -446,5 +446,41 @@
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
+  },
+  "H-Group Conventions": {
+    "message": "H-Group 约定"
+  },
+  "Beginner's Guide": {
+    "message": "入门指南"
+  },
+  "Learning Path": {
+    "message": "学习阶梯"
+  },
+  "Reference Document": {
+    "message": "参考文档"
+  },
+  "Start here to learn the fundamentals.": {
+    "message": "由此开始学习基础"
+  },
+  "Learn our strategies gradually, level by level.": {
+    "message": "逐级掌握我们的约定"
+  },
+  "Look up something specific.": {
+    "message": "查询某些具体信息"
+  },
+  "subtitle.before": {
+    "message": "合作智力游戏 ",
+    "description": "Part of website subtitle before the Hanabi word"
+  },
+  "Hanabi": {
+    "message": "花火"
+  },
+  "subtitle.after": {
+    "message": " 的攻略",
+    "description": "Part of website subtitle after the Hanabi word"
+  },
+  "Learn More": {
+    "message": "开始",
+    "description": "The enter button at home page"
   }
 }

@@ -60,7 +60,7 @@
     "description": "The label for category Variant Specific in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.Challenge Questions": {
-    "message": "习题",
+    "message": "挑战题",
     "description": "The label for category Challenge Questions in sidebar mainSidebar"
   }
 }
