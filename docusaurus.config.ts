@@ -125,7 +125,7 @@ const config: Config = {
     },
 
     // We provide some keyboard shortcuts for easier navigation.
-    "/js/hotkey.js",
+    "/H-Group/js/hotkey.js",
   ],
   future: {
     experimental_faster: true,

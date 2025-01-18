@@ -73,6 +73,17 @@ function navigateForwards() {
   clickSecondNavButton();
 }
 
+function calculateBaseUrl() {
+  const brand = document.querySelector("a.navbar__brand");
+  if (brand) {
+    const baseUrl = brand.getAttribute("href");
+    if (baseUrl) {
+      return baseUrl.endsWith("/") ? baseUrl.slice(0, -1) : baseUrl;
+    }
+  }
+  return "";
+}
+
 function goToSpecificLevel() {
   // eslint-disable-next-line no-alert
   const levelString = prompt(
@@ -84,7 +95,7 @@ function goToSpecificLevel() {
 
   // "p" is short for "Learning Path".
   if (levelString.toLowerCase() === "p") {
-    globalThis.location.href = "/learning-path/";
+    globalThis.location.href = `${calculateBaseUrl()}/learning-path/`;
     return;
   }
 
@@ -103,7 +114,7 @@ function goToSpecificLevel() {
     return;
   }
 
-  globalThis.location.href = `/level-${level}/`;
+  globalThis.location.href = `${calculateBaseUrl()}/level-${level}/`;
 }
 
 function isOnLandingPage() {
