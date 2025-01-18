@@ -15,6 +15,7 @@ const config = {
     "src/pages/index.tsx",
     "plugins/hanabiDocusaurusPlugin/index.ts",
     "plugins/hanabiDocusaurusPlugin/plugin/src/convertYAMLToSVG.ts",
+    "plugins/hanabiDocusaurusPlugin/plugin/src/fixStaticImagePath.ts",
     "static/js/hotkey.js",
   ],
   // @template-customization-end
@@ -39,11 +40,12 @@ const config = {
     "webpack",
     "@docusaurus/faster",
     "@docusaurus/Link",
+    "@docusaurus/Translate",
     "@docusaurus/theme-mermaid",
     "@docusaurus/types",
     "@docusaurus/plugin-content-docs",
     "@docusaurus/useBaseUrl",
-    "@docusaurus/useDocusaurusContext",
+    // "@docusaurus/useDocusaurusContext",
     "@theme/Layout",
     // @template-customization-end
   ],

@@ -68,6 +68,21 @@ export default function hanabiDocusaurusPlugin(): Plugin {
                         },
                       ],
                     },
+
+                    jsx: {
+                      babelConfig: {
+                        plugins: [
+                          // Similar to the custom loader below, only JavaScript files are
+                          // recognized.
+                          path.join(
+                            __dirname,
+                            "plugin",
+                            "dist",
+                            "fixStaticImagePath.js",
+                          ),
+                        ],
+                      },
+                    },
                   },
                 },
 

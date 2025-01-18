@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "@babel/core": "^7.26.0",
     "@docusaurus/core": "^3.6.3",
     "@docusaurus/preset-classic": "^3.6.3",
     "@docusaurus/theme-mermaid": "^3.6.3",
@@ -45,6 +46,7 @@
   "devDependencies": {
     "@docusaurus/faster": "^3.6.3",
     "@docusaurus/tsconfig": "^3.6.3",
+    "@types/babel__core": "^7.20.5",
     "complete-lint": "^1.12.1",
     "complete-node": "^1.7.4",
     "glob": "^11.0.0",
