@@ -1,5 +1,5 @@
 ---
-title: Card Layout
+title: 牌的摆放
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -9,35 +9,34 @@ import CardLayout3 from "./card-layout-3.yml";
 
 <BeginnersGuideProgress id="card-layout" />
 
-In this guide, there will be some images to show off the concepts introduced.
+本指南中会有一些展示概念的图片。
 
-## Play Stacks & Player Hands
+## 牌堆和手牌 \{#play-stacks--player-hands\}
 
-- The five **play stacks** are on the left.
-- The **player hands** are on the right.
-- Alice is always player 1. (She will always go first.)
-- Bob is always player 2. (He will always go second.)
-- Cards are drawn and added to the left side to each hand.
-  - Thus, Alice's newest card is the blue 1 and Bob's newest card is the red 1.
-- Conversely, the oldest card is the rightmost card.
-  - Thus, Alice's oldest card is the blue 5 and Bob's oldest card is the red 5.
-- A card's _slot_ refers to its position in the hand, from left to right.
-  - Thus, the blue 1 is on slot 1, the blue 2 is on slot 2, etc.
+- 左侧是 5 堆打出的牌，右侧是玩家的手牌。
+- Alice 永远是第一个行动的玩家。
+- Bob 永远是第二个行动的玩家。
+- 新抽的牌摆放在手牌左侧。
+  - 因此，Alice 最新的牌是蓝 1，Bob 最新的牌是红 1。
+- 相反，最老的牌总在最右侧。
+  - 因此，Alice 最老的牌是蓝 5，Bob 最老的牌是红 5。
+- 用一个数字描述一张牌在手牌中从左到右的位置。
+  - 因此，蓝 1 位于 1 号位，蓝 2 位于 2 号位，以此类推。
 
 <CardLayout1 />
 
-## Clues
+## 提示 \{#clues\}
 
-- Arrows indicate that a card was "touched" by the last clue that was given.
-- Clued cards will have permanent yellow borders around them. Unclued cards will not have these yellow borders.
+- 箭头表示某张牌被当前提示指及。
+- 提示过的牌会永久带有黄色边框。没有被提示过的牌则没有这些黄色边框。
 
 <CardLayout2 />
 
-- When a card is "touched" by a clue for the first time, a white arrow will point to the card and a yellow border will be applied.
-- When an already-clued card is "retouched" by subsequent clues, a gray arrow will point to the card.
+- 当一张牌首次被提示指到时，会有白色箭头指向这张牌，并且它会获得黄色边框。
+- 当一张已经被提示过的牌被后续提示再次指到时，会有灰色箭头指向这张牌。
 
 <CardLayout3 />
 
-## Challenge Questions
+## 挑战题 \{#challenge-questions\}
 
-After each section, there will be one or more challenge questions. Once you have solved the question, click on the "Solution" tab near the top of the screen to see the answer.
+每部分结束后会有一些挑战题。当你回答完问题后，可以点击上方的“解答”选项卡查看答案。

@@ -8,32 +8,32 @@ players:
   - cards:
       - type: b1
         border: false
-        below: Slot 1
+        below: 1 号位
       - type: b2
         border: false
-        below: Slot 2
+        below: 2 号位
       - type: b3
         border: false
-        below: Slot 3
+        below: 3 号位
       - type: b4
         border: false
-        below: Slot 4
+        below: 4 号位
       - type: b5
         border: false
-        below: Slot 5
+        below: 5 号位
   - cards:
       - type: r1
         border: false
-        below: Slot 1
+        below: 1 号位
       - type: r2
         border: false
-        below: Slot 2
+        below: 2 号位
       - type: r3
         border: false
-        below: Slot 3
+        below: 3 号位
       - type: r4
         border: false
-        below: Slot 4
+        below: 4 号位
       - type: r5
         border: false
-        below: Slot 5
+        below: 5 号位
