@@ -15,7 +15,6 @@ const config = {
     "src/pages/index.tsx",
     "plugins/hanabiDocusaurusPlugin/index.ts",
     "plugins/hanabiDocusaurusPlugin/plugin/src/convertYAMLToSVG.ts",
-    "plugins/hanabiDocusaurusPlugin/plugin/src/fixStaticImagePath.ts",
     "static/js/hotkey.js",
   ],
   // @template-customization-end
@@ -37,7 +36,6 @@ const config = {
     // @template-customization-start
     "prism-react-renderer",
     "raw-loader",
-    "webpack",
     "@docusaurus/faster",
     "@docusaurus/Link",
     "@docusaurus/Translate",
@@ -45,7 +43,6 @@ const config = {
     "@docusaurus/types",
     "@docusaurus/plugin-content-docs",
     "@docusaurus/useBaseUrl",
-    // "@docusaurus/useDocusaurusContext",
     "@theme/Layout",
     // @template-customization-end
   ],

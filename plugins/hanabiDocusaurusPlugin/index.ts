@@ -1,7 +1,7 @@
 // This is a Docusaurus plugin to automatically create SVG images from the YAML files. This is
 // triggered whenever the website is built.
 
-import type { Plugin } from "@docusaurus/types";
+import type { LoadContext, Plugin } from "@docusaurus/types";
 import path from "node:path";
 import url from "node:url";
 
@@ -13,11 +13,59 @@ import url from "node:url";
 // eslint-disable-next-line @typescript-eslint/naming-convention
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
-export default function hanabiDocusaurusPlugin(): Plugin {
+interface TranslatableContent {
+  clueGiver: string;
+  unknown: string;
+}
+
+export default function hanabiDocusaurusPlugin(
+  context: LoadContext,
+): Plugin<TranslatableContent> {
   return {
     name: "hanabi-docusaurus-plugin",
 
-    configureWebpack(_config, _isServer, _utils) {
+    loadContent() {
+      return {
+        clueGiver: "Clue Giver",
+        unknown: "Unknown",
+      };
+    },
+
+    // eslint-disable-next-line complete/no-mutable-return
+    getTranslationFiles() {
+      return [
+        {
+          path: "svg",
+          content: {
+            clueGiver: {
+              message: "Clue Giver",
+            },
+            unknown: {
+              message: "Unknown",
+              description: "Name of unknown player",
+            },
+          },
+        },
+      ];
+    },
+
+    translateContent({ content, translationFiles }) {
+      const translationFile = translationFiles.find((f) => f.path === "svg");
+      return {
+        ...content,
+        clueGiver:
+          translationFile?.content["clueGiver"]?.message ?? content.clueGiver,
+        unknown:
+          translationFile?.content["unknown"]?.message ?? content.unknown,
+      };
+    },
+
+    configureWebpack(_config, _isServer, _utils, contents) {
+      let { baseUrl } = context;
+      if (baseUrl.endsWith("/")) {
+        baseUrl = baseUrl.slice(0, -1);
+      }
+
       return {
         module: {
           rules: [
@@ -68,21 +116,6 @@ export default function hanabiDocusaurusPlugin(): Plugin {
                         },
                       ],
                     },
-
-                    jsx: {
-                      babelConfig: {
-                        plugins: [
-                          // Similar to the custom loader below, only JavaScript files are
-                          // recognized.
-                          path.join(
-                            __dirname,
-                            "plugin",
-                            "dist",
-                            "fixStaticImagePath.js",
-                          ),
-                        ],
-                      },
-                    },
                   },
                 },
 
@@ -96,6 +129,10 @@ export default function hanabiDocusaurusPlugin(): Plugin {
                     "dist",
                     "convertYAMLToSVG.js",
                   ),
+                  options: {
+                    baseUrl,
+                    translations: contents,
+                  },
                 },
               ],
             },

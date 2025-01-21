@@ -1,0 +1,9 @@
+{
+  "clueGiver": {
+    "message": "提示者"
+  },
+  "unknown": {
+    "message": "未知",
+    "description": "Name of unknown player"
+  }
+}

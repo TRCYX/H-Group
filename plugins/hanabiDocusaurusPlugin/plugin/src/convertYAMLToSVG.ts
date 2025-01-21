@@ -7,6 +7,7 @@
 // eslint-disable-next-line import-x/no-unassigned-import
 import "core-js/actual/set/index.js";
 
+import type { LoaderContext } from "webpack";
 import YAML from "yaml";
 import type {
   BigText,
@@ -20,6 +21,16 @@ import type {
 import { hanabiGameStateSchema } from "./hanabiGameState";
 import { SVG } from "./SVG";
 import type { SVGNode } from "./SVGNode";
+
+interface TranslatableContent {
+  clueGiver: string;
+  unknown: string;
+}
+
+interface LoaderOptions {
+  baseUrl: string;
+  translations: TranslatableContent;
+}
 
 const TEXT_COLOR_CLASS = "site-theme-text";
 const CARD_WIDTH = 70;
@@ -70,6 +81,7 @@ const COLORS_WITH_BLACK_TEXT: ReadonlySet<string> = new Set([
 
 class ImageGenerator {
   private readonly hanabiGameState: HanabiGameState;
+  private readonly options: LoaderOptions;
 
   /** Includes suits that may not actually be present in the current variant. */
   private readonly suitAbbreviationToWord: ReadonlyMap<string, string>;
@@ -86,8 +98,9 @@ class ImageGenerator {
   private yBelow = 0;
   private readonly svgFile: SVG;
 
-  constructor(hanabiGameState: HanabiGameState) {
+  constructor(hanabiGameState: HanabiGameState, options: LoaderOptions) {
     this.hanabiGameState = hanabiGameState;
+    this.options = options;
 
     const extraSuitEntries =
       hanabiGameState.suits === undefined
@@ -172,12 +185,15 @@ class ImageGenerator {
       }
 
       const fileName = `${suitWord}${rankOrEmpty}`;
-      this.svgFile.addImage(`${PIECES_PATH}/cards/${fileName}.svg`, {
-        x: xOffset,
-        y: 0,
-        width: CARD_WIDTH,
-        height: CARD_HEIGHT,
-      });
+      this.svgFile.addImage(
+        `${this.options.baseUrl}${PIECES_PATH}/cards/${fileName}.svg`,
+        {
+          x: xOffset,
+          y: 0,
+          width: CARD_WIDTH,
+          height: CARD_HEIGHT,
+        },
+      );
 
       xOffset += CARD_WIDTH + HORIZONTAL_SPACING_BETWEEN_CARDS;
     }
@@ -239,7 +255,10 @@ class ImageGenerator {
   }
 
   private drawPlayerName(playerNum: number, player: Player) {
-    const name = player.name ?? PLAYER_NAMES[playerNum] ?? "Unknown";
+    const name =
+      player.name ??
+      PLAYER_NAMES[playerNum] ??
+      this.options.translations.unknown;
 
     const r = this.svgFile.addSVG({
       x: this.xOffsetWherePlayerBegins,
@@ -257,7 +276,7 @@ class ImageGenerator {
 
     if (player.clueGiver === true) {
       // Based on: https://stackoverflow.com/a/42783381/14347173
-      const clueGiverDescription = "Clue Giver";
+      const clueGiverDescription = this.options.translations.clueGiver;
       r.addText(clueGiverDescription, {
         x: "0%",
         y: "50%",
@@ -376,12 +395,15 @@ class ImageGenerator {
       if (firstRank === undefined) {
         throw new Error("Failed to parse the first rank.");
       }
-      s.addImage(`${PIECES_PATH}/cards/${firstRank}.svg`, {
-        x: 0,
-        y: 0,
-        width: CARD_WIDTH,
-        height: CARD_HEIGHT,
-      });
+      s.addImage(
+        `${this.options.baseUrl}${PIECES_PATH}/cards/${firstRank}.svg`,
+        {
+          x: 0,
+          y: 0,
+          width: CARD_WIDTH,
+          height: CARD_HEIGHT,
+        },
+      );
       this.drawCardPips(s, suits, crossedOut, orange);
     } else if (ranks.size !== 1 && suits.size === 1) {
       // This is a card with a known color and an unknown rank.
@@ -400,12 +422,15 @@ class ImageGenerator {
       if (suitName === undefined) {
         throw new Error("Failed to parse the first suit name.");
       }
-      s.addImage(`${PIECES_PATH}/cards/${suitName}.svg`, {
-        x: 0,
-        y: 0,
-        width: CARD_WIDTH,
-        height: CARD_HEIGHT,
-      });
+      s.addImage(
+        `${this.options.baseUrl}${PIECES_PATH}/cards/${suitName}.svg`,
+        {
+          x: 0,
+          y: 0,
+          width: CARD_WIDTH,
+          height: CARD_HEIGHT,
+        },
+      );
       this.drawCardPips(s, ranks, crossedOut, orange);
     } else {
       // An exact card identity was specified. (e.g. "r1")
@@ -424,7 +449,7 @@ class ImageGenerator {
         throw new Error("Failed to parse the first rank.");
       }
       this.svgFile.addImage(
-        `${PIECES_PATH}/cards/${suitName}${firstRank}.svg`,
+        `${this.options.baseUrl}${PIECES_PATH}/cards/${suitName}${firstRank}.svg`,
         {
           x,
           y,
@@ -567,7 +592,7 @@ class ImageGenerator {
           "dominant-baseline": "central",
         });
         if (crossedOutSet.has(rank.toString())) {
-          rect.addImage(`${PIECES_PATH}/x.png`, {
+          rect.addImage(`${this.options.baseUrl}${PIECES_PATH}/x.png`, {
             x: CARD_WIDTH / 10 - 6,
             y: CARD_HEIGHT / 10 - 6,
             width: 12,
@@ -582,7 +607,7 @@ class ImageGenerator {
     for (const [i, color] of this.suitAbbreviations.entries()) {
       if (pips.has(color)) {
         svg.addImage(
-          `${PIECES_PATH}/pips/${this.suitAbbreviationToWord.get(color)}.svg`,
+          `${this.options.baseUrl}${PIECES_PATH}/pips/${this.suitAbbreviationToWord.get(color)}.svg`,
           {
             x: CARD_WIDTH / 2 - 6 - 20 * Math.sin(angle * i),
             y: CARD_HEIGHT / 2 - 6 - 20 * Math.cos(angle * i),
@@ -592,7 +617,7 @@ class ImageGenerator {
           },
         );
         if (crossedOutSet.has(color)) {
-          svg.addImage(`${PIECES_PATH}/x.png`, {
+          svg.addImage(`${this.options.baseUrl}${PIECES_PATH}/x.png`, {
             x: CARD_WIDTH / 2 - 6 - 20 * Math.sin(angle * i) - 2,
             y: CARD_HEIGHT / 2 - 6 - 20 * Math.cos(angle * i) - 2,
             width: 16,
@@ -606,25 +631,31 @@ class ImageGenerator {
 
   private drawExtraCardAttributes(card: Card) {
     if (card.trash === true) {
-      this.svgFile.addImage(`${PIECES_PATH}/trashcan.png`, {
-        x: this.xOffset + 5,
-        y: this.yOffset + 5,
-        width: CARD_WIDTH - 10,
-        height: CARD_HEIGHT - 10,
-        opacity: "0.4",
-      });
+      this.svgFile.addImage(
+        `${this.options.baseUrl}${PIECES_PATH}/trashcan.png`,
+        {
+          x: this.xOffset + 5,
+          y: this.yOffset + 5,
+          width: CARD_WIDTH - 10,
+          height: CARD_HEIGHT - 10,
+          opacity: "0.4",
+        },
+      );
     }
 
     const { clue } = card;
     if (clue !== undefined) {
       // Draw the arrow above the card.
       const arrowName = card.retouched === true ? "arrow_dark" : "arrow";
-      this.svgFile.addImage(`${PIECES_PATH}/${arrowName}.svg`, {
-        x: this.xOffset + 10,
-        y: this.yOffset - 40,
-        width: 50,
-        height: 70,
-      });
+      this.svgFile.addImage(
+        `${this.options.baseUrl}${PIECES_PATH}/${arrowName}.svg`,
+        {
+          x: this.xOffset + 10,
+          y: this.yOffset - 40,
+          width: 50,
+          height: 70,
+        },
+      );
 
       // Draw the clue circle on the arrow.
       const colors: ReadonlyMap<string, string> = new Map([
@@ -854,13 +885,16 @@ class ImageGenerator {
       2;
     const yOfDiscardPile = this.leftYOffset;
 
-    this.svgFile.addImage(`${PIECES_PATH}/trashcan.png`, {
-      x: xOfDiscardPile,
-      y: yOfDiscardPile,
-      width: TRASH_WIDTH,
-      height: TRASH_HEIGHT,
-      opacity: "0.2",
-    });
+    this.svgFile.addImage(
+      `${this.options.baseUrl}${PIECES_PATH}/trashcan.png`,
+      {
+        x: xOfDiscardPile,
+        y: yOfDiscardPile,
+        width: TRASH_WIDTH,
+        height: TRASH_HEIGHT,
+        opacity: "0.2",
+      },
+    );
 
     const widthTotal = CARD_WIDTH + ((discarded.length - 1) * CARD_WIDTH) / 2;
     const heightTotal =
@@ -893,9 +927,12 @@ class ImageGenerator {
   }
 }
 
-export default function convertYAMLToSVG(source: string): string {
+export default function convertYAMLToSVG(
+  this: LoaderContext<LoaderOptions>,
+  source: string,
+): string {
   const yaml = YAML.parse(source) as unknown;
   const hanabiGameState = hanabiGameStateSchema.parse(yaml);
-  const image = new ImageGenerator(hanabiGameState);
+  const image = new ImageGenerator(hanabiGameState, this.getOptions());
   return image.getSVGText();
 }
