@@ -1,5 +1,5 @@
 ---
-title: The Chop
+title: 弃牌位
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -8,23 +8,23 @@ import Chop2 from "./chop-2.yml";
 
 <BeginnersGuideProgress id="chop" />
 
-- In Hanabi, players discard cards from their hand to generate clues for the team. But which card should they discard?
-- The rightmost **unclued card** in a player's hand is called their "chop" card.
-  - This is a metaphor of a card being "on the chopping block".
-- When a player needs to discard, they should discard their chop card. This way, **everyone discards in a predictable way**.
+- 在花火中，玩家通过弃牌生成提示机会。但应该弃掉哪张牌呢？
+- 玩家手牌中最右侧的**未被提示过的牌**被称为“弃牌位（Chop）”。
+  - 弃牌位的英文 Chop 是一个比喻，作动词意为切、剁，作名词可表示被切块的排骨等，意指这张牌好像“已经在砧板上了”。
+- 当玩家需要弃牌时，应该弃掉弃牌位上的牌。这样一来，**每个人的弃牌都可预测**。
 
-## Without Clues
+## 无提示时 \{#without-clues\}
 
-- In the example below:
-  - Alice's chop card is the red 5 (on slot 5).
-  - Bob's chop card is the red 3 (on slot 5).
+- 在下面的例子里：
+  - Alice 的弃牌位在 5 号位，是红 5。
+  - Bob 的弃牌位在 5 号位，是红 3。
 
 <Chop1 />
 
-## With Clues
+## 有提示时 \{#with-clues\}
 
-- In the example below:
-  - Alice's chop card is the blue 4 (on slot 4), because slot 5 is already clued.
-  - Bob's chop card is the blue 3 (on slot 2), because slot 3, slot 4, and slot 5 are already clued.
+- 在下面的例子里：
+  - Alice 的弃牌位在 4 号位，是蓝 4，因为 5 号位已经被提示过。
+  - Bob 的弃牌位在 2 号位，是蓝 3，因为 3 号位、4 号位和 5 号位都已经被提示过。
 
 <Chop2 />
