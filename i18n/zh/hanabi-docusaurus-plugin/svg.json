@@ -5,5 +5,97 @@
   "unknown": {
     "message": "未知",
     "description": "Name of unknown player"
+  },
+  "color.red": {
+    "message": "红",
+    "description": "Lowercase of red"
+  },
+  "color.yellow": {
+    "message": "黄",
+    "description": "Lowercase of yellow"
+  },
+  "color.black": {
+    "message": "黑",
+    "description": "Lowercase of black"
+  },
+  "color.purple": {
+    "message": "紫",
+    "description": "Lowercase of purple"
+  },
+  "color.blue": {
+    "message": "蓝",
+    "description": "Lowercase of blue"
+  },
+  "color.green": {
+    "message": "绿",
+    "description": "Lowercase of green"
+  },
+  "color.rainbow": {
+    "message": "彩",
+    "description": "Lowercase of rainbow"
+  },
+  "color.pink": {
+    "message": "粉",
+    "description": "Lowercase of pink"
+  },
+  "color.focus": {
+    "message": "焦点",
+    "description": "Lowercase of focus"
+  },
+  "color.play": {
+    "message": "play",
+    "description": "Lowercase of play"
+  },
+  "color.chop": {
+    "message": "弃牌位",
+    "description": "Lowercase of chop"
+  },
+  "color.fresh": {
+    "message": "fresh",
+    "description": "Lowercase of fresh"
+  },
+  "color.bad": {
+    "message": "bad",
+    "description": "Lowercase of bad"
+  },
+  "color.brown": {
+    "message": "棕",
+    "description": "Lowercase of brown"
+  },
+  "shortColor.red": {
+    "message": "(红)"
+  },
+  "shortColor.blue": {
+    "message": "(蓝)"
+  },
+  "shortColor.green": {
+    "message": "(绿)"
+  },
+  "shortColor.yellow": {
+    "message": "(黄)"
+  },
+  "shortColor.purple": {
+    "message": "(紫)"
+  },
+  "Rainbow.text": {
+    "message": "彩",
+    "description": "Start of Rainbow text boxes"
+  },
+  "Rainbow.extraWidth": {
+    "message": "0",
+    "description": "Numerical extra width of text boxes starting with Rainbow.text"
+  },
+  "Rainbow.decreaseOffset": {
+    "message": "0",
+    "description": "Numerical decrease of offset of text boxes starting with Rainbow.text"
+  },
+  "bigText.Bluff": {
+    "message": "Bluff"
+  },
+  "bigText.Finesse": {
+    "message": "飞牌"
+  },
+  "bigText.Illegal!": {
+    "message": "非法！"
   }
 }

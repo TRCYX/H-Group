@@ -1,7 +1,12 @@
 // This is a Docusaurus plugin to automatically create SVG images from the YAML files. This is
 // triggered whenever the website is built.
 
-import type { LoadContext, Plugin } from "@docusaurus/types";
+import type {
+  LoadContext,
+  Plugin,
+  TranslationFile,
+  TranslationMessage,
+} from "@docusaurus/types";
 import path from "node:path";
 import url from "node:url";
 
@@ -16,6 +21,58 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 interface TranslatableContent {
   clueGiver: string;
   unknown: string;
+  color: {
+    red: string;
+    yellow: string;
+    black: string;
+    purple: string;
+    blue: string;
+    green: string;
+    rainbow: string;
+    pink: string;
+    focus: string;
+    play: string;
+    chop: string;
+    fresh: string;
+    bad: string;
+    brown: string;
+  };
+  shortColor: {
+    red: string;
+    blue: string;
+    green: string;
+    yellow: string;
+    purple: string;
+  };
+  Rainbow: {
+    text: string;
+    extraWidth: number;
+    decreaseOffset: number;
+  };
+  bigText: {
+    Bluff: string;
+    Finesse: string;
+    "Illegal!": string;
+  };
+}
+
+function translateContentSubObject<
+  K extends "color" | "shortColor" | "bigText",
+>(
+  key: K,
+  content: TranslatableContent,
+  translationFile?: TranslationFile,
+): TranslatableContent[K] {
+  return Object.fromEntries(
+    Object.entries(content[key]).map(([k, v]) => [
+      k,
+      translationFile?.content[`${key}.${k}`]?.message ?? v,
+    ]),
+  ) as TranslatableContent[K];
+}
+
+function parseTranslationInt(s: string | undefined): number | undefined {
+  return s === undefined ? undefined : Number.parseInt(s, 10);
 }
 
 export default function hanabiDocusaurusPlugin(
@@ -28,23 +85,105 @@ export default function hanabiDocusaurusPlugin(
       return {
         clueGiver: "Clue Giver",
         unknown: "Unknown",
+        color: {
+          red: "red",
+          yellow: "yellow",
+          black: "black",
+          purple: "purple",
+          blue: "blue",
+          green: "green",
+          rainbow: "rainbow",
+          pink: "pink",
+          focus: "focus",
+          play: "play",
+          chop: "chop",
+          fresh: "fresh",
+          bad: "bad",
+          brown: "brown",
+        },
+        shortColor: {
+          red: "(R)",
+          blue: "(B)",
+          green: "(G)",
+          yellow: "(Y)",
+          purple: "(P)",
+        },
+        bigText: {
+          Bluff: "Bluff",
+          Finesse: "Finesse",
+          "Illegal!": "Illegal!",
+        },
+        Rainbow: {
+          text: "Rainbow",
+          extraWidth: 21,
+          decreaseOffset: 13,
+        },
       };
     },
 
     // eslint-disable-next-line complete/no-mutable-return
-    getTranslationFiles() {
+    getTranslationFiles({ content }) {
       return [
         {
           path: "svg",
-          content: {
-            clueGiver: {
-              message: "Clue Giver",
-            },
-            unknown: {
-              message: "Unknown",
-              description: "Name of unknown player",
-            },
-          },
+          content: Object.fromEntries([
+            [
+              "clueGiver",
+              {
+                message: "Clue Giver",
+              } as const,
+            ],
+            [
+              "unknown",
+              {
+                message: "Unknown",
+                description: "Name of unknown player",
+              } as const,
+            ],
+            ...Object.keys(content.color).map(
+              (k) =>
+                [
+                  `color.${k}`,
+                  { message: k, description: `Lowercase of ${k}` },
+                ] as const,
+            ),
+            ...Object.keys(content.shortColor).map(
+              (k) =>
+                [
+                  `shortColor.${k}`,
+                  {
+                    message: `(${k.charAt(0).toUpperCase()})`,
+                  } as TranslationMessage,
+                ] as const,
+            ),
+            [
+              "Rainbow.text",
+              {
+                message: "Rainbow",
+                description: "Start of Rainbow text boxes",
+              } as const,
+            ],
+            [
+              "Rainbow.extraWidth",
+              {
+                message: "21",
+                description:
+                  "Numerical extra width of text boxes starting with Rainbow.text",
+              } as const,
+            ],
+            [
+              "Rainbow.decreaseOffset",
+              {
+                message: "13",
+                description:
+                  "Numerical decrease of offset of text boxes starting with Rainbow.text",
+              } as const,
+            ],
+            ...Object.keys(content.bigText).map(
+              (k) =>
+                [`bigText.${k}`, { message: k } as TranslationMessage] as const,
+            ),
+          ]),
         },
       ];
     },
@@ -57,6 +196,26 @@ export default function hanabiDocusaurusPlugin(
           translationFile?.content["clueGiver"]?.message ?? content.clueGiver,
         unknown:
           translationFile?.content["unknown"]?.message ?? content.unknown,
+        color: translateContentSubObject("color", content, translationFile),
+        shortColor: translateContentSubObject(
+          "shortColor",
+          content,
+          translationFile,
+        ),
+        bigText: translateContentSubObject("bigText", content, translationFile),
+        Rainbow: {
+          text:
+            translationFile?.content["Rainbow.text"]?.message ??
+            content.Rainbow.text,
+          extraWidth:
+            parseTranslationInt(
+              translationFile?.content["Rainbow.extraWidth"]?.message,
+            ) ?? content.Rainbow.extraWidth,
+          decreaseOffset:
+            parseTranslationInt(
+              translationFile?.content["Rainbow.decreaseOffset"]?.message,
+            ) ?? content.Rainbow.decreaseOffset,
+        },
       };
     },
 
