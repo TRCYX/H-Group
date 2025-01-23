@@ -1,40 +1,40 @@
 ---
-title: Card Notes
+title: 笔记
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
 
 <BeginnersGuideProgress id="card-notes" />
 
-When you play Hanabi, you will need to write _card notes_. This page explains why.
+打花火的时候，你应该在牌上记录**笔记**。本页会告诉你为什么。
 
-## Explicit and Implicit Information
+## 明确的信息与隐含的信息 \{#explicit-and-implicit-information\}
 
-- In Hanabi, players will know _explicit_ information and _implicit_ information about the cards in their hand:
-  - _Explicit_ information is from the clues "on" the card.
-  - _Implicit_ information is from the context of the game _when_ the card was clued.
-- For example, in a 3-player game:
-  - It is the first turn of the game.
-  - Alice clues Bob red, touching a card on his slot 1. Alice intends for this to be a _Play Clue_, signaling to Bob that he has a red 1 and that he should play it on the stacks right now.
-  - From Bob's perspective, he knows that _explicitly_, his red card can be red 1, red 2, red 3, red 4, or red 5.
-  - But Bob also knows that _implicitly_, Alice intends for him to play this red card, so it must be exactly the red 1.
+- 在花火中，玩家会知道自己手牌中的**明确**的信息和**隐含**的信息：
+  - **明确**的信息来自标在牌上的提示。
+  - **隐含**的信息来自给出提示时的场合。
+- 例如在一场 3 人游戏中：
+  - 现在是游戏的第一回合。
+  - Alice 提示 Bob 红色，触及他第 1 张牌。Alice 的意图是一个**出牌提示**，告诉 Bob 他有一张红 1，并且应该立即打出。
+  - 从 Bob 的视角，他**明确**地知道，这张红色牌可能是红 1、红 2、红 3、红 4 或红 5。
+  - 但 Bob 也**隐含**地知道，Alice 意图让他打出这张红色牌，因此它必须是红 1。
 
-## Players Need to Track Implicit Information
+## 玩家应该记录隐含的信息 \{#players-need-to-track-implicit-information\}
 
-- On [Hanab Live](https://hanab.live/), the interface automatically will keep track of clues that touch cards. And the interface will automatically narrow down the identities of the cards as they "get" more clues.
-- However, this automated tracking of _explicit_ information is not sufficient - there is a lot more _implicit_ information than _explicit_ information.
-- In Hanabi games where players only give basic _Play Clues_ to each other (like in the previous example), remembering all of the _implicit_ information about the cards is easy. But as games get more and more complicated, remembering _implicit_ information about every card in the game is impossible.
-- Thus, in order to play Hanabi properly, players **must** go above and beyond the automated _explicit_ tracking and record all of the implicit information themselves.
+- 在 [Hanab Live](https://hanab.live/)，界面会自动记录指到牌的提示。随着一张牌得到更多提示，它的可能性的范围会自动缩小。
+- 然而，这种对**明确**信息的自动记录并不足够——**隐含**信息远多于**明确**信息。
+- 在玩家互相只给出最基本的**出牌提示**的游戏中（如之前的例子），记住所有牌的**隐含**信息还算容易。但随着游戏越来越复杂，记住每张牌的**隐含**信息几乎不可能。
+- 因此，为了玩好花火，玩家<Em>必须</Em>比自动记录的**明确**信息更进一步，主动记录所有的隐含信息。
 
-## Writing Notes
+## 记笔记 \{#writing-notes\}
 
-- Handily, Hanab Live allows players to track _implicit_ information on a card by right-clicking on it. This pops up a text box, allowing players to record any information that they want. This is called a _card note_.
-- **After every single clue, players should record a note on the affected card.**
-- In the previous example, Bob should right-click on his red card and write "red 1", so that he doesn't forget for later.
-- Furthermore, Alice and Cathy should **also** right-click on Bob's red card and write "red 1", so that they can keep track of what Bob thinks about the card. In this way, **everybody writes notes on everybody's cards.**
+- 方便的是，Hanab Live 允许玩家通过右键点击一张牌来记录关于它的**隐含**信息。这样会弹出一个文本框，玩家可以填入任何信息。这被称为**笔记**。
+- <Em>每个提示后，所有玩家都应在受影响的牌上记录笔记。</Em>
+- 在之前的例子中，Bob 应该右键点击他的红色牌并写下 `r1` 表示红 1（r 表示 red），以免之后忘记。
+- 此外，Alice 和 Cathy **也应该**右键点击 Bob 的红色牌并写下 `r1`，以记录 Bob 对这张牌的看法。这样，<Em>每个人都会在每个人的牌上记笔记</Em>。
 
-## Avoiding Mistakes
+## 避免错误 \{#avoiding-mistakes\}
 
-- Since the red clue above was so simple, you may think that writing a note of "red 1" is silly and a waste of time. However, realize that Bob **might not play the red 1 for many, many turns**, at which point the game state may have dramatically changed.
-- The most common beginner mistake that we see is failing to write a note on a card, and then forgetting some piece of information later on in the game.
-- Do not forget to do this! Write _card notes_ after **every single clue**, no matter how simple or complicated it is!
+- 上面的红色提示非常简单，你可能会认为写下 `r1` 很蠢，浪费时间。但是 Bob **接下来很多回合里可能都不会打出红 1**，而到那时游戏局面可能已经完全改变。
+- 初学者最常见的错误就是不记笔记，导致之后忘记某些信息。
+- 切记！<Em>在每个提示后记笔记</Em>，无论提示简单还是复杂！

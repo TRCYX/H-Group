@@ -1,5 +1,5 @@
 ---
-title: Play Clues
+title: 出牌提示
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -8,17 +8,17 @@ import PlayClue2 from "./play-clue-2.yml";
 
 <BeginnersGuideProgress id="play-clues" />
 
-- The first type of clue is called a _Play Clue_.
-- The goal of Hanabi is to get all of the cards played on the stacks. Thus, we give _Play Clues_ to each other to communicate that specific cards are playable.
-- Here, Alice clues red to Bob, touching a card on slot 2.
-- This is a message to "play this card". Thus, it must be the red 1 (because no red cards are played on the stacks yet).
-- After the clue, all players make a note on the card that it is a red 1.
+- 第一类提示叫做**出牌提示**。
+- 花火的目标是打出所有牌。我们通过**出牌提示**来告诉别人某些牌可以打出。
+- 这里，Alice 提示 Bob 红色，指到他第 2 张牌。
+- 这是一个让他“打出这张牌”的信号。因此这张牌必须是红 1（因为还没有打出任何红色牌）。
+- 提示之后，所有玩家都应在这张牌上记录 `r1`。
 
 <PlayClue1 />
 
-- _Play Clues_ can be given with either a color clue or a number clue.
-- Here, Alice clues number 1 to Bob, touching a card on slot 3.
-- Similar to before, this is a message to "play this card". Thus, it must be a yellow 1 or a blue 1 (since those are the only two 1's that are not played yet).
-- After the clue, all players make a note on the card that it is yellow 1 or a blue 1.
+- **出牌提示**既可以是颜色提示，也可以是数字提示。
+- 这里，Alice 提示 Bob 数字 1，指到他第 3 张牌。
+- 与之前类似，这是一个“打出这张牌”的信号。因此这张牌必须是黄 1 或蓝 1（因为这是仅剩的两种未被打出的 1）。
+- 提示之后，所有玩家都应在这张牌上记录 `y1, b1` 或 `yb1`，表示黄 1 （Yellow）或蓝 1（Blue）。
 
 <PlayClue2 />

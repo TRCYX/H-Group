@@ -1,5 +1,5 @@
 ---
-title: Play Clues (Question 2)
+title: 出牌提示（问题 2）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -12,20 +12,20 @@ import PlayCluesQuestion2 from "./play-clues-question-2.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Alice clues number 4 to Bob, which touches one card on slot 4.
-- From Bob's perspective, this must be a _Play Clue_. Bob marks down the identity of the card.
-- What _card note_ does Bob write? (Be specific.)
+- Alice 提示 Bob 数字 4，仅触及他的 4 号位。
+- 从 Bob 的角度来看，这一定是一个**出牌提示**。Bob 记录下这张牌的所有可能。
+- Bob 的**笔记**会是什么内容？（请具体说明。）
 
 </TabItem>
 <TabItem value="solution">
 
-- Bob writes "red 4, green 4, blue 4".
-  - (These are the suits that have playable 4's, so the card can be any of these possibilities.)
+- Bob **笔记**的内容是 `r4, g4, b4`，表示红 4、绿 4、或蓝 4。
+  - （这些是当前可打出的 4 的花色，因此这张牌可能是其中任意一种。）
 
 </TabItem>
 </Tabs>

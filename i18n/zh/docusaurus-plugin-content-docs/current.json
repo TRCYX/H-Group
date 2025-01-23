@@ -12,7 +12,7 @@
     "description": "The label for category The Chop in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.1 - Play Clues": {
-    "message": "1 - 打牌提示",
+    "message": "1 - 出牌提示",
     "description": "The label for category 1 - Play Clues in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.2 - Save Clues": {

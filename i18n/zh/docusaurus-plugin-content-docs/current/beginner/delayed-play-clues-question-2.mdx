@@ -1,5 +1,5 @@
 ---
-title: Delayed Play Clues (Question 2)
+title: 延迟出牌提示（问题 2）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -12,25 +12,25 @@ import DelayedPlayCluesQuestion2 from "./delayed-play-clues-question-2.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Previously, Cathy was clued about some 1's, and will go on to play both of them.
-- Alice clues number 3 to Bob, which touches one card on slot 1. (This is a _Play Clue_.)
-- Bob writes a _card note_ with the identity of the card.
+- 此前，Cathy 收到了关于一些 1 的提示，并将继续打出这两张 1。
+- Alice 提示 Bob 数字 3，仅触及他的 1 号位。（这是一个**出牌提示**。）
+- Bob 在牌上记录**笔记**，写下这张牌的所有可能。
 
-1. What _card note_ does Bob write? (Be specific.)
-1. Is this a _Delayed Play Clue_?
-1. What action should Bob perform?
+1. Bob 的**笔记**会是什么内容？（请具体说明。）
+1. 这是一个**延迟出牌提示**吗？
+1. Bob 应该采取什么行动？
 
 </TabItem>
 <TabItem value="solution">
 
-1. Bob writes a _card note_ of "blue 3, purple 3".
-1. No, this is not a _Delayed Play Clue_. Bob's 3 cannot connect to Cathy's red 1 or green 1 because no-one else has any connecting 2's.
-1. Bob should probably play the 3 immediately (unless he has a good clue to give).
+1. Bob **笔记**的内容是 `b3, p3`，表示蓝 3（Blue）或紫 3（Purple）。
+1. 不，这不是一个**延迟出牌提示**。Bob 的 3 无法与 Cathy 的红 1 或绿 1 连接，因为其他玩家没有相连的 2。
+1. Bob 应该立即打出这张 3（除非他可以给出一个好提示）。
 
 </TabItem>
 </Tabs>

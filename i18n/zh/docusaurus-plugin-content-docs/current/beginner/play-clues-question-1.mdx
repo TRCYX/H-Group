@@ -1,5 +1,5 @@
 ---
-title: Play Clues (Question 1)
+title: 出牌提示（问题 1）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -12,20 +12,20 @@ import PlayCluesQuestion1 from "./play-clues-question-1.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Alice clues blue to Bob, which touches one card on slot 3.
-- From Bob's perspective, this must be a _Play Clue_. Bob marks down the identity of the card.
-- What _card note_ (i.e. card identity) does Bob write?
+- Alice 提示 Bob 蓝色，仅触及他的 3 号位。
+- 从 Bob 的角度来看，这一定是一个**出牌提示**。Bob 记录下这张牌的所有可能。
+- Bob 的**笔记**（即牌的所有可能）会是什么内容？
 
 </TabItem>
 <TabItem value="solution">
 
-- Bob writes "blue 2".
-  - (Since the blue 1 is already played, the next blue card to play is the blue 2.)
+- Bob **笔记**的内容是 `b2`。
+  - （由于蓝 1 已经被打出，下一张需要打出的蓝色牌是蓝 2。）
 
 </TabItem>
 </Tabs>
