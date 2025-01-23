@@ -13,6 +13,7 @@ const config = {
     "sidebars.ts",
     "src/beginnersGuide.tsx",
     "src/pages/index.tsx",
+    "src/theme/MDXComponents.ts",
     "plugins/hanabiDocusaurusPlugin/index.ts",
     "plugins/hanabiDocusaurusPlugin/plugin/src/convertYAMLToSVG.ts",
     "static/js/hotkey.js",
@@ -44,6 +45,7 @@ const config = {
     "@docusaurus/plugin-content-docs",
     "@docusaurus/useBaseUrl",
     "@theme/Layout",
+    "@theme-original/MDXComponents",
     // @template-customization-end
   ],
 };
