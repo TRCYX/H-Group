@@ -1,5 +1,5 @@
 ---
-title: Clue Interpretation (Question 3)
+title: 提示的解读（问题 3）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -12,27 +12,27 @@ import ClueInterpretationQuestion3 from "./clue-interpretation-question-3.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Bob has a clued 2 and a clued 5 in his hand.
-- Alice clues red to Bob, touching slot 2, slot 3, slot 4, and slot 5.
+- Bob 的手中有一张被提示过的 2 和一张被提示过的 5。
+- Alice 提示 Bob 红色，触及 2 号位、3 号位、4 号位和 5 号位的牌。
 
-1. What slot is focused?
-1. Is this a _Play Clue_ or a _Save Clue_?
-1. What _card note_ does Bob write on the focused card?
+1. 哪一张牌是焦点？
+1. 这是**出牌提示**还是**留牌提示**？
+1. Bob 会在焦点牌上写下什么**笔记**？
 
 </TabItem>
 <TabItem value="solution">
 
-1. Slot 3 is focused (i.e. the "new" card that was on chop).
-1. Red 1 is played on the stacks and Bob already has a red 2 and a red 5. Thus, the focused red card can be either a red 3 or a red 4.
-   - If it is a red 3, then this would be a _Chop-Focus Delayed Play Clue_ through his own red 2. That is legal.
-   - If it is a red 4, then it wouldn't make any sense, because red 4 is neither playable nor critical. (All clues must either be _Play Clues_ or _Save Clues_.)
-   - Thus, it must be a _Chop-Focus Delayed Play Clue_ on the red 3.
-1. Bob writes a _card note_ of "red 3" on his slot 3 card.
+1. 3 号位是焦点（即位于弃牌位的“新牌”）。
+1. 红 1 已经在牌堆上打出，且 Bob 已经有一张红 2 和一张红 5。因此，这张聚焦的红色牌可能是红 3 或红 4。
+   - 如果是红 3，那么这是一个通过他自己的红 2 的**弃牌位焦点的延迟出牌提示**。这是合理的。
+   - 红 4 不合理，因为红 4 既不可打出，也不是关键牌。（所有提示必须是**出牌提示**或**留牌提示**。）
+   - 因此，这一定是一个对于红 3 的**弃牌位焦点的延迟出牌提示**。
+1. Bob 在他 3 号位上写下的**笔记**是 `r3`，表示红 3。
 
 </TabItem>
 </Tabs>

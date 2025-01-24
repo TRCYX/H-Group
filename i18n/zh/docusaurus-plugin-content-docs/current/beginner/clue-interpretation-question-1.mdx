@@ -1,5 +1,5 @@
 ---
-title: Clue Interpretation (Question 1)
+title: 提示的解读（问题 1）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -12,28 +12,28 @@ import ClueInterpretationQuestion1 from "./clue-interpretation-question-1.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Cathy has a completely unclued hand.
-- Alice clues green to Cathy, touching slot 3 and slot 4.
+- Cathy 的手牌完全没有提示过。
+- Alice 提示 Cathy 绿色，触及 3 号位和 4 号位。
 
-1. What slot is focused?
-1. Is this a _Play Clue_ or a _Save Clue_?
-1. What _card note_ does Cathy write on the focused card?
+1. 哪一张牌是焦点？
+1. 这是**出牌提示**还是**留牌提示**？
+1. Cathy 会在焦点牌上写下什么**笔记**？
 
 </TabItem>
 <TabItem value="solution">
 
-1. Slot 4 is focused (i.e. the chop card).
-1. Since green 2 is played on the stacks, the card on slot 4 must be either a green 3, a green 4, or a green 5.
-   - If it is a green 3, then this would be a _Chop-Focus Play Clue_. That is legal.
-   - If it is a green 4, then it wouldn't make any sense, because green 4 is neither playable nor critical. (All clues must either be _Play Clues_ or _Save Clues_.)
-   - If it is a green 5, then it wouldn't make any sense, because green 5 is not playable. Green 5 is critical, but it must be saved with a number 5 clue as a _5 Save_.
-   - Thus, it must be a _Chop-Focus Play Clue_ on the green 3.
-1. Cathy writes a _card note_ of "green 3" on her slot 4 card.
+1. 4 号位是焦点（是弃牌位）。
+1. 由于绿 2 已经打出，4 号位的牌必须是绿 3、绿 4 或绿 5。
+   - 如果是绿 3，那么这是一个**弃牌位焦点的出牌提示**。这是合理的。
+   - 绿 4 不合理，因为绿 4 既不可打出，也不是关键牌。（所有提示必须是**出牌提示**或**留牌提示**。）
+   - 绿 5 也不合理，因为绿 5 不可打出。绿 5 是关键牌，但它必须通过数字 5 提示作为**留 5 提示**来保留。
+   - 因此，这一定是一个对于绿 3 的**弃牌位焦点的出牌提示**。
+1. Cathy 在她 4 号位上写下的**笔记**是 `g3`，表示绿 3。
 
 </TabItem>
 </Tabs>

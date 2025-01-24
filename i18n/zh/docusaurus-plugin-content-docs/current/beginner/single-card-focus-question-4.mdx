@@ -1,5 +1,5 @@
 ---
-title: Single Card Focus (Question 4)
+title: 单一焦点（问题 4）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -12,20 +12,20 @@ import SingleCardFocusQuestion4 from "./single-card-focus-question-4.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Bob has a 5 and a 2 clued in his hand.
-- Alice clues red to Bob, touching three cards.
-- Which slot is focused?
+- Bob 的手中有一张提示过的 5 和一张提示过的 2。
+- Alice 提示 Bob 红色，触及三张牌。
+- 哪一张牌是焦点？
 
 </TabItem>
 <TabItem value="solution">
 
-- Slot 3, because there are two new cards and slot 3 is the chop.
-  - (Slot 5 was previously touched, so the red clue "fills it in".)
+- 3 号位，因为有两张新牌，且 3 号位是弃牌位。
+  - （5 号位之前提示过，因此红色提示仅仅填补了信息。）
 
 </TabItem>
 </Tabs>
