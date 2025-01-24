@@ -20,7 +20,7 @@ players:
         middleNote: (1)
       - type: r
       - type: x
-        above: Blue 1
+        above: 蓝 1
       - type: x
   - cards:
       - type: b

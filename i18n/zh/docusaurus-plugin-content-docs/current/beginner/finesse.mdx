@@ -1,5 +1,5 @@
 ---
-title: The Finesse
+title: 飞牌
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -8,45 +8,45 @@ import Finesse2 from "./finesse-2.yml";
 
 <BeginnersGuideProgress id="finesse" />
 
-- Normally, players play cards that have been clued by someone else on the team.
-- However, it is also possible to tell a player to blind-play a card without any clues on it at all.
-- In the example below:
-  - Bob has no clued cards in his hand.
-  - Alice clues red to Cathy, touching a red 4. This must be a _Play Clue_ on the red 4.
-  - Bob sees that the red 4 is currently unplayable. Assuming Alice is not making a mistake, this clue implies that someone has the red 3.
-  - Bob does not see a red 3 clued in anyone else's hand. So, Alice must be promising him that he has a red 3.
-  - Normally, this would indicate a _Prompt_. But Bob does not have any red cards and Bob does not have any 3's. So where is the red 3?
-  - Bob knows that this must be a _Finesse_ - he is promised that his leftmost unclued card is the red 3.
-  - Bob blind-plays his slot 1 card, and it is the red 3.
-  - Cathy sees the blind-play happen immediately after this red clue, so she knows that she must have the connecting red card, the red 4.
-  - Cathy plays the red 4.
+- 通常，玩家打出的牌都被队友提示过。
+- 然而，也可能让玩家盲打一张完全没有提示过的牌。
+- 在下面的例子里：
+  - Bob 手中没有提示过的牌。
+  - Alice 提示 Cathy 红色，触及一张红 4。这一定是一个对于红 4 的**出牌提示**。
+  - Bob 看到红 4 目前无法打出。假设 Alice 没有犯错，这个提示意味着有人手里有红 3。
+  - Bob 没有看到其他玩家手中有提示过的红 3。因此，Alice 一定是在向他承诺，他手中有红 3。
+  - 通常，这会表示一个**引牌**。但 Bob 没有任何红色牌，也没有任何 3。那么红 3 在哪里？
+  - Bob 知道这一定是一个**飞牌（Finesse）**——Alice 向他承诺最左侧未被提示的牌是红 3。
+  - Bob 盲打他的 1 号位，结果是红 3。
+  - Cathy 看到盲打在这个红色提示后立即发生，因此她知道她一定有连接着的红色牌，即红 4。
+  - Cathy 打出红 4。
 
 <Finesse1 />
 
-### Prompts > Finesses
+### 引牌 > 飞牌 \{#prompts--finesses\}
 
-- **_Prompts_ always take precedence over _Finesses_**.
-- This means that if Alice has to decide between:
-  1. playing a card in her hand with a red clue on it, and
-  1. blind-playing a potential red card from her _Finesse Position_
-- Then Alice should always do #1.
+- <Em>**引牌**总是优先于**飞牌**</Em>。
+- 这意味着如果 Alice 必须在以下两者之间做出抉择：
+  1. 打出手中有红色提示的牌，和
+  1. 盲打她**飞牌位**上潜在的红牌
+- 那么 Alice 应该总是选择第一种。
 
-### Finesse Urgency
+### 飞牌的紧迫性 \{#finesse-urgency\}
 
-- When a _Finesse_ occurs, it causes temporary information desynchronization.
-- For example, in the previous scenario, if Bob discarded instead of blind-played, Cathy would go on to think that she had the red 3. But she really doesn't have the red 3, which means that information is not synchronized throughout the team.
-- For this reason, blind-playing a card into a _Finesse_ is very important - by doing so, it resynchronizes all of the information. So, **if a player is _Finessed_, they should usually blind-play the card immediately**, even if they have other important cards to play or some good clue to give.
+- 发生**飞牌**时，它会导致信息临时失去同步。
+- 例如，在前面的场景中，如果 Bob 弃牌而不是盲打，Cathy 会认为她手中有红 3。但她实际上并没有红 3，这意味着信息失去同步。
+- 因此，盲打**被飞**的牌非常重要——这样会重新同步所有信息。因此，<Em>如果玩家被飞牌，通常应该立即盲打这张牌</Em>，即使有其他重要的牌要出或有可以给出很好的提示。
 
-### Finesse Position
+### 飞牌位 \{#finesse-position\}
 
-- We define the _Finesse Position_ as the slot that a player's leftmost unclued card is in.
-- A player's _Finesse Position_ can move around, and if it does, it is still possible to _Finesse_ them.
-- In the example below:
-  - Alice clues Cathy red, which touches two red cards on slot 1 and slot 2.
-  - Cathy assumes that the slot 1 card is a red 1.
-  - Next, Bob clues Donald blue, which touches a blue 2.
-  - Now, it is Cathy's turn. Cathy knows that she must have the blue 1 and that Bob is trying to perform a _Finesse_.
-  - Blind-playing the blue 1 is more important than playing the red 1.
-  - Normally, Cathy's _Finesse Position_ would be her leftmost card. However, since Cathy's slot 1 and slot 2 card are already clued, her _Finesse Position_ card has shifted down to her slot 3. Thus, Cathy must blind-play the blue 1 from slot 3.
+- 我们将**飞牌位**定义为玩家最左侧未被提示的牌。
+- 玩家的**飞牌位**可能会移动，如果移动了，仍然可以对他们进行**飞牌**。
+- 在下面的例子里：
+  - Alice 提示 Cathy 红色，触及 1 号位和 2 号位的两张红色牌。
+  - Cathy 假设 1 号位的牌是红 1。
+  - 接下来，Bob 提示 Donald 蓝色，触及一张蓝 2。
+  - 现在轮到 Cathy。Cathy 知道她一定有蓝 1，并且 Bob 正在尝试**飞牌**。
+  - 盲打蓝 1 比打出红 1 更重要。
+  - 通常，Cathy 的**飞牌位**会是她最左侧的牌。然而，由于 Cathy 的 1 号位和 2 号位的牌已经被提示过，她的**飞牌位**已经移动到 3 号位。Cathy 必须盲打 3 号位的蓝 1。
 
 <Finesse2 />

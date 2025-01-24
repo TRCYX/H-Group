@@ -15,11 +15,11 @@ players:
   - cards:
       - type: x
       - type: 3
-        middleNote: (B)
+        middleNote: (蓝)
       - type: 3
-        middleNote: (G)
+        middleNote: (绿)
       - type: 3
-        middleNote: (R)
+        middleNote: (红)
       - type: x
   - cards:
       - type: x
