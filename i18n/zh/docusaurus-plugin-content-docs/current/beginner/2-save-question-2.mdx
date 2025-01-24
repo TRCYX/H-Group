@@ -1,6 +1,6 @@
 ---
 id: 2-save-question-2
-title: The 2 Save (Question 2)
+title: 留 2 提示（问题 2）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -13,27 +13,28 @@ import TwoSaveQuestion2 from "./2-save-question-2.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Previously in the game, Bob was given a _Play Clue_ on a 1. He had planned on playing it on his next turn.
-- Now, Alice clues number 2 to Bob, touching his slot 5.
-- From Bob's perspective, is this a _Play Clue_ or a _Save Clue_?
-- What _card note_ does Bob write? (Be specific.)
+- 之前 Bob 收到过一个对于 1 的**出牌提示**。他原本计划下一回合打出。
+- 现在，Alice 提示 Bob 数字 2，仅触及他的 5 号位。
+- 从 Bob 的角度来看，这是**出牌提示**还是**留牌提示**？
+- Bob 的**笔记**会是什么内容？（请具体说明。）
 
 </TabItem>
 <TabItem value="solution">
 
-- Bob already has a _card note_ of "red 1, a blue 1, purple 1" on his 1 (because these are the 1's left to play on the stacks).
-- If this is a _Play Clue_, then the identity of his 2 would be:
-  - a yellow 2 (directly playable)
-  - or a _Delayed Play Clue_ on the 2 that matches his unknown 1 (e.g. red 2, blue 2, or purple 2)
-- However, since Alice's clue touched Bob's chop, it could also be a _Save Clue_. If it is a _Save Clue_, then it could be a _2 Save_ on an unplayable 2.
-- Bob does not know whether or not this is a _Play Clue_ or a _Save Clue_, but he has to treat it as a _Save Clue_ for the time being until he gets more information.
-- Thus, Bob writes a _card note_ of "red 2, yellow 2, blue 2, purple 2".
-  - (It cannot be a green 2 because that card is already played and is useless to the team; Alice would not waste a clue on a useless card like that.)
+- Bob 已经在他的 1 上记录了表示红 1、蓝 1 或紫 1 的**笔记**`r1, b1, p1`（因为这些是尚未打出的 1）。
+- 如果这是**出牌提示**，那么他的 2 的身份可能是：
+  - 黄 2（可直接打出）
+  - 或者是一个通过他的未知 1 给出的**延迟出牌提示**（例如红 2、蓝 2 或紫 2）。
+- 但是 Alice 的提示触及了 Bob 的弃牌位，它也可能是**留牌提示**。如果它是**留牌提示**，那么它可能是针对一张无法立即打出的 2 的**留 2 提示**。
+- Bob 不知道这是一个**出牌提示**还是**留牌提示**，但他必须暂时将其视为**留牌提示**，直到获得更多信息。
+  - 译注：可以理解成暂时必须将这张牌保留，之后再确定是否可以打出。但仅在可能是**留 2 提示**的时候，一般直接当作**留牌提示**不会造成影响。
+- 因此，Bob 在**笔记**中写下 `r2, y2, b2, p2`，表示红 2、黄 2、蓝 2 或紫 2。
+  - （不可能是绿 2，因为绿 2 已经打出，对团队无用；Alice 不会浪费提示在这种无用的牌上。）
 
 </TabItem>
 </Tabs>

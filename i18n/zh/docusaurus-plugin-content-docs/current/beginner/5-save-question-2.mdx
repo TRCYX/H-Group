@@ -1,6 +1,6 @@
 ---
 id: 5-save-question-2
-title: The 5 Save (Question 2)
+title: 留 5 提示（问题 2）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -13,28 +13,28 @@ import FiveSaveQuestion2 from "./5-save-question-2.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- List all of the legal actions that Alice can perform.
-- What action should Alice perform?
+- 列出 Alice 可以采取的所有行动。
+- Alice 应该采取什么行动？
 
 </TabItem>
 <TabItem value="solution">
 
-- Bob has a yellow 2 on chop, which would normally need to be saved. However, Cathy already has the other copy clued in her hand, so Bob's yellow 2 is trash and should be ignored.
-- Bob also has two 5's, but neither of them are on chop, so they cannot be saved yet.
-- Cathy has two 5's. One of them is already saved (i.e. has a clue on it), but one of them is not already saved and is on chop.
-  - (Cathy's chop is slot 2 because the cards on slot 3 and slot 4 have a clue on them.)
-- Thus, the actions that Alice can perform are:
-  - to save Cathy's 5
-  - to discard
-- But which is better? In this situation, either Alice or Bob can save the 5:
-  - If Alice saves Cathy's 5, then Bob would discard a yellow 2 (which is trash).
-  - If Alice discards, then she would discard an unknown card, and Bob would save Cathy's 5.
-- Since discarding trash is better than discarding an unknown card, Alice should give the clue to let Bob discard.
+- Bob 的弃牌位上有一张黄 2，通常需要保留。然而，Cathy 手中已经有被提示过的另一张黄 2，因此 Bob 的黄 2 是废牌，可以忽略。
+- Bob 还有两张 5，但它们都不在弃牌位，因此暂时无法对其给出**留牌提示**。
+- Cathy 有两张 5。其中一张已经被保留（已被提示过），但另一张未被保留且处于弃牌位。
+  - （Cathy 的弃牌位是 2 号位，因为 3 号位和 4 号位已被提示过。）
+- 因此，Alice 可以采取的行动包括：
+  - 保留 Cathy 的 5
+  - 弃牌
+- 但哪个更好？现在 Alice 或 Bob 都可以保留 Cathy 的 5：
+  - 如果 Alice 保留 Cathy 的 5，那么 Bob 会弃掉一张黄 2（是废牌）。
+  - 如果 Alice 弃牌，她会弃掉一张未知牌，而 Bob 会保留 Cathy 的 5。
+- 由于弃掉废牌比弃掉未知牌更好，Alice 应该作出提示，让 Bob 弃牌。
 
 </TabItem>
 </Tabs>

@@ -1,5 +1,5 @@
 ---
-title: The Critical Save
+title: 留关键牌提示
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -7,17 +7,17 @@ import CriticalSave from "./critical-save.yml";
 
 <BeginnersGuideProgress id="critical-save" />
 
-- Critical cards are defined as the final card of a suit and rank combination that is not discarded yet. For example:
-  - If Alice has a red 2 in her hand, and the other copy of red 2 is in the deck, then Alice's red 2 is not critical.
-  - If Alice has a red 2 in her hand, and the other copy of red 2 is already discarded, then Alice's red 2 is critical.
-  - If Alice has a red 5 in her hand, then it is always critical. (There is only one copy of each 5 in a Hanabi deck.)
-- Obviously, critical cards need to be given _Save Clues_ so that they are not discarded. (If a critical card was discarded, then the maximum score of the game would decrease.)
-- As long as the critical card is not a 5, we agree that players can save critical cards with **either a color clue or a number clue**.
-- In the example below:
-  - Alice clues Bob blue, which touches a card on slot 4.
-  - Before this clue, the only clued card in Bob's hand was the 5 on slot 5.
-  - Bob's first instinct is that this could be a _Play Clue_ on the blue 2. However, since the clue was focused on his chop, this could also be a _Save Clue_.
-  - Bob looks through the discard pile and finds that there is a blue 4 there. Thus, this could be a _Save Clue_ on the blue 4. So, Bob knows that for now, he has to hold on to the card.
-  - Bob marks the card as either a blue 2 or a blue 4, so that he can keep track of it for later. Then, he discards.
+- **关键牌**指某种花色某数字的最后一张尚未被弃掉的牌。例如：
+  - 如果 Alice 手中有一张红 2，而另一张红 2 还在牌堆中，那么 Alice 的红 2 不是关键牌。
+  - 如果 Alice 手中有一张红 2，而另一张红 2 已经被弃掉，那么 Alice 的红 2 是关键牌。
+  - 如果 Alice 手中有一张红 5，那么它总是关键牌。（每种 5 只有一张。）
+- 显然，关键牌需要被给予**留牌提示**，以免被弃掉。（如果关键牌被弃掉，可能获得的最高分会降低。）
+- 在关键牌不是 5 时，我们约定<Em>既可以通过颜色提示，也可以通过数字提示</Em>来保留关键牌。
+- 在下面的例子里：
+  - Alice 提示 Bob 蓝色，触及他的 4 号位。
+  - 在这次提示之前，Bob 手中唯一被提示过的牌是 5 号位上的 5。
+  - Bob 的第一反应是这可能是一个对于蓝 2 的**出牌提示**。然而，由于提示的焦点是弃牌位，这也可能是一个**留牌提示**。
+  - Bob 检查了弃牌堆，发现有一张蓝 4。因此，这可能是一个对于蓝 4 的**留关键牌提示**。所以 Bob 知道他现在必须保留这张牌。
+  - Bob 在牌上标记 `b2, b4` 或 `b24`，表示蓝 2 或蓝 4，以便之后记住。然后，他选择弃牌。
 
 <CriticalSave />

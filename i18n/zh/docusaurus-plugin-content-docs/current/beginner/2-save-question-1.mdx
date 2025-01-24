@@ -1,6 +1,6 @@
 ---
 id: 2-save-question-1
-title: The 2 Save (Question 1)
+title: 留 2 提示（问题 1）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -13,22 +13,22 @@ import TwoSaveQuestion1 from "./2-save-question-1.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Alice clues number 2 to Bob, touching his slot 4.
-- From Bob's perspective, is this a _Play Clue_ or a _Save Clue_?
-- What _card note_ does Bob write?
+- Alice 提示 Bob 数字 2，仅触及他的 4 号位。
+- 从 Bob 的角度来看，这是**出牌提示**还是**留牌提示**？
+- Bob 的**笔记**会是什么内容？
 
 </TabItem>
 <TabItem value="solution">
 
-- This cannot be a _Save Clue_ because the clue did not touch the card on Bob's chop. Thus, it must be a _Play Clue_.
-- Bob writes a _card note_ that includes the following identities:
-  - blue 2 (directly playable)
-  - yellow 2 (as a _Delayed Play Clue_ through Cathy's yellow 1)
+- 这不可能是**留牌提示**，因为提示没有触及 Bob 的弃牌位。因此一定是**出牌提示**。
+- Bob 的**笔记**会包含以下可能性：
+  - 蓝 2（可直接打出）
+  - 黄 2（作为通过 Cathy 的黄 1 给出的**延迟出牌提示**）
 
 </TabItem>
 </Tabs>

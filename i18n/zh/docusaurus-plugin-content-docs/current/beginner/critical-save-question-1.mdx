@@ -1,5 +1,5 @@
 ---
-title: The Critical Save (Question 1)
+title: 留关键牌提示（问题 1）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -12,24 +12,24 @@ import CriticalSaveQuestion1 from "./critical-save-question-1.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Alice clues number 3 to Bob, touching a card on slot 3.
-- Is this a _Play Clue_ or a _Save Clue_?
-- What _card note_ does Bob write?
+- Alice 提示 Bob 数字 3，仅触及他的 3 号位。
+- 这是**出牌提示**还是**留牌提示**？
+- Bob 的**笔记**会是什么内容？
 
 </TabItem>
 <TabItem value="solution">
 
-- Bob knows that this could be a _Play Clue_ on:
-  - a yellow 3 (directly playable)
-  - a red 3 (as a _Delayed Play Clue_ through Cathy's red 2)
-- However, since it touched his chop, it could also be a _Save Clue_. Since green 3 is in the trash, a number 3 clue matches that, so it could be the matching green 3.
-- Bob does not know whether or not this is a _Play Clue_ or a _Save Clue_, but he has to treat it as a _Save Clue_ for the time being until he gets more information.
-- Bob writes a _card note_ of "yellow 3, red 3, green 3".
+- Bob 知道这可能是一个**出牌提示**，指向：
+  - 黄 3（可直接打出）
+  - 红 3（作为通过 Cathy 红 2 给出的**延迟出牌提示**）
+- 然而，提示触及了他的弃牌位，这也可能是一个**留牌提示**。由于绿 3 在弃牌堆中，提示的数字 3 能够与之匹配，因此也可能是绿 3。
+- Bob 不知道这是一个**出牌提示**还是**留牌提示**，但他必须暂时将其视为**留牌提示**，直到获得更多信息。
+- Bob 在**笔记**中写下 `y3, r3, g3`，表示黄 3、红 3 或绿 3。
 
 </TabItem>
 </Tabs>
