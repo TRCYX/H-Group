@@ -1,5 +1,5 @@
 ---
-title: Minimum Clue Value Principle (Question 1)
+title: 提示价值下限原则（问题 1）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -12,28 +12,28 @@ import MinimumClueValuePrincipleQuestion1 from "./minimum-clue-value-principle-q
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Alice is in a special situation where she cannot discard.
-- Bob's blue 4 has been previous touched with a blue clue.
-- Cathy's red 2 and yellow 2 have previously been touched with a number 2 clue.
-- Enumerate all of the legal _Tempo Clues_ that Alice can give.
+- Alice 处于无法弃牌的特殊情况。
+- Bob 的蓝 4 之前被蓝色提示触及过。
+- Cathy 的红 2 和黄 2 之前被数字 2 提示触及过。
+- 列出 Alice 可以给出的所有**节奏提示**。
 
 </TabItem>
 <TabItem value="solution">
 
-- Alice could give a _Tempo Clue_ to the blue 4 in Bob's hand:
-  - A number 4 clue would be legal, since it would only touch slot 4. This would "fill-in" the 4 to be a blue 4.
-  - A blue clue would be legal, since it would only touch slot 4. This would not "fill-in" the card, but the clue would still mean to "play the card", so it would still work properly.
-- Alice could give a _Tempo Clue_ to the red 2 in Cathy's hand:
-  - A number 2 clue would not be legal, since it would focus slot 1 instead of slot 4.
-  - A red clue would be legal, since it would only touch slot 4.
-- Alice cannot give a _Tempo Clue_ to the yellow 2 in Cathy's hand:
-  - A number 2 clue would not be legal, since it would focus slot 1 instead of slot 5.
-  - A yellow clue would not be legal, since it would focus slot 3 instead of slot 5.
+- Alice 可以给 Bob 手中的蓝 4 一个**节奏提示**：
+  - 数字 4 提示合理，因为它只会提示到 4 号位。这会填补这张牌为蓝 4。
+  - 蓝色提示合理，因为它只会提示到 4 号位。这不会填补牌的信息，但仍然意味着“打出这张牌”，因此它仍然有效。
+- Alice 可以给 Cathy 手中的红 2 一个**节奏提示**：
+  - 数字 2 提示不合理，因为焦点会是 1 号位而不是 4 号位。
+  - 红色提示合理，因为它只会提示到 4 号位。
+- Alice 无法给 Cathy 手中的黄 2 一个**节奏提示**：
+  - 数字 2 提示不合理，因为焦点会是 1 号位而不是 5 号位。
+  - 黄色提示不合理，因为焦点会是 3 号位而不是 5 号位。
 
 </TabItem>
 </Tabs>

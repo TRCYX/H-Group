@@ -17,7 +17,7 @@ players:
       - type: y
         clue: y
         middleNote: (2)
-        below: Focus
+        below: 焦点
       - type: y
         clue: y
       - type: x

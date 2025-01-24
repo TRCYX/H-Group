@@ -1,5 +1,5 @@
 ---
-title: Minimum Clue Value Principle (MCVP)
+title: 提示价值下限原则
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -7,29 +7,29 @@ import TempoClue from "./tempo-clue.yml";
 
 <BeginnersGuideProgress id="minimum-clue-value-principle" />
 
-### No Nonsense Clues
+### 禁止无意义提示 \{#no-nonsense-clues\}
 
-- Usually, players only discard when they have nothing else to do. But don't take this the wrong way.
-- Players are **not allowed** to just clue any card:
-  - Players are **only allowed** to give _Play Clues_ to actual playable cards.
-  - Players are **only allowed** to give _Save Clues_ to the specific cards outlined in the _Save Principle_ section.
-- If players cannot give a legal _Play Clue_ or _Save Clue_, then they **must discard**.
+- 通常，玩家只在无事可做时才会弃牌。但不要误解“无事可做”。
+- 玩家<Em>不允许</Em>随意提示任何牌：
+  - 玩家<Em>只允许</Em>对实际可打出的牌给出**出牌提示**。
+  - 玩家<Em>只允许</Em>对**留牌原则**部分中列出的牌给出**留牌提示**。
+- 如果玩家无法给出合理的**出牌提示**或**留牌提示**，则他们<Em>必须弃牌</Em>。
 
-### Tempo Clues
+### 节奏提示 \{#tempo-clues\}
 
-- Furthermore, players might be tempted to **clue a card again that already has a clue on it** in order to make it play right now. We call this kind of clue a _Tempo Clue_.
-- A _Tempo Clue_ is defined as a _Play Clue_ that does not "get" any brand new cards.
-- _Tempo Clues_ are quite inefficient - the team is using two clues to get one card. Since _Tempo Clues_ are so bad, we say that players are **only allowed to perform _Tempo Clues_ in special situations**, like when a player is forced to give a clue.
-- For example, in a 3-player game:
-  - Alice is in a special situation where she cannot discard.
-  - Bob has a 2 in his hand that was saved with a _2 Save_ clue earlier on in the game. He does not know what color it is, but assumes that it is either a red 2 (which is playable) or a blue 2 (which is not playable).
-  - Alice clues red to Bob, "filling in" the red 2. This is a _Tempo Clue_ because there are no new cards introduced. (Since this is so inefficient, Alice would never do this unless she was in a special stalling situation.)
-  - Bob can now play the red 2.
+- 此外，玩家可能会试图**再次提示一张已经提示过的牌**，以使其立即打出。我们将这种提示称为**节奏提示（Tempo Clue）**。
+- **节奏提示**被定义为不触及新牌的**出牌提示**。
+- **节奏提示**非常低效——团队使用两个提示来得到一张牌。由于**节奏提示**效果非常差，我们约定玩家<Em>只能在特殊情况下执行节奏提示</Em>，比如当玩家只能给出提示时。
+- 例如，在一场 3 人游戏中：
+  - Alice 处于无法弃牌的特殊情况。
+  - Bob 手中有一张 2，之前被**留 2 提示**过。他不知道这张 2 的颜色，但假设它是红 2（可打出）或蓝 2（不可打出）。
+  - Alice 提示 Bob 红色，填补了红 2 的信息。这是一个**节奏提示**，因为没有引入任何新牌。（由于效率太低，除非 Alice 处于特殊的停顿状态下，否则她绝不会这样做。）
+  - Bob 现在可以打出红 2。
 
 <TempoClue />
 
-### Minimum Clue Value Principle (MCVP)
+### 提示价值下限原则 \{#minimum-clue-value-principle-mcvp\}
 
-- So, if a player only has the option to give a _Tempo Clue_ or to discard, then they **must discard**.
-- We formally express this concept as _Minimum Clue Value Principle_: **all clues must get at least one previously unclued card played or saved**.
-- In other words, as a group, we hold ourselves to a high standard, and we don't give inefficient clues.
+- 因此，如果玩家只能在给出**节奏提示**和弃牌中二选一，那么他们<Em>必须弃牌</Em>。
+- 我们将这一概念正式表达为**提示价值下限原则（Minimum Clue Value Principle）**：<Em>所有提示必须让至少一张之前没有提示过的牌打出或保留</Em>。
+- 换句话说，作为一个团队，我们自我要求很高，不会给出低效的提示。

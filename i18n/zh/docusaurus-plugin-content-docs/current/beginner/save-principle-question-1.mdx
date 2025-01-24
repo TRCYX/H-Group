@@ -1,5 +1,5 @@
 ---
-title: Save Principle (Question 1)
+title: 留牌原则（问题 1）
 ---
 
 import BeginnersGuideProgress from "@site/src/beginnersGuide.tsx";
@@ -12,19 +12,19 @@ import SavePrincipleQuestion1 from "./save-principle-question-1.yml";
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '题目', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- Alice clues blue to Bob, touching a card on slot 1. This must be a _Play Clue_ on the blue 1.
-- Should Bob play the blue 1?
+- Alice 提示 Bob 蓝色，仅触及 1 号位。这一定是对于蓝 1 的**出牌提示**。
+- Bob 应该打出蓝 1 吗？
 
 </TabItem>
 <TabItem value="solution">
 
-- No. If Bob plays the blue 1 and Cathy discards the green 4, then the maximum score would be decreased.
-- As long as there is a chance that Cathy will discard, Bob **must** save the green 4 right now before playing any playable cards.
+- 不应该。如果 Bob 打出蓝 1 而 Cathy 弃掉绿 4，那么可能获得的最高分会降低。
+- 只要 Cathy 有可能弃牌，Bob <Em>必须</Em>在打出任何牌之前立即保留绿 4。
 
 </TabItem>
 </Tabs>

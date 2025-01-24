@@ -20,7 +20,7 @@ players:
       - type: g3
         border: false
       - type: b4
-        below: (b)
+        below: (蓝)
       - type: r1
         border: false
   - cards:

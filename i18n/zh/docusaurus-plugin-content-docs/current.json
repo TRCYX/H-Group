@@ -24,15 +24,15 @@
     "description": "The label for category Clue Interpretation in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.1 - Good Touch Principle": {
-    "message": "1 - Good Touch Principle",
+    "message": "1 - 良触原则",
     "description": "The label for category 1 - Good Touch Principle in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.2 - Save Principle": {
-    "message": "2 - Save Principle",
+    "message": "2 - 留牌原则",
     "description": "The label for category 2 - Save Principle in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.3 - Minimum Clue Value Principle": {
-    "message": "3 - Minimum Clue Value Principle",
+    "message": "3 - 提示价值下限原则",
     "description": "The label for category 3 - Minimum Clue Value Principle in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.The Early Game": {
