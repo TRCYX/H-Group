@@ -1,5 +1,5 @@
 ---
-title: Technical Documentation for the Example Images
+title: 示例图的技术文档
 ---
 
 import { Highlight } from "prism-react-renderer";
@@ -59,133 +59,133 @@ export const Example = ({ code, Image }) => (
   </div>
 );
 
-## Intro
+## 简介 \{#intro\}
 
-Throughout this website, we have example images that show game states. This page describes how to edit them or how to create new ones.
+本站中有许多展示游戏状态的示例图。本页描述了如何编辑或创建图片。
 
-Each example image is created from a [YAML](https://yaml.org/) file, which is a simple textual description that you can easily edit.
+每个示例图都是用 [YAML](https://yaml.org/) 文件生成的。YAML 是一种易于编辑的简单文本格式。
 
-## Adding a New Image
+## 添加新图 \{#adding-a-new-image\}
 
-1. Create a new YAML file. (You can base it off of an existing YAML file if you want.)
+1. 创建一个新的 YAML 文件。（可以基于现有的 YAML 文件进行修改。）
 
-2. On the respective Markdown page, import it as a React component at the top of the file, like so:
+2. 在对应的 Markdown 页面中，将其作为 React 组件导入文件顶部，如下所示：
 
 ```jsx
 import NewChopMove from "./new-chop-move.yml";
 ```
 
-3. Insert the React component at the appropriate place in the Markdown file:
+3. 在 Markdown 文件的适当位置插入 React 组件：
 
 ```jsx
 <NewChopMove />
 ```
 
-See [the Markdown file for level 2](https://raw.githubusercontent.com/hanabi/hanabi.github.io/refs/heads/main/docs/level-2.mdx) as a basic example of how a document is supposed to look with both text and images.
+参见[等级 2 的 Markdown 文件](https://raw.githubusercontent.com/hanabi/hanabi.github.io/refs/heads/main/docs/level-2.mdx)作为文档应如何包含文本和图片的基本示例。
 
-## Development
+## 开发 \{#development\}
 
-When using `npm run start` to view the page locally, any changes that you make to the website will be automatically updated without having to refresh the page. This includes any changes to YAML files - they will be automatically re-converted into SVG files on the fly and updated in the browser.
+使用 `npm run start` 在本地查看页面时，你对网站所做的任何更改都会自动更新，无需刷新页面。这包括对 YAML 文件的更改——它们将自动重新转换为 SVG 文件并在浏览器中更新。
 
-## YML File Format
+## YAML 文件格式 \{#yml-file-format\}
 
-There are 2 main sections: `stacks` and `players`.
+表示示例图的 YAML 文件主要分为两段：`stacks` 和 `players`。
 
-- `stacks` is an array of cards which have been played on the stacks already. The following suits are supported by default:
-  - `r`: red,
-  - `g`: green,
-  - `b`: blue,
-  - `y`: yellow,
-  - `p`: purple,
-  - `m`: rainbow (multicolor).
-- `players` contains an entry for each player. Each entry contains the `cards` that they have in their hand.
+- `stacks` 是包含已经打出到牌堆上的牌数组。默认支持的花色包括：
+  - `r`: 红色
+  - `g`: 绿色
+  - `b`: 蓝色
+  - `y`: 黄色
+  - `p`: 紫色
+  - `m`: 彩色（`m` 指 multicolor，多色）
+- `players` 为每位玩家包含一个条目。每个条目包含他们的手牌 `cards`。
 
 <Example code={SimpleSource} Image={SimpleResult} />
 
-Players are assigned the following names automatically: Alice, Bob, Cathy, Donald, and Emily. It is possible to override this with the `name` attribute. For example, this could be useful if Bob's hand is shown twice, before and after something happens.
+玩家会自动分配以下名称：Alice、Bob、Cathy、Donald 和 Emily。可以通过 `name` 属性覆盖此设置。比如 Bob 的手牌在某事件前后需要显示两次，这可能很有用。
 
-`players` can also contain a `text` instead of `cards`. This is used to describe something that happens in a game.
+`players` 也可以包含 `text` 而不是 `cards`。这用于描述游戏中发生的事情。
 
 <Example code={TextNameSource} Image={TextNameResult} />
 
-### Cards
+### 手牌 \{#cards\}
 
-Cards in hand can be of various types:
+手牌可以有多种类型：
 
-- clued with known exact identity, e.g. `g2`
-- clued with known suit, e.g. `b`
-- clued with known rank, e.g. `4`
-- clued with multiple possibilities, e.g. `b234`, `rm4`, `ym45`
-- unclued card without any pips displayed, e.g. `x`
-- unclued card with pips displayed, e.g. `xrg23`
+- 提示过且已明确的牌，例如 `g2`
+- 提示过且已知花色的牌，例如 `b`
+- 提示过且已知数字的牌，例如 `4`
+- 提示过且有多种可能性的牌，例如 `b234`、`rm4`、`ym45`
+- 未提示过且没有任何标记的牌，例如 `x`
+- 未提示过但显示标记的牌，例如 `xrg23`
 
-`crossedOut` attribute can be used to mark some pips with X (when all other copies of that card are seen elsewhere).
+`crossedOut` 属性可用于在某些标记上打 X（当该牌的每一张都在其他地方可见时）。
 
-The `orange` attribute can be used to draw some rank pips with orange. This is useful for pink cards.
+`orange` 属性可用于用橙色绘制某些数字标记。这对于粉色牌有用。
 
-By default, clued cards have an orange border, but this can be overridden with the `border` attribute.
+默认情况下，被提示的牌有橙色边框，但可以通过 `border` 属性覆盖。
 
-The `trash` attribute can be used to draw a trash icon on top of the card.
+`trash` 属性可用于在牌上绘制垃圾桶图标。
 
 <Example code={TypesSource} Image={TypesResult} />
 
-### Clues
+### 提示 \{#clues\}
 
-You can use the `clue` attribute to show that a card is in the process of being clued.
+你可以用 `clue` 属性来标出正在被提示到的牌。
 
-By default, there is no clue giver, but this can be specified with the `clueGiver` attribute.
+默认情况下没有提示者，但可以通过 `clueGiver` 属性指定。
 
-You can also use the `retouched` attribute to signify that the clue is re-touching a card, which will result in a darker arrow than normal. (This matches the behavior of Hanab Live.)
+你还可以用 `retouched` 属性来表示提示重新触及一张牌，这会导致箭头比通常更暗。（与 Hanab Live 的行为一致。）
 
 <Example code={ClueSource} Image={ClueResult} />
 
-### Text on Cards
+### 牌上的文本 \{#text-on-cards\}
 
-Text can be placed on a card:
+可以在牌上放置文本：
 
-- `middleNote` to put a text label in the middle of the card
-  - the string is automatically colored if it is a letter of one of the 5 suits
-- `above` to put a note above the card
-- `below` to put a note below the card
+- `middleNote` 将文本标签放在牌中间
+  - 如果文本是半角括号包围的五种花色之一，它会自动着色
+- `above` 在牌上方放置标注
+- `below` 在牌下方放置标注
 
-`above` and `below` have the same syntax:
+`above` 和 `below` 具有相同的语法：
 
-- `above: Green 3` or `above: Rainbow 5` will draw the box with the specified color and text.
-- Several more keywords have a specific color assigned to them: `Focus`, `Chop`.
-- You can override the color using `color` attribute. CSS colors are accepted, and additionally `rainbow`.
-- You can make it a multi-line note by using an array.
-- It can be a list of such text boxes, potentially with different colors.
+- `above: 绿 3` 或 `above: 彩 5` 将绘制具有指定颜色和文本的框。
+- 还有一些关键字分配了特定的颜色：`焦点`、`弃牌位`。
+- 你可以使用 `color` 属性覆盖颜色。该属性接受 CSS 颜色，此外还支持 `rainbow` 表示彩色。
+- 你可以通过使用数组使其成为多行注释。
+- 它可以是一个此类文本框的列表，可能具有不同的颜色。
 
 <Example code={CardTextSource} Image={CardTextResult} />
 
-### Discard Pile
+### 弃牌堆 \{#discard-pile\}
 
-For some examples, some cards in the discard pile need to be shown. This is performed with the `discarded` array on the top level.
+某些示例需要显示弃牌堆中的一些牌。这是通过顶层的 `discarded` 数组完成的。
 
 <Example code={TrashSource} Image={TrashResult} />
 
-### Big Text
+### 大文本 \{#big-text\}
 
-For keywords "Bluff", "Finesse" and "Illegal!", color is ignored.
+对于关键字“Bluff”“飞牌”和“非法!”，颜色被忽略。
 
 <Example code={BigTextSource} Image={BigTextResult} />
 
-### Variants
+### 变种 \{#variants\}
 
-Some variant-specific suits can be added via `suits`, which contains the mapping from the letter indicating the suit to the part of the filenames of card images and pips.
-Currently these variant suits are supported:
+可以通过 `suits` 添加一些变种的花色。`suits` 包含一个映射，将表示花色的字母映射为牌图像和标记的文件名部分的映射。
+目前支持以下变种花色：
 
 - black
 - brown
-- null (needs to be in quotes because normally `null` is a YAML keyword)
+- null（需要用引号括起来，因为通常 `null` 是 YAML 关键字）
 - omni
 - pink
 - prism-rygbp
 - teal
 - white
 
-Standard suits don't need to be repeated in `suits`.
+标准花色不需要在 `suits` 中重复。
 
-This is done to be able to differentiate between suits which commonly use the same letter, e.g. or "i" for both prism and pink.
+这样做是为了能够区分通常使用相同字母表示的花色，例如“i”同时用于 prism 和 pink。
 
 <Example code={SuitsSource} Image={SuitsResult} />
