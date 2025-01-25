@@ -1,77 +1,78 @@
 ---
-title: Level 1 - Fundamentals
+title: 等级 1 - 基础
 ---
 
-- Level 1 strategies can be learned with no games of Hanabi played. You can either learn them before you play your first game or after you play a few games to learn the basic mechanics.
-- This stuff is mostly a repeat of the [beginner's guide](beginner.mdx), but we go into a bit more detail here.
-- If you have not read the beginner's guide yet, **STOP NOW** and read that instead. Only come back here after you have played 5-10 games. (This page is just intended to be used as a reference for players who have already read the beginner's guide.)
+- 即使你没有玩过花火，你也可以学习等级 1 的内容。你可以在玩第一局之前学习，也可以在玩了几局熟悉基本规则后再来学习。
+- 这里的内容大部分是对[入门指南](beginner.mdx)的重复，但会更加详尽一些。
+- 如果你还没读过入门指南，<Em>请立即停止</Em>，先去阅读入门指南。我们建议你玩了 5-10 局游戏后，再回到这里。（本页仅作为已阅读入门指南的玩家的参考。）
+- 译注：这个地方有点矛盾，但等级 1 和入门指南几乎是一样的，译者建议先玩几局熟悉基本规则后，再看入门指南和等级 1 的内容，这样方便理解一些约定背后的道理。
 
-## Conventions
+## 约定 \{#conventions\}
 
-### Chop
+### 弃牌位（Chop） \{#chop\}
 
-- When players have to discard, they typically discard their rightmost unclued card.
-- A player's chop is formally defined as **the next unclued card that they would discard if they had nothing else to do**.
-- If a player has a clued card that is known to be useless, then they will typically **discard the useless card first**, before discarding their chop. (But the useless card does **not** count as the chop - their chop remains the rightmost unclued card.)
+- 当玩家需要弃牌时，通常会弃掉他们最右侧未被提示的牌。
+- 玩家的弃牌位（Chop）正式定义为：<Em>当这个玩家无事可做时，他接下来会弃掉的未被提示的牌的位置</Em>。
+- 如果玩家有一张已知无用的被提示过的牌，通常会<Em>先弃掉无用牌</Em>，然后再弃掉弃牌位的牌。（但无用牌<Em>不算</Em>弃牌位——他们的弃牌位仍然是最右侧未被提示的牌。）
 
-### The Definition of Playable
+### 可打出牌的定义 \{#the-definition-of-playable\}
 
-- First, see the section on _[Delayed Play Clues](beginner/delayed-play-clues.mdx)_ from the beginner's guide.
-- When we say that an unclued card is currently _playable_, we do **not** mean that the card would be able to play on the stacks right this instant. If an unclued card is _playable_, then what we really mean is that it would be legal for someone to give either a _Play Clue_ **or** a _Delayed Play Clue_ to the card.
-- In other words, if an unclued _playable_ card was given a _Delayed Play Clue_, that card would eventually play on the stack without any additional clues needing to be given by anyone else - all of the in-between cards, if any, would be present and accounted for at the moment that the _Play Clue_ was given.
+- 首先，请参阅入门指南中关于[**延迟出牌提示**](beginner/delayed-play-clues.mdx)的部分。
+- 当我们说一张未被提示的牌目前是**可打出的**时，我们<Em>并不</Em>意味着这张牌可以立即打出去。如果一张未被提示的牌是**可打出的**，实际上是指这张牌可以被给予**出牌提示** <Em>或</Em> **延迟出牌提示**。
+- 换句话说，如果一张未被提示的**可打出**牌被给予了**延迟出牌提示**，那么这张牌最终会在不需要其他人额外提示的情况下被打出—所有中间需要的牌（如果有的话）都会在给出**出牌提示**时存在并收到了提示。
 
-### One-Away-From-Playable Cards
+### 差一步可打出的牌 \{#one-away-from-playable-cards\}
 
-- As noted in the previous section, sometimes unclued cards happen to be _playable_.
-- Additionally, sometimes unclued cards happen to be _one-away-from-playable_.
-- A card is _one-away-from-playable_ if only one other card would need to be given a _Play Clue_ or a _Delayed Play Clue_ in order to make the card _playable_.
-- For example, in a 3-player game:
-  - No red cards are played on the stacks.
-  - No player has any red 1's in their hand.
-  - Bob has a red 2 with a number 2 clue on it. (It was saved with a _2 Save_ clue earlier on.)
-  - Cathy has an unclued red 3 in her hand.
-  - Alice knows that the unclued red 3 is currently _one-away-from-playable_, because there is only one card needed in order to make it _playable_ - the red 1.
-- Players are **not** allowed to give _Play Clues_ or _Delayed Play Clues_ to _one-away-from-playable_ cards - they are not playable yet!
-- Players are **not** allowed to give _Save Clues_ to _one-away-from-playable_ cards - unless they also happen to be critical.
+- 如前一节所述，有时未被提示的牌恰好是**可打出的牌**。
+- 但也有很多情况下，未被提示的牌是**差一步可打出的牌**。
+- 某张牌A是**差一步可打出的牌**，当且仅当再给一张牌B**出牌提示**或**延迟出牌提示**时，A就会变为**可打出的牌**。
+- 例如，在一个 3 人游戏中：
+  - 牌堆上没有打出任何红色牌。
+  - 没有任何玩家手中有红色 1。
+  - Bob 有一张带数字 2 提示的红色 2。（这张牌之前通过**留2提示**被留住。）
+  - Cathy 手中有一张未被提示的红色 3。
+  - Alice 知道这张未被提示的红色 3 目前是**差一步可打出的牌**，因为只需要一张牌（红色 1）就能让它变为**可打出的牌**。
+- 玩家<Em>不允许</Em>对**差一步可打出的**牌给予**出牌提示**或**延迟出牌提示**——它们还不可打出！
+- 玩家<Em>不允许</Em>对**差一步可打出的**牌给予**留牌提示**——除非它们恰好是关键牌。
 
-### Save Clues
+### 留牌提示 \{#save-clues\}
 
-- You are **only** allowed to give a _Save Clue_ to a card that is on chop.
-  - This means that if a clue focuses a non-chop card, then it must be a _Play Clue_!
-- You are **not** allowed to give a _Save Clue_ to any card you want. You are **only** allowed to give a _Save Clue_ on these specific cards:
-  1. 5's (with a number 5 clue, as a _5 Save_)
-  1. 2's (with a number 2 clue, as a _2 Save_)
-  1. Critical cards (with either color or number)
-- Additionally, everyone in the group also agrees to never let anyone discard a (unique) playable card. However, a clue to a unique playable card is defined as a _Play Clue_, not a _Save Clue_.
+- 你<Em>只能</Em>对弃牌位的牌给予**留牌提示**。
+  - 这意味着，如果一个提示的焦点牌不在弃牌位，那么它必须是一个**出牌提示**！
+- 你<Em>不能</Em>随意对任何牌给予**留牌提示**。你<Em>只能</Em>对以下特定牌给予**留牌提示**：
+  1. 5（通过数字 5 提示，作为**留 5 提示**）
+  1. 2（通过数字 2 提示，作为**留 2 提示**）
+  1. 关键牌（通过颜色或数字提示）
+- 此外，我们规定，绝不允许任何人弃掉目前场面上唯一的可打出牌。不过，对这种牌的提示应是**出牌提示**，而不是**留牌提示**。
 
-### Clue Focus
+### 提示的焦点牌 \{#clue-focus\}
 
-There is a 4-step process for determining the focus of a clue:
+确定提示的焦点有 4 个步骤：
 
-1. If no cards are new, then **the focus is on the leftmost re-touched card**.
-1. If only one card is new, then **the focus is on the new card**.
-1. If two or more cards are new, and one of them was on chop, then **the focus is on the chop**.
-1. If two or more cards are new, and none of them were on chop, then **the focus is on the leftmost new card**.
+1. 如果没有新牌被提示，那么<Em>焦点牌是最左侧被重新提示的牌</Em>。（译注：新牌是指没有被提示触及的牌。）
+1. 如果只有一张新牌被提示，那么<Em>焦点就是这张新牌</Em>。
+1. 如果有两张或更多新牌被提示，且其中一张在弃牌位，那么<Em>焦点在弃牌位的牌</Em>。
+1. 如果有两张或更多新牌被提示，且其中没有牌在弃牌位，那么<Em>焦点在最左侧的新牌</Em>。
 
-This process is represented in the following flowchart:
+这个过程可以用以下流程图表示：
 
 ```mermaid
 flowchart TD;
 
-S(A clue is given.<br />What card is focused?)
-D1[/Did it touch one or more previously untouched cards?\]
-D1Y([Yes])
-D1N([No])
-D1NL(The focus is on the **left-most** card.)
-D2[/Did it touch exactly one previously untouched card?\]
-D2Y([Yes])
-D2N([No])
-D2YL(The focus is on the **brand-new** card.)
-D3[/Did it touch the chop card?\]
-D3Y([Yes])
-D3N([No])
-D3YL(The focus is on the **chop** card.)
-D3NL(The focus is on the **left-most** card.)
+S(我收到了一个提示。<br />它的焦点是哪张牌？)
+D1[/它有触及任何新牌吗？\]
+D1Y([有])
+D1N([没有])
+D1NL(焦点在 **最左边** 的牌。)
+D2[/它只触及了一张新牌吗？\]
+D2Y([是])
+D2N([不是])
+D2YL(焦点牌是 **新牌**。)
+D3[/它有触及弃牌位的牌吗？\]
+D3Y([有])
+D3N([没有])
+D3YL(焦点在 **弃牌位** 的牌。)
+D3NL(焦点在 **最左边** 的牌。)
 
 class D1Y,D2Y,D3Y node-yes
 class D1N,D2N,D3N node-no
@@ -93,96 +94,96 @@ D3Y --> D3YL;
 D3N --> D3NL;
 ```
 
-### The Early Game
+### 游戏前期 \{#the-early-game\}
 
-- The _Early Game_ is the period of time before any player has discarded their chop card.
-- Players **must** "extinguish" all of the available _Play Clues_ and _Save Clues_ on the board before ending the _Early Game_.
-  - As outlined in the [beginner's guide](beginner/minimum-clue-value-principle.mdx), "extinguishing" all the _Play Clues_ does **not** include giving _Tempo Clues_. _Tempo Clues_ do not meet _Minimum Clue Value Principle_, so in general, they should not be given.
-- For level 9 players, there are [some additional rules](level-9.mdx#the-early-game-severity-1-stalling) about the Early Game. (Don't worry about them for now if you are only level 1.)
+- **游戏前期**是指任何玩家弃掉弃牌位牌之前的时间段。
+- 玩家<Em>必须</Em>在结束**游戏前期**之前“耗尽”所有可用的**出牌提示**和**留牌提示**。
+  - 如[入门指南](beginner/minimum-clue-value-principle.mdx)所述，“耗尽”所有**出牌提示**并<Em>不包括</Em>给予**节奏提示**。**节奏提示**不符合**提示价值下限原则**，因此通常不应给予。
+- 对于等级 9 的玩家，关于游戏前期有一些[额外规则](level-9.mdx#the-early-game-severity-1-stalling)。（如果你是等级 1 玩家，暂时不必担心这些。）
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The 5 Save
+### 留 5 提示 \{#the-5-save\}
 
-- A _5 Save_ is when someone uses a number 5 clue to touch a previously-unclued 5 on someone's chop. (Everyone agrees that this is just a _Save Clue_ instead of a _Play Clue_.)
-- By definition, you can only perform a _5 Save_ with a number clue. (If a color clue was used to touch an unclued 5, then it would be a _Play Clue_ instead.)
+- **留 5 提示**是指用数字 5 来提示某人弃牌位上的一张未被提示的 5。（大家都同意这只是**留牌提示**，而不是**出牌提示**。）
+- 根据约定，你只能通过数字提示来执行**留 5 提示**。（如果使用颜色来提示一张未被提示的 5，那么它是**出牌提示**。）
 
-### The 2 Save
+### 留 2 提示 \{#the-2-save\}
 
-- A _2 Save_ is when someone uses a number 2 clue to touch a previously-unclued 2 on someone's chop. (Everyone agrees that this is just a _Save Clue_ instead of a _Play Clue_.)
-- By definition, you can only perform a _2 Save_ with a number clue. (If a color clue was used to touch an unclued 5, then it would be a _Play Clue_ instead.)
-  - The exception is if the other copy of the 2 is in the discard pile. Then, touching the card with a color clue would be a _Critical Save_. But that would not classified as a _2 Save_.
+- **留 2 提示**是指某人使用数字 2 提示某人弃牌位上的一张未被提示的 2。（大家都同意这只是**留牌提示**，而不是**出牌提示**。）
+- 根据约定，你只能通过数字提示来执行**留 2 提示**。（如果使用颜色来提示一张未被提示的 2，那么它将是**出牌提示**。）
+  - 例外情况是，如果另一张 2 已经在弃牌堆中。那么，使用颜色提示来提示这张牌将是**留关键牌提示**。但这不会被归类为**留 2 提示**。
 
-#### The Visible Rule
+#### 可见规则 \{#the-visible-rule\}
 
-- Players are **not allowed** to perform a _2 Save_ on a 2 if the other copy of the 2 is visible in someone else's hand.
+- 如果你能在其他玩家手中看到另一张 2，你<Em>不允许</Em>对 2 执行**留 2 提示**。
 
-#### Double Chop 2's
+#### 双弃牌位 2 \{#double-chop-2s\}
 
-- The exception to the _Visible Rule_ is when the same 2 is on two players' chops at the same time. In that situation, players are allowed to _2 Save_ either one. And if it is the _Early Game_, then players **must** save one of them before giving a _5 Stall_ or discarding to initiate the _Mid-Game_.
+- **可见规则**有一个例外情况，即当同一张 2 同时出现在两名玩家的弃牌位上时。在这种情况下，玩家可以用**留 2 提示**提示其中任意一张。如果是**游戏前期**，玩家<Em>必须</Em>先保存其中一张，再考虑给予 **5 停顿**提示，或者弃牌来进入**中期游戏**。
 
-### The Prompt
+### 引牌（Prompt） \{#the-prompt\}
 
-- A _Prompt_ is when you get a player to play a clued card that was previously unknown.
-- If the player **was already going to play** the card, then **it isn't a _Prompt_**. _Prompts_ can only be on cards that were not going to play otherwise.
-- An example of a _Prompt_ can be found in the [beginner's guide](beginner/prompt.mdx).
-- For level 5 players, see the _[Prompts in Multi-Color Variants](level-5.mdx#prompts-in-multi-color-variants)_ section.
+- **引牌**是指你让一名玩家打出一张之前未知的被提示牌。
+- 如果玩家<Em>本来就要打出</Em>这张牌，那么<Em>这不是**引牌**</Em>。**引牌**只能针对那些本来不会被打出的牌。
+- 关于**引牌**的示例可以在[入门指南](beginner/prompt.mdx)中找到。
+- 对于等级 5 的玩家，请参阅[**彩虹变体中的引牌**](level-5.mdx#prompts-in-multi-color-variants)部分。
 
-### The Finesse
+### 飞牌（Finesse） \{#the-finesse\}
 
-- A _Finesse_ is when you get a player to blind-play a card to fulfill a promise that a certain card is playable right now.
-- _Finesses_ are covered in detail in the [beginner's guide](beginner/finesse.mdx).
-- _Finesses_ must be on "connecting" cards. (For example, the red 1 leads directly into the red 2, so they are considered to be a "connecting" pair of cards.)
-- When a player is _Finessed_, they should blind-play their card right away in order to demonstrate it!
+- **飞牌**是指你让一名玩家盲打一张牌，以兑现某张牌当前可打出的承诺。
+- **飞牌**在[入门指南](beginner/finesse.mdx)中有详细说明。
+- **飞牌**必须针对“连接”牌。（例如，红色 1 直接连接到红色 2，因此它们被视为“连接”牌。）
+- 当一名玩家被**飞牌**时，他们应该立即盲打自己的牌以证明这一点！
 
-### Finesse Position
+### 飞牌位 \{#finesse-position\}
 
-- A player's _Finesse Position_ refers to the slot that their **leftmost unclued card** is in.
-- For level 5 players, see the [_Queued Finesse_](level-5.mdx#the-queued-finesse) section.
-  - Playing with the _Queued Finesse_ makes the concept of a _Finesse Position_ more complicated, because it means that in certain situations, unclued cards count as being clued.
+- 玩家的**飞牌位**指的是他们**最左侧未被提示的牌**所在的位置。
+- 对于等级 5 的玩家，请参阅[**队列飞牌**](level-5.mdx#the-queued-finesse)部分。
+  - 使用**队列飞牌**会使**飞牌位置**的概念更加复杂，因为在某些情况下，未被提示的牌会被视为已提示（译注：这里的未提示指没有被提示直接触及，已提示指在飞牌时，这张牌已经被给与了明确的信息）。
 
-### Finessed Cards
+### 被飞的牌 \{#finessed-cards\}
 
-- Even though _Finessed_ cards are unclued, you can think of them as having an invisible clue on them. (Because they are already "gotten".)
-- Thus, if a clue touches a _Finessed_ card and some other card that did not have a clue on it, then the focus of the clue would be on the other card (because the focus of a clue is always on the "new" card introduced).
+- 尽管**被飞的牌**未被提示，但你可以认为它们有一个隐形的提示。（因为它们已经需要被“打出”了。）
+- 因此，如果一个提示同时提示了一张**被飞的牌**和另一张未被提示的牌，那么提示的焦点将在另一张牌上（因为提示的焦点总是在“新”牌上）。
 
-### Prompts > Finesses
+### 引牌 > 飞牌 \{#prompts>finesses\}
 
-- **_Prompts_ always take precedence over _Finesses_**.
-- This means that if Alice has to decide between:
-  1. playing a card in her hand with a red clue on it, and
-  1. blind-playing a potential red card from her _Finesse Position_
-- Then Alice should always do #1.
+- <Em>**引牌**总是优先于**飞牌**</Em>。
+- 这意味着，如果 Alice 必须在以下两者之间做出选择：
+  1. 打出手中有红色提示的牌，和
+  1. 盲打**飞牌位置**上可能的红色牌
+- 那么 Alice 应当选择 #1。
 
-## Website Features
+## 网站功能 \{#website-features\}
 
-- If you have played a few games on [Hanab Live](https://hanab.live), then you may have noticed that the website has several features.
-- The website has an [extensive documentation](https://github.com/Hanabi-Live/hanabi-live/blob/master/docs/features.md#notes). (You can also get to that page by pressing the "Help" icon in the upper-right part of the website lobby.)
-- Below are a few of the most important features that a beginner should know about.
+- 如果你在 [Hanab Live](https://hanab.live) 上玩过几局游戏，你可能会注意到网站有几个功能。
+- 网站有[详细的文档](https://github.com/Hanabi-Live/hanabi-live/blob/master/docs/features.md#notes)。（你也可以通过点击网站大厅右上角的“帮助”图标进入该页面。）
+- 以下是初学者应该了解的几个最重要的功能。
 
-### Card Notes
+### 牌面笔记 \{#card-notes\}
 
-- You should be [writing card notes](beginner/card-notes.mdx) in every game. (This should not be seen as a handicap. The best players in the world are constantly writing notes.)
-- Certain special notes [change the appearance of the card for you](https://github.com/Hanabi-Live/hanabi-live/blob/master/docs/features.md#notes).
-  - If you write the name of a card like "red 2" or "r2", the image of the card will snap to the written card.
-  - A note of "f" is used to indicate a card is _Finessed_ (meaning that it will blind-play in the future). The website draws a special border around _Finessed_ cards.
-    - You can use `shift + right-click` as a shortcut to add this note.
-  - A note of "cm" is used to indicate a card is _Chop Moved_. The website draws a special border around _Chop Moved_ cards. (_Chop Moves_ are a special convention introduced in level 4. If you are a level 1 player, don't worry about this for now.)
-    - You can use `alt + right-click` as a shortcut to add this note.
-  - You can also use brackets to stack multiple notes. For example, "[f] [red 2]".
+- 你应该在每局游戏中[写牌面笔记](beginner/card-notes.mdx)。（这不应被视为一种负担。世界上最优秀的玩家也在不断写笔记 ;)
+- 某些特殊笔记会[改变牌的外观](https://github.com/Hanabi-Live/hanabi-live/blob/master/docs/features.md#notes)。
+  - 如果你写下“red 2”或“r2”这样的牌名，牌的图像会立即显示为所写的牌（红色的2）。
+  - 笔记“f”用于表示一张牌被**飞牌**（意味着它将在未来盲打）。网站会在**被飞的牌**周围绘制特殊边框。
+    - 你可以使用 `shift + 右键点击` 作为快捷方式添加此笔记。
+  - 笔记“cm”用于表示一张牌被**弃牌位移动**。网站会在**弃牌位移动**的牌周围绘制特殊边框。（**弃牌位移动**是等级 4 引入的特殊约定。如果你是等级 1 玩家，暂时不必担心。）
+    - 你可以使用 `alt + 右键点击` 作为快捷方式添加此笔记。
+  - 你还可以使用中括号来堆叠多个笔记。例如，"[f] [red 2]"。
 
-### Rewind
+### 回放 \{#rewind\}
 
-- During a game, clicking the arrow button in the bottom-left-hand corner opens the [in-game replay feature](https://github.com/Hanabi-Live/hanabi-live/blob/master/docs/features.md#in-game-replay).
-  - You can also use the arrow keys as a shortcut to move backwards and forwards through time.
-- This is useful if you need to recall what happened several turns ago.
+- 在游戏中，点击左下角的箭头按钮可以打开[游戏内回放功能](https://github.com/Hanabi-Live/hanabi-live/blob/master/docs/features.md#in-game-replay)。
+  - 你也可以使用方向键作为快捷方式来回退或前进时间。
+- 这在需要回忆几回合前发生的事情时非常有用。
 
-### Empathy
+### 共情 \{#empathy\}
 
-- If you press the space bar or left-click on someone else's hand, you can see how the cards appear to them.
-- This is the equivalent of asking "what do you know about your cards?" in real life.
-- This feature is referred to as "empathy".
+- 如果你按下空格键或左键点击其他玩家的手牌，你可以看到他们眼中的牌是什么样子。
+- 这相当于在现实生活中问“你知道你手上有哪些牌吗？”
+- 此功能被称为“共情”。
 
-## Challenge Questions
+## 挑战问题 \{#challenge-questions\}
 
-The challenge questions for level 1 are listed in the [beginner's guide](beginner.mdx).
+等级 1 的挑战问题列在[入门指南](beginner.mdx)中。
