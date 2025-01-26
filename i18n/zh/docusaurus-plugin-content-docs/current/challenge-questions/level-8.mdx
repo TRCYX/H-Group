@@ -1,5 +1,5 @@
 ---
-title: Level 8 Challenge Questions
+title: 等级 8 挑战题
 ---
 
 import Question1 from "./level-8-question-1.yml";
@@ -9,81 +9,81 @@ import Question3 from "./level-8-question-3.yml";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-These questions are for [level 8](../level-8.mdx) strategies.
+这些问题对应[等级 8](../level-2.mdx)。
 
-## Question 1
+## 问题 1 \{#question-1\}
 
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '问题', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- There are 3 cards left in the deck, and no clues available. All remaining useful cards are gotten.
-- Bob knows the identity of all of his clued cards.
-- What action should Alice perform?
+- 牌堆里只剩下 3 张牌，提示机会用完了。所有剩余的有用的牌都已提示到。
+- Bob 知道所有他手中被提示的牌具体是什么。
+- Alice 应该采取什么行动？
 
 </TabItem>
 <TabItem value="solution">
 
-- It might be tempting for Alice to play her red 4 to allow Bob to play his red 5. However, doing this will lose the game.
-- This is because the limiting factor is Bob's ability to play all of his 5s before the end of the game. For this to happen, the team needs clues in order to stall. Discarding gives back a clue, but playing the 4 does not.
-- Thus, it is correct for Alice to discard on this turn, holding on to the red 4 for later.
+- Alice 可能会想打红 4，以便让 Bob 打红 5。但是这样做会输掉游戏。
+- 这是因为瓶颈是 Bob 能否在游戏结束前打出所有的 5。为了能够达成这一点，需要有提示机会来停顿。弃牌可以恢复一个提示机会，但打出 4 不会。
+- Alice 应该在这一回合弃牌，暂时保留红 4，之后再打。
 
 </TabItem>
 </Tabs>
 
 <Question1 />
 
-## Question 2
+## 问题 2 \{#question-2\}
 
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '问题', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- There are 5 cards left in the deck, and 1 clue available. The only clued cards are Alice's 5s.
-- What action should Alice perform?
+- 牌堆里只剩下 5 张牌，且仅有 1 个提示机会。唯一提示过的牌是 Alice 的 5。
+- Alice 应该采取什么行动？
 
 </TabItem>
 <TabItem value="solution">
 
-- It might be tempting for Alice to clue red to Cathy, which would be a _Finesse_ on the red 4. However, doing so would risk losing the game.
-- This is because it is possible that Alice will draw the blue 5 and the purple 5. If she did, then she would have to play 4 cards in total. If Alice clues on this turn, then it would be impossible to play all 4 cards (because the game will end).
-- Instead, it is correct for Alice to play yellow 5 or green 5, letting Bob save the red 5, and Cathy getting the red 4.
+- 对 Alice 而言，提示 Cathy 红色很诱人，这会**飞**红 4。但是这样做会输掉游戏。
+- 这是因为 Alice 有可能抽到蓝 5 和紫 5。如果她抽到了，那么她总共要打出 4 张牌。如果 Alice 在这一回合给出提示，那么将不可能打出所有 4 张牌（因为游戏会结束）。
+- 相反，Alice 应该打出黄 5 或绿 5，让 Bob 留红 5，而 Cathy 提示红 4。
 
 </TabItem>
 </Tabs>
 
 <Question2 />
 
-## Question 3
+## 问题 3 \{#question-3\}
 
 <Tabs
   defaultValue="question"
   values={[
-    {label: 'Question', value: 'question'},
-    {label: 'Solution', value: 'solution'},
+    {label: '问题', value: 'question'},
+    {label: '解答', value: 'solution'},
   ]}>
 <TabItem value="question">
 
-- There are 2 cards left in the deck, and 2 clues available. No one has any clued cards.
-- What action should Alice perform?
+- 牌堆里只剩下 2 张牌，且还有 2 个提示机会。没有人有任何提示过的牌。
+- Alice 应该采取什么行动？
 
 </TabItem>
 <TabItem value="solution">
 
-- Alice sees the red 3 in Cathy's hand and the red 5 in Bob's hand.
-- If Alice has the red 4 in her hand, then the situation is simple: the team will clue the red cards and then play them.
-- On the other hand, it is possible that both red 4s are still in the deck. In this case, there would be no time to play the 5 after playing the 4.
-- Thus, Alice should discard. She is guaranteed to either have had a red 4 in her hand, or to draw one of the copies.
-  - (For the purposes of this example, we assume that it is extremely unlikely for Alice to be discarding the red 4, since the team would have likely _Chop Moved_ it earlier on.)
-- After Alice discards, Bob can _Finesse_ the red 3 by cluing Alice's red 4, and then the red 5 can play in the subsequent round.
+- Alice 看到 Cathy 手中有红 3，Bob 手中有红 5。
+- 如果 Alice 手中有红 4，那么情况就很简单：大家会对红色牌给出提示，然后打出它们。
+- 另一方面，也有可能两张红 4 仍在牌堆中。在这种情况下，打出 4 后就没有时间打出 5 了。
+- 因此，Alice 应该弃牌。她要么手中有红 4，要么会抽到其中一张红 4。
+  - （在这个例子里，我们假设 Alice 极不可能弃掉红 4，因为很可能之前已经将红 4 **弃牌位移动**了。）
+- Alice 弃牌后，Bob 可以通过提示 Alice 的红 4 来**飞**红 3，然后红 5 可以在下一回合打出。
 
 </TabItem>
 </Tabs>

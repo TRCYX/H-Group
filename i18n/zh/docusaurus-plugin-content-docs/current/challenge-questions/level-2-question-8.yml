@@ -22,7 +22,7 @@ players:
       - type: b5
         border: false
       - type: b2
-        below: (b)
+        below: (蓝)
       - type: y1
         border: false
   - cards:

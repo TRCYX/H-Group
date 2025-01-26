@@ -33,6 +33,6 @@ players:
       - type: b1
         border: false
       - type: p4
-        below: (p)
+        below: (紫)
       - type: b2
         border: false

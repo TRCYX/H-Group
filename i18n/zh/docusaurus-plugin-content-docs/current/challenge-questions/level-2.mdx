@@ -1,5 +1,5 @@
 ---
-title: Level 2 Challenge Questions
+title: 等级 2 挑战题
 ---
 
 import Question1 from "./level-2-question-1.yml";
@@ -16,289 +16,289 @@ import Question10 from "./level-2-question-10.yml";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-These questions are for [level 2](../level-2.mdx) strategies.
+这些问题对应[等级 2](../level-2.mdx)。
 
-## Question 1
+## 问题 1 \{#question-1\}
 
 <Tabs
   defaultValue="question1"
   values={[
-    {label: 'Question', value: 'question1'},
-    {label: 'Solution', value: 'solution1'},
+    {label: '题目', value: 'question1'},
+    {label: '解答', value: 'solution1'},
   ]}>
 <TabItem value="question1">
 
-- It is currently the _Early Game_. There is 1 clue token left.
-- List all the legal actions that Alice can perform. Of the legal actions, which is the best one?
+- 现在是**前期**。只剩下 1 个提示机会。
+- 列出 Alice 可以采取的所有行动。哪种行动最好？
 
 </TabItem>
 <TabItem value="solution1">
 
-- There are two legal things for Alice to do:
-  - First, Alice can perform a _5 Stall_ to Donald (by cluing number 5 to touch the purple 5).
-  - Second, Alice can discard.
-- If Alice performs a _5 Stall_, then Bob's action would be to discard (since there are no clue tokens left).
-- If Bob discarded, he would discard a green 1, which is considered to be an excellent discard (since it is already played and is thus considered to be trash).
-- Alice could have a more desirable card on chop than a green 1, like a yellow 3 or a blue 3.
-- Thus, while it is permissible for Alice to either _5 Stall_ or discard, her best action is to perform a _5 Stall_, since her chop is more valuable than Bob's chop.
+- Alice 可以采取两种行动：
+  - 第一，Alice 可以向 Donald 给出**留 5 提示**（通过对紫 5 提示数字 5）。
+  - 第二，Alice 可以选择弃牌。
+- 如果 Alice **留 5**，那么 Bob 的行动将是弃牌（因为没有剩余的提示机会）。
+- 如果 Bob 弃牌，他会弃掉一张绿 1，这张弃牌很优秀（因为它已经打出，是废牌）。
+- Alice 的弃牌位可能是一张比绿 1 更值得保留的牌，比如黄 3 或蓝 3。
+- 因此，虽然 Alice 可以选择**留 5 提示**或弃牌，但她的最佳操作是进行**留 5 提示**，因为她的弃牌位比 Bob 的弃牌位更有价值。
 
 </TabItem>
 </Tabs>
 
 <Question1 />
 
-## Question 2
+## 问题 2 \{#question-2\}
 
 <Tabs
   defaultValue="question2"
   values={[
-    {label: 'Question', value: 'question2'},
-    {label: 'Solution', value: 'solution2'},
+    {label: '题目', value: 'question2'},
+    {label: '解答', value: 'solution2'},
   ]}>
 <TabItem value="question2">
 
-- Alice clues blue to Bob, which touches one card on slot 2.
-- Bob writes a card note with the identity of the card.
+- Alice 提示 Bob 蓝色，仅提示到 2 号位。
+- Bob 在牌上写下了关于其可能性的笔记。
 
-1. What _card note_ does Bob write?
-1. What action should Bob perform?
+1. Bob 的**笔记**会是什么内容？
+2. Bob 应该采取什么行动？
 
 </TabItem>
 <TabItem value="solution2">
 
-1. Bob writes "blue 2, blue 3 if blue 2 f".
-   - Bob knows that this must be a _Play Clue_ on his blue card, since it is not on chop. Blue 2 has not been played and has not been touched elsewhere, so this card could be the blue 2.
-   - However, Bob also sees a blue 2 on Cathy's _Finesse Position_, so Alice could have performed a _Reverse Finesse_. If that is the case, this card could be a blue 3.
-1. Bob must entertain the possibility of a _Reverse Finesse_, so he cannot play the blue card immediately. Assuming there is nothing useful to clue in Alice's hand, Bob should just discard (and avoid cluing the blue 2).
-   - If Cathy blind-plays her blue 2 on her turn, Bob can update his note to "blue 2, blue 3 if blue 2 f | blue 3".
-   - If Cathy has nothing more urgent to do and still does not play her blue 2 on her turn, Bob can update his note with "blue 2, blue 3 if blue 2 f | blue 2".
+1. Bob 写下“蓝 2，若蓝 2 被飞则为蓝 3”。
+   - Bob 知道这一定是对他的蓝色牌的**出牌提示**，因为它不在弃牌位。蓝 2 还没有打出在其他地方尚未被提示到，因此这张牌可能是蓝 2。
+   - 然而，Bob 也看到 Cathy 的**飞牌位**上有一张蓝 2，因此 Alice 可能进行了**反向飞牌**。如果是这样，这张牌可能是蓝 3。
+2. Bob 必须考虑**反向飞牌**的可能性，所以他不能立即打出蓝色牌。假设 Alice 手中没有需要提示的牌，Bob 应该选择弃牌（并避免提示蓝 2）。
+   - 如果 Cathy 在她的回合中盲打她的蓝 2，Bob 可以将笔记更新为“蓝 2，若蓝 2 被飞则为蓝 3 | 蓝 3”。
+   - 如果 Cathy 没有更紧急事情而仍未在她的回合中打出蓝 2，Bob 可以将笔记更新为“蓝 2，若蓝 2 被飞则为蓝 3 | 蓝 2”。
 
 </TabItem>
 </Tabs>
 
 <Question2 />
 
-## Question 3
+## 问题 3 \{#question-3\}
 
 <Tabs
   defaultValue="question3"
   values={[
-    {label: 'Question', value: 'question3'},
-    {label: 'Solution', value: 'solution3'},
+    {label: '题目', value: 'question3'},
+    {label: '解答', value: 'solution3'},
   ]}>
 <TabItem value="question3">
 
-- Alice clues number 3 to Bob, which touches one card on slot 4. It has negative red and green on it.
-- Bob writes a card note with the identity of the card.
+- Alice 提示 Bob 数字 3，仅提示到 4 号位。这张牌上有红色和绿色的否定信息。
+- Bob 在牌上写下了关于其可能性的笔记。
 
-1. What _card note_ does Bob write?
-1. What action should Bob perform?
+1. Bob 的**笔记**会是什么内容？
+2. Bob 应该采取什么行动？
 
 </TabItem>
 <TabItem value="solution3">
 
-1. Bob writes a note of "yellow 3, blue 3, purple 3".
-   - Bob knows that this must be a _Play Clue_ on his 3, since it is not on chop. Since there are no 2's played, the 3 is not directly playable. Normally, this would look like a _Reverse Finesse_ on Cathy's green 2, but since Bob's 3 has negative green, that is impossible.
-   - Thus, this must be a _Self-Finesse_ and Bob must have the 2 to make his 3 playable.
-   - Bob does not know exactly which 3 is playable until he plays his _Finesse Position_.
-1. Bob needs to blind-play his _Finesse Position_ immediately to demonstrate that he (and not Cathy) has the connecting 2.
-   - Cathy's chop is trash and does not need saving.
-   - After playing the 2, Bob should mark his 3 with the same color as the 2 that was played.
+1. Bob 写下“黄 3，蓝 3，紫 3”（可以用 `y2, b2, p2` 表示）。
+   - Bob 知道这一定是对他的 3 的**出牌提示**，因为它不在弃牌位。由于没有 2 被打出，这张 3 不能直接打出。通常，这看起来像是对 Cathy 的绿 2 的**反向飞牌**，但由于 Bob 的 3 有绿色的否定信息，所以是不可能的。
+   - 因此，这一定是**自我飞牌**，Bob 必须有 2 来使他的 3 可打出。
+   - Bob 在打出他的**飞牌位**前，无法确切知道哪张 3 是可打出的。
+2. Bob 需要立即盲打他的**飞牌位**，以表明他（而不是 Cathy）有连接的 2。
+   - Cathy 的弃牌位是废牌，不需要留牌。
+   - 在打出 2 后，Bob 应该将他的 3 标记为与打出的 2 相同的颜色。
 
 </TabItem>
 </Tabs>
 
 <Question3 />
 
-## Question 4
+## 问题 4 \{#question-4\}
 
 <Tabs
   defaultValue="question4"
   values={[
-    {label: 'Question', value: 'question4'},
-    {label: 'Solution', value: 'solution4'},
+    {label: '题目', value: 'question4'},
+    {label: '解答', value: 'solution4'},
   ]}>
 <TabItem value="question4">
 
-- Alice clues number 2 to Bob, which touches a yellow 2 on slot 5.
-- Bob discards trash from slot 4.
-- From Cathy's perspective, was Alice's clue a _Reverse Finesse_? Why or why not?
+- Alice 提示 Bob 数字 2，提示到 5 号位的黄 2。
+- Bob 从 4 号位弃掉了一张废牌。
+- 从 Cathy 的角度来看，Alice 的提示是**反向飞牌**吗？为什么？
 
 </TabItem>
 <TabItem value="solution4">
 
-- No, it is not a _Reverse Finesse_.
-- Since the yellow 2 was on chop, Alice performed a normal _2 Save_.
+- 不，这不是**反向飞牌**。
+- 由于黄 2 在弃牌位，Alice 给出的是普通的**留 2 提示**。
 
 </TabItem>
 </Tabs>
 
 <Question4 />
 
-## Question 5
+## 问题 5 \{#question-5\}
 
 <Tabs
   defaultValue="question5"
   values={[
-    {label: 'Question', value: 'question5'},
-    {label: 'Solution', value: 'solution5'},
+    {label: '题目', value: 'question5'},
+    {label: '解答', value: 'solution5'},
   ]}>
 <TabItem value="question5">
 
-- Alice clues number 3 to Bob, which touches one card on slot 2.
-- Bob writes a card note with the identity of the card.
+- Alice 提示 Bob 数字 3，仅提示到 2 号位。
+- Bob 在牌上写下了关于其可能性的笔记。
 
-1. What _card note_ does Bob write?
-1. What action should Bob perform?
+1. Bob 的**笔记**会是什么内容？
+2. Bob 应该采取什么行动？
 
 </TabItem>
 <TabItem value="solution5">
 
-1. Bob writes "red 3, blue 3, purple 3 if purple 2 f".
-   - Bob knows that this must be a _Play Clue_ on his 3, since it is not on chop. It could be an immediately playable red 3 or blue 3, but it could also be a _Reverse Finesse_ on a purple 3.
-1. Bob must entertain the possibility of a _Reverse Finesse_. For now, Bob needs to clue green to Cathy, which would be a _Critical Save_ on the critical green 3.
-   - If Cathy blind-plays the purple 2, Bob will update his note to "red 3, blue 3, purple 3 if purple 2 f | purple 3".
-   - If Cathy does not blind-play the purple 2, Bob will update his note to "red 3, blue 3, purple 3 if purple 2 f | red 3, blue 3".
-   - (This cannot be a _Self-Finesse_ on Bob, since he knows that _Self-Finesses_ cannot be given if a _Play Clue_ interpretation is possible. In this case, the clued card could be an immediately playable red 3 or blue 3.)
+1. Bob 写下“红 3，蓝 3，若紫 2 被飞则为紫 3”。
+   - Bob 知道这一定是对他的 3 的**出牌提示**，因为它不在弃牌位。它可能是立即可打出的红 3 或蓝 3，但也可能是对紫 3 的**反向飞牌**。
+2. Bob 必须考虑**反向飞牌**的可能性。目前，Bob 需要提示 Cathy 绿色，这将是对关键绿 3 的**留关键牌提示**。
+   - 如果 Cathy 盲打紫 2，Bob 会将笔记更新为“红 3，蓝 3，若紫 2 被飞则为紫 3 | 紫 3”。
+   - 如果 Cathy 没有盲打紫 2，Bob 会将笔记更新为“红 3，蓝 3，若紫 2 被飞则为紫 3 | 红 3，蓝 3”。
+   - （这不可能是**自我飞牌**，因为 Bob 知道，如果可能解释为直接的**出牌提示**，就不能给出**自我飞牌**。此场景下，提示到的牌可能是立即可打出的红 3 或蓝 3。）
 
 </TabItem>
 </Tabs>
 
 <Question5 />
 
-## Question 6
+## 问题 6 \{#question-6\}
 
 <Tabs
   defaultValue="question6"
   values={[
-    {label: 'Question', value: 'question6'},
-    {label: 'Solution', value: 'solution6'},
+    {label: '题目', value: 'question6'},
+    {label: '解答', value: 'solution6'},
   ]}>
 <TabItem value="question6">
 
-- Alice clues number 4 to Bob, which touches a green 4 on slot 5.
-- Bob discards trash from slot 4.
-- From Cathy's perspective, was Alice's clue a _Reverse Finesse_? Why or why not?
+- Alice 提示 Bob 数字 4，提示到了 5 号位的绿 4。
+- Bob 从 4 号位弃掉了一张废牌。
+- 从 Cathy 的角度来看，Alice 的提示是**反向飞牌**吗？为什么？
 
 </TabItem>
 <TabItem value="solution6">
 
-- Yes, this is a _Reverse Finesse_.
-- Green 4 is not critical, so the 4 clue cannot be a _Save Clue_. Thus, it must be a _Play Clue_. Cathy is promised a green 3 to make the green 4 playable.
+- 是的，这是**反向飞牌**。
+- 绿 4 不是关键牌，因此这个 4 提示不可能是**留牌提示**。因此，它一定是**出牌提示**。Cathy 被承诺有一张绿 3 来使绿 4 可打出。
 
 </TabItem>
 </Tabs>
 
 <Question6 />
 
-## Question 7
+## 问题 7 \{#question-7\}
 
 <Tabs
   defaultValue="question7"
   values={[
-    {label: 'Question', value: 'question7'},
-    {label: 'Solution', value: 'solution7'},
+    {label: '题目', value: 'question7'},
+    {label: '解答', value: 'solution7'},
   ]}>
 <TabItem value="question7">
 
-- Alice clues number 3 to Bob, which touches two cards on slot 3 and slot 5.
-- This is a _Chop Focus_ clue, which means that slot 5 is focused.
-- Bob writes a card note on both of the cards.
+- Alice 提示 Bob 数字 3，提示到了 3 号位和 5 号位。
+- 这是一个**弃牌位焦点的提示**，意味着 5 号位是焦点。
+- Bob 在两张牌上都写下了笔记。
 
-1. What _card note_ does Bob write on each card?
-1. What action should Bob perform?
+1. Bob 在每张牌上的**笔记**会是什么内容？
+2. Bob 应该采取什么行动？
 
 </TabItem>
 <TabItem value="solution7">
 
-1. Bob writes "red 3" on the slot 5 card, and "yellow 3, green 3, blue 3, purple 3" on the slot 3 card.
-   - Since Bob got a _Chop Focus_ clue, he should treat it as a _Play Clue_ or a _Save Clue_.
-   - However, there are no directly playable 3's, so this cannot be a direct _Play Clue_.
-   - The only 3 in the trash is the red 3, so this must be a _Save Clue_ on a red 3.
-   - This cannot be a _Self-Finesse_, because Alice would expect Bob to treat the clue as a _Save Clue_ on the red 3.
-   - This cannot be a _Reverse Finesse_. Even though Cathy has a red 2 on her _Finesse Position_, Cathy would interpret a clue touching a critical red 3 on chop as a _Save Clue_. Thus, she would never blind-play anything from Alice's clue.
-1. Assuming that Alice has no cards of interest, Bob should clue number 2 to Cathy as a _Play Clue_ on the red 2. (A number 2 clue is better than a red clue because it gets the purple 2 "for free".)
+1. Bob 在 5 号位的牌上写下“红 3”（`r3`），在 3 号位的牌上写下“黄 3，绿 3，蓝 3，紫 3”（`y3, g3, b3, p3`）。
+   - 由于 Bob 收到了**弃牌位焦点的提示**，他应将其视为**出牌提示**或**留牌提示**。
+   - 然而，没有直接可打出的 3，所以这不可能是直接的**出牌提示**。
+   - 弃牌堆中唯一的 3 是红 3，因此这一定是对红 3 的**留牌提示**。
+   - 这不可能是**自我飞牌**，因为 Alice 会期望 Bob 将此提示视为对红 3 的**留牌提示**。
+   - 这不可能是**反向飞牌**。即使 Cathy 的**飞牌位**上有一张红 2，Cathy 也会将触及弃牌位关键红 3 的提示视为**留牌提示**。因此，她不会由于 Alice 的提示盲打任何牌。
+2. 假设 Alice 手中没有有意思的牌，Bob 应该提示 Cathy 数字 2，作为对红 2 的**出牌提示**。（提示数字 2 比提示红色更好，因为它可以“免费”覆盖到紫 2。）
 
 </TabItem>
 </Tabs>
 
 <Question7 />
 
-## Question 8
+## 问题 8 \{#question-8\}
 
 <Tabs
   defaultValue="question8"
   values={[
-    {label: 'Question', value: 'question8'},
-    {label: 'Solution', value: 'solution8'},
+    {label: '题目', value: 'question8'},
+    {label: '解答', value: 'solution8'},
   ]}>
 <TabItem value="question8">
 
-- Bob has an unknown blue card in his hand.
-- Cathy has an unknown 2 in her hand.
-- What is the best clue that Alice can give?
+- Bob 手中有一张未知的蓝色牌。
+- Cathy 手中有一张未知的 2。
+- Alice 可以给出的最佳提示是什么？
 
 </TabItem>
 <TabItem value="solution8">
 
-- Alice only has one valid clue: number 2 to Cathy.
-- Alice cannot clue the red 3 (with either color or rank) to initiate a _Reverse Finesse_, because Cathy would proceed to play the unknown 2 as a red 2 (assuming a _Prompt_ over a _Finesse_).
-- Alice should avoid cluing red to Cathy, as it would violate _Good Touch Principle_ and touch the trash red 1.
+- Alice 只有一个合理的提示：提示 Cathy 数字 2。
+- Alice 不能提示红 3（无论用颜色还是数字）来发起**反向飞牌**，因为 Cathy 会认为这是一个**引牌**而非**飞牌**，并会打出未知的 2 作为红 2。
+- Alice 应避免提示 Cathy 红色，因为这会违反**良触原则**，触及废牌红 1。
 
 </TabItem>
 </Tabs>
 
 <Question8 />
 
-## Question 9
+## 问题 9 \{#question-9\}
 
 <Tabs
   defaultValue="question9"
   values={[
-    {label: 'Question', value: 'question9'},
-    {label: 'Solution', value: 'solution9'},
+    {label: '题目', value: 'question9'},
+    {label: '解答', value: 'solution9'},
   ]}>
 <TabItem value="question9">
 
-- Bob has an unknown 5 in his hand.
-- Cathy has an unknown yellow card in her hand.
-- What is the best clue that Alice can give?
+- Bob 手中有一张未知的 5。
+- Cathy 手中有一张未知的黄色牌。
+- Alice 可以给出的最佳提示是什么？
 
 </TabItem>
 <TabItem value="solution9">
 
-- Alice's most valuable clue is green to Bob. This would be a _Play Clue_ on the green 4 and initiate a _Reverse Finesse_.
-- Unlike the previous question, the _Reverse Finesse_ will work because Cathy knows that her yellow card cannot connect to a green 4.
-- Alice could also clue number 3 to Cathy as a _Play Clue_ on the green 3. This would also "fill in" the yellow 3. But it would only "get" one brand new card instead of two brand new cards.
+- Alice 最有价值的提示是提示 Bob 绿色。这会是对绿 4 的**出牌提示**并发起**反向飞牌**。
+- 与上一个问题不同，**反向飞牌**会生效，因为 Cathy 知道她的黄色牌无法连接到绿 4。
+- Alice 也可以提示 Cathy 数字 3，作为对绿 3 的**出牌提示**。这也会填补黄 3 的信息。但它只会覆盖到一张新牌，而不是两张新牌。
 
 </TabItem>
 </Tabs>
 
 <Question9 />
 
-## Question 10
+## 问题 10 \{#question-10\}
 
 <Tabs
   defaultValue="question10"
   values={[
-    {label: 'Question', value: 'question10'},
-    {label: 'Solution', value: 'solution10'},
+    {label: '题目', value: 'question10'},
+    {label: '解答', value: 'solution10'},
   ]}>
 <TabItem value="question10">
 
-- Bob has an unknown 5 in his hand.
-- Cathy has an unknown purple card in her hand.
-- What is the best clue that Alice can give?
+- Bob 手中有一张未知的 5。
+- Cathy 手中有一张未知的紫色牌。
+- Alice 可以给出的最佳提示是什么？
 
 </TabItem>
 <TabItem value="solution10">
 
-- Alice's most valuable clue is number 4 to Bob. This would be a _Play Clue_ on the red 4 and initiate a _Self Finesse_.
-- Alice can expect that Bob to play into the _Self-Finesse_ because:
-  - Bob will know that the number 4 clue cannot be a _Save Clue_. (No 4's are currently critical.)
-  - Bob will know that the number 4 clue cannot be a direct _Play Clue_, since there are no immediately playable 4's.
-  - Bob will know that the number 4 clue cannot be a _Reverse Finesse_, because Cathy does not have any playable cards on her _Finesse Position_ that connect to a 4.
-- Alice could also clue number 3 to Bob as a _Play Clue_ on the red 3, but this would only "get" one brand new card instead of two brand new cards.
+- Alice 最有价值的提示是提示 Bob 数字 4。这将是对红 4 的**出牌提示**并发起**自我飞牌**。
+- Alice 可以指望 Bob 会执行**自我飞牌**，因为：
+  - Bob 会知道数字 4 提示不可能是**留牌提示**。（目前没有 4 是关键牌。）
+  - Bob 会知道数字 4 提示不可能是直接的**出牌提示**，因为没有立即可打出的 4。
+  - Bob 会知道数字 4 提示不可能是**反向飞牌**，因为 Cathy 的**飞牌位**上没有可打出的牌可以连接到 4。
+- Alice 也可以提示 Bob 数字 3，作为对红 3 的**出牌提示**，但这只会覆盖到一张新牌，而不是两张新牌。
 
 </TabItem>
 </Tabs>
