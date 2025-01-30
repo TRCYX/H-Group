@@ -86,3 +86,22 @@ Editing files on the GitHub website is a pain. If you are adding a significant a
 - Now, the commit is synced to your GitHub, meaning that if you view your forked copy of the repository on GitHub.com, it should show all of the changes you made.
 - On the main page for your forked repository, click on the "Contribute" link near the top of the page, and then click on the "Open Pull Request" button. Next, click on the "Create pull request" button. Enter in a good description of the changes that you made, and then click on "Create pull request".
 - Now, wait for a maintainer to review the request. If additional changes are needed, then you can just push commits to your fork, and they will be automatically reflected in the pull request without having to do anything else.
+
+## Legal Notice
+
+This repository is a fork of [hanabi.github.io](https://github.com/hanabi/hanabi.github.io) licensed under the **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License**. The original license and its terms can be found in the `LICENSE` file.
+
+### Licensing of New Additions
+
+The file **`i18n/zh/docusaurus-plugin-content-docs/current/card-notes.mdx`** is a derivative work of [Hanab Live documentation](https://github.com/Hanabi-Live/hanabi-live) originally licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
+
+To comply with the licensing terms of the original work, **`i18n/zh/docusaurus-plugin-content-docs/current/card-notes.mdx` is licensed under the GNU General Public License v3.0 (GPL-3.0)**. A copy of the GPL v3 license is included in this repository (`LICENSE-GPL`).
+
+### Compatibility Notice
+
+Due to the differing license terms of CC BY-SA 4.0 and GPL v3.0, contributions and modifications should ensure compliance with both licenses. While CC BY-SA 4.0 and GPL v3.0 share a copyleft requirement, they have different conditions, and careful attention should be paid to compatibility when redistributing or combining content.
+
+For further details on licensing terms, please refer to:
+
+- [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/)
+- [GPL v3 License](https://www.gnu.org/licenses/gpl-3.0.html)
