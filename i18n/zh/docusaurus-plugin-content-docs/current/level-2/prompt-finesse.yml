@@ -14,7 +14,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Red 3
+        above: 红 3
       - type: x
       - type: x
       - type: r

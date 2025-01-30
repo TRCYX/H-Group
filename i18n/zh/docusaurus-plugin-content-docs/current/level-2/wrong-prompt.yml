@@ -14,7 +14,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Red 2
+        above: 红 2
       - type: x
       - type: r
         middleNote: (4)

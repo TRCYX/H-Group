@@ -20,10 +20,10 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Red 2
+        above: 红 2
       - type: 3
         clue: 3
-        middleNote: (R)
+        middleNote: (红)
       - type: x
       - type: x
       - type: x
