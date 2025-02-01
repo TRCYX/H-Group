@@ -5,7 +5,7 @@ stacks:
   - b: 1
   - p: 1
 players:
-  - text: Bob assumes that his 1 is a green 1.
+  - text: Bob 认为他的 1 是绿 1。
   - name: Alice
     cards:
       - type: x
@@ -20,7 +20,7 @@ players:
       - type: x
       - type: 1
       - type: x
-  - text: Alice gives a Fix Clue.
+  - text: Alice 给出一个修正提示。
   - name: Alice
     clueGiver: true
     cards:
@@ -38,5 +38,5 @@ players:
       - type: b1
         clue: b
         retouched: true
-        below: Focus
+        below: 焦点
       - type: x

@@ -10,33 +10,30 @@ players:
   - cards:
       - type: 1
         clue: 1
-        middleNote: 2nd
-        below: Fresh
+        middleNote: 第二
+        below: 新的
       - type: 1
         clue: 1
-        middleNote: 4th
+        middleNote: 第四
         below:
           text:
-            - Starting
-            - Hand
+            - 起手
           color: gray
       - type: 1
         clue: 1
-        middleNote: 3rd
+        middleNote: 第三
         below:
           text:
-            - Starting
-            - Hand
+            - 起手
           color: gray
       - type: x
       - type: 1
         clue: 1
-        middleNote: 1st
+        middleNote: 第一
         below:
           text:
-            - Starting
-            - Hand
-            - + Chop
+            - 起手 +
+            - 弃牌位
           color: gray
 
   - clueGiver: true

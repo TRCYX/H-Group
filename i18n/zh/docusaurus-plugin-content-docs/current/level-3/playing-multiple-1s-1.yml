@@ -16,11 +16,11 @@ players:
       - type: x
       - type: 1
         clue: 1
-        middleNote: 3rd
+        middleNote: 第三
       - type: 1
         clue: 1
-        middleNote: 2nd
+        middleNote: 第二
       - type: 1
         clue: 1
-        middleNote: 1st
+        middleNote: 第一
       - type: x

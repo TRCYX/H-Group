@@ -5,7 +5,7 @@ stacks:
   - b: 2
   - p: 4
 players:
-  - text: Bob assumes that his purple card is a purple 5.
+  - text: Bob 认为他的紫色牌是紫 5。
   - name: Alice
     cards:
       - type: x
@@ -20,7 +20,7 @@ players:
       - type: x
       - type: p
       - type: x
-  - text: Alice gives a Fix Clue.
+  - text: Alice 给出一个修正提示。
   - name: Alice
     clueGiver: true
     cards:

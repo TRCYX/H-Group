@@ -15,12 +15,12 @@ players:
       - type: x
       - type: x
       - type: 2
-        below: Red 2
+        below: 红 2
       - type: x
   - cards:
       - type: x
       - type: 3
-        below: Red 3
+        below: 红 3
       - type: x
       - type: x
   - cards:
@@ -29,4 +29,4 @@ players:
       - type: x
       - type: r
         clue: r
-        below: Red 4
+        below: 红 4

@@ -21,7 +21,7 @@ players:
       - type: 1
         clue: 1
       - type: x
-  - text: After Bob plays two of the 1s...
+  - text: Bob 打出其中两张 1 后……
   - name: Alice
     clueGiver: true
     cards:
@@ -38,5 +38,5 @@ players:
       - type: 1
         clue: 1
         retouched: true
-        below: Bad
+        below: 坏牌
       - type: x
