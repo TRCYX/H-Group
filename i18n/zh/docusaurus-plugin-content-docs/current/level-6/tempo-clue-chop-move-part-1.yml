@@ -15,7 +15,7 @@ players:
   - cards:
       - type: r
         clue: r
-        below: Focus
+        below: 焦点
       - type: r
         clue: r
       - type: x
@@ -28,4 +28,4 @@ players:
       - type: x
       - type: x
       - type: x
-  - text: Bob plays slot 1.
+  - text: Bob 打出 1 号位。

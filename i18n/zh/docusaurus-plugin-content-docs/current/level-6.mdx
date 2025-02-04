@@ -1,49 +1,49 @@
 ---
-title: Level 6 - Tempo Clues
+title: 等级 6 - 节奏提示
 ---
 
 import TempoClueChopMovePart1 from "./level-6/tempo-clue-chop-move-part-1.yml";
 import TempoClueChopMovePart2 from "./level-6/tempo-clue-chop-move-part-2.yml";
 import DiscardModulation from "./level-6/discard-modulation.yml";
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The Tempo Clue
+### 节奏提示 \{#the-tempo-clue\}
 
-- _Tempo Clues_ are defined as clues that "get" no new cards. The purpose of a _Tempo Clue_ is to get a card played that **already** had a clue on it.
-  - If a clue is given to a card that is **already** known to be playable, then that would **not** count as a _Tempo Clue_. It would instead be a _Burn Clue_ (i.e. a clue that accomplishes nothing).
-- As explained in the beginner's guide, we do not typically perform _Tempo Clues_, because they do not meet _[Minimum Clue Value Principle](beginner/minimum-clue-value-principle)_.
-- When a _Tempo Clue_ touches multiple cards, the focus is on the leftmost card. The non-focused cards are not promised to be playable.
-- We treat _Tempo Clues_ differently depending on whether they are valuable or not valuable. See the next two sections below.
+- *节奏提示*是指没有获取新牌的提示。其目的是让一张**已经**提示过的牌被打出。
+  - 如果提示的牌**已经**明确可以打出，那么这**不**算是节奏提示，而是一个**空烧提示**（即没有做到任何事的提示）。
+- 正如入门指南中所解释的，我们通常不会作出*节奏提示*，因为它们不满足[_提示价值下限原则_](beginner/minimum-clue-value-principle)。
+- 当*节奏提示*提示到多张牌时，焦点会落在最左边的那张牌上。焦点外的牌不保证可以打出。
+- 我们会根据*节奏提示*是否有价值来区别对待它们。具体内容请参见以下两节。
 
-### The Valuable Tempo Clue
+### 有价值的节奏提示 \{#the-valuable-tempo-clue\}
 
-- In some special situations, _Tempo Clues_ have enough value to justify giving them:
-  1. When everyone knows it gets two or more clued cards to play (in total across all hands).
-  1. When the clued card is not a 5 and it is "out of order" (meaning that it is not possible for a _Prompt_ to get the card played at this moment in time).
-  1. When playing the clued card would "unlock" someone's hand. (For level 9 players, see the section on [_Locked Hands_](level-9.mdx#the-locked-hand-save-lhs).)
-- If a _Tempo Clue_ is given in any of these situations, it is considered to be "valuable".
-- _Valuable Tempo Clues_ can be given at any time. They don't have any special rules associated with them and they are treated in exactly the same way a "normal" _Play Clue_ is.
-- When determining if a _Tempo Clue_ is _Valuable_, it should only be evaluated on the turn immediately after the clue is given. (This helps keeps things simple and prevents desynchronization.)
+- 在某些特殊情况下，*节奏提示*具有足够的价值，值得给出：
+  1. 当所有人都知道此提示能让两张或更多提示过的牌被打出时（所有玩家的手牌总计）。
+  1. 当提示到的牌不是 5，并且是“乱序”的（说明此时无法通过*引牌*打出这张牌）。
+  1. 当打出这张被提示的牌可以“解锁”某个玩家的手牌时。（对于等级 9 的玩家，请参见[_锁手留牌_](level-9.mdx#the-locked-hand-save-lhs)部分。）
+- 如果*节奏提示*是在上述任何一种情况下给出的，那么它就被认为是“有价值的”。
+- *有价值的节奏提示*可以在任何时候给出。它们不与任何特殊规则联系，对待它们会和“正常”的*出牌提示*一样。
+- 在判断一个*节奏提示*是否*有价值*时，应该仅在提示给出的次回合进行评估。（这有助于简化逻辑，避免失去同步。）
 
-### The Tempo Clue Stall (A Non-Valuable Tempo Clue)
+### 节奏提示停顿（一种无价值的节奏提示） \{#the-tempo-clue-stall-a-non-valuable-tempo-clue\}
 
-- If a player gives a _Tempo Clue_ that does **not** meet any of the criteria for being "valuable", it is treated differently and given a different name.
-- Sometimes, players are in "stalling situations" where it would be illegal for them to discard (like when they have a hand that is completely clued). In some specific stalling situations, it is okay to give a _Tempo Clue_ that doesn't meet the criteria for being valuable. This is called a _Tempo Clue Stall_. Since everyone sees that the player giving the clue was in a stalling situation, they can understand what is going on.
-- For level 9 players, see the _[Allowable Stall Clues](level-9.mdx#allowable-stall-clues-stall-table)_ section for the specific times when _Tempo Clue Stalls_ are okay to give. If you are lower than level 9, the details are not important right now.
-- Obviously, players are **only** allowed to give a _Tempo Clue Stall_ in a valid stalling situation. If a player gives a _Tempo Clue_ that does not meet the criteria to be valuable in an otherwise ordinary situation, then they must be intending to send a deeper message. See the _Tempo Clue Chop Moves_ section below.
+- 如果玩家给出的*节奏提示*{}**不**符合任何“有价值”的标准，那么它会被区别对待，得到一个不同的称呼。
+- 有时，玩家会处于“停顿状态”下，此时他们无法合规地弃牌（例如整手牌都被提示过）。在某些特定的停顿状态下，给出一个不满足“有价值”标准的*节奏提示*是可以接受的。这称为*节奏提示停顿*。由于所有人都能看到给出提示者处于停顿状态，大家都可以明白发生了什么。
+- 对于等级 9 的玩家，请参见[_允许的停顿提示_](level-9.mdx#allowable-stall-clues-stall-table)部分，了解何时可以给出*节奏提示停顿*。如果你的低于等级 9，目前这些细节不太重要。
+- 显然，玩家**只允许**在合法的停顿状态下给出*节奏提示停顿*。如果玩家在一般状态下给出了一个不满足“有价值”标准的*节奏提示*，那么他们一定在尝试传达更深层次的含义。请参见下面的*节奏提示弃牌位移动*部分。
 
-### The Tempo Clue Chop Move (TCCM)
+### 节奏提示弃牌位移动（TCCM） \{#the-tempo-clue-chop-move-tccm\}
 
-- First, see the section on the _[Tempo Clue Stall](#the-tempo-clue-stall-a-non-valuable-tempo-clue)_.
-- A _Tempo Clue Stall_ that is given in non-stalling situation can't be a stall - the cluer must be intending to send a deeper message.
-- We agree that _Tempo Clues_ of this nature cause a _Chop Move_ in addition to getting the focus of the card to play.
-- For example, in a 3-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Alice clues red to Bob, which touches two cards on slot 1 and slot 2.
-  - Bob plays red 1 from slot 1. The red card in slot 2 could be red 2, red 3, red 4, or red 5.
-  - Cathy clues number 2 to Bob, which does not introduce any new cards, but it does "fill in" his slot 2 card.
-  - Bob now knows that he has exactly red 2 on slot 2 and that this was a _Tempo Clue_. Since it does not get any new cards and only get _Tempo_ on one card in total, he knows that he should also _Chop Move_ his slot 5 card.
+- 首先，请参见[_节奏提示停顿_](#the-tempo-clue-stall-a-non-valuable-tempo-clue)部分。
+- 在非停顿状态下给出的*节奏提示停顿*不可能是停顿——提示者一定在尝试传达更深层次的含义。
+- 我们约定，这种性质的*节奏提示*除了让焦点牌被打出外，还会引发一次*弃牌位移动*，称为*节奏提示弃牌位移动（Tempo Clue Chop Move，TCCM）*。
+- 例如在 3 人游戏中：
+  - 现在是第一回合，还没有打出任何牌。
+  - Alice 提示 Bob 红色，提示到 1 号位和 2 号位的两张牌。
+  - Bob 从 1 号位打出红 1。2 号位的红牌可能是红 2、红 3、红 4 或红 5。
+  - Cathy 提示 Bob 数字 2，这并未引入任何新牌，但“填补”了 Bob 2 号位的牌。
+  - Bob 现在知道他的 2 号位是红 2，并且这是一个*节奏提示*。由于它没有获取任何新牌，且总共只让一张牌享受了*节奏*，他知道他还应该将弃牌位*移过* 5 号位。
 
 <TempoClueChopMovePart1 />
 
@@ -51,52 +51,57 @@ import DiscardModulation from "./level-6/discard-modulation.yml";
 
 <TempoClueChopMovePart2 />
 
-## General Principles
+## 一般原则 \{#general-principles\}
 
-### Chop Moves & Tempo Clues
+### 弃牌位移动与节奏提示 \{#chop-moves--tempo-clues\}
 
-- _Chop Moves_ interact with _Tempo Clues_ in a potentially confusing way. When a _Play Clue_ is given that touches a _Chop Moved_ card for the first time, it is **not** considered to be _Tempo Clue_, even though _Chop Moved_ cards are imagined to have an "invisible" clue on them. Instead, this would be categorized a normal _Play Clue_.
-  - The reason for this is kind of technical. A _Tempo Clue_ is defined as a 0-for-1 because all clued cards will "automatically" play on the stacks from _Good Touch Principle_. However, there is not an analogous principle for _Chop Moved_ cards - they will not automatically play on the stacks. Thus, a _Play Clue_ to a _Chop Moved_ card would be a 1-for-1.
-- In the _Early Game_, players must exhaust all _Play Clues_ and _Save Clues_ that satisfy _Minimum Clue Value Principle_. Since clues to playable _Chop Moved_ cards count as normal _Play Clues_, it follows that players are are obligated to give these kinds of clues before ending the _Early Game_.
+- *弃牌位移动*与*节奏提示*的交互可能会让人迷惑。当*出牌提示*首次提示到一张被弃牌位*移过*的牌时，它<Em>**不**</Em>被当作*节奏提示*，即使认为被弃牌位*移过*的牌带有“隐形”的提示。相反，这会被归类为普通的*出牌提示*。
+  - 原因比较技术性。*节奏提示*被定义为 0 换 1 的提示，因为所有提示到的牌都会根据*良触原则*“自动”打出。然而，被弃牌位*移过*的牌并没有类似的原则——它们不会自动打出。因此，对被弃牌位*移过*的牌给出*出牌提示*会被视为 1 换 1。
+- 在*游戏前期*，玩家必须穷尽所有符合*提示价值下限原则*的*出牌提示*和*留牌提示*。由于对可打出的被弃牌位*移过*的牌给出提示被当作普通的*出牌提示*，因此玩家有义务在结束*前期*之前给出这类提示。
 
-### Focus Shifting
+### 焦点移位 \{#focus-shifting\}
 
-- Sometimes, the normally-focused card of a clue would not make sense. We agree that:
-  - When two or more cards are touched as part of a _Play Clue_,
-  - and the normally-focused card is already known to be playable,
-  - and one or more of the touched cards are not already known to be playable,
-  - then the focus always shifts to the next left-most card that is not already known to be playable.
+- 有时，提示的正常焦点并不合理。我们约定：
+  - 当*出牌提示*涉及两张或更多牌时，
+  - 且正常焦点处的牌已经明确可以打出，
+  - 且被提示到的一张或多张牌尚未明确可以打出，
+  - 那么焦点会移位到次左侧的尚未明确可以打出的牌上。
 
-### Discard Modulation
+### 调节弃牌 \{#discard-modulation\}
 
-- Often times, either you or the player who comes after you can perform a clue. And the clue would have the same result if done by either player. So who should do it?
-- One way to decide is to look at the next player's chop. Is their chop high-value, low-value, or useless? If it is high-value, then you should discard and let them give the clue. If it is low-value or useless, then you should give the clue and let them discard.
-- "Stealing" clues in this way is called _Discard Modulation_. If other players are discarding to let you give all of the clues, you might have a high-value chop.
-- For example, in a 3-player game:
-  - All the 1's are played on the stacks.
-  - It is the _Mid-Game_.
-  - Bob has a red 3 on chop. This is a _one-away-from-playable_ card that is valuable to the team. However, it would be illegal to clue the card directly with a _Play Clue_ or a _Save Clue_.
-  - Cathy has a (playable) blue 2 in her hand.
-  - Alice decides to discard instead of giving a _Play Clue_ herself.
-  - Bob clues blue to Cathy as a _Play Clue_.
-  - Alice has smartly prevented the discard of the red 3, at least for a little while.
+- 时常你或下家都可以作出同一个提示，无论由谁给出，结果都是一样的。谁应该作出这个提示呢？
+- 一种判定的手段是观察下家的弃牌位。下家的弃牌位价值高、低还是没有价值？如果价值高，那么你应该弃牌，让下家作出提示。如果价值低或没有价值，那么你应该提示，让下家弃牌。
+- 这种“抢偷”提示的行为称为*调节弃牌*。如果其他玩家都在弃牌以让你作出所有提示，那么你的弃牌位可能价值很高。
+- 例如在 3 人游戏中：
+  - 所有的 1 都已经打出。
+  - 现在是**游戏中期**。
+  - Bob 的弃牌位有一张红 3。这张牌*差一张可打出*，价值很高。但直接对这张牌给出*出牌提示*或*留牌提示*都不合规。
+  - Cathy 手中有一张（可打出的）蓝 2。
+  - Alice 决定弃牌，而不是自己给出*出牌提示*。
+  - Bob 提示 Cathy 蓝色作为*出牌提示*。
+  - Alice 巧妙地避免了弃掉红 3，至少暂时如此。
 
 <DiscardModulation />
 
-### The Value of One-Away-From-Playable Cards
+### 差一张可打出的牌的价值 \{#the-value-of-one-away-from-playable-cards\}
 
-- In general, 3's are pretty high value, and 4's are pretty low value.
-- But combined with this, cards that are _one-away-from-playable_ are pretty high value, and cards that are two-away (or more) are pretty low value.
-- Thus, in some situations, a _one-away-from-playable_ 4 may be more valuable than a _two-away-from-playable_ 3.
-- According to our conventions, it is illegal to clue a _one-away-from-playable_ card as the focus of the clue without it being some kind of special move like a _Finesse_. However, sometimes we still want to "save" these cards. Thus, they are prime targets for indirect saves like the _Trash Chop Move_ or the _5's Chop Move_.
-- However, in most cases, _Chop Moving_ the valuable card just won't be possible. So in general, you should try to construct lines that protect high-value cards from being discarded for as long as possible.
+- 普遍而言，3 价值较高，而 4 价值较低。
+- 但与这一点相结合，*差一张可打出*的牌价值较高，而*差两张（或更多）可打出*的牌价值较低。
+- 因此，在某些情况下，一张*差一张可打出*的 4 可能比一张*差两张可打出*的 3 更有价值。
+- 根据我们的约定，将*差一张可打出*的牌作为提示的焦点是违规的，除非它是一种特殊行动，比如*飞牌*。有时我们仍然希望“保留”这些牌。因此，它们是*飞牌弃牌位移动*或 *5 弃牌位移动*等间接留牌的主要目标。
+- 然而在大多数情况下，将弃牌位*移过*高价值牌简单地无法做到。所以一般来说，你应该尝试设计能够尽可能久地保护高价值牌不被弃掉的路线。
 
-### Clarity Principle
+### 清晰原则 \{#clarity-principle\}
 
-- In the H-Group, we like to find the "best" move for every turn in the post-game review. This is fun and helps everybody improve. But this can be taken too far.
-- Sometimes, players will give clues that are very complicated. Maybe the clue looks like it could be two different moves. Or, maybe the clue relies on non-obvious contextual factors.
-- Often, these kinds of complicated clues end up in misplays and lost games. And in the post-game review, the person who gave the clue gets defensive: "If you guys just played perfectly, then my clue would have worked!"
-- It's natural for people to feel this way, because normally, if Alice performs a _Finesse_, and Bob is not paying attention and misses it, then we would say that Bob is at fault.
-- On the other hand, things are a little different when Alice gives a really complicated clue that Bob should _technically_ be able to figure out, but doesn't. In this case, Bob shares a little of the blame. **But it is mostly Alice that is at fault**.
-- Part of being good at Hanabi is recognizing when you should **not** try to do the most-optimal clue for the turn, because it would be confusing for your teammates. Clue clarity is really important and you should prioritize it! In the post-game review, you can always say: "On turn X, I considered this more-efficient clue, but it did not seem very clear. So I did this other, more-clear clue instead. What do you guys think?" That gives everyone a chance to discuss the theoretical move together and find out if it really was the best move, without introducing a huge chance of failure into the actual game.
-- **Don't give confusing clues.** If you do decide to give a confusing clue, and it doesn't work out, then **you are at fault**. This principle is more important than all other principles.
+- 在 H-Group 中，我们喜欢在复盘时为每个回合找到“最佳”行动。这很有趣，也能帮助大家提高水平。但这个做法可能会被滥用。
+- 有时玩家会给出非常复杂的提示。也许这个提示看起来好像可以是两种不同的行动。也有可能这个提示依赖于不明显的场合因素。
+- 这些复杂的提示经常会导致误打和输掉游戏。而在赛后回顾中，给出提示的玩家会辩解说：“如果你们打得完美，我的提示就会奏效！”
+- 有这种想法是很自然的，因为正常情况下，如果 Alice _飞牌_，而 Bob 没有注意到，错过了，我们认为是 Bob 的错。
+- 另一方面，当 Alice 给出一个非常复杂的提示，而 Bob *理论上*应该能够理解但没有理解时，情况就不太一样了。在这种情况下，Bob 也有一部分责任。**但主要是 Alice 的问题**。
+- 认识到什么时候**不应该**尝试给出最优的提示是成为花火高手的一部分，因为它对队友来说可能很迷惑。提示清晰非常重要，你应该优先考虑这点！在复盘时，你总可以说：“在第 X 回合，我考虑了这个效率更高的提示，但它好像不太清晰。所以我选择了另一个更清晰的提示。你们觉得呢？”这样每个人都有机会一起讨论这个理论上的行动，看看它是否真的是最佳行动，而不会在实际游戏中引入巨大的失败风险。
+- <Em>**不要给出令人困惑的提示。**</Em>
+  如果你决定给出一个令人困惑的提示，并且它没有奏效，那么**这是你的问题**。这一原则比所有其他原则都重要。
+
+## 挑战题 \{#challenge-questions\}
+
+如果你刚到等级 6，看看你能否作出这些[挑战题](challenge-questions/level-6.mdx)。

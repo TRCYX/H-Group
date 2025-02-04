@@ -21,8 +21,8 @@ players:
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过
   - clueGiver: true
     cards:
       - type: x

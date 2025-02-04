@@ -11,8 +11,8 @@ players:
       - type: x
         above:
           text:
-            - Chop
-            - Move
+            - 弃牌位
+            - 已移过
       - type: g3
         clue: 3
         retouched: true
