@@ -16,16 +16,16 @@ players:
       - type: x
       - type: x
       - type: x
-        above: Chop
+        above: 弃牌位
       - type: 1
         clue: 1
         trash: true
       - type: x
         above:
           text:
-            - Chop
-            - Moved
-  - text: After discarding the 1...
+            - 弃牌位
+            - 已移过
+  - text: 弃掉 1 后……
   - name: Alice
     clueGiver: true
     cards:
@@ -39,15 +39,15 @@ players:
       - type: b
         middleNote: (2)
         clue: b
-        below: Focus
+        below: 焦点
       - type: x
       - type: x
       - type: x
-        above: Chop
+        above: 弃牌位
       - type: b
         clue: b
         below:
           text:
-            - Formerly
-            - Chop
-            - Moved
+            - 弃牌位
+            - 之前
+            - 已移过

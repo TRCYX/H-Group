@@ -16,29 +16,25 @@ players:
       - type: x
       - type: x
       - type: x
-        above:
-          text: Chop
-          color: darkred
+        above: 弃牌位
       - type: 1
         clue: 1
         trash: true
       - type: x
         above:
           text:
-            - Chop
-            - Moved
-  - text: After discarding the 1...
+            - 弃牌位
+            - 已移过
+  - text: 弃掉 1 后……
   - name: Bob
     cards:
       - type: x
       - type: x
       - type: x
       - type: x
-        above:
-          text: Chop
-          color: darkred
+        above: 弃牌位
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过

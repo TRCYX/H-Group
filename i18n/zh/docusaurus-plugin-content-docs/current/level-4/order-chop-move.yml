@@ -17,24 +17,24 @@ players:
         clue: 1
         below:
           text:
-            - Chop
-            - Move
+            - 移动
             - Alice
+            - 弃牌位
           color: maroon
       - type: 1
         clue: 1
         below:
           text:
-            - Chop
-            - Move
+            - 移动
             - Cathy
+            - 弃牌位
           color: darkgreen
       - type: 1
         clue: 1
         below:
           text:
-            - Expected
-            - Play
+            - 预期
+            - 会打出
       - type: x
       - type: x
   - cards:

@@ -14,16 +14,16 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Red 2
+        above: 红 2
       - type: x
       - type: x
       - type: x
-        above: Chop
+        above: 弃牌位
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过
   - cards:
       - type: x
       - type: x

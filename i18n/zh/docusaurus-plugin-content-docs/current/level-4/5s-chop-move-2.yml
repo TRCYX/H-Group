@@ -17,11 +17,11 @@ players:
       - type: 5
         clue: 5
       - type: x
-        above: Chop
+        above: 弃牌位
       - type: 5
         clue: 5
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过
