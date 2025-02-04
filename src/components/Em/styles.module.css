@@ -1,5 +1,4 @@
 .em {
-  font-weight: var(--ifm-font-weight-bold);
   text-emphasis: filled dot;
   text-emphasis-position: under right;
 }

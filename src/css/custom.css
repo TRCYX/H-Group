@@ -167,3 +167,25 @@ svg.example text.site-theme-text {
 #__docusaurus g.node-con > :is(rect, circle, ellipse, polygon, path) {
   fill: var(--flowchart-con);
 }
+
+:root:lang("zh-CN"),
+:root:lang("zh-Hans") {
+  /* cspell:disable */
+  --ifm-font-family-base: ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  /* cspell:enable */
+}
+
+@font-face {
+  font-family: LXGW;
+  src: url("/font/LXGWWenKaiGB-Medium.subset.woff2");
+}
+
+em:lang("zh-CN"),
+em:lang("zh-Hans") {
+  font-family: LXGW, Fangsong, STFangsong, fangsong, ui-serif, serif;
+  font-style: normal;
+  font-weight: inherit;
+}

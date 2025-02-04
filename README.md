@@ -93,9 +93,11 @@ This repository is a fork of [hanabi.github.io](https://github.com/hanabi/hanabi
 
 ### Licensing of New Additions
 
-The file **`i18n/zh/docusaurus-plugin-content-docs/current/card-notes.mdx`** is a derivative work of [Hanab Live documentation](https://github.com/Hanabi-Live/hanabi-live) originally licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
+The file `i18n/zh/docusaurus-plugin-content-docs/current/card-notes.mdx` is a derivative work of [Hanab Live documentation](https://github.com/Hanabi-Live/hanabi-live) originally licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
 
 To comply with the licensing terms of the original work, **`i18n/zh/docusaurus-plugin-content-docs/current/card-notes.mdx` is licensed under the GNU General Public License v3.0 (GPL-3.0)**. A copy of the GPL v3 license is included in this repository (`LICENSE-GPL`).
+
+The font file at `static/font/LXGWWenKaiGB-Medium.subset.woff2` is a subset of [LXGW WenKai GB (霞婺文楷 GB)](https://github.com/lxgw/LxgwWenkaiGB), licensed under the **SIL Open Font License 1.1 (OFL 1.1)**. A copy of the OFL 1.1 license with the original copyright notes is included in this repository (`OFL.txt`).
 
 ### Compatibility Notice
 
