@@ -18,11 +18,11 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Green 1
+        above: 绿 1
       - type: x
-        above: Red 2
+        above: 红 2
       - type: x
-        above: Blue 1
+        above: 蓝 1
       - type: x
   - cards:
       - type: x

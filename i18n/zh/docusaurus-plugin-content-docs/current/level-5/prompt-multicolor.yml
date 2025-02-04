@@ -16,7 +16,7 @@ players:
   - cards:
       - type: rm12345
       - type: rm3
-        below: Prompt
+        below: 引牌
       - type: x
       - type: x
       - type: x

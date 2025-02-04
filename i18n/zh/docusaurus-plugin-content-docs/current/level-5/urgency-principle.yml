@@ -5,7 +5,7 @@ stacks:
   - b: 1
   - p: 1
 bigText:
-  text: "Clues: 1"
+  text: "提示机会：1"
   color: black
 players:
   - clueGiver: true
@@ -23,7 +23,7 @@ players:
   - name: Cathy
     cards:
       - type: x
-        above: Red 2
+        above: 红 2
       - type: x
       - type: x
       - type: x
@@ -33,7 +33,7 @@ players:
       - type: x
       - type: x
       - type: x
-        above: Blue 5
+        above: 蓝 5
   - name: Emily
     cards:
       - type: x

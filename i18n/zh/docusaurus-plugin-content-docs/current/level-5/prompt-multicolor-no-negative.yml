@@ -15,7 +15,7 @@ players:
       - type: x
   - cards:
       - type: rm
-        below: Prompt
+        below: 引牌
       - type: r
       - type: x
       - type: x
