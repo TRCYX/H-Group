@@ -11,13 +11,13 @@ players:
       - type: r3
       - type: x
       - type: x
-  - text: Alice discards a known red 3.
+  - text: Alice 弃掉已知的红 3。
   - name: Bob
     cards:
       - type: x
-        above: Red 3
+        above: 红 3
       - type: x
       - type: x
       - type: x
       - type: x
-  - text: Bob marks his Finesse Position slot as a red 3.
+  - text: Bob 标记飞牌位为红 3。

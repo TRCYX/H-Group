@@ -16,19 +16,19 @@ players:
       - type: x
   - cards:
       - type: 2
-        middleNote: (R)
+        middleNote: (红)
         clue: 2
       - type: x
       - type: x
       - type: x
       - type: x
-  - text: Bob discards his slot 1 card, revealing it to be a red 2.
+  - text: Bob 弃掉 1 号位的牌，亮出是红 2。
   - name: Cathy
     cards:
       - type: x
-        above: Red 2
+        above: 红 2
       - type: x
       - type: x
       - type: x
       - type: x
-  - text: Cathy blind-plays her slot 1.
+  - text: Cathy 盲打 1 号位。

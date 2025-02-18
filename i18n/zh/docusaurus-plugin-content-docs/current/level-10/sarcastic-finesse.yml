@@ -10,12 +10,12 @@ players:
       - type: x
       - type: x
       - type: 2
-        middleNote: (R)
+        middleNote: (红)
       - type: x
       - type: x
   - cards:
       - type: x
-        above: Red 1
+        above: 红 1
       - type: x
       - type: x
       - type: x

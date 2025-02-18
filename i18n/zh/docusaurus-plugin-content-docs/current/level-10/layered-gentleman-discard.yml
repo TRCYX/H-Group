@@ -7,9 +7,9 @@ stacks:
 players:
   - cards:
       - type: x
-        above: Green 1
+        above: 绿 1
       - type: x
-        above: Red 1
+        above: 红 1
       - type: x
       - type: x
       - type: x
@@ -24,7 +24,7 @@ players:
       - type: x
       - type: x
       - type: r1
-        below: Discards
+        below: 弃掉
         clue: r
         retouched: true
       - type: r

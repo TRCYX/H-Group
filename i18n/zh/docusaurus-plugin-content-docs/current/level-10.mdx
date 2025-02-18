@@ -1,5 +1,5 @@
 ---
-title: Level 10 - Special Discards
+title: 等级 10 - 特殊弃牌
 ---
 
 import GentlemanDiscard from "./level-10/gentleman-discard.yml";
@@ -10,137 +10,139 @@ import CertainFinesseDiscard from "./level-10/certain-finesse-discard.yml";
 import CompositionFinesse from "./level-10/composition-finesse.yml";
 import DoubleGentlemanDiscard from "./level-10/double-gentleman-discard.yml";
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The Gentleman's Discard (GD)
+{/* cspell:words gentlemans */}
 
-- First, see the section on the _[Sarcastic Discard](level-3.mdx#the-sarcastic-discard-sd)_.
-- To review, the _Sarcastic Discard_ is:
-  1. a move that transfers a **clued card** in one person's hand to a **clued card** in another person's hand
-  1. **necessary** to eliminate confusion among the team (because from _Good Touch Principle_, we are not normally supposed to have two copies of the same card "touched" with a clue)
-  1. done with both playable cards and non-playable cards
-- It is also possible to "transfer" cards to the _Finesse Position_ of other players. This is called a _Gentleman's Discard_ to signify that the other card was completely blind as opposed to having a clue on it already.
-- The _Gentleman's Discard_ is:
-  1. a move that transfers a **clued card** in one person's hand to the **_Finesse Position_** of another person's hand
-  1. **not necessary** and does not directly help the team, but may have some helpful side effects
-  1. done with **only playable cards**
-- For example, in a 3-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Alice clues number 1 to Cathy, touching one 1.
-  - Bob clues red to Cathy, filling in the already-touched 1 as red 1, as well as touching a new card, which must be a red 2.
-  - Cathy discards the known red 1 as a _Gentleman's Discard_.
-  - Alice blind-plays her _Finesse Position_ card as red 1.
+### 绅士弃牌（GD） \{#the-gentlemans-discard-gd\}
+
+- 首先，请参见[_讽刺性弃牌_](level-3.mdx#the-sarcastic-discard-sd)的章节。
+- 回顾一下，_讽刺性弃牌_：
+  1. 将一人手中**提示过的牌**转移到另一人手中**提示过的牌**
+  1. **是必要的**，用以消除困惑（因为根据*良触原则*，正常不该提示两张相同的牌）
+  1. 既适用于可打出的，也适用于不可打出的牌
+- 也可以将牌“转移”到其他玩家的*飞牌位*。这称为*绅士弃牌（Gentleman's Discard）*，表示另一张牌相较已被提示过，是完全盲目的。
+- *绅士弃牌*则：
+  1. 将一人手中**提示过的牌**转移到另一人的*飞牌位*
+  1. **不是必要的**，不会直接带来帮助，但可能有一些有益的副作用
+  1. 仅适用于**可打出的牌**
+- 例如在 3 人游戏中：
+  - 现在是第一个回合，还没有打出过任何牌。
+  - Alice 提示 Cathy 数字 1，提示到一张 1。
+  - Bob 提示 Cathy 红色，将已经提示的 1 填补为红 1，同时提示到一张新牌，这张牌必须是红 2。
+  - Cathy 弃掉已知的红 1，作为*绅士弃牌*。
+  - Alice 盲打*飞牌位*牌作为红 1。
 
 <GentlemanDiscard />
 
-- Often times, doing a _Gentleman's Discard_ will delay things and cost the team _Tempo_. Thus, a _Gentleman's Discard_ that slows things down is only good if there is some other side benefit to offset the lost _Tempo_ (such as delaying the discard of a valuable card, for example).
-- Just like how _Prompts_ take precedence over _Finesses_, _Sarcastic Discards_ take precedence over _Gentleman's Discards_.
-- It is explicitly illegal to perform a _Gentleman's Discard_ with a 1 when the other two copies of that 1 are on two different _Finesse Positions_ at the same time.
+- 进行*绅士弃牌*常会造成延迟。损失*节奏*。只有在有其他益处可以抵消损失的*节奏*时（例如一张高价值的牌本要弃掉，因之延后），*绅士弃牌*才是好的选择。
+- 就像*引牌*优先于*飞牌*一样，*讽刺性弃牌*优先于*绅士弃牌*。
+- 当另外两张相同的 1 同时位于两个不同的*飞牌位*时，明确禁止用 1 进行*绅士弃牌*。
 
-### The Layered Gentleman's Discard
+### 多层绅士弃牌 \{#the-layered-gentlemans-discard\}
 
-- First, see the section on the _[Gentleman's Discard](#the-gentlemans-discard-gd)_.
-- One great reason to want to do a _Gentleman's Discard_ is if the card you are discarding is also behind playable cards. This is similar to a _Layered Finesse_, only it was initiated by a discard instead of a clue.
-- For example, in a 3-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Alice clues number 1 to Cathy, touching one 1.
-  - Bob clues red to Cathy, filling in the already-touched 1 as red 1, as well as touching a new card, which must be red 2.
-  - Cathy discards the known red 1 as a _Gentleman's Discard_.
-  - Alice blind-plays her _Finesse Position_ card as red 1, but it is green 1.
-  - Alice knows that she is promised the red 1, so she will blind-play her slot 2 on her next turn.
+- 首先，请参见[_绅士弃牌_](#the-gentlemans-discard-gd)的章节。
+- *绅士弃牌*的一个好理由是你弃掉的牌进一步位于可打出的牌之后。这类似于*多层飞牌*，只是由弃牌而不是提示触发。
+- 例如在 3 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Alice 提示 Cathy 数字 1，提示到一张 1。
+  - Bob 提示 Cathy 红色，将已经提示过的 1 填补为红 1，同时提示到一张新牌，这张牌必须是红 2。
+  - Cathy 弃掉已知的红 1，作为*绅士弃牌*。
+  - Alice 盲打她的*飞牌位*作为红 1，但结果是绿 1。
+  - Alice 知道她应该被保证拥有红 1，会在下一个回合盲打她的 2 号位。
 
 <LayeredGentlemanDiscard />
 
-### The Baton Discard (BD)
+### 接力弃牌（BD） \{#the-baton-discard-bd\}
 
-- First, see the section on the _[Gentleman's Discard](#the-gentlemans-discard-gd)_.
-- When a _Gentleman's Discard_ happens, it transfers a playable card to someone else's hand. But players are also allowed to transfer unplayable cards that they happen to know the full identity of. We call this a _Baton Discard_ to distinguish it from the more-ordinary _Gentleman's Discard_.
-- Just like a _Gentleman's Discard_, a _Baton Discard_ promises that the card is exactly on someone else's _Finesse Position_.
-- For example, in a 3-player game:
-  - Red 1 is played on the stacks.
-  - Alice discards a known red 3.
-  - Bob does not have any clued cards in his hand.
-  - Bob looks at Cathy's hand and does not see the red 3. Thus, he knows that he has it.
-  - Bob marks his _Finesse Position_ card as red 3. For now, Bob does not have anything else to do, so he discards his chop card.
+- 首先，请参见[_绅士弃牌_](#the-gentlemans-discard-gd)的章节。
+- *绅士弃牌*发生时，将一张可打出的牌转移到另一人手中。但也可以转移恰好明确知道的不可打出的牌。我们称之为*接力弃牌（Baton Discard）*，以区别于更普通的*绅士弃牌*。
+- 就像*绅士弃牌*一样，*接力弃牌*承诺这张牌正好位于另一人的*飞牌位*。
+- 例如在 3 人游戏中：
+  - 红 1 已经打出。
+  - Alice 弃掉一张已知的红 3。
+  - Bob 手中没有任何提示过的牌。
+  - Bob 查看 Cathy 的手牌，也没有看到红 3。因此，他知道自己拥有这张牌。
+  - Bob 将他的*飞牌位*标记为红 3。目前，Bob 没有其他事情可做，因此他弃掉弃牌位的牌。
 
 <BatonDiscard />
 
-- Similar to the _Gentleman's Discard_, the transferred card counts as being clued. (All players should write a note of exactly the card transferred. For example, a note of "r3" would be written in the situation above.)
-  - Subsequently, this means that the player's _Finesse Position_ will shift to the right by one slot.
-- Note that it is **illegal** to perform a _Layered Baton Discard_; the card **must** be exactly on _Finesse Position_.
-  - This is because a _Layered Baton Discard_ would be information asymmetric. Since the card is not playable yet, the layer would not unravel in a defined time frame. In other words, if the card does not become playable for a long time, the player could technically discard the card without knowing that it was inside of a layer.
-  - For level 23 players, a _Layered Baton Discard_ would instead be interpreted as a _[Blaze Discard](level-23.mdx#the-blaze-discard)_.
-- _Baton Discards_ are mostly useful for two main reasons:
-  1. To better satisfy _Team Distribution Principle_. It makes sense to transfer a card out of a locked / almost locked hand to a player with an "empty" hand or a hand that only has one card clued in it.
-  1. You want to protect your own chop. If you discard your chop, the team could be losing some high-value _one-away-from-playable_ card. But if you transfer a card to someone else, it gives you something "safe" to do.
+- 与*绅士弃牌*类似，转移到的牌视为被提示过。（所有玩家都应写下转移到的牌的具体信息。例如，在上面的场景中，会写下笔记“r3”。）
+  - 进一步地，这表示该玩家的*飞牌位*会向右移动一位。
+- 请注意，执行*多层接力弃牌*是**违规**的；牌**必须**正好位于*飞牌位*。
+  - 这是因为*多层接力弃牌*会导致信息不对称。这张牌还不可打出，“层级”不会在确定的时间内拆解开。换句话说，如果这张牌在很长时间内都无法打出，玩家可能会在不知道它属于“层级”的情况下弃掉这张牌。
+  - 对于等级 23 的玩家，*多层接力弃牌*会被理解为[_烈焰弃牌_](level-23.mdx#the-blaze-discard)。
+- *接力弃牌*主要有两个用途：
+  1. 更好地满足*团队分配原则*。将牌从*锁定*或几乎*锁定*的手牌转移到“空”的手牌或只有一张提示过的手牌是合理的。
+  1. 你想保护自己的弃牌位。如果你弃掉自己的弃牌位，可能会丢失一些高价值的*差一张可打出*的牌。但如果你将牌转移到其他人手中，你会得到一些“安全”的事情做。
 
-### The Sarcastic Finesse
+### 讽刺性飞牌 \{#the-sarcastic-finesse\}
 
-- First, see the section on the _[Sarcastic Discard](level-3.mdx#the-sarcastic-discard-sd)_.
-- Imagine that in a 3-player game:
-  - Nothing is played on the stacks.
-  - Alice has an already-clued 2 in her hand. She has no idea what color 2 it is.
-  - Alice initiates a _Finesse_ by giving a red color _Play Clue_ to a red 2 in Cathy's hand.
-  - Bob blind-plays the red 1 from his _Finesse Position_.
-  - In most cases, Cathy would now play the red 2.
-  - However, in this case, Alice's unknown 2 actually happens to be a red 2. In this situation, Cathy is expected to perform a _Sarcastic Discard_.
+- 首先，请参见[_讽刺性弃牌_](level-3.mdx#the-sarcastic-discard-sd)的章节。
+- 想象在 3 人游戏中：
+  - 还没有打出过任何牌。
+  - Alice 手中有一张已经提示过的 2。她不知道这张 2 是什么颜色。
+  - Alice 提示 Cathy 手中的红 2，发起*飞牌*。
+  - Bob 盲打他的*飞牌位*牌作为红 1。
+  - 大多数情况下，Cathy 现在会打出红 2。
+  - 然而，在此情况下，Alice 未知的 2 恰好是红 2。在这种场景中，Cathy 应执行*讽刺性弃牌*。
 
 <SarcasticFinesse />
 
-- Doing a _Finesse_ that potentially duplicates a card in this way is called a _Sarcastic Finesse_. Normally, potentially duplicating a card is bad - it violates _Good Touch Principle_ and could lead to a clue being wasted. However, potentially duplicating a card with the _Sarcastic Finesse_ is not bad because:
-  - In the best case, you get a "true" _Finesse_ (a 2-for-1 or better).
-  - In the worst case, you get a 1-for-1 and full knowledge on a clued card in your own hand that was previously a mystery.
-  - On average, this is a 1.5-for-1, which satisfies _Minimum Clue Value Principle_.
-- Note that when giving a _Sarcastic Finesse_, the duplicated card in your own hand must be unknown. Otherwise, the clue receiver will simply think that the clued card is the next card in the suit.
+- 这种可能重复一张牌的*飞牌*称为*讽刺性飞牌*。有可能重复一张牌正常来说是不好的——会违反*良触原则*，可能浪费提示机会。然而，*讽刺性飞牌*时有可能重复一张牌并不坏，因为：
+  - 最好的情况下，你会得到一个“真正的”_飞牌_（2 换 1 以上）。
+  - 最坏的情况下，你会得到一个 1 换 1，且完全了解自己手中之前未知的提示过的牌。
+  - 平均而言，这是 1.5 换 1，符合*提示价值下限原则*。
+- 请注意，给出*讽刺性飞牌*时，你自己手中重复的牌必须是未知的。否则，收到提示者会简单地认为提示到的牌是该花色的下一张牌。
 
-### The Certain Finesse & The Certain Discard
+### 确定性飞牌与确定性弃牌 \{#the-certain-finesse--the-certain-discard\}
 
-- First, see the section on the _[Sarcastic Finesse](#the-sarcastic-finesse)_.
-- Imagine that in a 3-player game:
-  - Red 2 is played on the stacks.
-  - Alice has an already-clued red card in her hand. It has a negative 4 clue on it, so from _Good Touch Principle_ Alice knows that it is either red 3 or red 5.
-  - Alice performs a _Reverse Finesse_ by giving a red color _Play Clue_ to a red 4 in Bob's hand.
-  - Bob discards.
-  - Cathy knows that she is promised the red 3 in her _Finesse Position_.
+- 首先，请参见[_讽刺性飞牌_](#the-sarcastic-finesse)的章节。
+- 想象在 3 人游戏中：
+  - 红 2 已经打出。
+  - Alice 手中有一张已经提示过的红牌。它有一个否定的 4 提示，所以根据*良触原则*，Alice 知道它要么是红 3，要么是红 5。
+  - Alice 提示 Bob 手中的红 4，发起*反向飞牌*。
+  - Bob 弃牌。
+  - Cathy 知道她被保证*飞牌位*是红 3。
 
 <CertainFinesseDiscard />
 
-- This is an example of a _Certain Finesse_ - it is similar to the _Sarcastic Finesse_, but the "blind" card was potentially duplicated instead of the clued card.
-- In this situation, if Alice really has the red 3, Cathy is allowed to blind-discard their _Finesse Position_ card. This is called a _Certain Discard_, because Cathy can be certain that it is exactly red 3.
-- In other words, everyone agrees that performing a _Layered Finesse_ on a card that could potentially be clued in your own hand is illegal. Thus, everyone can be certain that they can safely blind-discard a card to pass it back to someone who potentially duplicated.
-- Note that players are **only allowed** to do a _Certain Discard_ if they know they have not been _Bluffed_. This means that _Certain Finesses_ **cannot be performed** from _Bluff Seat_. (_Bluffs_ are an advanced kind of move that is covered later on.)
+- 这是一个*确定性飞牌*的例子——它类似于*讽刺性飞牌*，但“盲打”的牌可能是重复的，而不是提示过的牌。
+- 在此场景中，如果 Alice 真的有红 3，Cathy 可以盲弃她的*飞牌位*。这称为*确定性弃牌*，因为 Cathy 可以确定它正好是红 3。
+- 换句话说，所有人都同意，对可能在自己手中提示过的牌*多层飞牌*是违规的。因此，所有人都可以确定，如果有人可能引发重复，可以盲弃重复的牌，传回给可能引发重复的人。
+- 请注意，玩家**只能**在知道自己没有被*诈唬*时执行*确定性弃牌*。这意味着*确定性飞牌*不能在*诈唬位*执行。（*诈唬*是一种高级行动，稍后会介绍。）
 
-### The Composition Finesse
+### 复合性飞牌 \{#the-composition-finesse\}
 
-- First, see the section on the _[Sarcastic Finesse](#the-sarcastic-finesse)_ and the _[Certain Finesse](#the-certain-finesse--the-certain-discard)_.
-- Sometimes, a move can be both a _Sarcastic Finesse_ and a _Certain Finesse_ at the same time. When this occurs, it is called a _Composition Finesse_.
-- For example, in a 3-player game:
-  - All of the 2's are played on the stacks.
-  - Alice has a card in her hand with a red clue on it. From _Good Touch Principle_, it could be either red 3, red 4, or red 5.
-  - Alice clues red to Bob, touching a red 4 as a _Play Clue_.
-  - Bob discards.
-  - Cathy knows that she has the red 3 on her _Finesse Position_ (as a _Certain Finesse_). She can _Certain Discard_ it if Alice has the red 3. But Alice does not have the red 3, so Cathy blind-plays the red 3.
-  - Alice discards.
-  - Bob knows that his red card is a red 4 (as a _Sarcastic Finesse_). He can _Sarcastic Discard_ it if Alice has the red 4. But Alice does not have the red 4, so Bob plays the red 4.
+- 首先，请参见[_讽刺性飞牌_](#the-sarcastic-finesse)和[_确定性飞牌_](#the-certain-finesse--the-certain-discard)的章节。
+- 有时，一行动可以同时是*讽刺性飞牌*和*确定性飞牌*。这种情况出现时，它称为*复合性飞牌*。
+- 例如在 3 人游戏中：
+  - 所有的 2 都已经打出。
+  - Alice 手中有一张带红色提示的牌。根据*良触原则*，它可能是红 3、红 4 或红 5。
+  - Alice 提示 Bob 红色，提示到一张红 4 作为*出牌提示*。
+  - Bob 弃牌。
+  - Cathy 知道她的*飞牌位*是红 3（作为*确定性飞牌*）。如果 Alice 有红 3，她可以*确定性弃牌*。但 Alice 没有红 3，所以 Cathy 盲打红 3。
+  - Alice 弃牌。
+  - Bob 知道他的红牌是红 4（作为*讽刺性飞牌*）。如果 Alice 有红 4，他可以*讽刺性弃牌*。但 Alice 没有红 4，因此 Bob 打出红 4。
 
 <CompositionFinesse />
 
-## Common Mistakes
+## 常见错误 \{#common-mistakes\}
 
-### The Double Gentleman's Discard (Illegal)
+### 双重绅士弃牌（违规） \{#the-double-gentlemans-discard-illegal\}
 
-- Normally, when a player performs a _Gentleman's Discard_, they know the **exact** identity of the card that they are discarding.
-- However, sometimes a _Gentleman's Discard_ can occur where, from your perspective, the card could have been two different things. Does this mean that the _Gentleman's Discard_ "gets" **both** of the cards?
-- No, it does not. Even if it looks like the player could not have known the true identity of the card, the _Gentleman's Discard_ only gets the specific other matching card. (The reason for this is that it allows players to act upon asymmetric information.)
-- For example, in a 3-player game:
-  - Red 1 and blue 1 are played on the stacks.
-  - Alice clues Bob number 2, which touches a red 2 on slot 1. This is a _Play Clue_ on the 2. Thus, this is a globally known red 2 or blue 2. Alice right-clicks on the card and writes a note of "r2, b2".
-  - Bob also writes a note of "r2, b2", but then stops to think a little deeper. He notices that Alice has a blue 3 in her hand, so it might have been possible for Cathy to perform a _Finesse_ on a hypothetical blue 2 in his hand.
-  - Bob rewinds to the beginning of the game and looks through all of the turns, watching closely to see if Cathy had an ample opportunity to perform a _Finesse_ on a blue 2. Indeed, he finds that Cathy had one or two turns where she could have easily performed a _Reverse Finesse_, but discarded instead.
-  - Thus, Bob knows that his card must be a red 2, so he updates his "r2, b2" note to "r2".
-  - Bob sees that Cathy has a red 2 on her _Finesse Position_, so he performs a _Gentleman's Discard_ by discarding the red 2.
-  - Cathy blind-plays the red 2 from her _Finesse Position_.
-  - Alice gasps in surprise, because Bob could not have possibly known that it was exactly a red 2. This must be a _Double Gentleman's Discard_, calling for both red 2 and blue 2. Alice blind-plays her _Finesse Position_ card, hoping to play a blue 2, but instead plays a red 5, losing the game.
-  - Alice forgot that _Double Gentleman's Discards_ were expressly illegal because it is possible for players to have asymmetric information about the current game state.
+- 通常，当玩家*绅士弃牌*时，他们**明确**知道他们弃掉的牌是什么。
+- 然而，有时*绅士弃牌*发生时，从你的视角来看，这张牌有两种不同的可能。这是否意味着*绅士弃牌*{}**同时**“获取”了两张牌？
+- 并不是。即使看起来玩家好像无法明确知道弃掉的牌，*绅士弃牌*也只会获取具体对应的牌。（这样的理由是允许玩家根据不对称信息采取行动。）
+- 例如在 3 人游戏中：
+  - 红 1 和蓝 1 已经打出。
+  - Alice 提示 Bob 数字 2，提示到 1 号位的红 2。这是对 2 的*出牌提示*。因此，这是一张全局已知的红 2 或蓝 2。Alice 右击这张牌并写下笔记“r2, b2”。
+  - Bob 也写下笔记“r2, b2”，但随后停下来仔细思考。他注意到 Alice 手中有一张蓝 3，所以 Cathy 有可能对他手中假想的蓝 2 执行*飞牌*。
+  - Bob 回放到游戏开始，仔细查看所有回合，密切关注 Cathy 是否有足够的机会对蓝 2 _飞牌_。确实，他发现 Cathy 有一两个回合可以轻松执行*反向飞牌*，但她选择了弃牌。
+  - 因此，Bob 知道他的牌必须是红 2，因此他将“r2, b2”的笔记更新为“r2”。
+  - Bob 看到 Cathy 的*飞牌位*是一张红 2，所以他弃掉红 2，执行*绅士弃牌*。
+  - Cathy 盲打她的*飞牌位*牌作为红 2。
+  - Alice 惊讶地倒吸一口凉气，因为 Bob 不可能知道牌恰好是红 2。这一定是一个*双重绅士弃牌*，同时指向红 2 和蓝 2。Alice 盲打她的*飞牌位*，希望能打出蓝 2，但结果打出了红 5，导致游戏失败。
+  - Alice 忘记了*双重绅士弃牌*是明确禁止的，因为玩家可能对当前游戏状态知道不对称的信息。
 
 <DoubleGentlemanDiscard />
