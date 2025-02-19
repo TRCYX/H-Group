@@ -5,7 +5,7 @@ stacks:
   - b: 1
   - p: 0
 bigText:
-  text: Illegal!
+  text: 违规！
 players:
   - clueGiver: true
     cards:
@@ -18,15 +18,13 @@ players:
       - type: b2
       - type: x
       - type: x
-  - name: Cathy
-    cards:
+  - cards:
       - type: b5
         border: false
       - type: x
       - type: x
       - type: x
-  - name: Donald
-    cards:
+  - cards:
       - type: x
       - type: x
       - type: r3

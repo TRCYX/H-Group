@@ -13,7 +13,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Blue 2
+        above: 蓝 2
       - type: x
       - type: x
       - type: x
@@ -21,7 +21,7 @@ players:
       - type: x
       - type: x
       - type: 3
-        middleNote: (R)
+        middleNote: (红)
       - type: x
   - cards:
       - type: x

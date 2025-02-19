@@ -1,5 +1,5 @@
 ---
-title: Level 11 - Bluffs
+title: 等级 11 - 诈唬
 ---
 
 import Bluff from "./level-11/bluff.yml";
@@ -16,269 +16,275 @@ import ColorConnectRainbowFinesseImpossible from "./level-11/color-connect-rainb
 import GuidePrinciple from "./level-11/guide-principle.yml";
 import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml";
 
-- This level introduces _Bluffs_, a way to tell a _Fib_ to the next player to cause them to blind-play.
-- _Bluffs_ can be very fun, since they allow for a lot more blind-plays than previously possible.
-- However, the fact that players are no longer always telling the truth to each other causes this level to be much more complicated and difficult to integrate than any of the previous levels.
-- Make sure that you are totally comfortable with the earlier levels before attempting to add _Bluffs_ to the mix. (We recommend at least 100-200 games of experience.)
+- 本等级引入*诈唬*，一种“忽悠”下家来令其盲打的手段。
+- *诈唬*可以很有趣，因为可以产生比之前多许多的盲打。
+- 然而，玩家间不再总是诚实这件事使得这一等级比之前的任何等级都更复杂、难以整合。
+- 尝试将*诈唬*加入游戏前，请确保你已经彻底熟悉之前的等级。（我们建议至少有 100-200 局游戏经验。）
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The Bluff
+### 诈唬 \{#the-bluff\}
 
-- _Finesses_ are quite efficient. So, when you see a playable card in someone's _Finesse Position_ slot, you will often want to "get" the card with a _Finesse_ (instead of cluing it directly). However, often times, the proper "connecting" card is not on the table.
-- In this situation, players can perform an alternate strategy by fibbing to the next player. By cluing an unrelated, _one-away-from-playable_ card, the next player will think that it is a _Finesse_ and that they have the connecting card. Then, they will blind-play their _Finesse Position_ card. This is called a _Bluff_.
-- After the card is blind-played, the player who received the clue will realize that something strange has happened - the type of clue **did not connect** to the card that was blind-played. Thus, the clued card is not currently playable and must be a _one-away-from-playable_ card.
-- For example, in a 3-player game:
-  - All the 2's are played on the stacks.
-  - Alice clues Cathy red, which touches a red 4 as a _Play Clue_.
-  - Next, it is Bob's turn. Bob sees that, with this red clue, Cathy has just been signaled that she has the red 3.
-  - From Bob's perspective, this looks like a _Finesse_ - if Bob does not blind-play the red 3 right now, Cathy will go on to misplay the red 4 as the red 3.
-  - Bob blind-plays his slot 1 card, expecting it to be a red 3. Instead, it is a blue 3, and it successfully plays on the stacks. Bob now knows that he was _Bluffed_ by Alice.
-  - Next, Cathy sees that Bob just blind-played a blue 3 immediately after this red clue, so she knows that she must have a _one-away-from-playable_ red card - the red 4. Cathy holds on to the red 4 for later and discards.
+- *飞牌*效率很高。当你看到某人的*飞牌位*可打出时，经常会希望*飞*这张牌（而不是直接提示）。然而，准确“相连”的牌时常并不在桌上。
+- 这种情况下，可以忽悠下家，执行另一种策略。提示一张不相关的*差一张可打出*的牌后，下家会认为这是在*飞牌*，而相连的牌在自己手中。接下来，下家会盲打*飞牌位*。这被称为*诈唬（Bluff）*。
+- 在牌盲打后，收到提示的玩家会意识到发生了奇怪的事情——提示的类型**无法**与盲打的牌**相连**。因此，提示的牌目前不可打出，必须是一张*差一张可打出*的牌。
+- 例如在 3 人游戏中：
+  - 所有的 2 都已经打出。
+  - Alice 提示 Cathy 红色，提示到一张红 4 作为*出牌提示*。
+  - 接下来轮到 Bob。Bob 看到，这个红色提示刚刚告知 Cathy 她有红 3。
+  - 从 Bob 的视角来看，这像是在*飞牌*——如果 Bob 现在不盲打红 3，Cathy 会将红 4 当作红 3 误打。
+  - Bob 盲打他的 1 号位，期望它是红 3。然而它是蓝 3，成功打出。Bob 现在知道他被 Alice *诈唬*了。
+  - 接下来，Cathy 看到 Bob 在这个红色提示后立即盲打了一张蓝 3，因此她知道自己手中的红牌必然是*差一张可打出*的红 4。Cathy 保留红 4 将来使用，然后弃牌。
 
 <Bluff />
 
-#### The Bluff Seat
+#### 诈唬位 \{#the-bluff-seat\}
 
-- **_Bluffing_ is only allowed when you are the person directly before the player who is blind-playing a card**.
-- We formalize this concept as the _Bluff Seat_. You are sitting in _Bluff Seat_ for a player if you are allowed to _Bluff_ them.
-- For example:
-  - If Alice is sitting directly before Bob, then Alice is sitting in _Bluff Seat_ for Bob, and Alice is allowed to _Bluff_ Bob.
-  - Alice is **not allowed** to _Bluff_ Cathy (or anyone else other than Bob, for that matter).
-  - Bob is in _Bluff Seat_ for Cathy, so Bob is allowed to _Bluff_ Cathy, and so forth.
-- If a player gets someone else to blind-play a card, and they are not in _Bluff Seat_ for them, then it **must** be a real _Finesse_!
+- <Em>**只有你是盲打者的直接上家时才允许*诈唬*。**</Em>
+- 我们将这一概念形式化为*诈唬位*。如果你允许*诈唬*某个玩家，那么你就坐在该玩家的*诈唬位*。
+- 例如：
+  - 如果 Alice 直接坐在 Bob 之前，那么 Alice 坐在 Bob 的*诈唬位*，Alice 被允许*诈唬* Bob。
+  - Alice <Em>**不允许**</Em>诈唬 Cathy（或任何其他玩家）。
+  - Bob 坐在 Cathy 的*诈唬位*，因此 Bob 被允许*诈唬* Cathy，以此类推。
+- 如果一个玩家令其他玩家盲打了一张牌，而他们不坐在后者的*诈唬位*，那么这<Em>**必然**</Em>是真正的*飞牌*！
 
-#### Lie Principle
+#### 谎言原则 \{#lie-principle\}
 
-- **_Bluffing_ is only allowed if the very next player will blind-play on the very next turn.**
-- We formalize this concept as _Lie Principle_:
-  - If a card is represented to be something different than what it really is, and the state of misinformation resolves immediately (i.e. the very next turn), then it is called a _Fib_. _Fibbing_ is okay.
-  - If a card is represented to be something different than what it really is, and the state of misinformation does not resolve immediately, it is called a _Lie_. _Lies_ are **illegal**. Players should **never** assume that they are _Lied_ to.
+- <Em>只有下家下回合立即会盲打时才允许*诈唬*。</Em>
+- 我们将这一概念形式化为*谎言原则*：
+  - 如果一张牌被描绘为与真实情况不同的东西，而此误会的状态立即化解（直接的下一回合），那么这只算作*忽悠*。*忽悠*可以接受。
+  - 如果一张牌被描绘为与真实情况不同的东西，而此误会的状态没有立即化解，那么这被称为*谎言*。*谎言*是**违规**。玩家**永远**不应该认为会被*谎言*欺骗。
 
-### The Self-Bluff
+### 自我诈唬 \{#the-self-bluff\}
 
-- In the same way you can do a _Self-Finesse_, it is possible to perform a _Self-Bluff_ by cluing someone in order to get their own _Finesse Position_ card.
-- Self-Bluffs must be given with rank clues, as a self-bluff with a color clue would be nonsensical.
-  - For max-level players, see the section on the [Self Color Bluff](extras/special-bluffs.mdx#self-color-bluffs-1-for-1-form-scb).
-- For example, in a 3-player game:
-  - Red 2 is played on the stacks.
-  - Alice clues number 4 to Bob, which touches one new 4 as a _Play Clue_.
-  - Bob does not see any playable cards in anyone else's hand.
-  - The closest 4 to being playable is the red 4, so Bob knows that the 4 in his hand is probably a red 4.
-  - Since Bob does not see any red 3's, Bob knows he must have the red 3, and he blind-plays his _Finesse Position_ card. It is a blue 1 and successfully plays.
-  - Bob now knows that he was _Bluffed_ by Alice and that the 4 in his hand is exactly the red 4.
+- 就像可以*自我飞牌*一样，也可以*自我诈唬*，通过提示某人，获取他们自己*飞牌位*上的牌。
+- *自我诈唬*必须用数字提示进行，因为用颜色提示*自我诈唬*不合理。
+  - 对于最高级玩家，请参见[_自我颜色诈唬_](extras/special-bluffs.mdx#self-color-bluffs-1-for-1-form-scb)的章节。
+- 例如在 3 人游戏中：
+  - 红 2 已经打出。
+  - Alice 提示 Bob 数字 4，提示到一张新 4 作为*出牌提示*。
+  - Bob 看不到其他玩家手中有任何可打出的牌。
+  - 最接近可打出的 4 是红 4，术语 Bob 知道他手中的 4 大概是红 4。
+  - 由于 Bob 看不到红 3，Bob 知道他自己必然持有红 3，于是他盲打*飞牌位*。结果是一张蓝 1，成功打出。
+  - Bob 现在知道他被 Alice *诈唬*了，而他手中的 4 精确地是红 4。
 
-### Bluffs Through Already-Clued Cards
+### 借助提示过的牌诈唬 \{#bluffs-through-already-clued-cards\}
 
-- It is also permissible to _Bluff_ "through" cards that are already clued. This can be better than a normal _Bluff_, because in addition to getting the blind-play, it also can give information to the player with the in-between card.
-- For example, in a 4-player game:
-  - All the 1's are played on the stacks.
-  - Bob has nothing clued in his hand.
-  - Cathy has a red 3 clued in her hand with just a number 3. She does not know what suit it is.
-  - Alice clues Donald red, which touches one red 4 as a _Play Clue_.
-  - Bob knows that he must have the red 2. If he blind-plays the red 2 (as a _Finesse_), then Cathy will play the red 3 (as a _Prompt_), and Donald will play the red 4.
-  - Bob plays his _Finesse Position_ card as a red 2. Instead, it is a blue 2 and it successfully plays.
-  - From Cathy's perspective, she knows that the red 4 is _two-away-from-playable_ instead of _one-away-from-playable_. _Bluffs_ on _two-away-from-playable_ cards are normally illegal. Thus, Cathy's mystery 3 must be exactly red 3, making the red 4 _one-away-from-playable_ after all.
-  - Cathy discards.
-  - From Donald's perspective, since red (the type of clue that was given) does not connect to blue (the card that was blind-played), this must be a _Bluff_. Normally, since the red 1 is currently played on the stacks, Donald would think that he has the red 3 (e.g. the _one-away-from-playable_ red card).
-  - However, Cathy already has a clued red 3 in her hand. If Donald also had a red 3, then Alice's clue would be violating _Good Touch Principle_. Thus, Donald must have the red 4 instead.
+- 也可以借助已经提示过的牌进行*诈唬*。这样有可能比普通的*诈唬*更优，因为除了盲打外，还可以为持有中间牌的玩家提供信息。
+- 例如在 4 人游戏中：
+  - 所有的 1 都已经打出。
+  - Bob 手牌没有任何提示。
+  - Cathy 手中有一张红 3，仅带有数字 3 的提示。她不知道其花色。
+  - Alice 提示 Donald 红色，提示到一张红 4 作为*出牌提示*。
+  - Bob 知道他手中必然有红 2。如果他盲打红 2（作为*飞牌*），那么 Cathy 将会打出红 3（作为*引牌*），而 Donald 将会打出红 4。
+  - Bob 打出他的*飞牌位*作为红 2。然而它是蓝 2，成功打出。
+  - 从 Cathy 的视角来看，她知道红 4 *差两张可打出*而非*差一张可打出*。对*差两张可打出*的牌进行*诈唬*是违规的。因此，Cathy 的神秘 3 必然精确地是红 3，使红 4 归根结底是*差一张可打出*的。
+  - Cathy 弃牌。
+  - 从 Donald 的视角来看，由于红色（提示的类型）与蓝色（盲打的牌）不相连，这一定是在*诈唬*。由于红 1 已经在牌堆上打出，Donald 正常会认为他手中有的是红 3（*差一张可打出*的红牌）。
+  - 然而，Cathy 手中已经有一张提示过的红 3。如果 Donald 也有一张红 3，那么 Alice 的提示将违反*良触原则*。因此，Donald 必然持有红 4。
 
 <BluffThroughClued />
 
-- Sometimes, the player who has the in-between card might have more than one "matching" clued card. In this situation, the player is promised that they have the in-between card, but they are not promised the position - it can be any of the matching clued cards.
-- For example, in the previous situation, if Cathy had two different red cards clued in her hand, then either one could be the red 3 - she is not promised the position of the card.
+- 有时，持有中间牌的玩家可能有多张“匹配”的提示过的牌。在这种情况下，该玩家只被保证持有中间牌，但不被保证其位置——可以是任意一张匹配的提示过的牌。
+- 例如，在上面的场景中，如果 Cathy 手中有两张不同的红牌被提示过，那么其中任何一张都可能是红 3——她不被保证牌的位置。
+  - 译注：中间牌在任一位置被提示过，都使得*诈唬*时提示的牌**_差一张可打出_**。*诈唬*不保证如果将盲打的牌改成真正相连的牌，就能靠*引牌*一路打到*诈唬*时提示的牌。
 
-## General Principles
+## 通用原则 \{#general-principles\}
 
-### Bob's Truth Principle (Part 1)
+### Bob 的真相原则（第一部分） \{#bobs-truth-principle-part-1\}
 
-- Sometimes, a player will give a clue that looks like it could be either a _Finesse_ or a _Bluff_. Between these two moves, which should have precedence?
-- For example, in a 4-player game:
-  - All of the 1's are played on the stacks.
-  - Cathy has a blue 2 on her _Finesse Position_.
-  - Alice clues blue to Donald, touching a blue 3. This is a _Play Clue_.
-  - Now, it is Bob's turn.
+- 有时一名玩家会给出一个看起来既可以是*飞牌*也可以是*诈唬*的提示。在这两种行动之间，哪种应该优先？
+- 例如在 4 人游戏中：
+  - 所有的 1 都已经打出。
+  - Cathy 的*飞牌位*是蓝 2。
+  - Alice 提示 Donald 蓝色，提示到一张蓝 3。这是一个*出牌提示*。
+  - 现在，轮到 Bob。
 
 <TruthPrinciple />
 
-- What to think **depends** on whether you are Bob or whether you are someone else on the team.
-- First, let's consider the case of Bob, the very next player. Bob should **always assume a _Finesse_ over a _Bluff_**. From his perspective:
-  - Bob knows that if this is a _Finesse_, then Cathy will blind-play the blue 2, and then Donald will know that he has the blue 3. If this is the case, Bob should not do anything special.
-  - Bob also knows that if this is a _Bluff_, then Bob should blind-play his _Finesse Position_ card immediately.
-  - Bob knows that if there is any way that this could be a _Finesse_ (the truth), he should **assume that the truth is being told**. Thus, Bob knows that it must be a _Finesse_ on Cathy and should not blind-play anything.
-- This is called _Bob's Truth Principle_, because Bob always assumes the truth over a _Fib_.
-- This convention is easy to remember because at the time of the blind-play, Bob does not need to play any differently than he did at level 10. He simply assumes the truth is being told.
+- 思考的内容与你是 Bob 还是其他队友**有关**。
+- 首先，我们考虑 Bob，即直接下家的情况。Bob <Em>**总是应该认为是*飞牌*而不是*诈唬***</Em>。从他的视角来看：
+  - Bob 知道，如果这是*飞牌*，那么 Cathy 将会盲打蓝 2，然后 Donald 会知道他持有蓝 3。如果是这样，Bob 不需要做任何特别的事情。
+  - Bob 也知道，如果这是*诈唬*，那么 Bob 应该立即盲打*飞牌位*。
+  - Bob 知道，如果这可能是*飞牌*（真相），他应该**认为传达的是真相**。因此，Bob 知道这一定是对 Cathy 的*飞牌*，不应该盲打任何牌。
+- 这被称为 _Bob 的真相原则_，因为 Bob 总是认为是真相而不是自己被*忽悠*了。
+- 这个约定很容易记住，因为盲打的时候，Bob 不需要与在等级 10 时的行为有所区别。他只是认为传达的是真相。
 
-### Cathy's Connecting Principle (Part 2)
+{/* cspell:disable-next-line */}
 
-- First, see the section on _[Bob's Truth Principle](#bobs-truth-principle-part-1)_.
-- Previously, we considered the case of Bob before he blind-played a card.
-- Now, we can consider the case of Bob **after** he has blind-played a card, which also extends to Cathy and every other player on the team. How does everyone know whether Alice did a _Finesse_ or a _Bluff_ on Bob?
-- The way to find out is to look at **whether the card that blind-played "connects" to the clue that was given**. If the clue connects, then it is a _Finesse_. If the clue did not connect, then it is a _Bluff_.
-- This is called _Cathy's Connecting Principle_ in order to highlight that everyone needs to assume different things than Bob did (before he blind-played anything).
-- If it is ambiguous whether or not the card connects, then everyone should **assume a _Bluff_ over a _Finesse_**. Note that this is the **opposite** of the precedence in _Bob's Truth Principle_!
+### Cathy 的相连原则（第二部分） \{#cathys-connecting-principle-part-2\}
 
-#### Example 1: Color Connect --> _Finesse_
+- 首先，请参见[_Bob 的真相原则_](#bobs-truth-principle-part-1)的部分。
+- 之前，我们考虑了 Bob 在盲打之前的情况。
+- 现在，我们可以考虑 Bob 在盲打**之后**的情况，这也适用于 Cathy 和其他玩家。大家如何知道 Alice 是对 Bob 进行了*飞牌*还是*诈唬*？
+- 确认的方法是检查**盲打的牌是否与给出的提示<Em>“相连”</Em>**。如果相连，那么是*飞牌*。如果不相连，那么是*诈唬*。
+- 这被称为 _Cathy 的相连原则_，以强调所有人都需要与 Bob（盲打之前）做不同的假设。
+- 如果牌是否相连存在歧义，那么大家都应该<Em>**认为是*诈唬*而不是*飞牌***</Em>。请注意，这与 *Bob 的真相原则*中的优先级**相反**！
 
-- Red 1 is played on the stacks.
-- Alice clues Cathy red, touching a red card as a _Play Clue_.
-- Bob blind-plays a red 2.
-- This must be a _Finesse_, because **red connects to red**. So Cathy should think that she has the red 3.
-- This is a textbook _Finesse_; it can't get any more basic than this.
+#### 例 1：颜色相连 --> _飞牌_
+
+- 红 1 已经打出。
+- Alice 提示 Cathy 红色，提示到一张红牌作为*出牌提示*。
+- Bob 盲打一张红 2。
+- 这一定是在*飞牌*，因为**红色与红色相连**。Cathy 应该认为她持有的是红 3。
+- 这是一个教科书式的*飞牌*；不能比此再基础了。
 
 <ColorConnect />
 
-#### Example 2: Color Disconnect --> _Bluff_
+#### 例 2：颜色不相连 --> _诈唬_
 
-- Red 1 is played on the stacks.
-- Alice clues Cathy red, touching a red card as a _Play Clue_.
-- Bob blind-plays a blue 1.
-- This must be a _Bluff_, because **blue does not connect to red**. So Cathy should think that she has the _one-away-from-playable_ red card, the red 3.
-- This is a textbook _Bluff_; it can't get any more basic than this.
+- 红 1 已经打出。
+- Alice 提示 Cathy 红色，提示到一张红牌作为*出牌提示*。
+- Bob 盲打一张蓝 1。
+- 这一定是在*诈唬*，因为**蓝色与红色不相连**。Cathy 应该认为她持有的是*差一张可打出*的红牌，即红 3。
+- 这是一个教科书式的*诈唬*；不能比此再基础了。
 
 <ColorDisconnect />
 
-#### Example 3: Rank Connect --> _Finesse_
+#### 例 3：数字相连 --> _飞牌_
 
-- Red 2 is played on the stacks.
-- Alice clues Cathy number 4, touching a 4 as a _Play Clue_.
-- Bob blind-plays the red 3.
-- This must be a _Finesse_, because **3 connects to 4**. So Cathy should think that she has the red 4.
+- 红 2 已经打出。
+- Alice 提示 Cathy 数字 4，提示到一张 4 作为*出牌提示*。
+- Bob 盲打红 3。
+- 这一定是在*飞牌*，因为**3 与 4 相连**。Cathy 应该认为她持有的是红 4。
 
 <RankConnect />
 
-#### Example 4: Rank Disconnect --> _Bluff_
+#### 例 4：数字不相连 --> _诈唬_
 
-- Red 2 is played on the stacks.
-- Alice clues Cathy number 4, touching a 4 as a _Play Clue_.
-- Bob blind-plays the blue 1.
-- This could be a _Triple Finesse_ (on blue 1 + blue 2 + blue 3 into blue 4) or it could be a _Bluff_ (on just blue 1 into red 4).
-- However, this must be a _Bluff_, because **1 does not connect to 4**. So Cathy should think that she has the _one-away-from-playable_ 4, the red 4.
-- The point of this example is to show that because a 2 happens to be played on the stacks, the red 4 is a _one-away-from-playable_ card and therefore becomes a legal _Bluff_ target.
+- 红 2 已经打出。
+- Alice 提示 Cathy 数字 4，提示到一张 4 作为*出牌提示*。
+- Bob 盲打蓝 1。
+- 这可能是在*三重飞牌*（蓝 1 + 蓝 2 + 蓝 3 到蓝 4），也可能是在*诈唬*（蓝 1 到红 4）。
+- 然而，这一定是在*诈唬*，因为**1 与 4 不相连**。Cathy 应该认为她持有的是*差一张可打出*的 4，即红 4。
+- 此例的要点在于，由于 2 已经打出，红 4 是*差一张可打出*的牌，因此成为合规的*诈唬*目标。
 
 <RankDisconnect />
 
-#### Example 5: Rank Disconnect Where a _Bluff_ Is Impossible --> _Triple Finesse_
+#### 例 5：数字不相连但*诈唬*不可能 --> _三重飞牌_
 
-- This is a 4-player game.
-- Nothing is played on the stacks.
-- Alice clues Donald number 4, touching a 4 as a _Play Clue_.
-- Bob blind-plays the red 1.
-- Cathy discards.
-- Donald needs to evaluate whether or not Alice's clue is a _Finesse_ or a _Bluff_. However, he knows that it **cannot** be a _Bluff_, because there are no _one-away-from-playable_ 4's. So even though **1 does not connect to 4**, this must be a _Finesse_, because Alice is not allowed to perform a _Bluff_ with any card that she wants.
-- Donald does not see any other red cards in Bob's hand. So Donald should think that he has the red 4, because that would connect to the blind-play of a red 1. Subsequently, Donald must have red 2 on his _Finesse Position_ and red 3 on his _Second Finesse Position_.
+- 这是一局 4 人游戏。
+- 还没有打出过任何牌。
+- Alice 提示 Donald 数字 4，提示到一张 4 作为*出牌提示*。
+- Bob 盲打红 1。
+- Cathy 弃牌。
+- Donald 需要判断 Alice 的提示是*飞牌*还是*诈唬*。然而，他知道这**不可能**是*诈唬*，因为没有*差一张可打出*的 4。因此，即使**1 与 4 不相连**，这也一定是在*飞牌*，因为 Alice 不允许随意用任何牌*诈唬*。
+- Donald 看不到 Bob 手中有其他红牌。Donald 应该认为他持有的是红 4，因为这会和盲打的红 1 相连。进一步，Donald 的*飞牌位*上必然是红 2，*第二飞牌位*上必然是红 3。
 
 <RankDisconnectBluffImpossible />
 
-#### Example 6: Rank Connect Where a _Finesse_ Is Impossible --> _Bluff_
+#### 例 6：数字相连但*飞牌*不可能 --> _诈唬_
 
-- Red 2 and blue 2 is played on the stacks.
-- Alice clues Cathy number 4, touching a 4 as a _Play Clue_.
-- Bob blind-plays the blue 3.
-- Normally, Cathy would think that this is a _Finesse_, because **3 connects to 4**, meaning that Cathy's 4 is the blue 4.
-- However, Cathy notices that her 4 has a negative blue clue on it. Thus, it cannot be the blue 4.
-- This must instead be a _Bluff_. Cathy marks her 4 as the red 4 (since red 4 is the only other _one-away-from-playable_ 4).
+- 红 2 和蓝 2 已经打出。
+- Alice 提示 Cathy 数字 4，提示到一张 4 作为*出牌提示*。
+- Bob 盲打蓝 3。
+- 通常，Cathy 会认为这是在*飞牌*，因为**3 与 4 相连**，意味着 Cathy 的 4 是蓝 4。
+- 然而，Cathy 注意到她的 4 有一个否定的蓝色提示。它不可能是蓝 4。
+- 这一定是在*诈唬*。Cathy 将她的 4 标记为红 4（因为红 4 是唯一剩下的*差一张可打出*的 4）。
 
 <RankConnectFinesseImpossible />
 
-#### Example 7: Color Connect With Rainbow --> _Finesse_
+#### 例 7：颜色与彩色相连 --> _飞牌_
 
-- This is a game with a rainbow suit. (The other examples in this section assume a "No Variant" game.)
-- Rainbow 1 is played on the stacks.
-- Alice clues Cathy red, touching a red card as a _Play Clue_.
-- Bob blind-plays a rainbow 2.
-- This must be a _Finesse_, because **red connects to red** (rainbow cards connect to every color). So Cathy should think that she has the rainbow 3.
+- 这是一局带彩色的游戏。（本节中的其他示例假设是“无变体”游戏。）
+- 彩 1 已经打出。
+- Alice 提示 Cathy 红色，提示到一张红牌作为*出牌提示*。
+- Bob 盲打一张彩 2。
+- 这一定是一个*飞牌*，因为**红色与红色相连**（彩色与所有颜色相连）。Cathy 应该认为她持有的是彩 3。
 
 <ColorConnectRainbow />
 
-#### Example 8: Color Connect With Rainbow Where a _Finesse_ Is Impossible --> _Bluff_
+#### 例 8：颜色与彩色相连但*飞牌*不可能 --> _诈唬_
 
-- This is a game with a rainbow suit. (The other examples in this section assume a "No Variant" game.)
-- Rainbow 1 and red 2 are played on the stacks.
-- Alice clues Cathy red, touching a red card as a _Play Clue_.
-- Bob blind-plays a rainbow 2.
-- Normally, Cathy would think that this is a _Finesse_, because **red connects to red** (rainbow cards connect to every color), meaning that Cathy's red card is the rainbow 3.
-- However, Cathy notices that her red card has a negative blue clue on it. Thus, it cannot be the rainbow 3.
-- This must instead be a _Bluff_. Cathy marks her red card as the red 4 (since the red 4 is the _one-away-from-playable_ red card).
+- 这是一局带有彩色的游戏。（本节中的其他示例假设是“无变体”游戏。）
+- 彩 1 和红 2 已经打出。
+- Alice 提示 Cathy 红色，提示到一张红牌作为*出牌提示*。
+- Bob 盲打一张彩 2。
+- 通常，Cathy 会认为这是在*飞牌*，因为**红色与红色相连**（彩色与所有颜色相连），意味着 Cathy 的红牌是彩 3。
+- 然而，Cathy 注意到她的红牌有一个否定的蓝色提示。它不可能是彩 3。
+- 这一定是在*诈唬*。Cathy 将她的红牌标记为红 4（因为红 4 是*差一张可打出*的红牌）。
 
 <ColorConnectRainbowFinesseImpossible />
 
-### Guide Principle
+### 引导原则 \{#guide-principle\}
 
-- Part of Hanabi involves making sure that if you perform an action, someone else on the team won't discard anything important (e.g. _Save Principle_). Additionally, part of Hanabi involves accounting for all the possibilities (e.g. _Schrödinger's Cat Principle_).
-- Combined, these two principles usually result in players taking the most conservative possible approach, even if a certain action would have a very low risk of losing the game.
-- One exception to the above rules is when Bob is playing into either a _Finesse_ or a _Bluff_. In this case, Bob knows that Alice is "guiding" him and he does not have to worry about Cathy's chop card. If Alice needs Bob to save Cathy's chop card, then Alice would wait until later to perform the _Finesse_ or _Bluff_.
-- For example, in a 4-player game:
-  - No cards are played on the stacks.
-  - Alice clues red to Donald, touching a red 2 as a _Play Clue_.
-  - Bob does not see any red 1's in anyone else's hand. Thus, Bob knows that Alice intends for him to blind-play a card.
-  - From Bob's perspective, it can be either a _Finesse_ (on exactly red 1) or a _Bluff_ (on the 1 of any of the other suits).
-  - Cathy has a critical 5 on chop.
-  - Should Bob risk blind-playing or should he save the 5?
-  - Normally, Bob would play it safe and save the 5. However, in this case, he knows that _Guide Principle_ applies, and Alice is guiding him to play right now.
-  - Bob blind-plays his _Finesse Position_. It is the red 1 and it successfully plays.
-  - Cathy does not discard since Alice saw that Cathy had something to clue.
+- 花火的一部分是确保如果你做一个行动，其他人不会弃掉任何重要的牌（_留牌原则_）。此外，花火的一部分是为所有可能性做考虑（_薛定谔的猫原则_）。
+- 这两点相结合通常会使得玩家采取最保守的做法，即使某个行动仅存在非常低的输掉游戏的风险。
+- 上述规则的一个例外是 Bob 正在为*飞牌*或*诈唬*盲打的时候。在这种情况下，Bob 知道 Alice 正在“引导”他，他不需要担心 Cathy 的弃牌位。如果 Alice 需要 Bob 保留 Cathy 的弃牌位，那么 Alice 会等待之后再*飞牌*或*诈唬*。
+- 例如在 4 人游戏中：
+  - 还没有打出过任何牌。
+  - Alice 提示 Donald 红色，提示到一张红 2 作为*出牌提示*。
+  - Bob 看不到其他玩家手中有任何红 1。Bob 知道 Alice 希望他盲打一张牌。
+  - 从 Bob 的视角来看，这可能是*飞牌*（正好是红 1），也可能是*诈唬*（其他花色的 1 号牌）。
+  - Cathy 的弃牌位上有一张关键的 5。
+  - Bob 应该冒险盲打还是应该留 5？
+  - 通常，Bob 会采取安全的打法，去保留 5。然而，在此场景下，他知道*引导原则*适用，Alice 正在引导他现在出牌。
+  - Bob 盲打*飞牌位*。结果是红 1，成功打出。
+  - Cathy 没有弃牌，因为 Alice 看到 Cathy 有提示可做。
 
 <GuidePrinciple />
 
-### Clue Interpretation & Occam's Razor
+{/* cspell:disable-next-line */}
 
-- First, see the section on [Schrödinger's Cat Principle](level-5.mdx#schrödingers-cat-principle).
-- When a clue could have multiple interpretations, usually _Schrödinger's Cat Principle_ is involved - players must wait a round and see what their teammates do in order to find out the true meaning of the clue. But what if a clue could have multiple interpretations and a player does **not** have to wait for information from anyone else?
-- For example:
-  - Alice gives a weird clue to Cathy.
-  - Bob does not see any "connecting" cards in anybody else's hands, so he can rule out a _Prompt_ and he can rule out a _Reverse Finesse_.
-- In this situation, we would say that Bob is the _reacting player_. If a _reacting player_ does not "react" to a clue in some demonstrable way, then someone else on the team will go on to misplay a card. So, the _reacting player_ has to immediately decide what the clue means and perform the resulting action.
-  - In some situations, there can be two _reacting players_ in a row. For example, if Alice clues a _two-away-from-playable_ card, then Bob must react **and** Cathy must react.
-- So how does a _reacting player_ figure out what the clue means? They should use _Occam's Razor_ - always assume the simplest possible interpretation.
+### 提示的解读与奥卡姆剃刀 \{#clue-interpretation--occams-razor\}
 
-1. Assume a direct _Play Clue_ or a _Delayed Play Clue_ (if it could be possible that no _Prompts_ & no blind-plays are involved).
-1. Assume a _Prompt_ (if it could be possible that no blind-plays are involved).
-1. Assume a _Finesse_ (or a _Prompt_ + _Finesse_) over a _Bluff_.
-1. Assume the "move" that results in the least number of blind-plays.
-   - In general, this means assuming a one-blind-play _Bluff_ over a two-blind-play _Finesse_. But keep in mind that only certain cards are legal _Bluff_ targets - you can't just do a _Bluff_ with any card.
-1. Assume the "move" that results in the least number of _Prompts_.
-   - This means that if something could be either a one-blind-play _Finesse_ **or** a one-blind-play _Finesse_ with a _Prompt_ involved, then the pure _Finesse_ is simpler and you should assume that.
+- 首先，请参见[_薛定谔的猫原则_](level-5.mdx#schrödingers-cat-principle)的章节。
+- 当一个提示可能有多种解释时，通常涉及*薛定谔的猫原则*——玩家必须等待一轮，看看队友们会做什么，以找出提示的真实含义。但如果一个提示可能有多种解释，而玩家**不**需要等待其他人提供的信息呢？
+- 例如：
+  - Alice 向 Cathy 给出一个奇怪的提示。
+  - Bob 看不到其他玩家手中有任何“相连”的牌，因此可以排除*引牌*和*反向飞牌*。
+- 在这种情况下，我们会说 Bob 是*作出反应的玩家*。如果*作出反应的玩家*没有对提示作出显著的“反应”，那么其他人将会误打。所以，*作出反应的玩家*必须立即决定提示的含义，执行相应的行动。
+  - 某些情况下，可能会连续有两个*作出反应的玩家*。例如，如果 Alice 提示一张*差两张可打出*的牌，那么 Bob 必须作出反应**并且** Cathy 也必须作出反应。
+- 那么*作出反应的玩家*如何确定提示的含义呢？他们应该使用*奥卡姆剃刀*——总是认可最简单的解释。
 
-## Common Mistakes
+1. 认为是直接的*出牌提示*或*延迟出牌提示*（如果有可能不涉及任何*引牌*和盲打）。
+1. 认为是*引牌*（如果有可能不涉及任何盲打）。
+1. 认为是*飞牌*（或*引牌* + _飞牌_）而不是*诈唬*。
+1. 认为是导致最少盲打的“行动”。
+   - 通常，这意味着认为是一盲打的*诈唬*而不是两盲打的*飞牌*。但请记住，只有特定的牌是合规的*诈唬*目标——你不能随意用任何牌*诈唬*。
+1. 认为是导致最少*引牌*的“行动”。
+   - 这意味着如果某行动可能是一盲打的*飞牌*或带*引牌*的一盲打*飞牌*，那么纯*飞牌*更简单，你应该认为是这种情况。
 
-### The Pang of Guilt
+## 常见错误 \{#common-mistakes\}
 
-- First, see the section on the _[Bluff Seat](#the-bluff-seat)_.
-- Before cluing a card directly, you should first consider if the card is on _Finesse Position_. If it is, and you clue it directly, you may be "stealing" someone's _Finesse_ or _Bluff_.
-- Thus, in this situation, it may be better to discard and let the player in _Bluff Seat_ get the card. If you do decide to clue the card directly, you should always feel a _Pang of Guilt_.
+### 内疚感 \{#the-pang-of-guilt\}
 
-### Mistaking a Layered Finesse for a Bluff
+- 首先，请参见[_诈唬位_](#the-bluff-seat)的章节。
+- 直接提示一张牌之前，你应该先考虑这张牌是否处于*飞牌位*。如果是，你直接提示它，可能会“偷走”某人的*飞牌*或*诈唬*。
+- 在这种情况下，弃牌并让*诈唬位*的玩家获取这张牌可能更好。如果你决定直接提示这张牌，你应该有一定的*内疚感*。
 
-- First, see the section on the _[Layered Finesse](level-5.mdx#the-layered-finesse)_.
-- Sometimes, players only play one card into a _Layered Finesse_, and then stop (when they should instead be digging for the promised card).
-- Since _Bluffs_ are only allowed from _Bluff Seat_, if the clue-giver is not in _Bluff Seat_ then such a clue is **always** a _Layered Finesse_ and not a _Bluff_.
-- However, _Bluffs_ take precedence over _Layered Finesses_ from _Bluff Seat_.
-  - In other words, if Alice gives a clue which causes Bob to blind-play an unrelated card immediately, then Bob should assume a _Bluff_ when possible.
-  - In still other words, _Layered Finesses_ are generally "turned off" from _Bluff Seat_.
-  - Of course, this only applies if the clue actually satisfies the criteria for a potential _Bluff_.
-    - In particular, if Alice gives a clue to Bob but Bob does not blind-play immediately, then according to the _Lie Principle_, the clue should always be interpreted as a _Layered Finesse_ as it cannot possibly be a legal _Bluff_.
-    - In particular, if Alice gives a clue to Bob which is not a legal _Bluff_ target, the clue should always be interpreted as a _Layered Finesse_.
+### 将多层飞牌误认为诈唬 \{#mistaking-a-layered-finesse-for-a-bluff\}
 
-### Bluff Prompts / Prompt Bluffs (Illegal)
+- 首先，请参见[_多层飞牌_](level-5.mdx#the-layered-finesse)的章节。
+- 有时，玩家只会在*多层飞牌*中打出一张牌，然后停下（当他们其实应该继续挖出被保证的牌时）。
+- 由于*诈唬*只允许从*诈唬位*进行，如果提示者不在*诈唬位*，那么这样的提示**一定是**{}_多层飞牌_，而不是*诈唬*。
+- 然而，在*诈唬位*，*诈唬*优先于*多层飞牌*。
+  - 换句话说，如果 Alice 给出一个提示，导致 Bob 立即盲打一张不相关的牌，那么 Bob 在有可能时，应认为这是*诈唬*。
+  - 再换句话说，*多层飞牌*大体上在*诈唬位*“关闭”。
+  - 当然，这仅在提示确实满足*诈唬*的条件时适用。
+    - 特别地，如果 Alice 给 Bob 一个提示，但 Bob 没有立即盲打，那么根据*谎言原则*，该提示应始终被理解成*多层飞牌*，因为它不可能是合规的*诈唬*。
+    - 特别地，如果 Alice 给 Bob 一个提示，而提示不指向合规的*诈唬*目标，该提示应始终被理解成*多层飞牌*。
 
-- It is illegal to trick players into thinking that they are _Prompted_. _Prompts_ **must** be the truth.
-- For example, in a 4-player game:
-  - Red 1 and blue 1 are played on the stacks.
-  - Bob has a card in his hand with a number 2 clue on it. He does not know its true identity.
-  - Alice clues red to Donald, touching a red 3 as a _Play Clue_.
-  - Since red 1 is on the stacks, Bob knows that Alice is indicating to the team that someone has the red 2.
-  - Bob looks around and sees that no-one else has the red 2.
-  - Thus, Bob knows that this must be a _Prompt_, so his unknown 2 must be a red 2. Bob plays the unknown 2. It is instead a blue 2, and it successfully plays on the stacks.
-  - Cathy is slightly surprised that Bob played the blue 2. However, this is not completely out of the ordinary, as Bob might have been able to figure it out somehow.
-  - Cathy performs the same analysis that Bob does. Namely, Cathy knows that Alice is indicating that someone on the team has the red 2, and Cathy does not see the red 2 in anyone else's hand.
-  - Thus, Cathy knows that Alice's clue to Donald must be a _Finesse_, so Cathy must have the red 2 on her _Finesse Position_. Cathy plays her _Finesse Position_ card. It is instead the blue 5 and misplays.
-  - This was Alice's fault, because _Bluffs_ are only allowed if they can be revealed immediately from a blind-play.
+### 诈唬引牌 / 引牌诈唬（违规） \{#bluff-prompts--prompt-bluffs-illegal\}
+
+- 欺骗玩家让他们认为自己被*引牌*是违规的。_引牌_{}**必须**是真实的。
+- 例如在 4 人游戏中：
+  - 红 1 和蓝 1 已经打出。
+  - Bob 手中有一张带有数字 2 提示的牌。他不知道它具体是什么。
+  - Alice 提示 Donald 红色，提示到一张红 3 作为*出牌提示*。
+  - 由于红 1 已经打出，Bob 知道 Alice 正在表明某人手中有红 2。
+  - Bob 环顾四周，发现没有其他玩家手中有红 2。
+  - 因此，Bob 知道这一定是在*引牌*，所以他手中的未知 2 必然是红 2。Bob 打出这张未知的 2。结果是蓝 2，成功打出。
+  - Cathy 对 Bob 打出蓝 2 感到有些惊讶。然而，这并不完全出乎意料，因为 Bob 可能已经通过某种方式推断出来了。
+  - Cathy 进行了与 Bob 相同的分析。具体而言，Cathy 知道 Alice 正在表明某人手中有红 2，而 Cathy 没有在其他玩家手中看到红 2。
+  - 因此，Cathy 知道 Alice 对 Donald 的提示一定是*飞牌*，所以 Cathy 的*飞牌位*必然是红 2。Cathy 打出*飞牌位*。结果是一张蓝 5，造成误打。
+  - 这是 Alice 的错，因为只有一次盲打能够立即揭示状况时才允许*诈唬*。
+- 译注：此场景中，Bob 在打出蓝 2 后会认为这是对自己的[_隐藏飞牌_](level-5.mdx#the-hidden-finesse)。
 
 <BluffPromptsPromptBluffs />
 
-### Queued Bluffs (Illegal)
+### 依序诈唬（违规） \{#queued-bluffs-illegal\}
 
-- First, see the section on the _[Queued Finesse](level-5.mdx#the-queued-finesse)_.
-- _Queued Finesses_ are encouraged, since they have few downsides.
-- However, players should **never** queue a _Bluff_ on top of a player who is _Finessed_. This is because the blind-playing player will assume that a _Layered Finesse_ is occurring and go on to play the card from the first _Finesse_. This means that the _Bluff_ will not be resolved immediately, violating _Lie Principle_. This mistake is really bad because it causes severe _Information Desynchronization_.
+- 首先，请参见[_依序飞牌_](level-5.mdx#the-queued-finesse)的章节。
+- *依序飞牌*是被鼓励的，它们缺点很少。
+- 然而，玩家**绝对**不应该在被*飞*的玩家上再做一个*诈唬*。这是因为盲打的玩家会认为发生了*依序飞牌*，并继续打出第一次*飞牌*的牌。这意味着*诈唬*不会立即化解，违反了*谎言原则*。这个错误非常糟糕，会导致严重的*信息不同步*。

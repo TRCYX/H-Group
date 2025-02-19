@@ -5,7 +5,7 @@ stacks:
   - b: 0
   - p: 0
 bigText:
-  text: Finesse
+  text: 飞牌
 players:
   - clueGiver: true
     cards:
@@ -16,7 +16,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Red 3
+        above: 红 3
       - type: x
       - type: x
       - type: x
@@ -25,7 +25,7 @@ players:
       - type: x
       - type: 4
         clue: 4
-        middleNote: (R)
+        middleNote: (红)
       - type: x
       - type: x
       - type: x

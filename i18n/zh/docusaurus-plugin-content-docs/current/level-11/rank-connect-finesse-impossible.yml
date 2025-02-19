@@ -5,7 +5,7 @@ stacks:
   - b: 2
   - p: 0
 bigText:
-  text: Bluff
+  text: 诈唬
 players:
   - clueGiver: true
     cards:
@@ -16,7 +16,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Blue 3
+        above: 蓝 3
       - type: x
       - type: x
       - type: x

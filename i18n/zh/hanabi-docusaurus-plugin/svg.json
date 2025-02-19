@@ -90,12 +90,12 @@
     "description": "Numerical decrease of offset of text boxes starting with Rainbow.text"
   },
   "bigText.Bluff": {
-    "message": "Bluff"
+    "message": "诈唬"
   },
   "bigText.Finesse": {
     "message": "飞牌"
   },
   "bigText.Illegal!": {
-    "message": "非法！"
+    "message": "违规！"
   }
 }
