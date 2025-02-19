@@ -29,7 +29,7 @@ import DoubleGentlemanDiscard from "./level-10/double-gentleman-discard.yml";
 - 例如在 3 人游戏中：
   - 现在是第一个回合，还没有打出过任何牌。
   - Alice 提示 Cathy 数字 1，提示到一张 1。
-  - Bob 提示 Cathy 红色，将已经提示的 1 填补为红 1，同时提示到一张新牌，这张牌必须是红 2。
+  - Bob 提示 Cathy 红色，将已经提示的 1 填补为红 1，同时提示到一张新牌，这张牌必然是红 2。
   - Cathy 弃掉已知的红 1，作为*绅士弃牌*。
   - Alice 盲打*飞牌位*牌作为红 1。
 
@@ -46,10 +46,10 @@ import DoubleGentlemanDiscard from "./level-10/double-gentleman-discard.yml";
 - 例如在 3 人游戏中：
   - 现在是第一回合，还没有打出过任何牌。
   - Alice 提示 Cathy 数字 1，提示到一张 1。
-  - Bob 提示 Cathy 红色，将已经提示过的 1 填补为红 1，同时提示到一张新牌，这张牌必须是红 2。
+  - Bob 提示 Cathy 红色，将已经提示过的 1 填补为红 1，同时提示到一张新牌，这张牌必然是红 2。
   - Cathy 弃掉已知的红 1，作为*绅士弃牌*。
   - Alice 盲打她的*飞牌位*作为红 1，但结果是绿 1。
-  - Alice 知道她应该被保证拥有红 1，会在下一个回合盲打她的 2 号位。
+  - Alice 知道她应该被保证持有红 1，会在下一个回合盲打她的 2 号位。
 
 <LayeredGentlemanDiscard />
 
@@ -62,7 +62,7 @@ import DoubleGentlemanDiscard from "./level-10/double-gentleman-discard.yml";
   - 红 1 已经打出。
   - Alice 弃掉一张已知的红 3。
   - Bob 手中没有任何提示过的牌。
-  - Bob 查看 Cathy 的手牌，也没有看到红 3。因此，他知道自己拥有这张牌。
+  - Bob 查看 Cathy 的手牌，也没有看到红 3。因此，他知道自己持有这张牌。
   - Bob 将他的*飞牌位*标记为红 3。目前，Bob 没有其他事情可做，因此他弃掉弃牌位的牌。
 
 <BatonDiscard />
@@ -139,7 +139,7 @@ import DoubleGentlemanDiscard from "./level-10/double-gentleman-discard.yml";
   - Alice 提示 Bob 数字 2，提示到 1 号位的红 2。这是对 2 的*出牌提示*。因此，这是一张全局已知的红 2 或蓝 2。Alice 右击这张牌并写下笔记“r2, b2”。
   - Bob 也写下笔记“r2, b2”，但随后停下来仔细思考。他注意到 Alice 手中有一张蓝 3，所以 Cathy 有可能对他手中假想的蓝 2 执行*飞牌*。
   - Bob 回放到游戏开始，仔细查看所有回合，密切关注 Cathy 是否有足够的机会对蓝 2 _飞牌_。确实，他发现 Cathy 有一两个回合可以轻松执行*反向飞牌*，但她选择了弃牌。
-  - 因此，Bob 知道他的牌必须是红 2，因此他将“r2, b2”的笔记更新为“r2”。
+  - 因此，Bob 知道他的牌必然是红 2，因此他将“r2, b2”的笔记更新为“r2”。
   - Bob 看到 Cathy 的*飞牌位*是一张红 2，所以他弃掉红 2，执行*绅士弃牌*。
   - Cathy 盲打她的*飞牌位*牌作为红 2。
   - Alice 惊讶地倒吸一口凉气，因为 Bob 不可能知道牌恰好是红 2。这一定是一个*双重绅士弃牌*，同时指向红 2 和蓝 2。Alice 盲打她的*飞牌位*，希望能打出蓝 2，但结果打出了红 5，导致游戏失败。
