@@ -70,7 +70,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 ### 借助提示过的牌诈唬 \{#bluffs-through-already-clued-cards\}
 
-- 也可以借助已经提示过的牌进行*诈唬*。这样有可能比普通的*诈唬*更优，因为除了盲打外，还可以为持有中间牌的玩家提供信息。
+- 也可以借助已经提示过的牌进行*诈唬*。这样有可能优于普通的*诈唬*，因为除了盲打外，还可以为持有中间牌的玩家提供信息。
 - 例如在 4 人游戏中：
   - 所有的 1 都已经打出。
   - Bob 手牌没有任何提示。
@@ -80,7 +80,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
   - Bob 打出他的*飞牌位*作为红 2。然而它是蓝 2，成功打出。
   - 从 Cathy 的视角来看，她知道红 4 *差两张可打出*而非*差一张可打出*。对*差两张可打出*的牌进行*诈唬*是违规的。因此，Cathy 的神秘 3 必然精确地是红 3，使红 4 归根结底是*差一张可打出*的。
   - Cathy 弃牌。
-  - 从 Donald 的视角来看，由于红色（提示的类型）与蓝色（盲打的牌）不相连，这一定是在*诈唬*。由于红 1 已经在牌堆上打出，Donald 正常会认为他手中有的是红 3（*差一张可打出*的红牌）。
+  - 从 Donald 的视角来看，由于红色（提示的类型）与蓝色（盲打的牌）不相连，这一定是在*诈唬*。由于红 1 已经打出，Donald 正常会认为他手中有的是红 3（*差一张可打出*的红牌）。
   - 然而，Cathy 手中已经有一张提示过的红 3。如果 Donald 也有一张红 3，那么 Alice 的提示将违反*良触原则*。因此，Donald 必然持有红 4。
 
 <BluffThroughClued />
@@ -121,7 +121,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 - 这被称为 _Cathy 的相连原则_，以强调所有人都需要与 Bob（盲打之前）做不同的假设。
 - 如果牌是否相连存在歧义，那么大家都应该<Em>**认为是*诈唬*而不是*飞牌***</Em>。请注意，这与 *Bob 的真相原则*中的优先级**相反**！
 
-#### 例 1：颜色相连 --> _飞牌_
+#### 例 1：颜色相连 --> _飞牌_ \{#example-1-color-connect----finesse\}
 
 - 红 1 已经打出。
 - Alice 提示 Cathy 红色，提示到一张红牌作为*出牌提示*。
@@ -131,7 +131,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 <ColorConnect />
 
-#### 例 2：颜色不相连 --> _诈唬_
+#### 例 2：颜色不相连 --> _诈唬_ \{#example-2-color-disconnect----bluff\}
 
 - 红 1 已经打出。
 - Alice 提示 Cathy 红色，提示到一张红牌作为*出牌提示*。
@@ -141,7 +141,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 <ColorDisconnect />
 
-#### 例 3：数字相连 --> _飞牌_
+#### 例 3：数字相连 --> _飞牌_ \{#example-3-rank-connect----finesse\}
 
 - 红 2 已经打出。
 - Alice 提示 Cathy 数字 4，提示到一张 4 作为*出牌提示*。
@@ -150,7 +150,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 <RankConnect />
 
-#### 例 4：数字不相连 --> _诈唬_
+#### 例 4：数字不相连 --> _诈唬_ \{#example-4-rank-disconnect----bluff\}
 
 - 红 2 已经打出。
 - Alice 提示 Cathy 数字 4，提示到一张 4 作为*出牌提示*。
@@ -161,7 +161,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 <RankDisconnect />
 
-#### 例 5：数字不相连但*诈唬*不可能 --> _三重飞牌_
+#### 例 5：数字不相连但*诈唬*不可能 --> _三重飞牌_ \{#example-5-rank-disconnect-where-a-bluff-is-impossible----triple-finesse\}
 
 - 这是一局 4 人游戏。
 - 还没有打出过任何牌。
@@ -173,7 +173,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 <RankDisconnectBluffImpossible />
 
-#### 例 6：数字相连但*飞牌*不可能 --> _诈唬_
+#### 例 6：数字相连但*飞牌*不可能 --> _诈唬_ \{#example-6-rank-connect-where-a-finesse-is-impossible----bluff\}
 
 - 红 2 和蓝 2 已经打出。
 - Alice 提示 Cathy 数字 4，提示到一张 4 作为*出牌提示*。
@@ -184,7 +184,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 <RankConnectFinesseImpossible />
 
-#### 例 7：颜色与彩色相连 --> _飞牌_
+#### 例 7：颜色与彩色相连 --> _飞牌_ \{#example-7-color-connect-with-rainbow----finesse\}
 
 - 这是一局带彩色的游戏。（本节中的其他示例假设是“无变体”游戏。）
 - 彩 1 已经打出。
@@ -194,7 +194,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 <ColorConnectRainbow />
 
-#### 例 8：颜色与彩色相连但*飞牌*不可能 --> _诈唬_
+#### 例 8：颜色与彩色相连但*飞牌*不可能 --> _诈唬_ \{#example-8-color-connect-with-rainbow-where-a-finesse-is-impossible----bluff\}
 
 - 这是一局带有彩色的游戏。（本节中的其他示例假设是“无变体”游戏。）
 - 彩 1 和红 2 已经打出。
