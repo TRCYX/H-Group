@@ -16,12 +16,12 @@ players:
   - cards:
       - type: x
       - type: 2
-        below: Red 2?
+        below: 红 2?
       - type: x
       - type: 2
-        below: Red 2?
+        below: 红 2?
       - type: 2
-        below: Red 2?
+        below: 红 2?
   - cards:
       - type: x
       - type: x

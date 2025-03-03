@@ -1,5 +1,5 @@
 ---
-title: Level 12 - Context
+title: 等级 12 - 场合
 ---
 
 import AssumingAsymmetricInformation from "./level-12/assuming-asymmetric-information.yml";
@@ -15,227 +15,229 @@ import CluingOnes1 from "./level-12/cluing-ones-1.yml";
 import CluingOnes2 from "./level-12/cluing-ones-2.yml";
 import CluingOnes3 from "./level-12/cluing-ones-3.yml";
 
-## Conventions
+## 约定 \{#conventions\}
 
-### Assuming Asymmetric Information
+### 对不对称信息做假设 \{#assuming-asymmetric-information\}
 
-- Sometimes, players will figure out asymmetric information about the identities of cards in their hand.
-- For example, in a 3-player game:
-  - It is the _Early Game_ and there are 3 clues available.
-  - Alice discards, initiating the _Mid-Game_.
-  - Bob knows that there must be nothing left to clue, or Alice would have been obligated to clue it.
-  - Bob has three 2's in his hand that were saved with a _2 Save_ clue earlier on.
-  - Bob sees that Cathy has a red 2 on chop. Since Alice did not clue it, Bob must have the other copy in his hand.
-  - Bob has not discarded since the _2 Save_ was given to him earlier on. Thus, he knows that one of his three clued 2's must be the other copy of the red 2, so he marks all three cards as "possible red 2".
-  - However, these notes are asymmetric - Alice and Bob write the notes, but Cathy does not. (Cathy has no idea that this is happening because Cathy cannot see her own red 2 on chop.)
-  - Alice and Bob will have to keep this information desync in mind going forward.
+- 玩家有时能够推断关于自己手牌的不对称信息。
+- 例如在 3 人游戏中：
+  - 现在是游戏*早期*，有 3 个提示机会。
+  - Alice 弃牌，进入游戏*中期*。
+  - Bob 知道，如果还有需要提示的牌，Alice 有义务提示。
+  - Bob 手中有三张 2，之前由*留 2 提示*保留。
+  - Bob 看到 Cathy 的弃牌位上是一张红 2。由于 Alice 没有提示它，Bob 自己手中必然有另一张红 2。
+  - Bob 在收到*留 2 提示*后没有弃过牌。他知道手中三张提示过的 2 中必然有一张是另一张红 2，所以他将这三张牌都标记为“可能是红 2”。
+  - 然而，这些笔记带有的信息是不对称的——Alice 和 Bob 能写下这些笔记，但 Cathy 不知道。（Cathy 不知道是因为她看不到自己弃牌位上的红 2。）
+  - Alice 和 Bob 接下来必须记住此信息不同步。
 
 <AssumingAsymmetricInformation />
 
-- By default, players should never assume that other players have asymmetric information. This is because having asymmetric information is the **exception** rather than the norm.
-- In the previous example, Bob might perform an action later on in the game that seems to demonstrate that he knows he has the red 2. But Cathy should not assume that he does, unless there is **no other explanation** for the clue.
+- 玩家默认不应假设其他玩家有不对称的信息。这是因为信息不对称属于**例外**，而不属于常态。
+- 在上面的例子里，Bob 可能之后会执行某行动，以表明他知道自己持有红 2。但 Cathy 不应假设他知道，除非**没有任何其他解释**。
 
-### Duplication Responsibility
+### 重复的责任 \{#duplication-responsibility\}
 
-- Usually, if a 2 needs to be saved, it is not the responsibility of a player with already-clued 2's in their hand, because they could potentially violate _Good Touch Principle_ by cluing it. So, they should defer and let someone else on the team do it. (The same general concept also applies to cluing playable cards on chop, for example.)
-- However, if all players have a clued 2 in their hand, then someone has to take a risk of violating _Good Touch Principle_ in order to satisfy _Save Principle_. Who should do it?
-- In this situation, the player who has the least number of matching clued cards should take responsibility. If 2+ players are tied, then the player with the less specific type of clue on their card(s) should take responsibility.
-- If 2+ players have the exact same number of clued cards and type of clued cards, then either player should save the card.
-- Example 1:
-  - In a 3 player game, Alice has a blue 2 on chop that needs to be saved.
-  - Bob has 2 unknown 2's.
-  - Cathy has 1 unknown 2.
-  - Bob should let Cathy perform the save, since 1 matching card is less than 2 matching cards.
+- 通常，如果需要保留一张 2，持有已提示过的 2 的玩家不对此负责，因为他们可能会因提示此 2 而违反*良触原则*。所以，他们应该将此事推迟，让其他人去做。（类似的概念也适用于提示弃牌位上的可打出牌等等。）
+- 然而，如果所有玩家手中都有提示过的 2，那么必须有人冒违反*良触原则*的险，以满足*留牌原则*。应该由谁这么做？
+- 在这种情况下，持有匹配的提示过的牌张数最少的玩家应担当责任。如果有两名以上玩家并列，那么牌张上的提示较宽泛的玩家应担当责任。
+- 如果两名以上玩家持有的提示过的牌张数完全相同，提示类型也完全相同，那么应由任一玩家保留这张牌。
+- 例 1：
+  - 在 3 人游戏中，Alice 的弃牌位上有一张蓝 2 需要保留。
+  - Bob 手中有 2 张未知的 2。
+  - Cathy 手中有 1 张未知的 2。
+  - Bob 应该让 Cathy 留牌，因为 1 张匹配的牌少于 2 张匹配的牌。
 
 <DuplicationResponsibility1 />
 
-- Example 2:
-  - In a 3 player game, Alice has a blue 2 on chop that needs to be saved.
-  - Bob has 2 unknown 2's.
-  - Cathy has 2 unknown 2's.
-  - The responsibility is shared, so Bob should perform the clue if Cathy has a good discard, or he can discard and let Cathy do it.
+- 例 2：
+  - 在 3 人游戏中，Alice 的弃牌位上有一张蓝 2 需要保留。
+  - Bob 手中有 2 张未知的 2。
+  - Cathy 手中有 2 张未知的 2。
+  - 责任由两人分担，所以如果 Cathy 有安全的牌可弃，Bob 就应该提示，否则他也可以弃牌，让 Cathy 提示。
 
 <DuplicationResponsibility2 />
 
-- Example 3:
-  - In a 3 player game, Alice has a blue 2 on chop that needs to be saved.
-  - Bob has 2 unknown blue cards.
-  - Cathy has 1 unknown 2's.
-  - Bob should let Cathy perform the save, since 1 matching card is less than 2 matching cards.
+- 例 3：
+  - 在 3 人游戏中，Alice 的弃牌位上有一张蓝 2 需要保留。
+  - Bob 手中有 2 张未知的蓝牌。
+  - Cathy 手中有 1 张未知的 2。
+  - Bob 应该让 Cathy 留牌，因为 1 张匹配的牌少于 2 张匹配的牌。
 
 <DuplicationResponsibility3 />
 
-- Example 4:
-  - In a 3 player game, Alice has a blue 2 on chop that needs to be saved.
-  - Bob has 2 unknown blue cards. No blue cards have been played yet, so from Bob's perspective, each blue card has a 1/9 chance of being the blue 2.
-  - Cathy has 2 unknown 2's. No 2's have been played yet, so from Cathy's perspective, each 2 has a 1/9 chance of being the blue 2.
-  - The responsibility is shared, so Bob should perform the clue if Cathy has a good discard, or he can discard and let Cathy do it.
+- 例 4：
+  - 在 3 人游戏中，Alice 的弃牌位上有一张蓝 2 需要保留。
+  - Bob 手中有 2 张未知的蓝牌。还没有打过蓝牌，所以从 Bob 的视角来看，每张蓝牌有 1/9 的概率是蓝 2。
+  - Cathy 手中有 2 张未知的 2。还没有打出过 2，所以从 Cathy 的视角来看，每张 2 有 1/9 的概率是蓝 2。
+  - 责任由两人分担，因此如果 Cathy 有安全的牌可弃，Bob 就应该提示，否则他也可以弃牌，让 Cathy 提示。
 
 <DuplicationResponsibility4 />
 
-- Example 5:
-  - In a 3 player game, Alice has a blue 2 on chop that needs to be saved.
-  - Bob has 2 unknown blue cards. No blue cards have been played yet, so from Bob's perspective, each blue card has a 1/9 chance of being the blue 2.
-  - Cathy has 2 unknown 2's. One 2 has been played already, so from Cathy's perspective, each 2 has a 1/8 chance of being the blue 2.
-  - Thus, it is Bob's responsibility to save the blue 2.
+- 例 5：
+  - 在 3 人游戏中，Alice 的弃牌位上有一张蓝 2 需要保留。
+  - Bob 手中有 2 张未知的蓝牌。还没有打过蓝牌，因此从 Bob 的视角来看，每张蓝牌有 1/9 的概率是蓝 2。
+  - Cathy 手中有 2 张未知的 2。已经打出过一张 2，因此从 Cathy 的视角来看，每张 2 有 1/8 的概率是蓝 2。
+  - 因此，保留蓝 2 是 Bob 的责任。
 
 <DuplicationResponsibility5 />
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The Selfish Clue
+### 自私提示 \{#the-selfish-clue\}
 
-- A _Selfish Clue_ is when a player:
-  1. has a playable card in their hand (e.g. red 2)
-  1. gives a _Play Clue_ to the next connecting card (e.g. red 3)
-- In almost all cases, there is no reason to give a _Selfish Clue_. Players can simply play their playable card and let someone else on the team "get" the next card. Being _Selfish_ is typically associated with having bad teamwork.
-- However, in rare cases, giving a _Selfish Clue_ can be good.
-- For example, in a 3-player game:
-  - All the 1's are played on the stacks.
-  - Alice has a globally known playable red 2 in her hand.
-  - Bob hand is as follows, from newest to oldest: `blue 1, red 3, red 4, red 5, blue 1`
-  - Both Bob and Cathy has a safe discard.
-  - Alice knows that on this turn, she is expected to play the red 2, unless she has a really good clue to give.
-  - Alice sees that if she plays the red 2, then Bob will probably have nothing to do, and will go on to discard the blue 1.
-  - At that point, the red 5 will be on chop, and it will be difficult for the team to get all of the red cards. Specifically, someone will probably have to give a number 3 clue to Bob as a 1-for-1 on the red 3.
-  - Alice sees that if she gives a red clue to Bob _right now_ (e.g. before she plays the red 2), then she will be able to "lock-in" a nice 3-for-1 clue. Even though the team will lose _Tempo_, this will be inconsequential because Bob has a safe discard and Cathy has a safe discard.
-  - Alice clues red to Bob as a _Selfish Play Clue_.
+- *自私提示*是指玩家：
+  1. 手中有一张可打出的牌（例如红 2）
+  1. 给出一个*出牌提示*，提示下一张相连的牌（例如红 3）
+- 几乎所有情况下，都没有理由给出*自私提示*。玩家可以简单地出牌，并让其他人“获取”下一张牌。通常将*自私*与糟糕的团队合作相关联。
+- 然而在极少数情况下，给出*自私提示*可能有益。
+- 例如在 3 人游戏中：
+  - 所有的 1 都已经打出。
+  - Alice 手中有一张全局已知可打出的红 2。
+  - Bob 的手牌如下，从新到旧：`蓝 1, 红 3, 红 4, 红 5, 蓝 1`
+  - Bob 和 Cathy 都有安全的牌可弃。
+  - Alice 知道，在本回合中，除非她有一个非常好的提示可给，她应该打出红 2。
+  - Alice 看到，如果她打出红 2，那么 Bob 可能会无事可做，弃掉蓝 1。
+  - 到那时，红 5 将会到达弃牌位，获取所有的红牌会变得困难。具体来说，可能不得不给 Bob 一个数字 3 提示，作为对红 3 的 1 换 1 提示。
+  - Alice 看到，如果她**现在**给 Bob 红色提示（在她打出红 2 之前），她将能够“锁定”一个漂亮的 1 换 3 提示。即使损失*节奏*也无所谓，因为 Bob 和 Cathy 都有安全牌可弃。
+  - Alice 给 Bob 一个红色提示作为*自私出牌提示*。
 
 <SelfishClue />
 
-### The Selfish Finesse (A Finesse Through Your Own Hand)
+### 自私飞牌（借助自己的手牌飞牌） \{#the-selfish-finesse-a-finesse-through-your-own-hand\}
 
-- First, see the section on the _[Selfish Clue](#the-selfish-clue)_.
-- One excellent reason to give a _Selfish Clue_ is to "lock in" a _Finesse_ before the cards move out of _Finesse Position_. This is called a _Selfish Finesse_.
-- Like any other _Finesse_, players in this situation should just mark the cards for later and wait patiently for the cluer to play their card.
-- For example, in a 3-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Alice clues red to Bob, touching a red 1 on slot 1 as a _Play Clue_. (This is now a globally known red 1, since Cathy does not have any red 1's in her hand.)
-  - Bob clues red to Cathy, touching a red 3 on slot 1 as a _Play Clue_.
-  - Cathy sees that Alice has as red 2 on her _Finesse Position_, so this must be a _Selfish Finesse_. Bob did not want to play the red 1 because then the _Finesse_ might go away and he wanted to lock it in. Cathy marks her red card as potentially red 3 and discards.
-  - Alice sees that Bob gave a _Play Clue_ to a red 3. Bob knows for sure that he has the red 1, so Alice must have the red 2 on her _Finesse Position_. Alice marks her _Finesse Position_ card as red 2 and discards.
-  - Bob plays red 1.
-  - Cathy discards.
-  - Alice blind-plays red 2.
+- 首先，请参见[_自私提示_](#the-selfish-clue)部分。
+- 给出*自私提示*的一个很好的理由是，在牌移出*飞牌位*之前“锁定”一个*飞牌*。这称为*自私飞牌*。
+- 像任何其他*飞牌*一样，处于这种情况的玩家应该仅仅为将来标记这些牌，耐心等待提示者打出自己的牌。
+- 例如在 3 人游戏中：
+  - 这是第一个回合，牌堆上还没有任何牌被打出。
+  - Alice 提示 Bob 红色，提示到 1 号位的红 1 作为*出牌提示*。（现在这是一张全局已知的红 1，因为 Cathy 手中没有红 1。）
+  - Bob 提示 Cathy 红色，提示到 1 号位的红 3 作为*出牌提示*。
+  - Cathy 看到 Alice 的*飞牌位*上有一张红 2，因此这一定是*自私飞牌*。Bob 不想打出红 1，是因为那样*飞牌*可能会消失，他想将其锁定。Cathy 将她的红牌标记为可能是红 3，然后弃牌。
+  - Alice 看到 Bob 给了一张红 3 _出牌提示_。Bob 当然知道他持有红 1，所以 Alice 的*飞牌位*上必然是红 2。Alice 将她的*飞牌位*标记为红 2，然后弃牌。
+  - Bob 打出红 1。
+  - Cathy 弃牌。
+  - Alice 盲打红 2。
 
 <SelfishFinesse />
 
-### The Ego Clue (Mistake)
+### 自我中心提示（错误） \{#the-ego-clue-mistake\}
 
-- When you have a playable card, it is usually a mistake to defer playing that card in order to "steal" a clue from another player to force them to discard.
-- When this occurs, it is called an _Ego Clue_.
-- For example, in a 3-player game:
-  - Red 1 is played on the stacks.
-  - Alice holds a globally-known blue 1.
-  - Bob has a red 2 on chop, followed by another red 2.
-  - Alice wants Bob to discard so that she can cleanly clue the red 2 to get it played. Thus, Alice decides to give a _Play Clue_ to Cathy on a yellow 1, and hope that Bob has nothing else to do.
-  - Bob discards.
-  - Here, Alice made a mistake, because the line with better teamwork was for Alice to play the blue 1 and Bob to clue the yellow 1. Accelerating the red 2 is not as important as allowing for Bob to potentially clue Alice's hand.
-- _Ego Clues_ are usually not good because the cluer is forgetting that they cannot see their own hand. In some cases, it really is important to have Bob discard as soon as possible, but it is the exception rather than the norm. Good Hanabi players know that the best lines empower their teammates, instead of forcing them to do actions that are only good from one specific perspective.
-- _Ego Clues_ only apply when the cluer has a playable card. They do not apply when the cluer has a known trash card.
-- _Ego Clues_ are different from [_Selfish Clues_](#the-selfish-clue) because _Ego Clues_ are defined as cluing cards of a separate suit (instead of the same suit).
+- 当你有一张可打出的牌时，推迟打出这张牌以“偷走”另一个玩家的提示，迫使他们弃牌，这样做通常是错误的。
+- 这种情况发生时，它称为*自我中心提示*。
+- 例如在 3 人游戏中：
+  - 红 1 已经打出。
+  - Alice 手中有一张全局已知的蓝 1。
+  - Bob 的弃牌位上是一张红 2，接下来也是一张红 2。
+  - Alice 希望 Bob 弃牌，以便她可以干净地提示红 2，使其打出。Alice 决定给 Cathy 一个针对黄 1 的*出牌提示*，并希望 Bob 无事可做。
+  - Bob 弃牌。
+  - 这里，Alice 犯了一个错误，因为团队合作更好的路线是 Alice 打蓝 1，而 Bob 提示黄 1。加速红 2 不如让 Bob 有机会提示 Alice 重要。
+- *自我中心提示*通常不好，因为提示者忘记了他们看不到自己的手牌。有些情况下，确实需要 Bob 尽快弃牌，但这是例外而不是常态。优秀的花火玩家知道，最好的路线会给予队友权力，而非强迫他们执行仅从某个特定视角来看较好的行动。
+- *自我中心提示*仅适用于提示者持有可打出的牌的情况。如果提示者持有的是已知的废牌，则不适用。
+- *自我中心提示*与[_自私提示_](#the-selfish-clue)不同，因为*自我中心提示*定义为提示不同花色的牌（而非同一花色）。
 
-### The Stale 1's Clue
+### 过时的 1 提示 \{#the-stale-1s-clue\}
 
-- We have many conventions that specify what a clue means. But combined with this, we are always expected to look at the context of the game.
-- For example, sometimes players will receive a clue that just feels strange. If this good clue could have been given a bunch of turns ago, why is it only being given now? Were the other players not paying close enough attention, and are only getting around to cluing this card now?
-- In these types of situations, from _High Value Principle_, you can assume that the team is not making any mistakes, which means that the meaning of the clue should be altered from the "textbook" definition. We call these types of clues _Context Clues_ because they rely on contextual reading of the game state.
-- The most common _Context Clue_ is given to "stale" 1's towards the beginning of the game. For example, in a 3-player game:
-  - After a few ordinary clues happen, Alice discards, which ends the _Early Game_ and initiates the _Mid-Game_. By doing this, she implies that there is nothing to do (because players are mandated to "extinguish" all of the available _Play Clues_ and _Save Clues_ in the _Early Game_).
-  - Bob then immediately clues Cathy about two 1's.
-  - Normally, from _Good Touch Principle_, Cathy would assume that both of the 1's were "good" and play both.
-  - However, Cathy also knows that if both of these 1's were good, then Alice was required to clue them before discarding.
-  - Thus, Cathy can reason that one of the 1's are bad. Furthermore, by convention, she knows that the oldest (rightmost) 1 is bad, because that would be the one that she would ordinarily play first.
-  - So, Cathy should skip over the oldest (rightmost) 1, and play the other 1. Cathy should also treat the other 1 as known-trash.
-- The _Stale 1's Clue_ is specific example of a more general concept called _Focus Inversion_, which is covered below.
+- 我们有许多约定来指定提示的含义。但与此同时，我们总是需要观察游戏的场合。
+- 例如，有时玩家收到的提示就是令人感到奇怪。如果这个好提示很多回合前就可以给出，为什么现在才给？其他玩家是不是不太上心，等到现在才提示这张牌？
+- 在这类情况下，根据*高价值原则*，可以相信队友没有犯错。提示的含义应相对于“教科书”定义有所改变。我们称这些提示为*场合提示*，因为它们依赖于对游戏场合的解读。
+  - 译注：这个原则已经消失在时间长河之中了。其原意是指，提示应被理解为价值最高的解释。但是这显然和例如[_奥卡姆剃刀原则_](level-11.mdx#clue-interpretation--occams-razor)等至少在明面上不容易调和，可能因此删去。
+- 最常见的*场合提示*是接近在游戏开端时对“过时”的 1 给出的提示。例如在 3 人游戏中：
+  - 在几个平常的提示后，Alice 弃牌，结束了*早期*并进入*中期*。由此，她表明自己无事可做（因为玩家有义务在*早期*“穷尽”所有可行的*出牌提示*和*留牌提示*）。
+  - Bob 随后立即提示 Cathy 两张 1。
+  - 正常情况下，根据*良触原则*，Cathy 会认为这两张 1 都是“好的”，打出它们。
+  - 然而，Cathy 也知道，如果这两张 1 都是好的，那么 Alice 在弃牌前有义务提示它们。
+  - 因此，Cathy 可以推断出其中一张 1 是坏的。进一步，根据约定，她知道最老的（最右边的）1 是坏的，因为她一般会先打出那张牌。
+  - 所以，Cathy 应该跳过最老的（最右边的）1，打出另一张 1。Cathy 还应将另一张 1 视为已知的废牌。
+- *过时的 1 提示*是更一般的概念*焦点反转*的具体例子，下面将会介绍。
+  - 译注：译者认为仅按字面描述，这个说法并不合适，但是读者应能感受到*过时的 1 提示*是一种“通常的焦点不合适”的一种具体情况。
 
-### Focus Inversion
+### 焦点反转 \{#focus-inversion\}
 
-- Sometimes, a _Play Clue_ is given that both touches the chop card and one or more other card. The normal interpretation of this is to treat it as a chop-focus _Play Clue_, and play the chop. However, sometimes a player can know that the chop is not actually playable. This can be determined through:
-  - explicit information - negative clues present on the card
-  - implicit information - historical / contextual information about the card derived from moves that teammates performed earlier on in the game
-- When this occurs, the clue is meant to be a _Play Clue_ on the leftmost card **instead** of the chop card.
-- Just like a "normal" _Play Clue_ that touches multiple new cards, the chop card (and other new cards introduced) are not necessarily playable right now.
-- For example, in a 3-player game:
-  - Alice clues 1's to Bob, which introduces one card on slot 1.
-  - Bob plays the 1 and it is red 1.
-  - Cathy clues blue to Bob, which introduces two cards on slot 1 and slot 5.
-  - Normally, Bob would think that this is a _Chop-Focus_ clue, and play the blue 1 from slot 5.
-  - However, his slot 5 card has a negative 1 clue on it (from Alice's number 1 clue), so it explicitly cannot be the blue 1.
-  - Thus, this must be _Focus Inversion_ and blue 1 must be on slot 1. The blue card on slot 5 can be either blue 2, blue 3, blue 4, or blue 5.
+- 有时，一个*出牌提示*会同时提示到弃牌位和其他的牌。常规的解读是*弃牌位焦点出牌提示*，收到提示的玩家应打出弃牌位。然而，有时该玩家能够得知弃牌位其实无法打出。这可以确定自以下内容：
+  - 明确信息——牌上的否定提示
+  - 隐含信息——根据队友之前的行动推断出的历史/场合信息
+- 这种情况发生时，该提示的意图是对最左边的牌的*出牌提示*，**而不是**对弃牌位。
+- 就像“常规”的*出牌提示*一样，弃牌位（以及其他新引入的牌）未必现在就可以打出。
+- 例如在 3 人游戏中：
+  - Alice 提示 Bob 数字 1，提示到 1 号位的一张牌。
+  - Bob 打出这张 1，是红 1。
+  - Cathy 提示 Bob 蓝色，提示到 1 号位和 5 号位的两张牌。
+  - 平常，Bob 会认为这是一个*弃牌位焦点*提示，并从 5 号位打出蓝 1。
+  - 然而，他的 5 号位牌有一个否定的 1 提示（来自 Alice 的数字 1 提示），所以它明确不是蓝 1。
+  - 这一定是*焦点反转*，蓝 1 必然在 1 号位。5 号位的蓝牌可以是蓝 2、蓝 3、蓝 4 或蓝 5。
 
 <FocusInversion />
 
-- Note that **_Self-Finesses_ with rank always take precedence over _Focus Inversion_**, which is a specific case where _Occam's Razor_ does not apply. (_Self-Finesses_ with rank are quite common, but _Self Finesses_ with color are nonsensical.)
+- 请注意，**用数字作提示的*自我飞牌*总是优先于*焦点反转***，这是*奥卡姆剃刀*不适用的一个特例。（用数字作提示的*自我飞牌*很常见，但用颜色作提示的*自我飞牌*完全不合理。）
 
-## General Principles
+## 通用原则 \{#general-principles\}
 
-### Context
+### 场合 \{#context\}
 
-- If you are reading this section, you are presumably a more-experienced Hanabi player who has the fundamentals down. So, now is a good time to clear up a potential misconception that you may have about our conventions.
-- Up until now, you may have the impression that the group has a lot of conventions, and that if you just memorize all of the conventions, you will become a really good Hanabi player. Or, you may have the impression that the conventions are like laws and that you must always follow them. Neither of these things are true.
-- _Context_ is defined as all of the meta-information about the game state. In intermediate and expert games, when determining what a clue means, players must **always** take into account the full context of the game. This means that figuring out what a clue means is never truly as easy as following one of the flowcharts listed on the website.
-- When writing the strategy documentation, it would be distracting to constantly write the word "probably" and to constantly write "this may not apply in all situations" all over the place. For advanced players, this is obvious - Hanabi is complicated enough such that every convention is meant to be broken if the particular situation demands it.
-- Thus, players need to read the reference documentation with **a grain of salt**, especially when it says the word "always". Even though this website outlines the "correct" thing to do in a lot of situations, these are not strict rules. Rather, they are intended to show the "default" or "common" case. Memorizing the default cases is really helpful, for intermediate and advanced players alike. But players have to always remember to keep their brain fully engaged on the particular situation.
+- 如果你在阅读本节，你可能已经是一位有一定经验的花火玩家，充分掌握了基础知识。所以，现在是澄清你可能对我们的约定产生的误解的好时机。
+- 到目前为止，你可能有一种印象，认为我们的团体有很多约定，只需要记住所有约定，就可以成为非常优秀的花火玩家。也有可能你认为这些约定就像法律一样，你必须始终遵守它们。这两者都不是真的。
+- *场合*定义为有关游戏状态的所有元信息。在中级和专家级的游戏中，需要确定提示的含义时，玩家必须<Em>**总是**</Em>全面考虑游戏场合。这意味着理解提示的含义从来不像遵循网站上的一张流程图那样简单。
+- 在编写策略文档时，不断写“可能”和“这可能不适用于所有情况”令人分心。对于高级玩家来说，这是显而易见的——花火足够复杂，在特定情况下有需要时，每个约定都可以打破。
+- 因此，玩家需要**持保留态度**阅读参考文档，尤其是出现“总是”这个词时。尽管本网站在许多情况下描绘了“正确”的做法，但这些并不是严苛的规则。相反，它们旨在展示“默认”或“常见”的情形。记住默认情况非常有益，即使对中级和高级玩家也是如此。但必须始终记住，在具体场景下，玩家必须时刻大脑在线。
 
-### Choosing Between Playable Cards
+### 在可打出牌之间作选择 \{#choosing-between-playable-cards\}
 
-- Typically, players will only have one card to play at a time. In this case, unless there is some really good clue to give, there are no decisions to be made - they just play their one playable card.
-- What if a player has two or more playable cards to play? Which card should they play first?
-- If one of the cards leads into a teammate's hand, then they should play that one, because that would be good teamwork. Otherwise, they can play any card that they want.
-- However, if a player does not play their cards in a certain order, nothing special happens. In other words:
-  - When **you** have multiple cards to play, try to think about which card would be best using common sense. And then play that one.
-  - When **other** people have multiple cards to play, try to predict which one they will play. But if they play an unexpected card, do not read into it too much. They are either making a small mistake or they have a plan that is not yet visible to you.
-- For level 25 players, you must play cards in a [very specific order](level-25.mdx).
+- 通常，玩家一次只有一张牌可打出。这种情况下，除非有一些相当好的提示可给，不然不需要做什么决策——只需打出那一张可打出的牌。
+- 如果玩家有两张以上可打出的牌，应该先出哪一张？
+- 如果有一张牌与队友的手牌相连，那么应该打出那张牌，这会是良好的合作。否则，可以打出任何想打的牌。
+- 然而，如果玩家没有按特定顺序出牌，不会发生任何特别的事情。换句话说：
+  - 当**你**有多张牌可打出时，尝试用常识思考哪一张牌最好。然后打出那张牌。
+  - 当**其他人**有多张牌可打出时，尝试预测他们会打出哪一张。但如果他们打出了预料之外的牌，不要过多解读。他们要么犯了一个小错误，要么有一个你尚未看到的计划。
+- 对于等级 25 的玩家，你必须按照[非常具体的顺序](level-25.mdx)出牌。
 
-### Cluing 1's in the Early Game
+### 在游戏早期提示 1 \{#cluing-1s-in-the-early-game\}
 
-- As outlined in the [level 3 strategy section](level-3.mdx#tempo), Hanabi is about balancing _Efficiency_ and _Tempo_.
-- As outlined in the [level 6 strategy section](level-6.mdx#the-value-of-one-away-from-playable-cards), _one-away-from-playable_ cards are valuable.
-- So, players have to balance _Efficiency_, _Tempo_, and "locking in" a touch on _one-away-from-playable_ cards.
-- In the _Early Game_, it is very common for players to give a number 1 clue when they see a hand that has two or more 1's in it. And this type of clue is normally pretty good. But because of the previous considerations, sometimes it would be better to get the 1's with several color clues instead.
+- 如[等级 3 策略部分](level-3.mdx#tempo)所述，花火是关于平衡*效率*和*节奏*的。
+- 如[等级 6 策略部分](level-6.mdx#the-value-of-one-away-from-playable-cards)所述，*差一张可打出*的牌价值较高。
+- 因此，玩家必须平衡*效率*、*节奏*以及用提示“锁住”*差一张可打出*的牌。
+- 在游戏*早期*，看到一手牌中有两张以上 1 时，玩家常会给出数字 1 提示。这种提示通常相当不错。但出于上述考虑，用多个颜色提示来获取 1 有时会更好。
 
-#### Example 1
+#### 例 1 \{#example-1\}
 
-- Players should not just consider how good their individual clue is - they should also consider how their teammates can **build** on top of their clue.
-- For example, in a 3-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Bob's hand is as follows, from newest to oldest: `green 4, red 1, red 3, blue 2, blue 1`
-  - Alice would like to get the red 1 and the blue 1 played from Bob's hand. (No-one else has a red 1 or a blue 1.) Should Alice clue number 1, red, or blue?
-  - If Alice clues number 1, it would be a 2-for-1 clue. But then the team will probably spend a clue getting the blue 2. This will result in an efficiency of 3-for-2. And the red 3 will probably end up being discarded. Bad.
-  - If Alice clues blue, it would be a 2-for-1 clue. But then the team will no longer be able to give a red clue, because it would be _Chop-Focused_ on the red 3. So they would have to clue number 1, which would result in an efficiency of 3-for-2. Bad.
-  - Thus, Alice should clue red first, and then clue blue later, resulting in an efficiency of 4-for-2.
+- 玩家不应仅仅考虑自己的单个提示有多好——还应考虑队友如何在此基础上**进一步**提示。
+- 例如在 3 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Bob 的手牌从新到老为：`绿 4, 红 1, 红 3, 蓝 2, 蓝 1`
+  - Alice 希望从 Bob 手中打出红 1 和蓝 1。（其他人没有红 1 和蓝 1。）Alice 应该提示数字 1、红色还是蓝色？
+  - 如果 Alice 提示数字 1，会是一个 1 换 2 提示。但是之后队友可能需要花费一个提示来获取蓝 2。这将导致 2 换 3 的效率。而红 3 可能会被弃掉。不好。
+  - 如果 Alice 提示蓝色，会是一个 1 换 2 提示。但是之后队友将无法再给出红色提示，因为它会因*弃牌位焦点*，聚焦在红 3 上。所以他们将不得不提示数字 1，导致 2 换 3 的效率。不好。
+  - Alice 应该先提示红色，之后再提示蓝色，从而实现 2 换 4 的效率。
 
 <CluingOnes1 />
 
-#### Example 2
+#### 例 2 \{#example-2\}
 
-- When players make the choice between cluing number 1 or cluing color, the cards in other people's hands should also be considered.
-- For example, in a 4-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Cathy's hand is as follows, from newest to oldest: `red 1, green 4, blue 3, blue 1`
-  - Donald is holding a cluable red 2.
-  - Alice would like to get the red 1 and the blue 1 played. (No-one else has a red 1 or a blue 1.) Should she clue 1, red, or blue?
-  - Just like in the previous example, cluing number 1 means that the red 2 will have to be clued as a 1-for-1, which results in an efficiency of 3-for-2.
-  - Instead, Alice clues blue to Cathy as a 2-for-1. Next, Bob will clue red to Donald, performing the _Finesse_ as a 2-for-1. In total, this is a 4-for-2.
+- 当玩家在提示数字 1 和提示颜色之间做出选择时，还应考虑其他玩家手中的牌。
+- 例如在 4 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Cathy 的手牌从新到老为：`红 1, 绿 4, 蓝 3, 蓝 1`
+  - Donald 手中有一张可提示的红 2。
+  - Alice 希望令红 1 和蓝 1 打出。（其他人手中没有红 1 和蓝 1。）她应该提示 1、红色还是蓝色？
+  - 就像上一个例子一样，提示数字 1 意味着红 2 将不得不被 1 换 1 提示，导致 2 换 3 的效率。
+  - 相反，Alice 提示 Cathy 蓝色作为 1 换 2。接下来，Bob 将提示 Donald 红色，执行*飞牌*作为 1 换 2。作为总计，这是 2 换 4 的效率。
 
 <CluingOnes2 />
 
-#### Example 3
+#### 例 3 \{#example-3\}
 
-- As explained in the [beginner's guide](beginner/other-general-strategy.mdx), it is almost always better to give a _Play Clue_ instead of a _Save Clue_ if a player has a playable card in their hand.
-- However, sometimes it is better to give a _Save Clue_ first and then a _Play Clue_ later.
-- For example, in a 3-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Cathy's hand is as follows, from newest to oldest: `blue 4, blue 4, red 3, red 1, blue 5`
-  - Alice would like to get the red 1 played. (No-one else has a red 1 in their hand.) Alice also knows that the team needs to eventually save the blue 5.
-  - If Alice clues number 1 first to get the red 1, then the team will need to give a _5 Save_ to save the blue 5, resulting in an efficiency of 2-for-2.
-  - Instead, Alice clues number 5 as a _5 Save_, which allows Bob to follow up with a red _Chop-Focus Play Clue_. This touches the red 3 as a 2-for-1, allowing for an overall efficiency of a 3-for-2.
+- 正如[入门指南](beginner/other-general-strategy.mdx)中所解释，如果玩家手中有可打出的牌，给出*出牌提示*几乎总好于给出*留牌提示*。
+- 然而，有时先给出*留牌提示*，然后再给出*出牌提示*更好。
+- 例如在 3 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Cathy 的手牌从新到老为：`蓝 4, 蓝 4, 红 3, 红 1, 蓝 5`
+  - Alice 希望令红 1 打出。（其他人手中没有红 1。）Alice 还知道团队最终需要保留蓝 5。
+  - 如果 Alice 先提示数字 1 以获取红 1，之后队友将需要给出*留 5 提示*来保留蓝 5，导致 2 换 2 的效率。
+  - 相反，Alice 提示数字 5 作为*留 5 提示*，允许 Bob 跟进一个红色*弃牌位焦点出牌提示*。这触及红 3 作为 1 换 2，从而实现 2 换 3 的整体效率。
 
 <CluingOnes3 />
 
-#### Other Considerations
+#### 其他考虑因素 \{#other-considerations\}
 
-- Just in case you thought Hanabi was not difficult enough, there are some other factors to consider when finding the best clue:
-  - Does giving a color clue put a playable card on _Finesse Position_? If so, maybe a color clue is better.
-  - Does giving a number 1 clue give the player the ability to perform a useful _Order Chop Move_? If so, maybe a number 1 clue is better.
+- 以防你认为花火还不够难，在寻找最佳提示时，这里还有一些其他可以考虑的因素：
+  - 给出颜色提示是否会将可打出牌置于*飞牌位*？如果是，或许颜色提示更好。
+  - 给出数字 1 提示是否会允许该玩家执行有意义的*顺序弃牌位移动*？如果是，也许数字 1 提示更好。
