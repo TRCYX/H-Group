@@ -189,3 +189,46 @@ em:lang("zh-Hans") {
   font-style: normal;
   font-weight: inherit;
 }
+
+@counter-style decimal-with-enumeration-comma {
+  system: extends decimal;
+  suffix: "、";
+}
+
+ol:lang("zh-CN"),
+ol:lang("zh-Hans") {
+  list-style-type: decimal-with-enumeration-comma;
+}
+
+@counter-style parenthesized-decimal {
+  system: fixed;
+  symbols: ⑴ ⑵ ⑶ ⑷ ⑸ ⑹ ⑺ ⑻ ⑼ ⑽ ⑾ ⑿ ⒀ ⒁ ⒂ ⒃ ⒄ ⒅ ⒆ ⒇;
+  suffix: " ";
+  range: 1 20;
+}
+
+ol ol:lang("zh-CN"),
+ul ol:lang("zh-CN"),
+ol ol:lang("zh-Hans"),
+ul ol:lang("zh-Hans") {
+  list-style-type: parenthesized-decimal;
+}
+
+@counter-style circled-decimal {
+  system: fixed 0;
+  symbols: ⓪ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳ ㉑ ㉒ ㉓ ㉔ ㉕ ㉖ ㉗ ㉘ ㉙
+    ㉚ ㉛ ㉜ ㉝ ㉞ ㉟ ㊱ ㊲ ㊳ ㊴ ㊵ ㊶ ㊷ ㊸ ㊹ ㊺ ㊻ ㊼ ㊽ ㊾ ㊿;
+  suffix: " ";
+  range: 0 50;
+}
+
+ol ol ol:lang("zh-CN"),
+ol ul ol:lang("zh-CN"),
+ul ol ol:lang("zh-CN"),
+ul ul ol:lang("zh-CN"),
+ol ol ol:lang("zh-Hans"),
+ol ul ol:lang("zh-Hans"),
+ul ol ol:lang("zh-Hans"),
+ul ul ol:lang("zh-Hans") {
+  list-style-type: circled-decimal;
+}
