@@ -5,7 +5,7 @@ stacks:
   - b: 2
   - p: 0
 bigText:
-  text: Bluff
+  text: 诈唬
 players:
   - clueGiver: true
     cards:
@@ -16,7 +16,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Red 2
+        above: 红 2
       - type: x
       - type: x
       - type: x
@@ -28,7 +28,7 @@ players:
         clue: 4
       - type: x
       - type: x
-  - text: After Bob blind-plays red 2...
+  - text: Bob 盲打红 2 后……
   - name: Cathy
     cards:
       - type: x
@@ -36,8 +36,8 @@ players:
       - type: 4
         below:
           text:
-            - Red 4
-            - Blue 4
+            - 红 4
+            - 蓝 4
           color: grey
       - type: x
       - type: x

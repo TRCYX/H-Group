@@ -5,7 +5,7 @@ stacks:
   - b: 0
   - p: 0
 bigText:
-  text: Illegal!
+  text: 违规！
 players:
   - clueGiver: true
     cards:
@@ -15,16 +15,16 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Red 1
+        above: 红 1
       - type: x
       - type: x
       - type: x
   - cards:
       - type: x
         border: false
-        above: Misplays!
-        middleNote: (B5)
-        below: Red 2
+        above: 误打！
+        middleNote: (蓝 5)
+        below: 红 2
       - type: x
       - type: x
       - type: x

@@ -12,7 +12,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Blue 3
+        above: 蓝 3
       - type: x
       - type: x
       - type: x
@@ -20,12 +20,12 @@ players:
       - type: x
       - type: x
       - type: 4
-        above: Red 4
+        above: 红 4
         clue: 4
       - type: x
   - cards:
       - type: x
       - type: b
-        above: Blue 4
+        above: 蓝 4
       - type: x
       - type: x

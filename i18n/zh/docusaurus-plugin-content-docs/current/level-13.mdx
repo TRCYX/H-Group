@@ -1,5 +1,5 @@
 ---
-title: Level 13 - Intermediate Bluffs
+title: 等级 13 - 中级诈唬
 ---
 
 import BluffColorDisconnect from "./level-13/bluff-color-disconnect.yml";
@@ -13,165 +13,166 @@ import HardBluff from "./level-13/hard-bluff.yml";
 import GoodTouchBluff from "./level-13/good-touch-bluff.yml";
 import GoodTouchBluff2 from "./level-13/good-touch-bluff-2.yml";
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The 3 Bluff
+### 3 诈唬 \{#the-3-bluff\}
 
-- Typically, the player who receives a clue that causes a _Bluff_ blind-play knows that the card that was clued is _one-away-from-playable_.
-- Our group plays with an artificial _3 Bluffs_ convention. This means that in addition to being _one-away-from-playable_, we agree that a _Bluff_ can _also_ be any 3 that will be useful in the future. (If you are curious, the history of this move is on a [separate page](https://github.com/hanabi/hanabi.github.io/blob/main/misc/3-bluffs.md).)
-- You can initiate a _3 Bluff_ with either a completely-unclued 3 or an already-clued 3; the same connect/disconnect rules apply in both cases.
-- _3 Bluffs_ are mostly used to get 1's played at the beginning of the game. However, similar to a normal _Bluff_, a _3 Bluff_ can be used to get any playable card (as long as it doesn't look like a _Finesse_).
-- Here are some examples that cover the most common _3 Bluff_ situations.
+- 通常，玩家收到引发*诈唬*的提示，会知道提示的牌是*差一张可打出*的。
+- 我们团体使用一种人为的 *3 诈唬*约定。这表明除了*差一张可打出*的牌外，我们还同意*诈唬*{}**也**可以作用于任意将来有用的 3。（如果你好奇，此行动的历史在[单独的页面](https://github.com/hanabi/hanabi.github.io/blob/main/misc/3-bluffs.md)上。）
+  - 译注：简而言之，可以获取更多 3，避免被弃掉。2 可以由*留 2 提示*保留，而 3 也有一定价值，但*弃牌位移动*等其他保住 3 的方式未必总是有机会发挥作用。
+- 你既可以用完全未提示过的 3，也可以用已经提示过的 3 发起 _3 诈唬_；相同的相连/不相连规则同时适用于这两种情况。
+- *3 诈唬*主要用于在游戏开始时打出 1。然而，与普通的*诈唬*类似，*3 诈唬*可以用于打出任何可打出的牌（只要看起来不像*飞牌*）。
+- 以下是一些示例，涵盖最常见的 *3 诈唬*场景。
 
-#### Example 1 - **Color Disconnect** (Valid)
+#### 例 1 - **颜色不相连**（有效） \{#example-1---color-disconnect-valid\}
 
-- On the first turn of the game, Alice clues Cathy red, which touches a red 3.
-- Bob blind-plays blue 1.
-- Cathy knows that it is either a red 2 (if it was a normal _Bluff_) or a red 3 (if it was a _3 Bluff_). She marks down both of the possibilities for later.
+- 在游戏的第一回合，Alice 提示 Cathy 红色，提示到一张红 3。
+- Bob 盲打蓝 1。
+- Cathy 知道它要么是红 2（常规的*诈唬*），要么是红 3（_3 诈唬_）。她为将来记下这两种可能性。
 
 <BluffColorDisconnect />
 
-#### Example 2 - **Number 3 with Suit Disconnect** (Valid)
+#### 例 2 - **数字 3 而花色不相连**（有效） \{#example-2---number-3-with-suit-disconnect-valid\}
 
-- On the first turn of the game, Alice clues Cathy number 3, which touches a red 3.
-- Bob blind-plays blue 1.
-- Cathy knows that it was a _3 Bluff_, because a played 1 does not "connect" to number 3.
-- Beyond that, Cathy knows nothing about the card, besides that it is a 3 (since it has a number 3 clue on it).
+- 在游戏的第一回合，Alice 提示 Cathy 数字 3，提示到一张红 3。
+- Bob 盲打蓝 1。
+- Cathy 知道这是在 _3 诈唬_，因为打出的 1 与数字 3 不“连接”。
+- 除此之外，Cathy 对这张牌一无所知，只知道它是 3（因为它上面有一个数字 3 提示）。
 
 <Number3WithSuitDisconnect />
 
-#### Example 3 - **Color Connect** (Not Valid; Looks Like a Finesse)
+#### 例 3 - **颜色相连**（无效；看起来像飞牌） \{#example-3---color-connect-not-valid-looks-like-a-finesse\}
 
-- On the first turn of the game, Alice clues Cathy red, which touches a red 3.
-- Bob blind-plays red 1.
-- Cathy sees that Bob does not have red 2. Since red connects to red, Cathy assumes that she has the red 2.
-- Cathy misplays the red 3 as a red 2.
-- Alternatively, if Cathy saw that Bob had both red 1 and red 2 on his _Finesse Position_ at the time the clue was given, she would know that she has the red 2 **or** the red 3. Subsequently, Bob is promised a red 2, since if he does not blind-play a card, Cathy will go on to misplay the red 3 as red 2.
+- 在游戏的第一回合，Alice 提示 Cathy 红色，提示到一张红 3。
+- Bob 盲打红 1。
+- Cathy 看到 Bob 没有红 2。由于红色与红色相连，Cathy 认为她持有的是红 2。
+- Cathy 将红 3 当作红 2 误打。
+- 另一种可能是，如果 Cathy 看到 Bob 在提示时*飞牌位*上接连有红 1 和红 2，她会知道她持有的是红 2 **或者**红 3。由此，Bob 被保证有红 2，因为如果他不（再次）盲打，Cathy 将会将红 3 当作红 2 误打。
 
 <ColorConnectNotValid />
 
-#### Example 4 - **Color Connect With Rank Disconnect** (Not Valid; Looks Like a Finesse)
+#### 例 4 - **颜色相连而数字不相连**（无效；看起来像飞牌） \{#example-4---color-connect-with-rank-disconnect-not-valid-looks-like-a-finesse\}
 
-- This is a 4-player game.
-- Nothing is played on the stacks.
-- Alice clues Donald red, touching a red 3 as a play clue.
-- Bob blind-plays the red 1.
-- Cathy notices that Donald's red card has a negative 2 clue on it. This means that Donald will not go on to misplay the card as the red 2.
-- Cathy needs to evaluate whether or not Alice's clue is a _Finesse_ or a _3 Bluff_. If this is a _Double Finesse_, then Cathy needs to blind-play the red 2. If this is a _Bluff_, then Alice only intended for Bob to blind-play.
-- Cathy knows that since **red connects to red**, this must be a _Double Finesse_, so Cathy assumes that she has the red 2 on her _Finesse Position_.
-- Cathy misplays blue 5.
+- 这是 4 人游戏。
+- 还没有打出过任何牌。
+- Alice 提示 Donald 红色，提示到一张红 3 作为*出牌提示*。
+- Bob 盲打红 1。
+- Cathy 注意到 Donald 的红牌有一个负面的 2 提示。这意味着 Donald 不会将这张牌当作红 2 误打。
+- Cathy 需要评估 Alice 的提示是*飞牌*还是 _3 诈唬_。如果是*双重飞牌*，那么 Cathy 需要盲打红 2。如果是*诈唬*，那么 Alice 只希望 Bob 盲打。
+- Cathy 知道，由于**红色与红色相连**，这一定是在*双重飞牌*，因此 Cathy 认为她的*飞牌位*上有红 2。
+- Cathy 误打蓝 5。
 
 <ColorConnectWithRankDisconnect />
 
-#### Example 5 - **Number 3 With Suit Connect** (Valid)
+#### 例 5 - **数字 3 而花色相连**（有效） \{#example-5---number-3-with-suit-connect-valid\}
 
-- On the first turn of the game, Alice clues Cathy number 3, which touches a red 3.
-- Bob blind-plays red 1.
-- Cathy knows that it was a _3 Bluff_, because a played 1 does not "connect" to number 3.
-- Beyond that, Cathy knows nothing about the card, besides that it is a 3 (since it has a number 3 clue on it).
-- Even though red 1 and red 3 are the same suit, Bob is not promised a red 2.
+- 在游戏的第一回合，Alice 提示 Cathy 数字 3，提示到一张红 3。
+- Bob 盲打红 1。
+- Cathy 知道这是在 _3 诈唬_，因为打出的 1 与数字 3 不相连。
+- 除此之外，Cathy 对这张牌一无所知，只知道它是 3（因为它上面有一个数字 3 提示）。
+- 即使红 1 和红 3 是同一花色，Bob 也不被保证有红 2。
 
 <Number3WithSuitConnect />
 
-#### Generic Questions
+#### 通用问题 \{#generic-questions\}
 
-- _3 Bluffs_ can be confusing. If you don't want to memorize the five examples above, you can simply ask the following questions:
-  1. Does the clue "connect" to the blind-play?
-     - If it connects, then it is a _Finesse_.
-     - If it does not connect, then it is a _Bluff_.
-     - Red connects to red, but red does **not** connect to blue.
-     - 2 connects to 3, but 1 does **not** connect to 3.
-  1. Will the player who received the clue go on to misplay if nothing else is blind-played?
-     - If yes, then it is a _Finesse_.
-     - If no, then it is a _Bluff_.
+- *3 诈唬*可能令人困惑。如果你不想记住上面的五个示例，可以简单地回答以下问题：
+  1. 提示是否与盲打“相连”？
+     - 如果相连，那么是*飞牌*。
+     - 如果不相连，那么是*诈唬*。
+     - 红色与红色相连，但红色与蓝色**不**相连。
+     - 2 与 3 相连，但 1 与 3 **不**相连。
+  1. 如果没有盲打任何其他牌，收到提示的玩家是否会误打？
+     - 如果是，那么是*飞牌*。
+     - 如果否，那么是*诈唬*。
 
-### The Critical Color Bluff (CCB)
+### 关键牌颜色诈唬（CCB） \{#the-critical-color-bluff-ccb\}
 
-- Building on the _3 Bluffs_ convention, we also agree that it is possible for a card that initiates a _Bluff_ to be any critical card, but only if **a color clue** is used, and only if **it is not a 5**.
-  - Note that this includes the black 4 or any "dark" 4.
-- Unlike the [_3 Bluff_](#the-3-bluff), you can only initiate a _Critical Color Bluff_ with a completely-unclued critical card.
-- For example, in a 3-player game:
-  - Nothing is played on the stacks. Red 4 is currently in the discard pile.
-  - Alice clues Cathy red, touching a red 4 as a _Play Clue_.
-  - Bob blind-plays a blue 1.
-  - Cathy marks her red card as the _one-away-from-playable_ red card, the red 2.
-  - However, Cathy also knows that _3 Bluffs_ are a thing, so she _also_ marks her red card as possibly a red 3.
-  - However, Cathy also knows that _Critical Color Bluffs_ are a thing, so she _also_ marks her red card as possibly a red 4.
+- 比 *3 诈唬*约定更进一步，我们还同意，发起*诈唬*的牌可以是任何关键牌，但前提是<Em>**使用颜色提示**</Em>，并且<Em>**它不是 5**</Em>。
+  - 注意这包括黑 4 或任何“暗”4。
+- 与 [_3 诈唬_](#the-3-bluff)不同，你只能使用完全未提示的关键牌发起*关键牌颜色诈唬（Critical Color Bluff，CCB）*。
+- 例如在 3 人游戏中：
+  - 还没有打出过任何牌。红 4 目前在弃牌堆中。
+  - Alice 提示 Cathy 红色，提示到一张红 4 作为*出牌提示*。
+  - Bob 盲打蓝 1。
+  - Cathy 标记她的红牌为*差一张可打出*的红牌，红 2。
+  - 然而，Cathy 也知道存在 _3 诈唬_，所以她**也**标记她的红牌可能是红 3。
+  - 然而，Cathy 也知道存在*关键牌颜色诈唬*，因此她**也**标记她的红牌可能是红 4。
 
 <CriticalColorBluff />
 
-### The Hard Bluff
+### 困难诈唬 \{#the-hard-bluff\}
 
-- First, see the section on _[Cathy's Connecting Principle](level-11.mdx#cathys-connecting-principle-part-2)_.
-- Sometimes, it can be ambiguous as to whether a player blind-played a card into a _Bluff_, or they blind-played into a _Finesse_ + _Prompt_. In this situation, _Occam's Razor_ applies, so players should go with the _Bluff_ interpretation, since it is simpler. When such a _Bluff_ occurs, it is called a _Hard Bluff_ to disambiguate from situations where _Bluffs_ happen with no ambiguity.
-- For example, this is a _Finesse_ + _Prompt_ and **not** a _Hard Bluff_:
-  - Only red 1 is played on the stacks.
-  - Cathy has a 3 clued in her hand (with no color information on it).
-  - Alice clues Cathy about a new 4.
-  - Bob blind-plays red 2.
-  - In a normal _Bluff_, a _one-away-from-playable_ card is clued. However, Cathy sees that the highest stack is the red stack, so the 4 in her hand must be two-away.
-  - Thus, Cathy does **not** read it as a _Bluff_; she is promised red 3 and red 4, so she plays the unknown 3 as a _Self-Prompt_ for the red 3.
+- 首先，请参见 [_Cathy 的相连原则_](level-11.mdx#cathys-connecting-principle-part-2)的章节。
+- 有时，一名玩家是在为*诈唬*盲打，还是在为*飞牌* + *引牌*盲打，可能并不明确。这种情况下，*奥卡姆剃刀*适用，所以应该采用*诈唬*的解释，因为这种解释比较简单。当这样的*诈唬*出现时，我们称之为*困难诈唬*，以区别于*诈唬*不存在歧义的情况。
+- 例如，这是*飞牌* + _引牌_，而**不是**{}_困难诈唬_：
+  - 只有红 1 已经打出。
+  - Cathy 手中有一张提示过的 3（没有颜色信息）。
+  - Alice 提示 Cathy 一张新的 4。
+  - Bob 盲打红 2。
+  - 在常规的*诈唬*中，提示的牌是*差一张可打出*的。然而，Cathy 看到红花色已经是打出最多的花色，她手中的 4 必然至少*差两张可打出*。
+  - Cathy **无法**将此解读为*诈唬*，她被保证有红 3 和红 4，所以她将未知的 3 作为对红 3 的*自我引牌*打出。
 
 <FinessePromptNotHardBluff />
 
-- For example, this **is** a _Hard Bluff_:
-  - Red 1 and blue 2 are played on the stacks.
-  - Cathy has a 3 clued in her hand (with no color information on it).
-  - Alice clues Cathy about a new 4.
-  - Bob blind-plays red 2.
-  - This could be a _Bluff_ if the 4 in her hand is blue 4, since blue 4 is currently _one-away-from-playable_. Thus, Cathy **does not** assume that her 4 is red 4, and subsequently, **does not** assume that her unknown 3 is a red 3. However, it could **also** be the case that the 4 is a red 4 (if the 3 in her hand happens to be red 3).
-  - Thus, Cathy marks down both possibilities for later and does not play anything right now.
+- 例如，这**是**在*困难诈唬*：
+  - 红 1 和蓝 2 已经打出。
+  - Cathy 手中有一张提示过的 3（没有颜色信息）。
+  - Alice 提示 Cathy 一张新的 4。
+  - Bob 盲打红 2。
+  - 如果她手中的 4 是蓝 4，这可能是一个*诈唬*，因为蓝 4 目前*差一张可打出*。因此，Cathy <Em>**不能**</Em>认定她的 4 是红 4，进而**不能**认定她的未知 3 是红 3。当然，它也确实<Em>**有可能**</Em>是红 4（如果她手中的 3 恰好是红 3）。
+  - Cathy 为将来记下这两种可能性，现在先不出牌。
 
 <HardBluff />
 
-### The Hard 3 Bluff
+### 困难 3 诈唬 \{#the-hard-3-bluff\}
 
-- Players can use a 3 to _3 Bluff_ the 1 of the same suit.
-- This is called a _Hard 3 Bluff_ to distinguish it from a more-ordinary _3 Bluff_.
-- An example of a _Hard 3 Bluff_ can be found above as example 5.
+- 玩家可以使用数字 3 对同一花色的 1 进行 _3 诈唬_。
+- 这被称为*困难 3 诈唬*，以区别于更平凡的 _3 诈唬_。
+- *困难 3 诈唬*的示例可以在上面的例 5 中找到。
 
-### The Known Bluff
+### 已知的诈唬 \{#the-known-bluff\}
 
-- Usually, when a _Bluff_ occurs, the blind-playing player has no idea that is a _Bluff_ - they assume they are playing a specific card into a true _Finesse_.
-- However, in rare situations, a clue will be given that looks like a _Finesse_, but the next player will know for sure that they do not have the "connecting" card.
-- In these situations, if the next player cannot see a better explanation for the clue, then they should blind-play their _Finesse Position_ card as a _Known Bluff_.
-- For example:
-  - The player might see all of the copies of the card that they are supposed to be blind-playing.
-  - The player might have negative information on their entire hand (e.g. negative blue on every card when they are supposed to be blind-playing a blue 2).
-  - The player might know that they are blind-playing a 1 into a _3 Bluff_ (e.g. a card was clued with number 3 and there are no cards played yet).
+- 通常，当*诈唬*发生时，盲打的玩家并不知道存在*诈唬*——他们认为自己正在为真正的*飞牌*打一张特定的牌。
+- 然而，在罕见情况下，会有提示看起来像*飞牌*，但下一名玩家会明确知道自己没有“相连”的牌。
+- 这样的情况下，如果下一名玩家找不出更好的解释，那么应该盲打*飞牌位*，作为*已知的诈唬*。
+- 例如：
+  - 该玩家可能能够看到全部数量的应该盲打的牌。
+  - 该玩家可能整手牌上都有否定信息（例如，当应该盲打蓝 2 时，每张牌都否定蓝色）。
+  - 该玩家可能知道自己正在为 *3 诈唬*盲打 1（例如，一张牌用数字 3 提示，而还没有打出过任何牌）。
 
-### The Good Touch Bluff
+### 良触诈唬 \{#the-good-touch-bluff\}
 
-- Care has to be taken so that a _Bluff_ does not look like a _Finesse_.
-- For example, in a 4-player game:
-  - Red 2 and blue 2 are played on the stacks.
-  - Alice clues Cathy number 4, which touches a red 4.
-  - Bob blind-plays a blue 3 from his _Finesse Position_.
-  - Since 3 connects to 4, Cathy knows she has the blue 4, and goes on to misplay red 4 as blue 4.
-  - Thus, Alice should not have given this clue.
+- 必须小心避免*诈唬*看起来像*飞牌*。
+- 例如在 4 人游戏中：
+  - 红 2 和蓝 2 已经打出。
+  - Alice 提示 Cathy 数字 4，提示到一张红 4。
+  - Bob 从*飞牌位*盲打蓝 3。
+  - 由于 3 与 4 相连，Cathy 知道她持有蓝 4，并将红 4 当作蓝 4 误打。
+  - 因此，Alice 不应该给出这个提示。
 
 <GoodTouchBluff />
 
-- However, what if someone else on the team already has the connecting card? In this situation, the clue can be given without fear: from _Good Touch Principle_, the clue recipient will know that it is a _Bluff_ instead of a _Finesse_.
-- For example, in a 4-player game:
-  - Red 2 and blue 2 are played on the stacks.
-  - Alice clues Cathy number 4, which touches a red 4.
-  - Bob blind-plays a blue 3 from his _Finesse Position_.
-  - Cathy's first thought is that since 3 connects to 4, she must have the blue 4. However, Cathy sees that Donald already has a clued blue 4 it in his hand. (The blue 4 just has a blue clue on it and the true identity of the card is not yet known to Donald.)
-  - Cathy knows that she must **not** have the blue 4, because then Alice's clue would have violated _Good Touch Principle_. Cathy can reason that her 4 is instead some **other** _one-away-from-playable_ 4. The only other valid _Bluff_ target is the red 4 (because the only _one-away-from-playable_ 4 is red 4). So, Cathy marks her number 4 card as a red 4, and discards.
-  - Donald is surprised by Alice's clue. From Donald's perspective, Cathy should have misplayed the red 4 as the blue 4, since 3 connects to 4.
-  - Since Cathy did not misplay, Donald can reason that **he** must have the blue 4. Donald marks the previously unknown blue card in his hand as blue 4.
+- 然而，如果其他人手中相连的牌已被提示过呢？这种情况下，可以放心地给出提示：根据*良触原则*，收到提示者会知道这是*诈唬*而不是*飞牌*。
+- 例如在 4 人游戏中：
+  - 红 2 和蓝 2 已经在牌堆上打出。
+  - Alice 提示 Cathy 数字 4，触及一张红 4。
+  - Bob 从他的*飞牌位*盲打蓝 3。
+  - Cathy 的第一反应是，由于 3 与 4 相连，她必然持有蓝 4。然而，Cathy 看到 Donald 手中已经有一张提示过的蓝 4。（蓝 4 只带有一个蓝色提示，Donald 还不明确这张牌是什么。）
+  - Cathy 知道她有的**不可能**是蓝 4，那样 Alice 的提示将违反*良触原则*。Cathy 可以推断她的 4 是**其他**的*差一张可打出*的 4。唯一其他有效的*诈唬*目标是红 4（因为唯一的*差一张可打出*的 4 是红 4）。所以，Cathy 将她的数字 4 牌标记为红 4，并弃牌。
+  - Donald 对 Alice 的提示感到惊讶。从 Donald 的视角来看，Cathy 应该将红 4 当作蓝 4 误打，因为 3 与 4 相连。
+  - 由于 Cathy 没有误打，Donald 可以推断**他**必然持有蓝 4。Donald 将手中之前未知的蓝牌标记为蓝 4。
 
 <GoodTouchBluff2 />
 
-## General Principles
+## 通用原则 \{#general-principles\}
 
-### Legal Bluff-Targets
+### 合规的诈唬目标 \{#legal-bluff-targets\}
 
-The full list of legal _Bluff_ targets is represented in the following table:
+合规的*诈唬*目标的完整列表如下：
 
-| Type of Card                      | Color Clue | Number Clue | Name of Convention     |
-| --------------------------------- | ---------- | ----------- | ---------------------- |
-| any _one-away-from-playable_ card | ✔️         | ✔️          | _Bluff_                |
-| any _two-away-from-playable_ 3    | ✔️         | ✔️          | _3 Bluff_              |
-| any critical non-5                | ✔️         | ❌          | _Critical Color Bluff_ |
+| 牌的类型               | 颜色提示 | 数字提示 | 约定名称         |
+| ---------------------- | -------- | -------- | ---------------- |
+| 任何*差一张可打出*的牌 | ✔️       | ✔️       | _诈唬_           |
+| 任何*差两张可打出*的 3 | ✔️       | ✔️       | _3 诈唬_         |
+| 任何关键的非 5         | ✔️       | ❌       | _关键牌颜色诈唬_ |

@@ -5,7 +5,7 @@ stacks:
   - b: 0
   - p: 0
 bigText:
-  text: Bluff
+  text: 诈唬
 discarded:
   - r4
 players:
@@ -18,7 +18,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Blue 1
+        above: 蓝 1
       - type: x
       - type: x
       - type: x
@@ -31,16 +31,16 @@ players:
       - type: x
       - type: x
       - type: x
-  - text: After Bob blind-plays the blue 1...
+  - text: Bob 盲打蓝 1 后……
   - name: Cathy
     cards:
       - type: x
       - type: r
         below:
           text:
-            - Red 2
-            - Red 3
-            - Red 4
+            - 红 2
+            - 红 3
+            - 红 4
           color: red
       - type: x
       - type: x
