@@ -5,7 +5,7 @@ stacks:
   - b: 0
   - m: 1
 bigText:
-  text: 诈唬
+  text: 诈飞
 players:
   - clueGiver: true
     cards:
