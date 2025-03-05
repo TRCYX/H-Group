@@ -14,7 +14,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Blue 2
+        above: 蓝 2
       - type: x
       - type: x
       - type: x
@@ -23,11 +23,11 @@ players:
       - type: x
       - type: 1
         clue: 1
-        middleNote: (B)
+        middleNote: (蓝)
       - type: x
       - type: x
       - type: x
-  - text: After Bob blind-plays blue 2...
+  - text: Bob 盲打蓝 2 后……
   - name: Cathy
     cards:
       - type: x
@@ -36,15 +36,15 @@ players:
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过

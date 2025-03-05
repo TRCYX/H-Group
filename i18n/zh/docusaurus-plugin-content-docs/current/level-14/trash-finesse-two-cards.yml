@@ -18,20 +18,20 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Red 1
+        above: 红 1
       - type: x
       - type: x
       - type: x
   - cards:
       - type: 1
         clue: 1
-        middleNote: (G)
+        middleNote: (绿)
       - type: 1
         clue: 1
-        middleNote: (G)
+        middleNote: (绿)
       - type: x
       - type: x
-  - text: After Cathy blind-plays red 1...
+  - text: Cathy 盲打红 1 后……
   - name: Donald
     cards:
       - type: 1
@@ -41,10 +41,10 @@ players:
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过

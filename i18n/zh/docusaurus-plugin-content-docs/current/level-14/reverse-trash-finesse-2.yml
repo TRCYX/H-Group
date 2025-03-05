@@ -17,8 +17,8 @@ players:
   - cards:
       - type: 2
         clue: 2
-        middleNote: (G)
-        below: discards
+        middleNote: (绿)
+        below: 弃掉
       - type: x
       - type: x
       - type: x
@@ -26,44 +26,44 @@ players:
   - cards:
       - type: x
       - type: x
-        above: Red 2
+        above: 红 2
       - type: x
       - type: x
       - type: x
-  - text: After Bob discards green 2...
+  - text: Bob 弃掉绿 2 后……
   - name: Bob
     cards:
       - type: x
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过
       - type: x
         above:
           text:
-            - Chop
-            - Moved
+            - 弃牌位
+            - 已移过
   - name: Cathy
     cards:
       - type: x
-        middleNote: r2?
+        middleNote: 红 2?
       - type: x
-        above: Red 2
-        middleNote: r2?
+        above: 红 2
+        middleNote: 红 2?
       - type: x
-        middleNote: r2?
+        middleNote: 红 2?
       - type: x
-        middleNote: r2?
+        middleNote: 红 2?
       - type: x
-        middleNote: r2?
+        middleNote: 红 2?
