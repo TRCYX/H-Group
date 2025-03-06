@@ -42,8 +42,10 @@ players:
         above: 弃牌位
       - type: m
         clue: b
+        retouched: true
       - type: m
         clue: b
+        retouched: true
       - type: b
         clue: b
         below: 焦点
