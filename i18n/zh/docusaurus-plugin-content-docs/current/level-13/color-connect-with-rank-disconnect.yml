@@ -23,7 +23,7 @@ players:
       - type: x
         border: false
         above: 误打！
-        middleNote: (蓝 5)
+        middleNote: (蓝5)
         below: 红 2
       - type: x
       - type: x

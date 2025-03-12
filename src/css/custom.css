@@ -176,6 +176,8 @@ svg.example text.site-theme-text {
     Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   /* cspell:enable */
+
+  font-feature-settings: "halt";
 }
 
 @font-face {

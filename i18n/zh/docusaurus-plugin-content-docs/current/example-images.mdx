@@ -153,14 +153,14 @@ import NewChopMove from "./new-chop-move.yml";
 - `above: 绿 3` 或 `above: 彩 5` 将绘制具有指定颜色和文本的框。
 - 还有一些关键字分配了特定的颜色：`焦点`、`弃牌位`。
 - 你可以使用 `color` 属性覆盖颜色。该属性接受 CSS 颜色，此外还支持 `rainbow` 表示彩色。
-- 你可以通过使用数组使其成为多行注释。
+- 你可以通过使用列表使其成为多行注释。
 - 它可以是一个此类文本框的列表，可能具有不同的颜色。
 
 <Example code={CardTextSource} Image={CardTextResult} />
 
 ### 弃牌堆 \{#discard-pile\}
 
-某些示例需要显示弃牌堆中的一些牌。这是通过顶层的 `discarded` 数组完成的。
+某些示例需要显示弃牌堆中的一些牌。这是通过顶层的 `discarded` 列表完成的。
 
 <Example code={TrashSource} Image={TrashResult} />
 
@@ -170,10 +170,10 @@ import NewChopMove from "./new-chop-move.yml";
 
 <Example code={BigTextSource} Image={BigTextResult} />
 
-### 变种 \{#variants\}
+### 变体 \{#variants\}
 
-可以通过 `suits` 添加一些变种的花色。`suits` 包含一个映射，将表示花色的字母映射为牌图像和标记的文件名部分的映射。
-目前支持以下变种花色：
+可以通过 `suits` 添加一些变体的花色。`suits` 包含一个映射，将表示花色的字母映射为牌图像和标记的文件名部分的映射。
+目前支持以下变体花色：
 
 - black
 - brown

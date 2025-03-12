@@ -57,13 +57,13 @@ players:
   - name: Cathy
     cards:
       - type: x
-        middleNote: 红 2?
+        middleNote: 红2?
       - type: x
         above: 红 2
-        middleNote: 红 2?
+        middleNote: 红2?
       - type: x
-        middleNote: 红 2?
+        middleNote: 红2?
       - type: x
-        middleNote: 红 2?
+        middleNote: 红2?
       - type: x
-        middleNote: 红 2?
+        middleNote: 红2?
