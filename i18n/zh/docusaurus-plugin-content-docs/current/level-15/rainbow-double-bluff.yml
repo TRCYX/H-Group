@@ -14,13 +14,13 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Blue 1
+        above: 蓝 1
       - type: x
       - type: x
       - type: x
   - cards:
       - type: x
-        above: Yellow 1
+        above: 黄 1
       - type: x
       - type: x
       - type: x
@@ -28,6 +28,6 @@ players:
       - type: x
       - type: bm
         clue: b
-        middleNote: (M3)
+        middleNote: (彩3)
       - type: x
       - type: x

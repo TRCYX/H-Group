@@ -13,13 +13,13 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Red 1
+        above: 红 1
       - type: x
       - type: x
       - type: x
   - cards:
       - type: x
-        above: Blue 1
+        above: 蓝 1
       - type: x
       - type: x
       - type: x
@@ -30,15 +30,15 @@ players:
         middleNote: (4)
       - type: x
       - type: x
-  - text: After both red 1 and blue 1 blind-play...
+  - text: 红 1 和蓝 1 都盲打后……
   - name: Donald
     cards:
       - type: x
       - type: r
         below:
           text:
-            - red 3
-            - red 4
+            - 红 3
+            - 红 4
           color: red
       - type: x
       - type: x

@@ -13,13 +13,13 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Red 1
+        above: 红 1
       - type: x
       - type: x
       - type: x
   - cards:
       - type: x
-        above: Red 2
+        above: 红 2
       - type: x
       - type: x
       - type: x
@@ -27,14 +27,14 @@ players:
       - type: x
       - type: 4
         clue: 4
-        middleNote: (R)
+        middleNote: (红)
       - type: x
       - type: x
-  - text: After both red 1 and red 2 blind-play...
+  - text: 红 1 和红 2 都盲打后……
   - name: Donald
     cards:
       - type: x
       - type: 4
-        below: any 4
+        below: 任意 4
       - type: x
       - type: x

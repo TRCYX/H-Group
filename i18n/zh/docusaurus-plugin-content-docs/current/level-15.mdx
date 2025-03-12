@@ -1,5 +1,5 @@
 ---
-title: Level 15 - Double Bluffs
+title: 等级 15 - 双重诈飞
 ---
 
 import DoubleBluffLooksLikeHalf from "./level-15/double-bluff-looks-like-half.yml";
@@ -10,112 +10,113 @@ import HardDoubleBluff from "./level-15/hard-double-bluff.yml";
 import PestilentDoubleBluff from "./level-15/pestilent-double-bluff.yml";
 import RainbowDoubleBluff from "./level-15/rainbow-double-bluff.yml";
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The Double Bluff
+### 双重诈飞 \{#the-double-bluff\}
 
-- Sometimes, Bob and Cathy will have playable cards on their _Finesse Position_. In this situation, you might be able to perform a _Double Finesse_ to get them to immediately blind-play. However, this is only possible if both cards are related, and the "connecting" card is available to _Play Clue_.
-- In the same way that you can sometimes perform a _Bluff_ when a _Finesse_ is not available, you can also sometimes perform a _Double Bluff_ when a _Double Finesse_ is not available. This is performed by giving a _Play Clue_ to a non-trash card that is not a legal _Bluff_-target.
-- For example, in a 4-player game:
-  - Red 1 is currently played on the stacks.
-  - Alice clues Donald red, which touches a red 4 as a _Play Clue_.
-  - Since red 4 must be playable right now, Bob thinks he has the red 2 and the red 3. Bob blind-plays his _Finesse Position_ card, but it is actually a blue 1.
-  - Cathy sees that Bob blind-played because of the red clue. However, the red 4 is a non-trash card and not a legal _Bluff_-target. Thus, Alice must intend for a _Double Bluff_ instead of a single _Bluff_. Cathy blind-plays her _Finesse Position_ card and it is a yellow 1.
-  - At first, Donald thought that the red card in his hand was red 2 (as a _Play Clue_).
-  - After Bob blind-played, Donald thought that the red card in his hand was red 3 (as a _Bluff_).
-  - After Cathy blind-played, Donald knows that his card was not a valid _Bluff_ target for the blue 1, and so he must have the red 4 (as a _Double Bluff_).
-    - For players not yet at level 16, Donald would also mark the card as a potential red 5 in addition to a red 4.
+- 有时，Bob 和 Cathy 的*飞牌位*上都有可打出的牌。你或许可以通过*双重飞牌*让他们立即盲打。但是，只有在两张牌相关，而“相连”的牌能被*出牌提示*时，这才能实现。
+- 就像有时可以在无法*飞牌*时*诈飞*，有时也可以在无法*双重飞牌*时*双重诈飞*。可以通过向一张不是合规*诈飞*目标的非废牌给出*出牌提示*执行此行动。
+- 例如在 4 人游戏中：
+  - 红 1 已经打出。
+  - Alice 提示 Donald 红色，提示到他手中的红 4，作为*出牌提示*。
+  - 由于红 4 现在必须可打出，Bob 觉得他持有红 2 和红 3。Bob 盲打*飞牌位*，但发现实际上是蓝 1。
+  - Cathy 看到 Bob 因为红色提示而盲打。然而，红 4 不是废牌，也不是合规的*诈飞*目标。于是，Alice 一定是想要*双重诈飞*而非简单地*诈飞*。Cathy 盲打*飞牌位*，发现是黄 1。
+  - 起初，Donald 认为他手中的红牌是红 2（作为*出牌提示*）。
+  - 在 Bob 盲打后，Donald 认为他手中的红牌是红 3（作为*诈飞*）。
+  - 在 Cathy 盲打后，Donald 知道他的牌不是对蓝 1 的合规*诈飞*目标，因此他手中的牌必定是红 4（作为*双重诈飞*）。
+    - 对于未达到等级 16 的玩家，除红 4 以外，Donald 还会将这张牌标记为可能是红 5。
 
 <DoubleBluff />
 
-- Similar to other kinds of _Bluffs_, _Double Bluffs_ may only be performed from _Bluff Seat_, and must be demonstrated immediately. In other words, both blind-plays must occur on the two turns directly following the clue.
-- _Double Bluffs_ are valid even if the card which Bob blind-plays connects to the card which is clued by Alice.
-  - For example, the previous scenario works equally well if Bob's blue 1 is replaced by a red 2.
-  - In this situation, Cathy would not know whether the clue is a _Double Bluff_ or _Double Finesse_ until after she blind-plays.
-- Some more-specific types of _Double Bluffs_ are listed below.
+- 类似其他*诈飞*，*双重诈飞*只能在*诈飞位*执行，且必须立即澄清。换句话说，两次盲打必须在提示后紧接着的两个回合发生。
+- *双重诈飞*即使在 Bob 盲打的牌与 Alice 提示的牌相连时也有效。
+  - 例如，如果 Bob 的蓝 1 被替换为红 2，上述场景同样适用。
+  - 这种情况下，Cathy 无法确定提示是*双重诈飞*还是*双重飞牌*，直到她盲打。
+- 以下是一些更具体的*双重诈飞*类型。
 
-### The Triple Bluff (Illegal)
+### 三重诈飞（违规） \{#the-triple-bluff-illegal\}
 
-- We agree that all _Bluff_-style clues should resolve after two-blind plays.
-- Thus, there is no such thing as a _Triple Bluff_.
+- 我们约定所有*诈飞*类提示应在两次盲打后化解。
+- 因此不存在*三重诈飞*。
 
-### The Hard Double Bluff
+### 困难双重诈飞 \{#the-hard-double-bluff\}
 
-- Similar to a _[Hard 3 Bluff](level-13.mdx#the-hard-3-bluff)_, it is also possible to perform a _Hard Double Bluff_.
-- For example, in a 4-player game:
-  - No cards are played on the stacks.
-  - Alice clues number 4 to Donald, touching a red 4 as a _Play Clue_.
-  - Bob blind-plays red 1 from his _Finesse Position_.
-  - Cathy blind-plays red 2 from her _Finesse Position_.
-  - Even though red 1 and red 2 are the same suit as the red 4, the team knows that no-one is promised the red 3, since two blind-plays happened immediately after the clue.
-  - Donald knows that his clued card can be any 4.
+- 类似[_困难 3 诈飞_](level-13.mdx#the-hard-3-bluff)，也可以执行*困难双重诈飞*。
+- 例如在 4 人游戏中：
+  - 还没有打出过任何牌。
+  - Alice 提示 Donald 数字 4，提示到他手中的红 4，作为*出牌提示*。
+  - Bob 从*飞牌位*盲打红 1。
+  - Cathy 从*飞牌位*盲打红 2。
+  - 尽管红 1 和红 2 与红 4 同花色，大家都知道没有人被保证有红 3，因为提示后立即发生了两次盲打。
+  - Donald 知道他的提示牌可以是任何 4。
+- 译注：可以通过*Cathy 的相连原则*澄清：提示的是数字 4，虽然红 1 和红 2 显然相连，但最后打出的 2 与 4 不相连。
 
 <HardDoubleBluff />
 
-### The Pestilent Double Bluff (PDB)
+### 毒瘤双重诈飞（PDB） \{#the-pestilent-double-bluff-pdb\}
 
-- Normally, a _Double Bluff_ can only be initiated with a card that is not a legal _Bluff_-target. However, this is not always true.
-- Sometimes, Alice can clue a legal _Bluff_-target to make Bob blind-play, and then "force" Cathy to blind-play as well in order to resynchronize the information about the identity of the clued card.
-- This is called a _Pestilent Double Bluff_ to distinguish it from the more-normal _Double Bluff_ where a non-legal _Bluff_-target is used.
-- For example, in a 4-player game:
-  - It is the first turn of the game and nothing is played on the stacks.
-  - Alice clues number 2 to Donald, touching a red 2 as a _Play Clue_.
-  - Bob blind-plays a blue 1 from his _Finesse Position_.
-  - Cathy sees that right now, Donald will assume that he has the blue 2 (because it directly connects to the blue 1 that Bob blind-played). This is bad, because the card is really a red 2.
-  - Cathy knows that because information is still not synchronized amongst the team, Alice must intend for Cathy to blind-play a card as a _Pestilent Double Bluff_.
-  - Cathy blind-plays her _Finesse Position_. It is a green 1 and it successfully plays.
-  - At first, Donald thought that his 2 was either a blue 2 (as a _Finesse_ on Bob) or a green 2 (as a _Finesse_ on Cathy).
-  - After Bob blind-played, Donald thought that his 2 was a blue 2 (as a _Finesse_ on Bob).
-  - After Cathy blind-played, Donald knows that something weird happened. If his 2 really was blue 2, then Cathy would not have blind-played anything, so his 2 cannot be blue 2.
-  - Donald knows that his 2 cannot be green 2 either, or else Bob would not have blind-played anything. (He would have waited for Cathy to blind-play.)
-  - Thus, Donald marks his 2 as either red 2, yellow 2, or purple 2.
+- 通常，*双重诈飞*只能通过非合规的*诈飞*目标发起。这并不总是成立。
+- 有时，Alice 可以提示一个合规的*诈飞*目标让 Bob 盲打，然后“迫使”Cathy 也盲打以重新同步关于提示的牌的信息。
+- 这称为*毒瘤双重诈飞（Pestilent Double Bluff，PDB）*，以区别于使用非合规*诈飞*目标的普通*双重诈飞*。
+- 例如在 4 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Alice 提示 Donald 数字 2，提示了到一张红 2，作为*出牌提示*。
+  - Bob 从*飞牌位*盲打蓝 1。
+  - Cathy 看到此时 Donald 会认为他持有蓝 2（因为它直接与 Bob 盲打的蓝 1 相连）。这很糟糕，因为那张牌其实是红 2。
+  - Cathy 知道由于信息仍未同步，Alice 一定希望让 Cathy 盲打一张牌，作为*毒瘤双重诈飞*。
+  - Cathy 盲打她的*飞牌位*。是绿 1，成功打出。
+  - 最初，Donald 认为他的 2 是蓝 2（_飞_ Bob）或绿 2（_飞_ Cathy）。
+  - 在 Bob 盲打后，Donald 认为他的 2 是蓝 2（_飞_ Bob）。
+  - 在 Cathy 盲打后，Donald 知道发生了奇怪的事情。如果他的 2 真的是蓝 2，那么 Cathy 并不会盲打，所以他的 2 不可能是蓝 2。
+  - Donald 知道他的 2 也不可能是绿 2，否则 Bob 不会盲打（他会等 Cathy 盲打）。
+  - 于是，Donald 将他的 2 标记为红 2、黄 2 或紫 2。
 
 <PestilentDoubleBluff />
 
-- More examples of a _Pestilent Double Bluff_ can be found [here](examples/pestilent-double-bluff.mdx).
+- 更多*毒瘤双重诈飞*的示例可以在[这里](examples/pestilent-double-bluff.mdx)找到。
 
-## General Principles
+## 一般原则 \{#general-principles\}
 
-### Deferring a Bluff
+### 推迟诈飞 \{#deferring-a-bluff\}
 
-- From _Urgency Principle_, we know that players are allowed to defer a _Finesse_ or a _Bluff_ in order to do a _Finesse_ or _Bluff_ of their own. And indeed, when players see a really good clue, they should probably defer blind-playing to give the clue. But there are limits.
-- When a player knows for sure that they are _Finessed_ (instead of _Bluffed_), then deferring a _Finesse_ (to perform another _Finesse_ or _Bluff_) is great! It has almost no downsides, other than the obvious loss of _Tempo_. Everyone on the team is "in the know", so to speak.
-- When a player _could_ be _Bluffed_, deferring a _Bluff_ can be extremely dangerous because it causes _Information Desynchronization_ throughout the team.
-- Deferring a _Bluff_ to perform a _Finesse_ can be pretty clear, depending on the situation. It should be done sparingly.
-  - Note that deferring a _Bluff_ to perform a _Finesse_ can potentially lose the game if the original cluer is performing a _Double Bluff_. So there is some risk involved.
-- Deferring a _Bluff_ to perform **another** _Bluff_ is much worse. Since the _Bluff_ was not immediately resolved, the game state "fractures" into two valid game states for the receivers of each clue (e.g. the player who received the clue that initiated the first _Bluff_, and the player who received the clue that initiated the _Deferred Bluff_). This means that these two players will have to entertain two entire hypothetical game states in their mind and build upon each hypothetical with each new piece of information. This makes it extremely difficult for them to plan ahead or make correct decisions during their turns.
-- Thus, deferring a _Bluff_ to do another _Bluff_ should **almost never be performed**.
-- Also, see the below section on _Deferring a Double Bluff_.
+- 根据*紧急原则*，我们知道玩家可以推迟*飞牌*或*诈飞*以执行自己的*飞牌*或*诈飞*。确实，当看到一个非常好的提示时，玩家可能应该推迟盲打以给出提示。但这有一些限制。
+- 当一名玩家确定自己被*飞*（而非*诈飞*）时，推迟*飞牌*（以执行另一次*飞牌*或*诈飞*）很好！除了显然会损失*节奏*外，这样几乎没有其他缺点。所有队友都会知情。
+- 当一名玩家*可能*被*诈飞*时，推迟*诈飞*非常危险，因为这样会导致队伍*信息失去同步*。
+- 推迟*诈飞*以执行*飞牌*在某些情况下可以比较清晰，但应谨慎使用。
+  - 注意，如果原提示者正在*双重诈飞*，推迟*诈飞*以执行*飞牌*可能会输掉游戏。所以这里存在一定风险。
+- 推迟*诈飞*以执行**另一次**{}*诈飞*更糟糕。由于*诈飞*没有立即化解，游戏状态会“分裂”为两个有效的游戏状态（接收第一次*诈飞*提示的玩家和接收推迟的*诈飞*提示的玩家）。这两名玩家需要在脑海中构建两套完整对游戏状态的假设，并将每个新信息在叠加在这些假设之上。这使他们很难提前计划或在自己回合做出正确的决策。
+- 因此，<Em>**几乎从不应该**</Em>推迟*诈飞*以执行另一次*诈飞*。
+- 另请参阅下面关于*推迟双重诈飞*的章节。
 
-### Deferring a Double Bluff
+### 推迟双重诈飞 \{#deferring-a-double-bluff\}
 
-- First, see the section on _[Deferring a Bluff](#deferring-a-bluff)_.
-- If Bob suspects that Alice is performing a _Double Bluff_, then Bob should **never defer**. It is very important that _Double Bluffs_ resolve immediately.
-- Similarly, if Bob blind-plays, and Cathy can not rule out a _Double Bluff_, then Cathy should **never defer**. (If Cathy defers, it will cause an unrecoverable _Information Desynchronization_, because her future blind-play will not be interpreted as related to the _Double Bluff_.)
+- 首先，请参考[_推迟诈飞_](#deferring-a-bluff)的章节。
+- 如果 Bob 怀疑 Alice 正在*双重诈飞*，那么 Bob <Em>**绝不应该拖延**</Em>。*双重诈飞*必须立即化解，这点非常重要。
+- 类似地，如果 Bob 盲打，而 Cathy 无法排除*双重诈飞*的可能性，那么 Cathy <Em>**绝不应该拖延**</Em>。（如果 Cathy 拖延，将导致*信息*不可恢复地*失去同步*，因为她未来的盲打不会被理解为与此次*双重诈飞*相关。）
 
-### A Table for Deferring Bluffs
+### 延迟诈飞的表格 \{#a-table-for-deferring-bluffs\}
 
-| Alice is deferring a               | to perform a | Ok?                      |
-| ---------------------------------- | ------------ | ------------------------ |
-| Finesse                            | Finesse      | Yes!                     |
-| Finesse                            | Bluff        | Yes!                     |
-| Bluff                              | Finesse      | Sometimes, use sparingly |
-| Bluff                              | Bluff        | Almost never do this     |
-| Double Bluff (first blind-player)  | Finesse      | No, **never** do this    |
-| Double Bluff (first blind-player)  | Bluff        | No, **never** do this    |
-| Double Bluff (second blind-player) | Finesse      | No, **never** do this    |
-| Double Bluff (second blind-player) | Bluff        | No, **never** do this    |
+| Alice 正在推迟           | 以执行 | 是否可行？         |
+| ------------------------ | ------ | ------------------ |
+| 飞牌                     | 飞牌   | 可行！             |
+| 飞牌                     | 诈飞   | 可行！             |
+| 诈飞                     | 飞牌   | 有时可行，谨慎使用 |
+| 诈飞                     | 诈飞   | 几乎不要这么做     |
+| 双重诈飞（第一次盲打者） | 飞牌   | **绝不**这么做     |
+| 双重诈飞（第一次盲打者） | 诈飞   | **绝不**这么做     |
+| 双重诈飞（第二次盲打者） | 飞牌   | **绝不**这么做     |
+| 双重诈飞（第二次盲打者） | 诈飞   | **绝不**这么做     |
 
-### Interaction between Bob's Truth Principle and Occam's Razor
+### Bob 的真相原则与奥卡姆剃刀的交互 \{#interaction-between-bobs-truth-principle-and-occams-razor\}
 
-- First, see the sections on _[Bob's Truth Principle](level-11.mdx#bobs-truth-principle-part-1)_ and _[Occam's Razor](level-11.mdx#clue-interpretation--occams-razor)_.
-- Normally, Bob follows _Occam's Razor_ - he assumes that clues mean the thing with the least amount of blind-plays and _Prompts_.
-- However, sometimes Bob can see that a clue is either a _Double Bluff_ or a _Finesse_, where the _Finesse_ needs more blind-plays than the _Bluff_.
-- In this situation, even though the _Finesse_ requires more blind-plays, we agree that Bob should always assume the _Finesse_ interpretation because of _Bob's Truth Principle_.
-- For example in a 3-player game:
-  - On the first turn of the game, Alice clues number 4, touching Bob's slot 1 card as a _Play Clue_.
-  - Bob sees Cathy's _Finesse Position_ card is a playable red 1.
-  - Thus, Bob knows that Alice's clue can either be:
-    - a _Reverse Finesse_ on a red 4, meaning that Cathy will blind-play the red 1, and then Bob will blind-play the red 2 and the red 3
-    - a _Double Bluff_, meaning that Bob will blind-play some playable card and then Cathy will blind-play the red 1
-  - Bob knows that in this situation, _Bob's Truth Principle_ applies, so he knows it must be a _Reverse Finesse_ instead of a _Double Bluff_.
+- 首先，请参考 [_Bob 的真相原则_](level-11.mdx#bobs-truth-principle-part-1)和[_奥卡姆剃刀_](level-11.mdx#clue-interpretation--occams-razor)的章节。
+- 通常，Bob 遵循*奥卡姆剃刀*——他认为提示表示需要最少盲打和*引牌*的解释。
+- 然而，有时 Bob 可以看到提示可能是*双重诈飞*或*飞牌*，其中*飞牌*需要比*双重诈飞*更多的盲打。
+- 这种情况下，即使*飞牌*需要更多盲打，我们约定出于*Bob 的真相原则*，Bob 应始终认可*飞牌*的解释。
+- 例如在 3 人游戏中：
+  - 在游戏的第一回合，Alice 提示数字 4，提示到 Bob 的 1 号位，作为*出牌提示*。
+  - Bob 看到 Cathy 的*飞牌位*牌是一张可打出的红 1。
+  - 于是，Bob 知道 Alice 的提示可能是：
+    - 对红 4 的*反向飞牌*，意味着 Cathy 将盲打红 1，然后 Bob 将盲打红 2 和红 3。
+    - _双重诈飞_，意味着 Bob 将盲打一张可打出的牌，然后 Cathy 将盲打红 1。
+  - Bob 知道在这种情况下，*Bob 的真相原则*适用，因此他知道这必然是*反向飞牌*而非*双重诈飞*。
