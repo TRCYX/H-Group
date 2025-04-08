@@ -5,6 +5,8 @@ title: 等级 6 挑战题
 import Question1 from "./level-6-question-1.yml";
 import Question2 from "./level-6-question-2.yml";
 import Solution2 from "./level-6-question-2-part-2.yml";
+import Question3 from "./level-6-question-3.yml";
+import Solution3 from "./level-6-question-3-part-2.yml";
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
@@ -69,6 +71,40 @@ import TabItem from "@theme/TabItem";
   - Alice 会在下回合打出 4 号位的绿 3。
 
 <Solution2 />
+
+</TabItem>
+</Tabs>
+
+## 问题 3 \{#question-3\}
+
+<Tabs
+  defaultValue="question3"
+  values={[
+    {label: '题目', value: 'question3'},
+    {label: '解答', value: 'solution3'},
+  ]}>
+<TabItem value="question3">
+
+- 红 2 已经打出。
+- Alice 的 3 号位有一张红牌，保证为可打出的红 4。
+- Bob 有一张未知的 5，在弃牌位上保留过。
+- Cathy 的 2 号位有一张红牌，保证为可打出的红 3。
+- Alice 向 Bob 给出一个红色提示，提示到 1 号位的一张红牌，且填补了 5 号位之前颜色未知的红 5。
+- 在 Bob 的回合，他应该采取什么行动？
+
+<Question3 />
+
+</TabItem>
+<TabItem value="solution3">
+
+- 在此场景中，红色提示的焦点存在歧义：
+  - 如果红色提示聚焦在“新”的 1 号位上，那么焦点就会是*废牌*，所以得到的行动会是对 2、3、4 号位的*垃圾弃牌位移动*。
+  - 如果红色提示聚焦在已经提示过的 5 号位上，那么焦点就会是之前不知道可打出的红 5，所以得到的行动会是对 4 号位的*节奏提示弃牌位移动*。
+  - Bob 也知道*节奏提示弃牌位移动*优先于*垃圾弃牌位移动*。
+  - 因此，在此场景中，Bob 只应该将弃牌位*移*过 4 号位。
+  - Bob 在 4 号位上写下“cm”，然后继续给出无关的提示或弃掉 1 号位。
+
+<Solution3 />
 
 </TabItem>
 </Tabs>
