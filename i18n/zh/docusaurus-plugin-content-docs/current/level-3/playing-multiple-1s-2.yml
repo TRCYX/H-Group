@@ -16,7 +16,7 @@ players:
       - type: 1
         clue: 1
         middleNote: 第一
-        below: 新的
+        below: 新
       - type: x
       - type: 1
         clue: 1

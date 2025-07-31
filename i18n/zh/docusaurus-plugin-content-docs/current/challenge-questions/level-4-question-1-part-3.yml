@@ -18,7 +18,7 @@ players:
       - type: 1
         below:
           text:
-            - 新的
+            - 新
           color: Green
       - type: x
       - type: x

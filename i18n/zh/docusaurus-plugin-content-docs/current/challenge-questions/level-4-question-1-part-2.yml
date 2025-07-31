@@ -22,7 +22,7 @@ players:
         middleNote: (1)
         below:
           text:
-            - 新的
+            - 新
           color: Green
       - type: x
         middleNote: (1)
@@ -43,7 +43,7 @@ players:
         middleNote: (1)
         below:
           text:
-            - 新的
+            - 新
           color: Green
       - type: x
         middleNote: (1)
