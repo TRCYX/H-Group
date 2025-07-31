@@ -129,6 +129,7 @@ const config: Config = {
   ],
   future: {
     experimental_faster: true,
+    v4: true,
   },
 
   // Enable Mermaid diagrams:
