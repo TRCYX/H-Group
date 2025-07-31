@@ -205,8 +205,8 @@ export default function hanabiDocusaurusPlugin(
         bigText: translateContentSubObject("bigText", content, translationFile),
         Rainbow: {
           text:
-            translationFile?.content["Rainbow.text"]?.message ??
-            content.Rainbow.text,
+            translationFile?.content["Rainbow.text"]?.message
+            ?? content.Rainbow.text,
           extraWidth:
             parseTranslationInt(
               translationFile?.content["Rainbow.extraWidth"]?.message,

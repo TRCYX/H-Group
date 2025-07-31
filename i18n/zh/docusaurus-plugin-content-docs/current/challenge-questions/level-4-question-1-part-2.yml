@@ -1,0 +1,55 @@
+players:
+  - name: Bob
+    cards:
+      - type: x
+        middleNote: (1)
+        below:
+          text:
+            - 起手
+          color: Gray
+      - type: b
+        middleNote: (3)
+        clue: b
+      - type: x
+      - type: b
+        middleNote: (4)
+        clue: b
+      - type: x
+  - text: 打出蓝 3 后：
+  - name: Bob
+    cards:
+      - type: x
+        middleNote: (1)
+        below:
+          text:
+            - 新的
+          color: Green
+      - type: x
+        middleNote: (1)
+        below:
+          text:
+            - 起手
+          color: Gray
+      - type: x
+      - type: b
+        middleNote: (4)
+        clue: b
+      - type: x
+  - text: 打出蓝 4 后：
+  - name: Bob
+    cards:
+      - type: x
+      - type: x
+        middleNote: (1)
+        below:
+          text:
+            - 新的
+          color: Green
+      - type: x
+        middleNote: (1)
+        below:
+          text:
+            - 起手
+          color: Gray
+      - type: x
+      - type: x

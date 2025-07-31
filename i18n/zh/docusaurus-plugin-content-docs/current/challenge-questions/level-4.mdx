@@ -1,0 +1,50 @@
+---
+title: 等级 4 挑战题
+---
+
+import Question1 from "./level-4-question-1.yml";
+import Solution1Part1 from "./level-4-question-1-part-2.yml";
+import Solution1Part2 from "./level-4-question-1-part-3.yml";
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+这些问题对应[等级 4](../level-4.mdx)。
+
+## 问题 1 \{#question-1\}
+
+<Tabs
+  defaultValue="question1"
+  values={[
+    {label: '题目', value: 'question1'},
+    {label: '解答', value: 'solution1'},
+  ]}>
+<TabItem value="question1">
+
+- 现在是*早期*。
+- 红 1 和蓝 5 已经打出。
+- 之前，Bob 从 2 号位打出过蓝 3，又从 4 号位打出过蓝 4。
+- Cathy 的弃牌位上被留过两张未知的 2。
+- Alice 提示 Bob 数字 1，提示到他 2 号位和 3 号位的牌。
+- Bob 打出 3 号位，是绿 1，成功打出。
+- Cathy 接下来会弃掉哪个位置的牌？
+
+<Question1 />
+
+</TabItem>
+<TabItem value="solution1">
+
+- 由于 Bob 之前从 2 号位和 4 号位打出过牌，所以他抽过两张新牌。
+- 因此，他的 3 号位牌必定属于起始手牌，而 2 号位是在打出蓝 3 后新抽的牌。
+- 所以他的 2 号位是一张“新”的 1，而 3 号位是一张起始手牌中“普通”的 1。
+
+<Solution1Part1 />
+
+- 如等级 3 所述，[未知的 1 应按特定顺序打出](../level-3.mdx#playing-multiple-1s)。具体来说，[新 1 应当优先](../level-3.mdx#part-2---the-fresh-1s-rule)。
+- 这意味着 Bob 本应打出 2 号位而非 3 号位。
+- 因此，Cathy 知道 Bob 的想要执行*顺序弃牌位移动*。Cathy 将弃牌位*移*过 3 号位。现在她的弃牌位在 2 号位，所以接下来她会弃掉 2 号位。
+
+<Solution1Part2 />
+
+</TabItem>
+</Tabs>
