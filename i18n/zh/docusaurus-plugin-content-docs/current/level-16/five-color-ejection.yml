@@ -15,7 +15,7 @@ players:
   - cards:
       - type: x
       - type: x
-        above: Red 1
+        above: 红 1
       - type: x
       - type: x
       - type: x
@@ -27,12 +27,12 @@ players:
         middleNote: (5)
       - type: x
       - type: x
-  - text: After Bob blind-plays red 1...
+  - text: Bob 盲打红 1 后……
   - name: Cathy
     cards:
       - type: x
       - type: x
       - type: r
-        below: Red 5
+        below: 红 5
       - type: x
       - type: x

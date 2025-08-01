@@ -5,33 +5,33 @@ stacks:
   - b: 0
   - p: 0
 bigText:
-  text: first turn
+  text: 第一回合
   color: black
 players:
   - cards:
       - type: x
       - type: x
       - type: x
-        above: Blue 1
+        above: 蓝 1
       - type: x
       - type: x
   - cards:
       - type: x
-        above: Red 2
+        above: 红 2
         clue: r
         trash: true
       - type: x
-        above: Red 2
-        middleNote: r2?
+        above: 红 2
+        middleNote: 红2?
         clue: r
       - type: x
-        above: Red 4
-        middleNote: r2?
+        above: 红 4
+        middleNote: 红2?
         clue: r
       - type: x
-        above: Blue 4
+        above: 蓝 4
       - type: 5
-        above: Blue 5
+        above: 蓝 5
   - clueGiver: true
     cards:
       - type: x
@@ -39,7 +39,7 @@ players:
       - type: x
       - type: x
       - type: g
-        above: Green 1
-  - text: Alice plays Slot 3
-  - text: Bob discards Slot 1
-  - text: Bob writes Elimination Notes on Slots 2 and 3
+        above: 绿 1
+  - text: Alice 打出 3 号位
+  - text: Bob 弃掉 1 号位
+  - text: Bob 在 2 号位和 3 号位写下排除笔记

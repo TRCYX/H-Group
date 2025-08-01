@@ -1,5 +1,5 @@
 ---
-title: Level 16 - Ejections & Discharges
+title: 等级 16 - 饵牌和钓牌
 ---
 
 import FiveColorEjection from "./level-16/five-color-ejection.yml";
@@ -9,132 +9,133 @@ import UnknownTrashDischargeTwoForOne from "./level-16/unknown-trash-discharge-t
 import UnknownTrashDischargeTwoForOne2 from "./level-16/unknown-trash-discharge-two-for-one-2.yml";
 import UnknownDupeDischarge from "./level-16/unknown-dupe-discharge.yml";
 
-## Conventions
+## 约定 \{#conventions\}
 
-### Ejections
+### 饵牌 \{#ejections\}
 
-- _Ejection_ refers to a move like a _Bluff_, but instead of playing an unrelated card from _Finesse Position_, someone plays an unrelated card from their _Second Finesse Position_. For example, if a player's hand is completely unclued, their _Second Finesse Position_ is slot 2.
-- Just like a _Bluff_, an _Ejection_ can only be performed on the very next player.
-- Several different kinds of moves can cause an _Ejection_. The most common one is the _5 Color Ejection_.
+- _饵牌_（_Ejection_）类似于*诈飞*，但是相较从*飞牌位*盲打不相关的牌，某人会从*第二飞牌位*盲打不相关的牌。比如说，如果一名玩家的手牌完全没有提示过，那么其*第二飞牌位*就是 2 号位。
+- 和*诈飞*一样，*饵牌*只能对直接下家执行。
+- 有若干不同的行动可以引发*饵牌*，最常见的是 _5 颜色饵牌_。
 
-### Discharges
+### 钓牌 \{#discharges\}
 
-- _Discharge_ is similar to _Ejection_, except instead of blind-playing the _Second Finesse Position_ card, the player plays the _Third Finesse Position_ card.
-- Just like a _Bluff_, a _Discharge_ can only be performed on the very next player.
-- Several different kinds of moves can cause a _Discharge_. The most common one is the _Unknown Trash Discharge_.
+- _钓牌_（_Discharge_）与*饵牌*类似，但是相较盲打*第二飞牌位*，玩家会盲打*第三飞牌位*。
+- 和*诈飞*一样，*钓牌*只能对直接下家执行。
+- 有若干不同的行动可以引发*钓牌*，最常见的是*未知垃圾钓牌*。
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The 5 Color Ejection (5CE)
+### 5 颜色饵牌（5CE） \{#the-5-color-ejection-5ce\}
 
-- Normally, if a player gives a color _Play Clue_ to a previously untouched 5, it would mean that it is a _Finesse_ on the 5 and all of the cards leading up to the 5 are playable.
-- If the very next player sees that they will only have to **blind-play one card** in their hand to fulfill the _Finesse_, then they should assume that it is a _Finesse_ and blind-play their _Finesse Position_.
-- If the very next player sees that they would have to **blind-play two or more cards** in their hand to fulfill the _Finesse_, then a _Finesse_ is unlikely. Instead, players agree that this signals an _Ejection_ and that the next player should play their _Second Finesse Position_.
-  - _Prompts_ don't factor into the "two or more blind-plays" rule. Players only count the number of blind-plays.
-- After the blind-play, the player who received the clue will know that they must have a 5.
-- Note that _5 Color Ejection_ only applies if the 5 did not have any clues on it already. If a 5 is re-clued, it signals a _Finesse_ on all of the cards leading up to the 5.
-  - However, the "invisible" clue from a _Chop Move_ does not count. In other words, you **can** perform a _5 Color Ejection_ with a _Chop Moved_ 5, as long as the card does not have any positive clues on it.
-- For example, in a 3-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Alice clues red to Cathy, touching a red 5 on slot 3.
-  - Bob knows that normally, this would be a _Finesse_ on the 5, indicating to Bob that he has the red 1, the red 2, the red 3, and the red 4. However, since this calls for more than one blind card, he knows that _5 Color Ejection_ should take precedence, so he knows to play his _Second Finesse Position_ card. It is a red 1 and it successfully plays.
-  - From Cathy's perspective, if Bob had played his _Finesse Position_ card in response to the red clue, then Cathy would know that it was a _Finesse_ or a _Bluff_. But since Bob blind-played his _Second Finesse Position_ card, it must be a _5 Color Ejection_. Cathy marks the red card as red 5.
+- 正常情况下，如果一名玩家对一张之前未提示过的 5 用颜色给出*出牌提示*，这可能表示一次指向这张 5 的*飞牌*，所有连向这张 5 的牌都可打出。
+- 如果下家发现<Em>**自己**</Em>只需要**盲打一张牌**来完成*飞牌*，那么应该认为这是一次*飞牌*，盲打自己的*飞牌位*。
+- 如果下家发现<Em>**自己**</Em>需要**盲打两张牌以上**来完成*飞牌*，那么就不太可能是*飞牌*。此时，玩家们约定这是在*饵牌*，称为 _5 颜色饵牌（5 Color Ejection，5CE）_，下家应该盲打自己的*第二飞牌位*。
+  - *引牌*不计入“两张以上盲打”的规则。只计算**盲打**数量。
+- 盲打之后，收到提示的玩家会知道自己必然有一张 5。
+- 注意 *5 颜色饵牌*仅在这张 5 之前未提示过时适用。如果一张 5 被重新提示，则表示对连向 5 的所有牌执行*飞牌*。
+  - 然而，_弃牌位移动_（_Chop Move_）带来的“隐形”提示不算。换句话说，你**允许**对一张被弃牌位*移*过的 5 执行 _5 颜色饵牌_，只要这张牌没有被提示过。
+- 例如在 3 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Alice 提示 Cathy 红色，提示到 3 号位的一张红 5。
+  - Bob 知道，正常情况下，这会是指向 5 的*飞牌*，表明着 Bob 手中有红 1、红 2、红 3 和红 4。然而由于这样会要盲打超过一张牌，他知道 *5 颜色饵牌*更优先，所以他盲打自己的*第二飞牌位*。结果是一张红 1，成功打出。
+  - 从 Cathy 的视角来看，如果 Bob 盲打了自己的*飞牌位*作为对红色提示的回应，那么 Cathy 会认为是在*飞牌*或者*诈飞*。但由于 Bob 盲打了自己的*第二飞牌位*，这一定是 _5 颜色饵牌_。Cathy 将自己的红牌标记为红 5。
 
 <FiveColorEjection />
 
-- In the previous example, a _5 Color Ejection_ was preformed with the 5 being the only new card introduced with the color clue. However, it is also possible to perform a _5 Color Ejection_ with more than one card introduced.
-  - For players playing at level 20, this kind of thing would normally signal an _[Out-of-Order Finesse](level-20.mdx#the-out-of-order-finesse)_, but the _5 Color Ejection_ interpretation takes precedence as long as the next player would have to blind-play two or more cards.
+- 在上面的例子里，*5 颜色饵牌*执行时，颜色提示只引入了 5 一张新牌。但是也可以在执行 *5 颜色饵牌*时引入多张新牌。
+  - 对于等级 20 的玩家，这种情况通常表示[_乱序飞牌_](level-20.mdx#the-out-of-order-finesse)，但只要下家需要盲打两张牌以上，*5 颜色饵牌*的解释就更优先。
 
-### The Unknown Trash Discharge (1-for-1 Form) (UTD)
+### 未知垃圾钓牌（1 换 1 形式）（UTD） \{#the-unknown-trash-discharge-1-for-1-form-utd\}
 
-- In general, _Bluffs_ work because the blind-play tells the person who was clued that they have a _one-away-from-playable_ card of that color.
-- In general, _Trash Bluffs_ work because the blind-play tells the person who was clued that they have a trash card.
-- Players must be careful to not give a _Trash Bluff_ that looks like a _Bluff_ - that will desynchronize the team.
-- For example, in a 3-player game:
-  - All the 1's are played on the stacks.
-  - Alice clues red to Cathy, touching a red 1 as a _Play Clue_.
-  - Bob blind-plays his _Finesse Position_ and it successfully plays as blue 2.
-  - Cathy knows that a _Bluff_ has occurred and marks her red card as red 3 (the _one-away-from-playable_ red card).
-  - Of course, this is not true, because Cathy's red card is actually a red 1. The team will likely get a misplay at some point in the future.
+- 一般来说，*诈飞*之所以奏效，是因为其中的盲打能告诉收到提示的玩家手中有一张*差一张可打出*的某颜色的牌。
+- 一般来说，*垃圾诈飞*之所以奏效，是因为其中的盲打能告诉收到提示的玩家手中有一张废牌。
+- 玩家必须小心，不能给出看起来像*诈飞*的*垃圾诈飞*——这会让队伍失去同步。
+- 例如在 3 人游戏中：
+  - 所有的 1 都已经打出。
+  - Alice 提示 Cathy 红色，提示到一张红 1，作为*出牌提示*。
+  - Bob 盲打*飞牌位*，结果是蓝 2，成功打出。
+  - Cathy 知道发生了一次*诈飞*，将自己的红牌标记为红 3（*差一张可打出*的红牌）。
+  - 当然，这不是真的，因为 Cathy 的红牌实际上是红 1。这张牌可能会在未来误打。
 
 <IllegalTrashBluff />
 
-- If the above example happens and Alice is not making a mistake, then Alice must be trying to communicate something extra. This should signal an _Discharge_ on the very next player.
-- Since the _Third Finesse Position_ card was played instead of the _Finesse Position_ card, then the player who received the clue will know that the card is trash.
-- For example, in a 3-player game:
-  - All the 1's are played on the stacks.
-  - Alice clues red to Cathy, touching a red 1 as a _Play Clue_.
-  - Bob knows that if he played his _First Finesse Position_, then Cathy would write a note of red 3 on the card (as a _Bluff_), which would be a _Lie_.
-  - Bob knows that if he played his _Second Finesse Position_, then Cathy would write a note of red 5 on the card (as a _5 Color Ejection_), which would be a _Lie_.
-  - Bob blind-plays his _Third Finesse Position_. It is a blue 2 and it successfully plays.
-  - Cathy knows that a _Discharge_ has occurred from Alice's red clue. This must be an _Unknown Trash Discharge_, so the focus of the clue must be trash.
-  - Cathy marks her red card as a red 1 (since that is the only possible trash red card) and discards it.
+- 如果发生了上面例子里的情况，而 Alice 没有犯错，那么 Alice 一定是在尝试传达额外的信息。这会表示对下家执行*钓牌*，称为*未知垃圾钓牌（Unknown Trash Discharge，UTD）*。
+- 由于盲打的是*第三飞牌位*而不是*飞牌位*，收到提示的玩家会知道提示到的牌是废牌。
+- 例如在 3 人游戏中：
+  - 所有的 1 都已经打出。
+  - Alice 提示 Cathy 红色，提示到一张红 1，作为*出牌提示*。
+  - Bob 知道，如果他盲打*第一飞牌位*，那么 Cathy 会在牌上标记红 3（作为*诈飞*），这会成为*谎言*。
+  - Bob 知道，如果他盲打*第二飞牌位*，那么 Cathy 会在牌上标记红 5（作为 _5 颜色饵牌_），这也会成为*谎言*。
+  - Bob 盲打*第三飞牌位*。结果是一张蓝 2，成功打出。
+  - Cathy 知道 Alice 的红色提示引发了一次*钓牌*。这一定是一次*未知垃圾钓牌*，所以提示的焦点一定是废牌。
+  - Cathy 将自己的红牌标记为红 1（因为这是唯一可能的红色废牌）并弃掉。
 
 <UnknownTrashDischarge />
 
-- In summary:
-  - For a _Trash Bluff_:
-    - The empathy on the clued card **only** contains possibilities that are _Playable_, _Delayed Playable_, or trash.
-    - Thus, a normal blind-play is enough to prove it is trash.
-  - For an _Unknown Trash Discharge_:
-    - The empathy on the clued card contains one or more possibilities that are useful and currently unplayable.
-    - Thus, something extra is needed to prove it is trash.
-  - Other than this, don't use more complicated factors to prefer a _Trash Bluff_ over an _Unknown Trash Discharge_ (like Bob having to wait on some other card).
+- 总结：
+  - 对于*垃圾诈飞*：
+    - 被提示牌的共情**仅**存在*可打出*、*可延迟打出*或废牌的可能。
+    - 因此，一次普通的盲打就足以证明它是废牌。
+  - 对于*未知垃圾钓牌*：
+    - 被提示牌的共情存在一种以上这样的可能，它们有用但目前不可打出。
+    - 因此，需要额外的信息来证明它是废牌。
+  - 译注：共情指从你的视角看对方牌的可能，即网页上长按对方的牌看到的可能。强调是“共情”应是为了简化判据。
+  - 除此之外，不要用更复杂的因素来决定*垃圾诈飞*比*未知垃圾钓牌*优先（例如需要让 Bob 等待其他牌）。
 
-### The Unknown Trash Discharge (2-for-1 Form) (UTD)
+### 未知垃圾钓牌（1 换 2 形式）（UTD） \{#the-unknown-trash-discharge-2-for-1-form-utd\}
 
-- When multiple cards are clued with an _Unknown Trash Discharge_, **only the focus of the clue is considered to be trash**. This means that _Good Touch Principle_ applies to the non-focused cards.
-- Note that this is **the opposite of the _Trash Bluff_**. (In a _Trash Bluff_, when multiple cards are clued, all of the touched cards are considered to be trash.)
-- This means that while most _Unknown Trash Discharges_ are 1-for-1 clues, you can also perform an _Unknown Trash Discharge_ as a 2-for-1, a 3-for-1, and so forth.
-- For example, in a 3-player game:
-  - (This is almost exactly the same as the previous example.)
-  - All the 1's are played on the stacks.
-  - Alice clues red to Cathy, touching a red 1 on slot 2 and a red 5 on slot 3. The red 1 is focused. This looks like a _Play Clue_ on the red 1.
-  - Bob knows that this must be an _Unknown Trash Discharge_, so he blind-plays his _Third Finesse Position_. It is a blue 2 and it successfully plays.
-  - Cathy knows that a _Discharge_ has occurred from Alice's red clue. This must be an _Unknown Trash Discharge_, so the focus of the clue must be trash.
-  - Cathy marks her slot 2 card as a red 1 (since that is the only possible trash red card) and discards it.
-  - Cathy also knows that non-focused cards touched in an _Unknown Trash Discharge_ are supposed to be useful. Thus, Cathy marks her slot 3 card as a red 2, a red 3, a red 4, or a red 5.
+- 当*未知垃圾钓牌*提示多张牌时，**只有提示的焦点被当作废牌**。这意味着*良触原则*对焦点以外的牌适用。
+- 注意这**与*垃圾诈飞*相反**。（在*垃圾诈飞*中，提示多张牌时，所有被触及的牌都被当作废牌。）
+- 这表示虽然大多数*未知垃圾钓牌*是 1 换 1 提示，但你也可以执行 1 换 2、1 换 3 等等的*未知垃圾钓牌*。
+- 例如在 3 人游戏中：
+  - （这与上一个例子几乎完全相同。）
+  - 所有的 1 都已经打出。
+  - Alice 提示 Cathy 红色，提示到 Cathy 2 号位的红 1 和 3 号位的红 5。焦点是红 1。这看起来像是对红 1 的*出牌提示*。
+  - Bob 知道这一定是*未知垃圾钓牌*，所以他盲打*第三飞牌位*。结果是蓝 2，成功打出。
+  - Cathy 知道 Alice 的红色提示引发了一次*钓牌*。这一定是*未知垃圾钓牌*，所以提示的焦点一定是废牌。
+  - Cathy 将自己的 2 号位标记为红 1（因为这是唯一可能的红色废牌）并弃掉。
+  - Cathy 还知道，在*未知垃圾钓牌*中触及的焦点以外的牌应当是有用的。因此，Cathy 将自己的 3 号位标记为红 2、红 3、红 4 或红 5。
 
 <UnknownTrashDischargeTwoForOne />
 
-- Rarely, it is also possible to perform a _Discharge_ using a clue that would normally look like a _Trash Bluff_, by cluing other non-trash cards.
-- For example, in a 3-player game:
-  - All the 1's except for red 1 are played on the stacks.
-  - Alice clues number 1 to Cathy, touching a green 1 on slot 1 and a red 1 on slot 2. The focus is on the green 1 as a _Play Clue_.
-  - From Bob's perspective, this looks like it could be a _Trash Finesse_. In other words, if Bob blind-played his _Finesse Position_, then Cathy would write the correct note on the green 1. However, a _Trash Finesse_ promises that all the cards touched are trash. In this case, the red 1 is not a trash card, so playing slot 1 would lie to Cathy about the identity of the red 1.
-  - Thus, Bob interprets the clue as a _Unknown Trash Discharge_ and blind-plays his _Third Finesse Position_. It is a blue 2 and successfully plays.
+- 在极少数情况下，也可以通过提示其他非废牌来执行一次看起来像*垃圾诈飞*的*钓牌*。
+- 例如在 3 人游戏中：
+  - 除了红 1，所有的 1 都已经打出。
+  - Alice 提示 Cathy 数字 1，提示到 Cathy 1 号位的绿 1 和 2 号位的红 1。焦点是绿 1，是*出牌提示*。
+  - 从 Bob 的视角来看，这看起来像在*垃圾飞牌*。换句话说，如果 Bob 盲打*飞牌位*，那么 Cathy 会在绿 1 上写下正确的笔记。然而*垃圾飞牌*承诺所有触及的牌都是废牌。在此场景中，红 1 不是废牌，所以盲打 1 号位会在红 1 是什么上向 Cathy 说谎。
+  - 因此，Bob 将这次提示解释为*未知垃圾钓牌*，盲打自己的*第三飞牌位*。结果是一张蓝 2，成功打出。
 
 <UnknownTrashDischargeTwoForOne2 />
 
-### The Unknown Dupe Discharge (UDD)
+### 未知重复钓牌（UDD） \{#the-unknown-dupe-discharge-udd\}
 
-- First, see the section on _[Unknown Trash Discharge](#the-unknown-trash-discharge-1-for-1-form-utd)_.
-- Typically, players closely follow _Good Touch Principle_, since duplicating cards is confusing and wastes efficiency on follow-up _Fix Clues_.
-- However, there are still plenty of situations where players will intentionally duplicate a card:
-  1. When it is the first turn of the game (and there is nothing else to do).
-  1. When the team is at 8 clues (and there is nothing else to do).
-  1. When a player is in a _Double Discard Situation_ (and there is nothing else to do).
-  1. When the team is losing and nearing the _End-Game_ (and _Tempo_ on playable cards is really important).
-- If a player uses a clue to duplicate a card, and these criteria do not apply, then they must be trying to send an additional message.
-- In this case, they intend for a _Discharge_ to communicate the "badness" of the focused card. This is called an _Unknown Dupe Discharge_ (and works in a very similar way to the _Unknown Trash Discharge_).
-- After an _Unknown Dupe Discharge_, the focus of the clue can be any unknown duplicated card. The player will only know which specific duplicated card it is after they discard it.
-- For example, in a 3-player game:
-  - It is the first turn of the game and nothing is played on the stacks.
-  - Alice clues number 5 to Bob as a _5 Save_.
-  - Bob's hand is as follows: `red 2, red 2, red 4, blue 4, blue [5]`
-  - Bob clues green to Cathy as a play clue.
-  - Cathy clues red to Bob, touching the red 2 on slot 1, the red 2 on slot 2, and the red 4 on slot 3.
-  - Alice knows that Cathy is violating _Good Touch Principle_ and duplicating the red 2. There doesn't seem to be a very good reason for this, so this must be an _Unknown Dupe Discharge_.
-  - Alice blind-plays her _Third Finesse Position_. It is a blue 1 and it successfully plays on the stacks.
-  - Normally, Bob would think that this was an _Unknown Trash Discharge_. However, no red trash cards exist. Thus, this must have been an _Unknown Dupe Discharge_.
-  - Bob discards his slot 1 card (the focus of the clue). It is revealed to be a red 2. Now, Bob writes _Elimination Notes_ for the red 2 on his slot 2 and his slot 3.
+- 首先，请参见[_未知垃圾钓牌_](#the-unknown-trash-discharge-1-for-1-form-utd)的章节。
+- 通常情况下，玩家会严格遵守*良触原则*，因为重复相同的牌会带来混乱，在后续的*修正提示*上浪费效率。
+- 然而仍有很多情况玩家会故意重复一种牌：
+  1. 在游戏的第一回合（且没有其他事情可做）。
+  2. 有 8 个提示机会（且没有其他事情可做）。
+  3. 玩家处于*二连弃牌状况*（且没有其他事情可做）。
+  4. 队伍处于劣势，且接近*末期*时（且可打出的牌的*节奏*非常重要）。
+- 如果玩家使用提示来重复一张牌，而这些条件都不适用，那么他们一定在尝试传达额外的信息。
+- 在这种情况下，他们希望*钓牌*，用来传达焦点牌是“坏”的。这称为*未知重复钓牌（Unknown Dupe Discharge，UDD）*（运作方式与*未知垃圾钓牌*非常类似）。
+- 在*未知重复钓牌*后，提示的焦点可以是任何未知的重复牌。玩家只有弃掉它后才会知道具体是哪一张重复牌。
+- 例如在 3 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Alice 提示 Bob 数字 5，作为*留 5 提示*。
+  - Bob 的手牌如下：`红 2、红 2、红 4、蓝 4、蓝 [5]`
+  - Bob 提示 Cathy 绿色，作为*出牌提示*。
+  - Cathy 提示 Bob 红色，触及 1 号位的红 2、2 号位的红 2 和 3 号位的红 4。
+  - Alice 知道 Cathy 违反了*良触原则*，重复了红 2。这样做似乎没有很好的理由，所以这一定是*未知重复钓牌*。
+  - Alice 盲打*第三飞牌位*。结果是一张蓝 1，成功打出。
+  - 通常情况下，Bob 会认为这是*未知垃圾钓牌*。然而并不存在红色废牌。这一定是*未知重复钓牌*。
+  - Bob 弃掉自己的 1 号位（提示的焦点）。结果显示这是一张红 2。现在，Bob 在自己的 2 号位和 3 号位上写下红 2 的*排除笔记*。
 
 <UnknownDupeDischarge />
 
-- _Unknown Dupe Discharges_ can be initiated with either color clues or number clues.
-- _Unknown Dupe Discharges_ only apply if **the two duplicated cards are in the same person's hand**.
-  - It is explicitly illegal to perform an _Unknown Dupe Discharge_ that duplicates a card in someone else's hand. If this happens, the clue must have some other meaning.
-- Remember that after an _Unknown Dupe Discharge_, the player who received the clue is supposed to _discard the focus of the clue_, even before other known trash to the left of it.
-  - However, in the case where only two new cards are touched, then the player who received the clue may know that both of these cards must be the same. In this special case, they can discard the non-focused card to cause a _Trash Order Chop Move_.
-  - Note that if the _Unknown Dupe Discharge_ was initiated by a chop-focus clue, this means that the expected discard order is thus different from the usual 'left to right' order, since in that case, the focus of the clue will be rightmost.
-  - Players are also expected to discard focus-first even in the case where it is globally known that the clued cards are duplicated cards. This is because in general, it can be hard to tell if the clue receiver knows that an _Unknown Dupe Discharge_ has occurred, because it could have been an _Unknown Trash Discharge_, in which case only the focus is discardable. Discarding focus-first in all cases avoids desync on whether the clue receiver knows they hold dupes or simply trash.
+- *未知重复钓牌*可以通过颜色提示或者数字提示发起。
+- *未知重复钓牌*仅在**两张重复牌在同一名玩家的手中**时适用。
+  - 重复其他人手中的牌的*未知重复钓牌*明确违规。如果发生这种情况，提示一定另有含义。
+- 记住，在*未知重复钓牌*之后，收到提示的玩家应该**弃掉提示的焦点**，即使它左侧有其他已知的废牌。
+  - 然而在仅触及两张新牌的情况下，收到提示的玩家能够知道这两张牌一定相同。在这种特殊情况下，他们可以弃掉非焦点牌以引发*垃圾顺序弃牌位移动*。
+  - 注意，如果*未知重复钓牌*是以焦点在弃牌位的提示发起的，这表示预期的弃牌顺序与通常的“从左到右”顺序不同，因为在这种情况下，提示的焦点会是最右侧的牌。
+  - 即使在全局已知被提示的牌是重复牌时，玩家也应优先弃掉焦点牌。这是因为一般来说很难判断收到提示的玩家是否知道发生了*未知重复钓牌*，因为也可能是*未知废牌钓牌*，那样只有焦点牌可以弃掉。在所有情况下都优先弃掉焦点牌，这样无论收到提示者是否能辨别自己手中的是重复牌还是仅仅是废牌，都可以避免队伍失去同步。

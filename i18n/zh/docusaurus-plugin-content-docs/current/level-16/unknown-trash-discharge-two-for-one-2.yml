@@ -16,26 +16,26 @@ players:
       - type: x
       - type: x
       - type: x
-        above: Blue 2
+        above: 蓝 2
       - type: x
       - type: x
   - cards:
       - type: 1
         clue: 1
-        above: Green 1
+        above: 绿 1
       - type: 1
         clue: 1
-        above: Red 1
+        above: 红 1
       - type: x
       - type: x
       - type: x
-  - text: After Bob blind-plays blue 2...
+  - text: Bob 盲打蓝 2 后……
   - name: Cathy
     cards:
       - type: 1
         trash: true
       - type: 1
-        middleNote: (R)
+        middleNote: (红)
       - type: x
       - type: x
       - type: x

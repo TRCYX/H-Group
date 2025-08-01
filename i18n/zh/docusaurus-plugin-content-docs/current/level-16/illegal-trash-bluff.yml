@@ -5,7 +5,7 @@ stacks:
   - b: 1
   - p: 1
 bigText:
-  text: Illegal!
+  text: 违规！
 players:
   - clueGiver: true
     cards:
@@ -16,7 +16,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Blue 2
+        above: 蓝 2
       - type: x
       - type: x
       - type: x
@@ -29,14 +29,14 @@ players:
       - type: x
       - type: x
       - type: x
-  - text: After Bob blind-plays blue 2...
+  - text: Bob 盲打蓝 2 后……
   - name: Cathy
     cards:
       - type: x
       - type: r
         middleNote: (1)
-        above: Bombs!
-        below: Red 3
+        above: 会误打!
+        below: 红 3
       - type: x
       - type: x
       - type: x
