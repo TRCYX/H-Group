@@ -1,5 +1,5 @@
 ---
-title: Level 17 - Dupe Tech
+title: 等级 17 - 重复牌技术
 ---
 
 import AssistedTrashChopMoveTrashFinesse from "./level-17/assisted-trash-chop-move-trash-finesse.yml";
@@ -10,112 +10,115 @@ import DuplicitousValueClue from "./level-17/duplicitous-value-clue.yml";
 import TimeTravelChopMoveBlind from "./level-17/time-travel-chop-move-blind-play-form.yml";
 import TimeTravelChopMoveDirect from "./level-17/time-travel-chop-move-direct-form.yml";
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The Duplicitous Value Clue
+### 有价值的误导性提示 \{#the-duplicitous-value-clue\}
 
-- Normally, we do not give _Play Clues_ to duplicated cards, as that would violate _Good Touch Principle_.
-- However, in some situations, it is possible to give a _Play Clue_ to Bob and trick him into playing a duplicated card. If while doing so, the clue also picked up one or more other valuable cards, then this would be a _Duplicitous Value Clue_.
-- We agree that as long as this kind of clue meets _Minimum Clue Value Principle_ (not counting the duplicated card itself), no further _Prompts_ or blind-plays are called for - the point of the clue was to simply "lock in" a save on the valuable cards.
-- For example, in a 3-player game:
-  - Red 2 and blue 2 are played on the stacks.
-  - Alice holds a globally known red 3.
-  - Alice clues number 3 to Bob as a _Play Clue_, touching 2 cards.
-  - Bob plays the focused 3, assuming that it is the blue 3. However, it is actually red 3, and it successfully plays on the stacks.
-  - Although this was unexpected, the team sees that this was a _Duplicitous Value Clue_, since there is sufficient value in "locking in" a save on Bob's other 3.
-  - Bob marks his other 3 as **any** useful 3. It is not promised to be playable. (Thus, no-one will think that it is a _Prompt_ or a _Finesse_.)
+- 通常我们不会对重复的牌给出*出牌提示*，因为这会违反*良触原则*。
+- 但在某些情况下，有可能向 Bob 给出*出牌提示*，诱导他打出一张重复的牌。如果这个提示同时还触及其他有价值的牌，那么这就会是一次*有价值的误导性提示*。
+- 我们约定只要这种提示满足*提示价值下限原则*（不计算重复的牌本身），就不会引发后续的*引牌*或盲打——这个提示的目的只是“锁定”其他有价值的牌。
+- 例如在 3 人游戏中：
+  - 红 2 和蓝 2 已经打出。
+  - Alice 持有一张全员已知的红 3。
+  - Alice 提示 Bob 数字 3 作为*出牌提示*，提示到 2 张牌。
+  - Bob 打出焦点处的 3，以为它是蓝 3。但它实际上是红 3，且成功打出。
+  - 虽然这出乎意料，但大家明白这是一个*有价值的误导性提示*，因为“锁定”Bob 的另一张 3 价值足够。
+  - Bob 将另一张 3 标记为**任意**有用的 3。它并不保证可打出。（从而没有人会认为这是*引牌*或*飞牌*。）
 
 <DuplicitousValueClue />
 
-- For _Duplicitous Value Clues_ that do **not** meet _Minimum Clue Value Principle_, see the _[Duplicitous Tempo Clue](#the-duplicitous-tempo-clue)_ section below.
+- 对于**不**满足*提示价值下限原则*的*误导性提示*，请参阅下面的[_误导性节奏提示_](#the-duplicitous-tempo-clue)部分。
+  - 译注：原文写的是不满足*提示价值下限原则*的 _Duplicitous Value Clue_，即*有价值的误导性提示*。译者认为下面也未引入就使用了 _Duplicitous Clue_，且一开始的 [Google 文档](https://docs.google.com/document/d/1zhFHjb2ChoLEIKn71bd8yKFczy0kn3hStrydRQ_m4NE) 中同一位置使用的也是 _Duplicitous Clue_，没有价值的 _Duplicitous Value Clue_ 听起来很奇怪，所以其实这类提示可能应统称 _Duplicitous Clue_ 而非 _Duplicitous Value Clue_，译作*误导性提示*。
 
-### The Duplicitous Blind-Play
+### 误导性盲打 \{#the-duplicitous-blind-play\}
 
-- First, see the section on the _[Duplicitous Value Clue](#the-duplicitous-value-clue)_.
-- In the _Duplicitous Value Clue_, a duplicated card is clued directly (in order to "get" some other cards). Similar to this, it is also possible to get a duplicated card to blind-play (in order to "get" some other cards). This is called a _Duplicitous Blind-Play_.
-- _Duplicitous Blind-Plays_ function the same way as _Duplicitous Value Clues_ in that as long as the clue meets _Minimum Clue Value Principle_, no further _Prompts_ or blind-plays are called for.
-- For example, in a 3-player game:
-  - Red 2 and blue 2 are played on the stacks.
-  - Alice holds a globally known red 3.
-  - Alice clues blue to Cathy, touching a blue 4 as a _Play Clue_.
-  - Bob blind-plays his _Finesse Position_, expecting it to be a blue 3 as a _Finesse_. Instead, it is a red 3, and successfully plays on the stacks.
-  - Although this was unexpected, the team sees that this was a _Duplicitous Blind-Play_, since there is sufficient value in "locking in" a save on Cathy's blue 4.
-  - The team knows that blue 4 is not promised to be playable. (Thus, no-one will think that it is a _Prompt_ or a _Finesse_.)
+- 首先，请参阅[_有价值的误导性提示_](#the-duplicitous-value-clue)的章节。
+- *有价值的误导性提示*直接提示到一张重复的牌（为了“获取”其他牌）。类似地，也可以让一张重复的牌盲打（为了“获取”其他牌）。这被称为*误导性盲打*。
+- *误导性盲打*与*有价值的误导性提示*的运作方式相同——只要提示满足*提示价值下限原则*，就不会引发后续的*引牌*或盲打。
+- 例如在 3 人游戏中：
+  - 红 2 和蓝 2 已经打出。
+  - Alice 持有一张全员已知的红 3。
+  - Alice 提示 Cathy 蓝色，提示到一张蓝 4，作为*出牌提示*。
+  - Bob 盲打*飞牌位*，以为是*飞*蓝 3。结果却是一张红 3，且成功打出。
+  - 虽然这出乎意料，但大家明白这是一次*误导性盲打*，因为“锁定”Cathy 的蓝 4 价值足够。
+  - 大家都知道蓝 4 并不保证可打出。（从而没人会认为这是*引牌*或*飞牌*。）
 
 <DuplicitousBlindPlay />
 
-- Note that _Duplicitous Blind-Plays_ can also be performed with certain _Ejections_, _Discharges_, and so on.
+- 注意*误导性盲打*也可以通过某些*饵牌*、*钓牌*等执行。
 
-### The Duplicitous Tempo Clue
+### 误导性节奏提示 \{#the-duplicitous-tempo-clue\}
 
-- First, see the section on the _[Duplicitous Value Clue](#the-duplicitous-value-clue)_ and the _[Duplicitous Blind-Play](#the-duplicitous-blind-play)_.
-- In the _Duplicitous Value Clue_ and the _Duplicitous Blind-Play_, one or more "extra" valuable cards are touched for later. But what if this type of move is performed, but no additional valuable cards were touched?
-- If a filled-in card is revealed as playable, the clue should retroactively be treated as a _Tempo Clue_. Thus, this type of clue is called a _Duplicitous Tempo Clue_.
-- _Duplicitous Tempo Clues_ may or may not cause a _Tempo Clue Chop Move_. (The conditions for this are the same as a "normal" _Tempo Clue_.)
-- For example, in a 3-player game:
-  - Red 1, green 1, and blue 1 are played on the stacks.
-  - Cathy holds a globally known red 2.
-  - Bob holds a previously-touched green 2, but its rank is not yet known.
-  - Alice clues number 2 to Bob, touching one new card, and also "filling in" the green 2.
-  - Bob knows that this is a _Play Clue_ on the blue 2. He plays it, but it is actually a red 2, and successfully plays on the stacks.
-  - Bob's first thought was that this was a _Duplicitous Value Clue_, but no other new cards were touched as part of the clue. Thus, Bob knows that this is a _Duplicitous Tempo Clue_ instead.
-  - Since Alice was not in a valid stalling situation and getting tempo on Bob's green 2 was not _Valuable_, Bob treats this as a _Tempo Clue Chop Move_. (The _Tempo Clue_ on the green 2 is not _Valuable_ because the green 2 was _Promptable_ and because the clue only gets one unit of _Tempo_.)
+- 首先，请参阅[_有价值的误导性提示_](#the-duplicitous-value-clue)和[_误导性盲打_](#the-duplicitous-blind-play)的章节。
+- 在*有价值的误导性提示*和*误导性盲打*中，提示会触及至少一张“额外”的有价值的牌。但如果这类行动执行时，没有触及额外的有价值的牌，会怎样呢？
+- 如果一张已提示过的牌被填补了信息，揭示为可打出，那么这个提示应被追溯视为*节奏提示*。这类提示称为*误导性节奏提示*。
+- *误导性节奏提示*可能会也可能不会引发*节奏提示弃牌位移动*。（判断条件与“普通”*节奏提示*相同。）
+- 例如在 3 人游戏中：
+  - 红 1、绿 1 和蓝 1 已经打出。
+  - Cathy 持有一张全员已知的红 2。
+  - Bob 持有一张之前提示过的绿 2，但尚不知道其数字。
+  - Alice 提示 Bob 数字 2，触及一张新牌，同时“填补”了绿 2 的信息。
+  - Bob 知道这是对蓝 2 的*出牌提示*。他将其打出，但实际上是红 2，且成功打出。
+  - Bob 的第一反应是这是*有价值的误导性提示*，但提示没有触及其他新牌。于是，Bob 明白这是*误导性节奏提示*。
+  - 由于 Alice 没有处于有效的停顿状态，且 Bob 的绿 2 上得到的节奏并不算*有价值*，Bob 将此视为*节奏提示弃牌位移动*。（对绿 2 的*节奏提示*不算*有价值*，因为绿 2 可被*引牌*，且提示只获得一个单位的*节奏*。）
 
 <DuplicitousTempoClue />
 
-### The Assisted Trash Chop Move
+### 受助废牌弃牌位移动 \{#the-assisted-trash-chop-move\}
 
-- First, see the section on the _[Trash Chop Move](level-4.mdx#the-trash-chop-move-tcm)_.
-- _Trash Chop Moves_ can be very useful, but sometimes they can be "blocked" when there is no way to cleanly clue the known trash.
-- In this situation, the problem can be solved by using a _Trash Bluff_ or an _Unknown Trash Discharge_ to get a duplicated card to blind-play. This is called an _Assisted Trash Chop Move_.
-- Since no "extra" cards are touched as part of the move (like in an e.g. _Duplicitous Value Clue_), the point of the clue should be clear to the team: a _Trash Chop Move_ on all cards to the right of the clued card(s).
-- For example, this is an _Assisted Chop Move_ from a _Trash Finesse_ in a 3-player game:
-  - Blue 1 is played on the stacks.
-  - Alice holds a globally known yellow 1.
-  - Alice clues number 1 to Cathy, touching a blue 1 in slot 3 as a _Play Clue_.
-  - Bob knows that since the blue 1 was represented as a good 1, this must be a _Trash Finesse_, and Bob must have a red 1, a green 1, a yellow 1, or a purple 1 on his _Finesse Position_.
-  - Bob blind-plays his _Finesse Position_. To his surprise, it is a yellow 1 and it successfully plays on the stacks.
-  - Since yellow 1 was duplicated, the rest of the team knows that something unusual has happened. However, since no additional cards were touched as part of the clue, everyone knows that it was an _Assisted Chop Move_ on Cathy. (In this case, Cathy should _Chop Move_ slot 4 and slot 5.)
+- 首先，请参阅[_废牌弃牌位移动_](level-4.mdx#the-trash-chop-move-tcm)的章节。
+- *废牌弃牌位移动*可以非常有用，但有时无法干净地提示已知废牌，执行受阻。
+- 这种情况下，可以通过使用*废牌诈飞*或*未知废牌钓牌*盲打一张重复牌来解决问题。这被称为*受助废牌弃牌位移动*。
+- 由于提示没有触及“额外”的牌（如在*有价值的误导性提示*中那样），大家应该清楚这个提示的意图：对被提示的牌右侧的所有牌执行*废牌弃牌位移动*。
+- 例如这是一局 3 人游戏中通过*废牌飞牌*执行的*受助废牌弃牌位移动*：
+  - 蓝 1 已经打出。
+  - Alice 持有一张全员已知的黄 1。
+  - Alice 提示 Cathy 数字 1，提示到 3 号位的蓝 1，作为*出牌提示*。
+  - Bob 知道既然蓝 1 被展示为一张好 1，这一定是在*废牌飞牌*，且 Bob 的*飞牌位*上必须是红 1、绿 1、黄 1 或紫 1。
+  - Bob 盲打*飞牌位*。出乎他的意料，这是一张黄 1，且成功打出。
+  - 由于黄 1 重复了，其他人知道发生了不寻常的事情。但由于提示没有触及额外的牌，所有人都明白这是对 Cathy 的*受助弃牌位移动*。（此场景中，Cathy 应该将弃牌位*移*过 4 号位和 5 号位。）
 
 <AssistedTrashChopMoveTrashFinesse />
 
-- For example, this is an _Assisted Chop Move_ from an _Unknown Trash Discharge_ in a 3-player game:
-  - Blue 1 is played on the stacks.
-  - Alice holds a globally known yellow 1.
-  - Alice clues blue to Cathy, touching a blue 1 in slot 2 as a _Play Clue_.
-  - Bob knows that since blue 1 was represented as blue 2, this must be an _Unknown Trash Discharge_.
-  - Bob blind-plays his _Third Finesse Position_. To his surprise, it is a yellow 1 and it successfully plays on the stacks.
-  - Since yellow 1 was duplicated, the rest of the team knows that something unusual has happened. However, since no additional cards were touched as part of the clue, everyone knows that it was an _Assisted Chop Move_ on Cathy. (In this case, Cathy should _Chop Move_ slot 3, slot 4 and slot 5.)
+- 例如这是一局 3 人游戏中通过*未知废牌钓牌*执行的*受助弃牌位移动*：
+  - 蓝 1 已经打出。
+  - Alice 持有一张全员已知的黄 1。
+  - Alice 提示 Cathy 蓝色，提示到 2 号位的蓝 1，作为*出牌提示*。
+  - Bob 知道既然蓝 1 被表示为蓝 2，这一定是在*未知废牌释放*。
+  - Bob 盲打*第三飞牌位*。出乎他的意料，这是一张黄 1，且成功打出。
+  - 由于黄 1 重复了，其他人知道发生了不寻常的事情。但由于提示没有触及额外的牌，所有人都明白这是对 Cathy 的*受助弃牌位移动*。（此场景中，Cathy 应该将弃牌位*移*过 3 号位、4 号位和 5 号位。）
 
 <AssistedTrashChopMoveUTD />
 
-### The Time Travel Chop Move (Direct Form)
+### 时间旅行弃牌位移动（直接形式） \{#the-time-travel-chop-move-direct-form\}
 
-- First, see the section on the _[Duplicitous Value Clue](#the-duplicitous-value-clue)_ and the _[Duplicitous Blind-Play](#the-duplicitous-blind-play)_.
-- Normally, a _Duplicitous Clue_ "gets" an extra card or "fills in" another card as a _Tempo Clue_. However, if a _Duplicitous Clue_ is performed that does not accomplish either of these things, it must have been done for some other reason.
-- In this situation, after the duplication reveals itself, the clued player should interpret the clue as a _Trash Chop Move_ on their own hand. (In other words, they should pretend like the duplicated card was clued directly as a _Trash Chop Move_.)
-- For example, in a 3-player game:
-  - All of the 2s are played on the stacks.
-  - Cathy holds a globally known red 3.
-  - Alice clues number 3 to Bob, touching a new 3 as a _Play Clue_.
-  - Bob plays his 3, expecting it to be any 3 other than red. However, it is actually red 3, and successfully plays on the stacks.
-  - Since this move was a 0-for-1 and did not provide tempo on any cards, everyone knows that this was a _Time Travel Chop Move_. Bob _Chop Moves_ all the cards that were behind his red 3.
+- 首先，请参阅[_有价值的误导性提示_](#the-duplicitous-value-clue)和[_误导性盲打_](#the-duplicitous-blind-play)的章节。
+- 通常*误导性提示*会“获取”额外牌或作为*节奏提示*填补另一张牌的信息。然而，如果执行的*误导性提示*没有达成其中任意一者，那一定是出于其他原因。
+- 这种情况下，在重复的牌展示出来之后，被提示的玩家应将此提示视为对自己手牌的*废牌弃牌位移动*。（换句话说，应该假装重复的牌是被直接以*废牌弃牌位移动*提示。）
+- 例如在 3 人游戏中：
+  - 所有的 2 都已经打出。
+  - Cathy 持有一张全员已知的红 3。
+  - Alice 提示 Bob 数字 3，提示到一张新 3，作为*出牌提示*。
+  - Bob 打出他的 3，期望它是红 3 以外的任何 3。但实际上是红 3，且成功打出。
+  - 由于这次行动是 0 换 1，也没有在任何一张牌上提供节奏，所有人都明白这是*时间旅行弃牌位移动*。Bob 将弃牌位*移*过自己红 3 后面的所有牌。
 
 <TimeTravelChopMoveDirect />
 
-### The Time Travel Chop Move (Blind-Play Form)
+### 时间旅行弃牌位移动（盲打形式） \{#the-time-travel-chop-move-blind-play-form\}
 
-- First, see the section on the _[Time Travel Chop Move (Direct Form)](#the-time-travel-chop-move-direct-form)_.
-- Normally, a _Time Travel Chop Move_ involves cluing the duplicated card directly. But what if the duplicated card is "blocked" with no way to cleanly clue it?
-- In this situation, players can cause the duplicated card to blind-play instead of cluing it directly, which should accomplish the same thing (i.e. the cards to the right of the duplicated card being _Chop Moved_). However, care has to be taken to ensure that the end result is truly "bad" enough to not be misinterpreted as another kind of clue.
-- Specifically:
-  - The clue must not satisfy _Minimum Clue Value Principle_ (similar to a _Duplicitous Clue_).
-  - The clue must not look like an _[Assisted Trash Chop Move](#the-assisted-trash-chop-move)_ on the clue receiver.
-- For example, in a 3-player game:
-  - All of the 1s are played on the stacks. Cathy has a known blue 2.
-  - Bob has a previously-clued red card in his hand, but does not know the rank of the card.
-  - Alice clues number 3 to Bob, "filling in" the red card as the red 3. (The clue touches no other cards.)
-  - Bob knows that this is a _Finesse_ on the red 2 into the red 3. Bob blind-plays his _Finesse Position_, but it is a blue 2 instead of a red 2, which successfully plays on the stacks.
-  - Since the move was a 0-for-1, Bob understands that he should _Chop Move_ everything that was behind the blue 2 as a _Time Travel Chop Move_.
+- 首先，请参阅[_时间旅行弃牌位移动（直接形式）_](#the-time-travel-chop-move-direct-form)的章节。
+- 通常*时间旅行弃牌位移动*会直接提示重复的牌。但如果重复的牌受阻，无法干净地提示呢？
+- 这种情况下，玩家可以让重复的牌盲打而非直接提示，从而达到相同效果（即弃牌位*移*过重复牌右侧所有牌）。然而，需要注意确保最终结果真的足够“坏”，使得不被误解为其他类型的提示。
+- 具体来说：
+  - 提示必须不满足*提示价值下限原则*（类似于*误导性提示*）。
+    - 译注：自然也不能像*误导性节奏提示*。
+  - 提示必须看起来不像对接收提示者的[_受助废牌弃牌位移动_](#the-assisted-trash-chop-move)。
+- 例如在 3 人游戏中：
+  - 所有的 1 都已经打出。
+  - Cathy 有一张已知的蓝 2。
+  - Bob 手中有一张之前提示过的红牌，但不知道其数字。
+  - Alice 提示 Bob 数字 3，“填补”红牌为红 3。（提示没有触及其他牌。）
+  - Bob 知道这是对红 3 *飞*红 2。Bob 盲打*飞牌位*，但结果是蓝 2 而非红 2，且成功打出。
+  - 由于这次行动是 0 换 1，Bob 明白自己应该将弃牌位*移*过蓝 2 后面的所有牌，作为*时间旅行弃牌位移动*。
 
 <TimeTravelChopMoveBlind />

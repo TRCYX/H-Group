@@ -16,13 +16,13 @@ players:
       - type: x
       - type: 3
         clue: 3
-        above: Red 3
-        below: plays
+        above: 红 3
+        below: 打出
       - type: 3
         clue: 3
       - type: x
       - type: x
-  - text: After Bob plays red 3....
+  - text: Bob 打出红 3 后……
   - name: Bob
     cards:
       - type: x
@@ -30,9 +30,9 @@ players:
       - type: 3
         below:
           text:
-            - Blue 3
-            - Yellow 3
-            - Green 3
-            - Purple 3
+            - 蓝 3
+            - 黄 3
+            - 绿 3
+            - 紫 3
       - type: x
       - type: x

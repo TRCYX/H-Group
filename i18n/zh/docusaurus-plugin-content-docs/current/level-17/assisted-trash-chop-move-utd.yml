@@ -16,29 +16,37 @@ players:
       - type: x
       - type: x
       - type: x
-        above: Yellow 1
-        middleNote: (f)
-        below: plays
+        above: 黄 1
+        below: 打出
       - type: x
       - type: x
   - cards:
       - type: x
       - type: b
         clue: b
-        above: Blue 1
+        middleNote: (1)
       - type: x
       - type: x
       - type: x
-  - text: After Bob discharges yellow 1...
+  - text: Bob 被钓出黄 1 后……
   - name: Cathy
     cards:
       - type: x
       - type: b
-        middleNote: b1
+        below: 蓝 1
         trash: true
       - type: x
-        middleNote: cm
+        above:
+          text:
+            - 弃牌位
+            - 已移过
       - type: x
-        middleNote: cm
+        above:
+          text:
+            - 弃牌位
+            - 已移过
       - type: x
-        middleNote: cm
+        above:
+          text:
+            - 弃牌位
+            - 已移过

@@ -16,8 +16,8 @@ players:
       - type: x
       - type: 3
         clue: 3
-        above: Red 3
-        below: plays
+        above: 红 3
+        below: 打出
       - type: x
       - type: x
       - type: x
@@ -27,14 +27,23 @@ players:
       - type: x
       - type: x
       - type: r3
-  - text: After Bob plays red 3...
+  - text: Bob 打出红 3 后……
   - name: Bob
     cards:
       - type: x
       - type: x
       - type: x
-        middleNote: cm
+        above:
+          text:
+            - 弃牌位
+            - 已移过
       - type: x
-        middleNote: cm
+        above:
+          text:
+            - 弃牌位
+            - 已移过
       - type: x
-        middleNote: cm
+        above:
+          text:
+            - 弃牌位
+            - 已移过

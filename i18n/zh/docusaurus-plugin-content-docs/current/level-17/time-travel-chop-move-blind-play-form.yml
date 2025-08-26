@@ -14,9 +14,8 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Blue 2
-        middleNote: f
-        below: plays
+        above: 蓝 2
+        below: 打出
       - type: r3
         clue: 3
         retouched: true
@@ -29,14 +28,23 @@ players:
       - type: x
       - type: b2
       - type: x
-  - text: After Bob blind-plays blue 2...
+  - text: Bob 盲打蓝 2 后……
   - name: Bob
     cards:
       - type: x
       - type: r3
       - type: x
-        middleNote: cm
+        above:
+          text:
+            - 弃牌位
+            - 已移过
       - type: x
-        middleNote: cm
+        above:
+          text:
+            - 弃牌位
+            - 已移过
       - type: x
-        middleNote: cm
+        above:
+          text:
+            - 弃牌位
+            - 已移过
