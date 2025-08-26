@@ -22,7 +22,7 @@ players:
   - cards:
       - type: x
         border: false
-        above: 误打！
+        above: 误打!
         middleNote: (蓝5)
         below: 红 2
       - type: x

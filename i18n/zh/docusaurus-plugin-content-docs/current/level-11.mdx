@@ -34,7 +34,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
   - 接下来轮到 Bob。Bob 看到，这个红色提示刚刚告知 Cathy 她有红 3。
   - 从 Bob 的视角来看，这像是在*飞牌*——如果 Bob 现在不盲打红 3，Cathy 会将红 4 当作红 3 误打。
   - Bob 盲打 1 号位，期望它是红 3。然而它是蓝 3，成功打出。Bob 现在知道他被 Alice *诈飞*了。
-  - 接下来，Cathy 看到 Bob 在这个红色提示后立即盲打了一张蓝 3，因此她知道自己手中的红牌一定是*差一张可打出*的红 4。Cathy 保留红 4 将来使用，然后弃牌。
+  - 接下来，Cathy 看到 Bob 在这个红色提示后立即盲打了一张蓝 3，因此她知道自己手中的红牌一定是*差一张可打出*的红 4。Cathy 保留红 4 待之后使用，然后弃牌。
 
 <Bluff />
 
@@ -114,7 +114,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 ### Cathy 的相连原则（第二部分） \{#cathys-connecting-principle-part-2\}
 
-- 首先，请参见[_Bob 的真相原则_](#bobs-truth-principle-part-1)的部分。
+- 首先，请参阅[_Bob 的真相原则_](#bobs-truth-principle-part-1)的部分。
 - 之前，我们考虑了 Bob 在盲打之前的情况。
 - 现在，我们可以考虑 Bob 在盲打**之后**的情况，这也适用于 Cathy 和其他玩家。大家如何知道 Alice 是对 Bob 执行了*飞牌*还是*诈飞*？
 - 确认的方法是检查**盲打的牌是否与给出的提示<Em>“相连”</Em>**。如果相连，那么是*飞牌*。如果不相连，那么是*诈飞*。
@@ -228,7 +228,7 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 ### 提示的解读与奥卡姆剃刀 \{#clue-interpretation--occams-razor\}
 
-- 首先，请参见[_薛定谔的猫原则_](level-5.mdx#schrödingers-cat-principle)的章节。
+- 首先，请参阅[_薛定谔的猫原则_](level-5.mdx#schrödingers-cat-principle)的章节。
 - 当一个提示可能有多种解释时，通常涉及*薛定谔的猫原则*——玩家必须等待一轮，看看队友们会做什么，以找出提示的真实含义。但如果一个提示可能有多种解释，而玩家**不**需要等待其他人提供的信息呢？
 - 例如：
   - Alice 向 Cathy 给出一个奇怪的提示。
@@ -249,13 +249,13 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 ### 一丝内疚 \{#the-pang-of-guilt\}
 
-- 首先，请参见[_诈飞位_](#the-bluff-seat)的章节。
+- 首先，请参阅[_诈飞位_](#the-bluff-seat)的章节。
 - 直接提示一张牌之前，你应该先考虑这张牌是否处于*飞牌位*。如果是，你直接提示它，可能会“偷走”某人的*飞牌*或*诈飞*。
 - 这种情况下，弃牌并让*诈飞位*的玩家获取这张牌可能更好。如果你决定直接提示这张牌，你应该感到一丝*内疚*。
 
 ### 将多层飞牌误认为诈飞 \{#mistaking-a-layered-finesse-for-a-bluff\}
 
-- 首先，请参见[_多层飞牌_](level-5.mdx#the-layered-finesse)的章节。
+- 首先，请参阅[_多层飞牌_](level-5.mdx#the-layered-finesse)的章节。
 - 有时，玩家只会在*多层飞牌*中打出一张牌，然后停下（当他们其实应该继续挖出被保证的牌时）。
 - 由于*诈飞*只允许从*诈飞位*执行，如果提示者不在*诈飞位*，那么这样的提示**一定是**{}_层飞_，而不是*诈飞*。
 - 然而，在*诈飞位*，*诈飞*优先于*层飞*。
@@ -285,6 +285,6 @@ import BluffPromptsPromptBluffs from "./level-11/bluff-prompts-prompt-bluffs.yml
 
 ### 依序诈飞（违规） \{#queued-bluffs-illegal\}
 
-- 首先，请参见[_依序飞牌_](level-5.mdx#the-queued-finesse)的章节。
+- 首先，请参阅[_依序飞牌_](level-5.mdx#the-queued-finesse)的章节。
 - *依序飞牌*是被鼓励的，它们缺点很少。
 - 然而，玩家**绝对**不应该在被*飞*的玩家上再叠加一个*诈飞*。这是因为盲打的玩家会认为发生了*依序飞牌*，并继续打出第一次*飞牌*的牌。这意味着*诈飞*不会立即化解，违反了*谎言原则*。这个错误非常糟糕，会导致*信息*严重*失去同步*。
