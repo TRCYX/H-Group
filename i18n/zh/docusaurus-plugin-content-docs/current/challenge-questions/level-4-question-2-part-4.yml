@@ -1,0 +1,52 @@
+stacks:
+  - r: 1
+  - y: 0
+  - g: 0
+  - b: 1
+  - p: 0
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+        middleNote: (红1)
+  - cards:
+      - type: 1
+        clue: 1
+        middleNote: 第二
+        below: 新
+      - type: 1
+        clue: 1
+        middleNote: 第一
+        below:
+          text:
+            - 新 +
+            - 弃牌位
+          color: green
+      - type: r
+        middleNote: (2)
+      - type: 1
+        clue: 1
+        retouched: true
+        trash: true
+        middleNote: 第四
+        below:
+          text:
+            - 起手
+      - type: 1
+        clue: 1
+        retouched: true
+        middleNote: 第三
+        below:
+          text:
+            - 起手
+  - cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+        middleNote: (蓝1)

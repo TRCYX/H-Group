@@ -5,6 +5,10 @@ title: 等级 4 挑战题
 import Question1 from "./level-4-question-1.yml";
 import Solution1Part1 from "./level-4-question-1-part-2.yml";
 import Solution1Part2 from "./level-4-question-1-part-3.yml";
+import Question2Part1 from "./level-4-question-2-part-1.yml";
+import Question2Part2 from "./level-4-question-2-part-2.yml";
+import Question2Part3 from "./level-4-question-2-part-3.yml";
+import Solution2 from "./level-4-question-2-part-4.yml";
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
@@ -45,6 +49,57 @@ import TabItem from "@theme/TabItem";
 - 因此，Cathy 知道 Bob 的想要执行*顺序弃牌位移动*。Cathy 将弃牌位*移*过 3 号位。现在她的弃牌位在 2 号位，所以接下来她会弃掉 2 号位。
 
 <Solution1Part2 />
+
+</TabItem>
+</Tabs>
+
+## 问题 2 \{#question-2\}
+
+<Tabs
+  defaultValue="question2"
+  values={[
+    {label: '问题', value: 'question2'},
+    {label: '解答', value: 'solution2'},
+  ]}>
+<TabItem value="question2">
+
+- 现在是游戏的第一回合。
+- Alice 提示 Bob 数字 1。
+- 这些 1 的打出顺序是从右到左。
+
+<Question2Part1 />
+
+- Bob 打出最右边一张。是红 1，成功打出1。（Bob 抽了一张新牌。）
+- Cathy 做了不相关的事情。
+- Alice 提示 Bob 红色，提示到 Bob 的弃牌位。这一定是对红 2 的*出牌提示*。
+
+<Question2Part2 />
+
+- Bob 打出 5 号位。是蓝 1，成功打出。（Bob 抽了一张新牌。）
+- Cathy 做了不相关的事情。
+- Alice 再次提示 Bob 数字 1，提示到 Bob 的两张新牌，同时重新触及他起手的 1。
+- Bob 预期会打出哪张牌？
+
+<Question2Part3 />
+
+</TabItem>
+<TabItem value="solution2">
+
+- 有时，新 1 会与尚未打出的 1 在同一手牌中被提示。
+- 这时，之前 1 上关于打出顺序笔记要擦除，重新计算 1 的打出顺序。
+- 对于这样的计算，优先级保持不变：
+  - 弃牌位
+  - 新 1（从左到右）
+  - 起手的 1（从右到左）
+- 因此：
+  - Bob 擦除他所有 1 上的笔记。
+  - Bob 的 2 号位是弃牌位，所以他在上面写下“第一”。
+  - Bob 的 1 号位牌是新 1，他在上面写下“第二”。
+  - Bob 的 4 号位和 5 号位牌是起始手牌中的 1。他在 5 号位上写下“第三”，在 4 号位上写下“第四”。
+  - 此外，Bob 知道自己手中有四张 1，但只需要打出三张。因此，根据*良触原则*，他 4 号位的 1 永远不需要打出，所以他将其标记为已知废牌。
+  - Bob 打出他的 2 号位。是黄 1，成功打出。（由于这符合预期，所以不会*移动*任何玩家的弃牌位。）
+
+<Solution2 />
 
 </TabItem>
 </Tabs>

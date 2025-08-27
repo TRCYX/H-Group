@@ -1,0 +1,35 @@
+stacks:
+  - r: 1
+  - y: 0
+  - g: 0
+  - b: 1
+  - p: 0
+players:
+  - clueGiver: true
+    cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+  - cards:
+      - type: 1
+        clue: 1
+      - type: 1
+        clue: 1
+      - type: r
+        middleNote: (2)
+      - type: 1
+        clue: 1
+        retouched: true
+        middleNote: 第四
+      - type: 1
+        clue: 1
+        retouched: true
+        middleNote: 第三
+  - cards:
+      - type: x
+      - type: x
+      - type: x
+      - type: x
+      - type: x
