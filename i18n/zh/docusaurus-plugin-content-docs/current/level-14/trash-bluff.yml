@@ -1,9 +1,9 @@
 stacks:
-  - r: 0
-  - y: 1
-  - g: 1
-  - b: 1
-  - p: 1
+  - r: 1
+  - y: 2
+  - g: 2
+  - b: 2
+  - p: 2
 players:
   - clueGiver: true
     cards:
@@ -14,35 +14,34 @@ players:
       - type: x
   - cards:
       - type: x
-        above: 蓝 2
+        above: 蓝 3
       - type: x
       - type: x
       - type: x
       - type: x
   - cards:
       - type: x
-      - type: 1
-        clue: 1
+      - type: 2
+        clue: 2
         middleNote: (蓝)
       - type: x
+      - type: 2
+        clue: 2
+        middleNote: (绿)
       - type: x
-      - type: x
-  - text: Bob 盲打蓝 2 后……
+  - text: Bob 盲打蓝 3 后……
   - name: Cathy
     cards:
       - type: x
-      - type: 1
+      - type: 2
         trash: true
       - type: x
         above:
           text:
             - 弃牌位
             - 已移过
-      - type: x
-        above:
-          text:
-            - 弃牌位
-            - 已移过
+      - type: 2
+        trash: true
       - type: x
         above:
           text:

@@ -1,12 +1,6 @@
 // See: https://webpack.js.org/contribute/writing-a-loader/
 // TODO: go through all variables and remove them potentially
 
-// Needed because `Set.intersection` is not in Node 20. This polyfill can be removed when the
-// Node.js LTS is brought to version 22. Put an engines directive in "package.json" when this is the
-// case.
-// eslint-disable-next-line import-x/no-unassigned-import
-import "core-js/actual/set/index.js";
-
 import type { LoaderContext } from "webpack";
 import YAML from "yaml";
 import type {
@@ -176,7 +170,7 @@ class ImageGenerator {
             }
 
             return key;
-        });
+          });
 
     // Create a new SVG file.
     this.svgFile = new SVG();
