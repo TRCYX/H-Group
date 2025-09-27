@@ -11,32 +11,32 @@ players:
       - type: x
       - type: x
       - type: x
-  - text: Alice discards, it is Blue 3
-  - text: Alice writes Elimination Notes
+  - text: Alice 弃牌，是蓝 3
+  - text: Alice 写下排除笔记
   - name: Alice
     cards:
       - type: x
       - type: x
-        middleNote: b3?
+        middleNote: 蓝3?
       - type: x
-        middleNote: b3?
+        middleNote: 蓝3?
       - type: x
-        middleNote: b3?
+        middleNote: 蓝3?
       - type: x
-        middleNote: b3?
+        middleNote: 蓝3?
   - text: ""
   - name: Alice
     cards:
       - type: x
       - type: x
-        middleNote: b3?
+        middleNote: 蓝3?
       - type: x
-        middleNote: b3?
+        middleNote: 蓝3?
       - type: x
-        middleNote: b3?
+        middleNote: 蓝3?
       - type: x
-        above: Blue 3
-        middleNote: b3?
+        above: 蓝 3
+        middleNote: 蓝3?
   - clueGiver: true
     name: Bob
     cards:
@@ -51,6 +51,6 @@ players:
       - type: x
       - type: x
       - type: b
-        above: Blue 4
+        above: 蓝 4
         clue: b
       - type: x

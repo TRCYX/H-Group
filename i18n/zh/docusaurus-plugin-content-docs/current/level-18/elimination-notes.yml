@@ -11,27 +11,27 @@ players:
       - type: x
       - type: x
       - type: x
-  - text: Alice discards, it is Red 4
-  - text: Alice writes Elimination Notes
+  - text: Alice 弃牌，是红 4
+  - text: Alice 写下排除笔记
   - name: Alice
     cards:
       - type: x
       - type: x
-        middleNote: r4?
+        middleNote: 红4?
       - type: x
-        middleNote: r4?
+        middleNote: 红4?
       - type: x
-        middleNote: r4?
+        middleNote: 红4?
       - type: x
-        middleNote: r4?
+        middleNote: 红4?
   - text: ""
   - name: Alice
     cards:
       - type: r
-        middleNote: r5
+        middleNote: 红5
         clue: r
       - type: r
-        middleNote: r4?
+        middleNote: 红4?
         clue: r
       - type: x
       - type: x

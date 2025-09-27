@@ -9,11 +9,11 @@ players:
       - type: 4
         clue: 4
       - type: x
-        above: Blue 3
+        above: 蓝 3
       - type: x
-        middleNote: r3?
+        middleNote: 红3?
       - type: x
-        middleNote: r3?
+        middleNote: 红3?
       - type: x
   - cards:
       - type: x
