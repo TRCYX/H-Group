@@ -1,5 +1,5 @@
 ---
-title: Level 19 - 5 Tech
+title: 等级 19 - 5 技术
 ---
 
 import TheFivePull from "./level-19/the-five-pull.yml";
@@ -11,226 +11,226 @@ import TheFiveNumberEjection from "./level-19/the-five-number-ejection.yml";
 import TheFiveNumberDischarge from "./level-19/the-five-number-discharge.yml";
 import InteractionsBetween2SavesAnd5Stalls from "./level-19/interaction-between-2-saves-and-5-stalls.yml";
 
-## Conventions
+## 约定 \{#conventions\}
 
-### The Low Score Phase and the Normal Score Phase
+### 低分数阶段与正常分数阶段 \{#the-low-score-phase-and-the-normal-score-phase\}
 
-- At this point, you should already know that we split up the game of Hanabi into the _Early Game_ and the _Mid-Game_ (based on when someone discards).
-- In a similar way, we also split up the game of Hanabi into the _Low Score Phase_ and the _Normal Score Phase_:
-  - The _Low Score Phase_ is defined as when the score is below `2 x number of suits`. (e.g. 10 points in a no variant game, 6 points in a 3-suit game, etc.)
-  - The _Normal Score Phase_ is defined as when the score is equal to or past this threshold.
-- Some special moves using a number 5 clue can only be performed in the _Low Score Phase_ of the game.
-- On Hanab Live, the score will be colored cyan when the _Low Score Phase_ is active.
+- 现在，你应该已经知道我们将每局花火游戏分出*早期*和*中期*（基于何时有人弃牌）。
+- 类似地，我们也将每局花火游戏分出*低分数阶段*和*正常分数阶段*：
+  - *低分数阶段*定义为分数低于 `2 × 花色数量` 的阶段。（例如，在无变体游戏中为 10 分，在 3 花色游戏中为 6 分等等。）
+  - *正常分数阶段*定义为分数达到或超过此阈值的阶段。
+- 一些使用数字 5 提示的特殊行动只能在游戏的*低分数阶段*执行。
+- 在 Hanab Live 上，在*低分数阶段*时，分数会显示为青色。
 
-### No Play Clues with a Number 5 Clue in the Low Score Phase
+### 低分数阶段禁止用数字 5 作出出牌提示 \{#no-play-clues-with-a-number-5-clue-in-the-low-score-phase}
 
-- Normally, if a player uses a number 5 clue to clue a 5 that is two-or-more-away-from-chop, and that player is not a stalling situation, then it would be a _Play Clue_ on the 5.
-- However, all number 5 clues in the _Low Score Phase_ are **never** to be interpreted as a direct _Play Clue_.
-- They are instead interpreted as a more advanced move. (See the _[5 Pull](#the-5-pull)_ section below.)
-- This means that if players need to give a _Play Clue_ to a playable 5, and the score is less than 2 points per stack, then they **must** use a color clue, or wait until later.
+- 正常情况下，如果玩家用数字 5 来提示一张距离弃牌位差两张牌以上的 5，且该玩家不处于停顿局面，那么这会是对 5 的*出牌提示*。
+- 然而，在*低分数阶段*，**任何**数字 5 提示都**不应**解读为直接的*出牌提示*。
+- 相反，它们应解读为更高级的行动。（参见下面 _[5 拉](#the-5-pull)_ 的章节。）
+- 这意味着如果需要给可打出的 5 作*出牌提示*，而分数低于平均每花色 2 分，那么此时**必须**使用颜色提示，或者等到之后。
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The Early 5's Chop Move
+### 早期 5 弃牌位移动 \{#the-early-5s-chop-move}
 
-- First, see the section on the _[5 Stall](level-9.mdx#the-5-stall-intermediate-section)_.
-- In the _Early Game_, players are only allowed to perform a _5 Stall_ if there is nothing left to do. (Or, as a special exception, if there is only one _Play Clue_ to give and that card is on _Finesse Position_.)
-- Thus, if someone clues a 5 and there **is** something else to do, they must be trying to send an additional message.
-- If the 5 is one-away from chop, they intend for an _Early 5's Chop Move_. This functions in the exact same way a normal _5's Chop Move_ does (except it was done in the _Early Game_, which is not normally possible).
-- For level 21 players, there are [additional rules](level-21.mdx#interaction-between-the-chop-move-ignition-and-5-rank-clues) relating to the _Early 5's Chop Move_.
+- 首先，请参阅 _[5 停顿](level-9.mdx#the-5-stall-intermediate-section)_ 的章节。
+- 在*游戏早期*，只有在没有其他事可做时，玩家才允许执行 _5 停顿_。（或者作为特殊例外，如果只有一个可给的*出牌提示*，而其目标牌在*飞牌位*。）
+- 因此，如果有人提示了 5，而**有**其他事情可做，那么他们一定是在尝试传达额外的信息。
+- 如果这张 5 距离弃牌位差一张牌，那么他们想要做的是*早期 5 弃牌位移动*。这和普通的 *5 弃牌位移动*工作方式完全相同（只不过它是在*游戏早期*完成的，通常是不可能的）。
+- 对于等级 21 的玩家，有一些与*早期 5 弃牌位移动*相关的[附加规则](level-21.mdx#interaction-between-the-chop-move-ignition-and-5-rank-clues)。
 
-### The 5 Pull
+### 5 拉 \{#the-5-pull}
 
-- This convention only applies in the _Low Score Phase_.
-- Players are only allowed to perform a _5 Stall_ in certain situations. If a player performs a _5 Stall_ when it would otherwise be illegal, then it is not a _5 Stall_ at all, and would instead be:
-  - a _5's Chop Move_ if the 5 is one-away-from-chop
-  - a _Play Clue_ if the 5 is two-or-more-away-from-chop
-- However, since _Play Clues_ with number 5 clues are "turned off" in the _Low Score Phase_, then the cluing player must be intending something else: a _5 Pull_.
-- A _5 Pull_ causes the player to blind-play the card to the right of the 5. The clued 5 is not actually related to the blind-play. This is why it is called a _Pull_ instead of a _Finesse_ or a _Bluff_.
-- _5 Pulls_ are typically done to 5's that are on slot 1. But, for example, you can also clue a 5 in slot 2 in order to get a blind-play on slot 3.
-- _5 Pulls_ take precedence over _Finesses_ and _Bluffs_, because a number 5 clue is never considered to be _Play Clue_.
-- For example in a 3-player game:
-  - It is the _Early Game_ and the _Low Score Phase_.
-  - Red 3 is played on the stacks.
-  - Alice clues Cathy number 5, touching a red 5 on slot 1. (There are other _Play Clues_ for Alice to give, so this cannot be a _5 Stall_.)
-  - Normally, Bob would think that this is a _Finesse_ and that he should blind-play his _Finesse Position_ card as the red 4.
-  - However, Bob knows that _Play Clues_ with a number 5 clue are "turned off" in the _Low Score Phase_, which means that Alice is **not** indicating that the red 5 is playable.
-  - Bob can see that there is a playable blue 1 to the right of the 5, so Alice must be intending a _5 Pull_. When it gets to Cathy's turn, Cathy will blind-play that card.
+- 此约定仅适用于*低分数阶段*。
+- 仅在特定情况下，玩家允许执行 _5 停顿_。如果有玩家在不合规的情况下执行了 _5 停顿_，那么执行的根本就不是 _5 停顿_，而会是：
+  - _5 弃牌位移动_，若该 5 距离弃牌位差一张牌
+  - _出牌提示_，若该 5 距离弃牌位差两张牌以上
+- 然而，由于用数字 5 作出的*出牌提示*在*低分数阶段*“关闭”，所以给出提示的玩家想要执行的一定是另外的行动：_5 拉_。
+- *5 拉*令收到提示的玩家盲打 5 右侧的牌。提示到的 5 实际上与盲打无关。这就是为什么它被称为*拉*而不是*飞牌*或*诈飞*。
+- *5 拉*常在 1 号位的 5 上执行。但是比如说，你也可以提示 2 号位的 5 以便使 3 号位盲打。
+- *5 拉*优先于*飞牌*和*诈飞*，因为数字 5 提示不允许认作*出牌提示*。
+- 例如在 3 人游戏中：
+  - 现在是*游戏早期*以及*低分数阶段*。
+  - 红 3 已经打出。
+  - Alice 提示 Cathy 数字 5，提升到 1 号位的红 5。（Alice 还有其他*出牌提示*可给，所以这不可能是 _5 停顿_。）
+  - 正常情况下，Bob 会认为这是在*飞牌*，他应该盲打*飞牌位*作为红 4。
+  - 然而，Bob 知道用数字 5 作出的*出牌提示*在*低分数阶段*“关闭”，这意味着 Alice **并没有**表示红 5 可打出。
+  - Bob 可以看到 5 右侧是一张可打出的蓝 1，所以 Alice 一定是想要 _5 拉_。轮到 Cathy 的回合时，Cathy 将盲打那张牌。
 
 <TheFivePull />
 
-- Since _5 Pulls_ are never _Play Clues_ on the 5, it is possible to _5 Pull_ a 4 without promising that the 5 is the same suit.
-- Confusingly, _5 Pulls_ work differently from _Finesses_. Even though they involve playing a blind card, a _5 Pull_ should be treated as a _Delayed Play Clue_ (or a potential _Prompt_). This means that the blind card could play through any existing touched cards.
-- When a player is _Finessed_ or _Bluffed_, they are allowed to defer playing the blind card in order to do a _Finesse_ or _Bluff_ of their own. However, if they could be _Bluffed_, they are **not** allowed to initiate a _5 Pull_. (Players are still allowed to defer playing into a _Finesse_ in order to initiate a _5 Pull_.)
-- In the rare case where a _5 Pull_ is performed in a 3-player game by touching two 5's in slot 1 and slot 3, then the _5 Pulled_ card is slot 2.
-- Remember that a number 5 clue [is always a _5 Stall_ instead of a _5 Pull_ if the only card ignored is a 2 on chop](#interaction-between-2-saves--5-stalls).
+- 由于 *5 拉*不是对提示到的 5 的*出牌提示*，所以可以 *5 拉*一张 4，而不保证 5 是同一花色。
+- 可能令人困惑的是，*5 拉*与*飞牌*不同。即使同样涉及盲打，*5 拉*也应被视为*延迟出牌提示*（或潜在的*引牌*）。这意味着要盲打的牌有可能需要在现有提示过的牌之后才能打出。
+- 当玩家被*飞*或*诈飞*时，可以推迟盲打以执行自己的*飞牌*或*诈飞*。然而，如果玩家可能被*诈飞*，则**禁止**发起 _5 拉_。（玩家仍然允许推迟为*飞牌*盲打以发起 _5 拉_。）
+- 在 3 人游戏中通过提示 1 号位和 3 号位的两张 5 来 *5 拉*的罕见情况中，被 *5 拉*的牌是 2 号位。
+- 记住，如果唯一被忽略的牌是一张弃牌位上的 2，那么数字 5 提示[总是 *5 停顿*而不是 _5 拉_](#interaction-between-2-saves--5-stalls)。
 
-### The 5 Pull Prompt & The 5 Pull Finesse
+### 5 拉引牌与 5 拉飞牌 \{#the-5-pull-prompt--the-5-pull-finesse}
 
-- _5 Pulls_ are also allowed to initiate a _Prompt_ or _Finesse_.
-- For example, in a 4-player game:
-  - It is the first turn of the game and nothing is played on the stacks.
-  - Cathy's hand is as follows, from newest to oldest: `blue 4, blue 5, red 2, red 2`
-  - Donald's hand is as follows, from newest to oldest: `yellow 4, green 1, yellow 3, yellow 3`
-  - Alice clues number 5 to Cathy, touching the blue 5 on slot 2.
-  - Bob knows that since the team is the _Early Game_, Alice's clue might be a _5 Stall_.
-  - However, Bob also knows that you are only allowed to perform a _5 Stall_ if there are no normal _Save Clues_ or _Play Clues_ to give. Bob sees that Donald has a green 1 that could be _Play Clued_. Thus, Bob knows that Alice's clue cannot be a _5 Stall_, which makes it a _5 Pull_ instead (since it is two-or-more-away from the chop).
-  - Bob knows that if this was a _5 Pull_, it would be pulling the red 2. If Bob does nothing, Cathy might go on to misplay the red 2 as some playable 1.
-  - Thus, this must be a _5 Pull Finesse_, so Bob blind-plays his _Finesse Position_. It is a red 1 and it successfully plays.
-  - Cathy knows that the only reason that Bob would blind-play a card is it this was a _5 Pull Finesse_. Cathy blind-plays her slot 3 card. It is a red 2 and it successfully plays.
+- *5 拉*也被可以发起*引牌*或*飞牌*。
+- 例如在 4 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Cathy 的手牌如下，从新到老：`蓝 4、蓝 5、红 2、红 2`
+  - Donald 的手牌如下，从新到老：`黄 4、绿 1、黄 3、黄 3`
+  - Alice 提示 Cathy 数字 5，提示到 2 号位的蓝 5。
+  - Bob 知道现在是*游戏早期*，Alice 的提示可能是 _5 停顿_。
+  - 然而，Bob 也知道只有在没有普通的*留牌提示*或*出牌提示*可给时才允许执行 _5 停顿_。Bob 看到 Donald 有一张绿 1 可以给出*出牌提示*。于是，Bob 知道 Alice 的提示不可能是 _5 停顿_，从而形成 _5 拉_（因为距离弃牌位差两张牌以上）。
+  - Bob 知道如果这是 _5 拉_，它会拉出红 2。如果 Bob 什么都不做，Cathy 可能会将红 2 当作某张可打出的 1 误打。
+  - 因此，这一定是 _5 拉飞牌_，所以 Bob 盲打*飞牌位*。结果是一张红 1，成功打出。
+  - Cathy 知道 Bob 会盲打一张牌的唯一原因是这是一次 _5 拉飞牌_。Cathy 盲打她的 3 号位牌。结果是一张红 2，并且成功打出。
 
 <TheFivePullPrompt />
 
-- Unlike other types of _Finesses_, _5 Pull Finesses_ **must** be demonstrated with a blind-play between when the _5 Pull_ is given and the _5 Pulled_ player's next turn (e.g. a _Forward Finesse_).
-- Subsequently, _5 Pulls_ are **not** allowed to initiate a _Reverse Finesse_. (This is because we don't want the person with the pulled card to have to entertain too many possibilities.)
-- Remember that during a _5 Pull Finesse_, the pulled card **always** connects to the blind-play. In other words, it not possible to perform a _5 Pull Bluff_.
+- 与其他类型的*飞牌*不同，在 *5 拉*给出和被 *5 拉*的玩家的下一回合之间，_5 拉飞牌_**必须**至少展现一次盲打（例如是*正向飞牌*）。
+- 因此，_5 拉_**不允许**引起*反向飞牌*。（这是因为我们不希望被拉的玩家需要考虑过多的可能性。）
+- 记住，在 *5 拉飞牌*中，被拉的牌**必须**与盲打相连。换句话说，不可能执行 _5 拉诈飞_。
 
-### The 5 Pull Double Finesse
+### 5 拉双重飞牌 \{#the-5-pull-double-finesse}
 
-- First, see the section on the [5 Pull Finesse](#the-5-pull-prompt--the-5-pull-finesse).
-- As you would expect, it is also possible to perform a _5 Pull Double Finesse_ in the exact same way that you can _5 Pull Finesse_.
-- The "pulled" card will always connect to the final blind-play.
-- For example in a 4-player game:
-  - It is the first turn of the game and nothing is played on the stacks.
-  - Donald's hand is as follows, from newest to oldest: `blue 4, blue 5, red 3, yellow 1`
-  - Alice clues number 5 to Donald, touching the blue 5 on slot 2.
-  - Bob blind-plays the red 1 (because he knows that it cannot be a _5 Stall_).
-  - Cathy blind-plays the red 2 (because she knows that she needs to play into the _Double Finesse_).
-  - Donald knows that the _5 Pulled_ card is the red 3 (connecting to the red 1 and the red 2).
+- 首先，请参阅[5 拉飞牌](#the-5-pull-prompt--the-5-pull-finesse)的章节。
+- 如你所料，也可以以与 *5 拉飞牌*完全相同的方式执行 _5 拉双重飞牌_。
+- “被拉”的牌必须与最后的盲打相连。
+- 例如在 4 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Donald 的手牌如下，从新到老：`蓝 4、蓝 5、红 3、黄 1`
+  - Alice 提示 Donald 数字 5，提示到 2 号位的蓝 5。
+  - Bob 盲打出红 1（因为他知道这不可能是 _5 停顿_）。
+  - Cathy 盲打出红 2（因为她知道需要响应*双重飞牌*）。
+  - Donald 知道 *5 拉*出的牌是红 3（与红 1 和红 2 相连）。
 
 <TheFivePullDoubleFinesse />
 
-- Previously, we said that _5 Pull Finesse_ **must** be a _Forward Finesse_. However, _5 Pulled_ players **do** have to respect that a _5 Pull Finesse_ can be a _5 Pull Double Finesse_ with the second blind-play as a _Reverse Finesse_. (Specifically, we refer to this as a _Finesse_ with a _Reverse Finesse_ component.)
-- More examples of a _5 Pull Double Finesse_ can be found [here](examples/5-pull-double-finesse.mdx).
+- 之前我们说过，_5 拉飞牌_**必须**是*正向飞牌*。然而，被 *5 拉*的玩家也**必须**考虑到 *5 拉飞牌*可能是 _5 拉双重飞牌_，其中第二次盲打是*反向飞牌*。（具体来说，我们称此为带有*反向*成分的*飞牌*。）
+- 更多 *5 拉双重飞牌*的例子可以在[这里](examples/5-pull-double-finesse.mdx)找到。
 
-### The 5 Pull Clandestine Finesse
+### 5 拉暗飞牌 \{#the-5-pull-clandestine-finesse}
 
-- First, see the section on the [5 Pull Finesse](#the-5-pull-prompt--the-5-pull-finesse).
-- A _5 Pull Finesse_ **must** be a _Forward Finesse_.
-- However, _5 Pulled_ players **do** have to respect that the _Finesse_ can be _Clandestine_.
-- For example in a 3-player game:
-  - It is the first turn of the game and nothing is played on the stacks.
-  - Bob's hand is as follows, from newest to oldest: `red 1, green 1, green 4, green 4, green 5`
-  - Cathy's hand is as follows, from newest to oldest: `blue 4, blue 1, blue 5, green 2, blue 2`
-  - Alice clues number 5 to Cathy, touching the blue 5 on slot 3.
-  - Bob blind-plays the red 1 (because he knows that it cannot be a _5 Stall_).
-  - Normally, Cathy would think that Alice performed a _5 Pull Finesse_, and she would blind-play her slot 4 card as the red 2 (which would connect to the red 1).
-  - However, Cathy also sees that at the time of the clue, Bob had a playable green 1 behind the red 1. Thus, it is possible that Alice might be performing a _5 Pull Clandestine Finesse_.
-  - Cathy performs an unrelated action.
-  - Alice performs an unrelated action.
-  - Bob blind-plays the green 1 from slot 2.
-  - Cathy now knows that this was indeed a _5 Pull Clandestine Finesse_ and that she has the green 2 on her slot 4.
+- 首先，请参阅[5 拉飞牌](#the-5-pull-prompt--the-5-pull-finesse)的章节。
+- _5 拉飞牌_**必须**是*正向飞牌*。
+- 然而，被 *5 拉*的玩家**必须**考虑到该*飞牌*可能是*暗飞牌*。
+- 例如在 3 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Bob 的手牌如下，从新到老：`红 1、绿 1、绿 4、绿 4、绿 5`
+  - Cathy 的手牌如下，从新到老：`蓝 4、蓝 1、蓝 5、绿 2、蓝 2`
+  - Alice 提示 Cathy 数字 5，提示到 3 号位的蓝 5。
+  - Bob 盲打红 1（因为他知道不可能是 _5 停顿_）。
+  - 通常，Cathy 会认为 Alice 执行了 _5 拉飞牌_，她会盲打 4 号位牌作为红 2（与红 1 相连）。
+  - 然而，Cathy 也看到在提示发起时，Bob 在红 1 后还有一张可打出的绿 1。所以，Alice 可能在执行 _5 拉暗飞牌_。
+  - Cathy 执行了不相关的行动。
+  - Alice 执行了不相关的行动。
+  - Bob 从 2 号位盲打绿 1。
+  - Cathy 现在知道这确实是 _5 拉暗飞牌_，而她的 4 号位上是绿 2。
 
 <TheFivePullClandestineFinesse />
 
-### The 5 Pull Promise (A Play Clue After a 5 Pull)
+### 5 拉的保证（5 拉之后的出牌提示） \{#the-5-pull-promise-a-play-clue-after-a-5-pull}
 
-- Normally, _5 Pulls_ have to be treated as _Delayed Play Clues_. This means that sometimes, it can take a long time for the pulled card to blind-play.
-- From the perspective of the player who is _5 Pulled_, if a follow up _Play Clue_ is given to a currently unplayable card, then they can disregard the _Delayed Play Clue_ interpretation - the _5 Pulled_ player is **promised** the card that makes the unplayable card playable.
-- For example, in a 4-player game:
-  - Alice has two clued 1's in her hand - red 1 and blue 1.
-  - Bob does a _5 Pull_ on Donald. Donald knows that the _5 Pulled_ card could be either red 2 or blue 2 (if it is a _Delayed Play Clue_).
-  - Cathy clues Alice about a red 3. Now, Donald knows that he is **promised** the red 2 as his _5 Pulled_ card (and he no longer has to wait for the blue 1 to come down before blind-playing).
+- 通常，*5 拉*必须视为*延迟出牌提示*。这意味着有时拉出的牌可能要很长时间后才能盲打。
+- 从被 *5 拉*的玩家的视角来看，如果后续的*出牌提示*指向了一张当前不可打出的牌，那么他们可以忽略*延迟出牌提示*的解释——被 *5 拉*的玩家被**保证**拉出的牌能使那张不可打出牌变为可打出。
+- 例如在 4 人游戏中：
+  - Alice 手中有两张被提示过的 1——红 1 和蓝 1。
+  - Bob 对 Donald 执行 _5 拉_。Donald 知道 *5 拉*出的牌可能是红 2 或蓝 2（如果是*延迟出牌提示*）。
+  - Cathy 提示 Alice 一张红 3。现在，Donald 知道他被**保证**红 2 是他被 *5 拉*出的牌（所以他不再需要等待蓝 1 打出后再盲打）。
 
 <TheFivePullPromise />
 
-### Finesses While 5 Pulled are Certain Finesses
+### 被 5 拉时发起的飞牌是确定性飞牌 \{#finesses-while-5-pulled-are-certain-finesses}
 
-- Sometimes, a _5 Pulled_ player may not play their pulled card right away. Maybe they have to wait for existing cards to play first, or maybe they want to capitalize on a _Finesse_ while it is still available.
-- Any _Finesse_ that a _5 Pulled_ player performs is to be treated as a _Certain Finesse_.
-- Any _Certain Discard_ that is performed in response to a _Finesse_ that a _5 Pulled_ player did applies to the _5 Pulled_ card.
+- 有时，被 *5 拉*的玩家可能不会立即打被拉出的牌。他们有可能必须等现有的牌先打出，也有可能他们想在某个*飞牌*还存在时从中获利。
+- 被 *5 拉*的玩家执行的任何*飞牌*都应视为*确定性飞牌*。
+- 为响应被 *5 拉*的玩家发起的*飞牌*而进行的任何*确定性弃牌*都指向被 *5 拉*出的牌。
 
-### The 5 Pull Skip
+### 5 拉跳过 \{#the-5-pull-skip}
 
-- If a player is already _Finessed_, it is possible to _Finesse_ them again and get them to play their _Second Finesse Position_ card.
-- Similarly, if a _5 Pull_ is performed, and the card immediately to the right of a 5 is already clued or already "gotten", then the _5 Pull_ skips over that card and gets the next card after that.
+- 如果一名玩家已经被*飞*，可以再次*飞*他们，让他们打*第二飞牌位*。
+- 类似地，如果被 *5 拉*过，而紧邻 5 右侧的牌已经被提示过或已经被“获取”，那么 *5 拉*会跳过那张牌而获取其后的下一张牌。
 
-### The 5 Number Ejection (5NE)
+### 5 数字饵牌 (5NE) \{#the-5-number-ejection-5ne}
 
-- This convention only applies in the _Low Score Phase_.
-- Players are only allowed to perform a _5 Stall_ in certain situations. If a player performs a _5 Stall_ when it would otherwise be illegal, then it is not a _5 Stall_ at all, and would instead be:
-  - a _5's Chop Move_ if the 5 is one-away-from-chop
-  - a _5 Pull_ if the 5 is two-or-more-away-from-chop and the card to the right of it is playable
-  - a _5 Pull Finesse_ if the 5 is two-or-more-away-from-chop and the card to the right of it is _one-away-from-playable_
-- However, what if the 5 is two-or-more-away-from-chop and the card to the right of it is _two-or-more-away-from-playable_? This would be quite strange.
-- We agree that this signals an _Ejection_ and that the next player should play their _Second Finesse Position_.
-- For example, in a 3-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Alice clues number 5 to Cathy, touching a 5 on slot 1.
-  - Cathy's hand is, from newest to oldest: `red 5, red 3, green 2, green 1, green 2`
-  - Bob thinks about what Alice's 5 clue could mean:
-    - The clue cannot be a _5 Stall_, because there is a green 1 to _Play Clue_.
-    - The clue cannot be a _5 Pull_, because the red 3 is not playable.
-    - The clue cannot be a _5 Pull Finesse_, because the red 3 is _two-away-from-playable_.
-  - Since Bob would have to blind-play two cards into the _Finesse_ (the same rule as in _5 Color Ejections_), Bob knows that he should instead treat this as a _5 Number Ejection_. Bob blind-plays his slot 2 card and it successfully plays as the red 1.
-- After a _5 Number Ejection_, the card next to the 5 should be globally marked as _Chop Moved_, and marked accordingly as _two-or-more-away-from-playable_. For example, in a no variant game, the card would always be a 3 or 4.
+- 此约定仅适用于*低分数阶段*。
+- 仅在特定情况下，玩家允许执行 _5 停顿_。如果有玩家在不合规的情况下执行了 _5 停顿_，那么执行的根本就不是 _5 停顿_，而会是：
+  - _5 弃牌位移动_，若该 5 距离弃牌位差一张牌
+  - _5 拉_，若该 5 距离弃牌位差两张牌以上，且其右侧的牌可打出
+  - _5 拉飞牌_，若该 5 距离弃牌位差两张牌以上，且其右侧的牌差一张可打出
+- 然而，如果 5 距离弃牌位两张牌以上，且其右侧的牌*差两张以上可打出*呢？这会非常奇怪。
+- 我们约定这表示一次*饵牌*，下一名玩家应该打出*第二飞牌位*。
+- 例如在 3 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Alice 提示 Cathy 数字 5，提示到 1 号位的一张 5。
+  - Cathy 的手牌，从新到老是：`红 5、红 3、绿 2、绿 1、绿 2`
+  - Bob 考虑 Alice 的 5 提示可能的意思：
+    - 该提示不可能是 _5 停顿_，因为有一张绿 1 可以给出*出牌提示*。
+    - 该提示不可能是 _5 拉_，因为红 3 不可打出。
+    - 该提示不可能是 _5 拉飞牌_，因为红 3 _差两张可打出_。
+  - 由于 Bob 需要盲打两张牌来完成*飞牌*（与 *5 颜色饵牌*的规则相同），Bob 知道他应该将此视为 _5 数字饵牌_。Bob 盲打 2 号位，结果是一张红 1，成功打出。
+- 在 *5 数字饵牌*之后，5 旁边的牌应全员标记为*已被弃牌位移过*，并相应标记为*差两张以上可打出*。例如，在无变体游戏中，这张牌一定是 3 或 4。
 
 <TheFiveNumberEjection />
 
-### The 5 Number Discharge (5ND)
+### 5 数字钓牌 (5ND) \{#the-5-number-discharge-5nd}
 
-- This convention only applies in the _Low Score Phase_.
-- When a _5 Pull_ is given, depending on the playability of the _pulled_ card, it would trigger a normal _5 Pull_, a _5 Pull Finesse_, or a _5 Number Ejection_.
-- But what if the card was not playable at all? In other words, what happens if a _5 Pulled_ card is trash?
-- We agree that this signals a _Discharge_ and that the next player should play their _Third Finesse Position_.
-- For example, in a 3-player game:
-  - All the 1's are played on the stacks.
-  - Alice clues number 5 to Cathy, touching a 5 on slot 1.
-  - Cathy's hand is, from newest to oldest: `blue 5, red 1, green 2, green 4, yellow 1`
-  - Bob thinks about what Alice's 5 clue could mean:
-    - The clue cannot be a _5 Stall_, because there is a green 2 to _Play Clue_.
-    - The clue cannot be a _5 Pull_, because the red 1 is not playable.
-    - The clue cannot be a _5 Pull Finesse_, because the red 1 is not _one-away-from-playable_.
-    - The clue cannot be a _5 Number Ejection_, because the red 1 is not _two-or-more-away-from-playable_.
-  - Thus, Bob knows that this is a _5 Number Discharge_. He blind-plays his _Third Finesse Position_ card. It is a blue 2 and successfully plays.
+- 此约定仅适用于*低分数阶段*。
+- 当给出 *5 拉*时，根据*拉*出的牌距离可打出的程度，可能会触发普通的 _5 拉_、*5 拉飞牌*或 _5 数字饵牌_。
+- 但是，如果该牌完全不可打出呢？换句话说，如果 *5 拉*出的牌是废牌会发生什么？
+- 我们约定这表示一次*钓牌*，下一名玩家应该打出*第三飞牌位*。
+- 例如在 3 人游戏中：
+  - 所有的 1 都已经打出。
+  - Alice 提示 Cathy 数字 5，提示到 1 号位的一张 5。
+  - Cathy 的手牌，从新到老是：`蓝 5、红 1、绿 2、绿 4、黄 1`
+  - Bob 考虑 Alice 的 5 提示可能的意思：
+    - 这个提示不可能是 _5 停顿_，因为有一张绿 2 可以给出*出牌提示*。
+    - 这个提示不可能是 _5 拉_，因为红 1 不可打出。
+    - 这个提示不可能是 _5 拉飞牌_，因为红 1 不是*差一张可打出*。
+    - 这个提示不可能是 _5 数字饵牌_，因为红 1 不是*差两张以上可打出*。
+  - 于是，Bob 知道这是 _5 数字钓牌_。他盲打*第三飞牌位*。结果是一张蓝 2，成功打出。
 
 <TheFiveNumberDischarge />
 
-- After a _5 Number Discharge_, the card next to the 5 should be marked as globally known-trash.
-  - This means that the card counts as having a positive clue on it (as if it was used to perform a _Trash Chop Move_, for example).
-  - Subsequently, the clued player's _Finesse Position_ should move to the next unclued card.
+- 在 *5 数字钓牌*之后，5 旁边的牌应标记为全员已知的废牌。
+  - 这意味着这张牌视作带有提示（比如说，就像它被用来执行*垃圾弃牌位移动*一样）。
+  - 收到提示的玩家的*飞牌位*从而应移动到下一张未提示过的牌。
 
-### The 5 Number Ejection Finesse Position Skips
+### 5 数字饵牌的飞牌位跳过 \{#the-5-number-ejection-finesse-position-skips}
 
-- First, see the section on the _[5 Number Ejection](#the-5-number-ejection-5ne)_ and the _[5 Number Discharge](#the-5-number-discharge-5nd)_.
-- After a _5 Number Ejection_, the card next to the 5 will be marked as a _Chop Moved_ _two-or-more-away-from-playable_ card.
-- Normally, _Chop Moved_ cards are not on _Finesse Position_, because they are on the right-side of the hand. However, after a _5 Number Ejection_, it is possible for the _Chop Moved_ card to become on _Finesse Position_.
-- If a _Finesse_ happens in such a situation, the holder of the _Chop Moved_ card should either play the _Chop Moved_ card **or** skip over it, depending on the situation:
-  - Normally, they should simply treat the _Chop Moved_ card as being on _Finesse Position_, and play the _Chop Moved_ card.
-  - However, if the _Finesse_ is calling for a card that was not two-or-more-away-from-playable at the time of the _5 Number Ejection_, then obviously the _Chop Moved_ card cannot be the _Finesse_ target, and they should instead skip over the _Chop Moved_ card and play the next _Finesse Position_ card.
+- 首先，请参阅 _[5 数字饵牌](#the-5-number-ejection-5ne)_ 和 _[5 数字钓牌](#the-5-number-discharge-5nd)_ 的章节。
+- 在 *5 数字饵牌*之后，5 旁边的牌将被标记为*已被弃牌位移过*的*差两张以上可打出*的牌。
+- 通常，*弃牌位已移过*的牌不会在*飞牌位*上，因为它们处于手牌的右侧。然而，在 *5 数字饵牌*之后，*弃牌位已移过*的牌有可能在*飞牌位*上。
+- 如果在这种情况下发生*飞牌*，持有*弃牌位已移过*的牌的玩家应该视具体情况，**要么**打出这张牌，**要么**跳过它：
+  - 通常，他们应该简单地将*弃牌位已移过*的牌视为在*飞牌位*上，打出*弃牌位已移过*的牌。
+  - 然而，如果*飞牌*需要的牌在 *5 数字饵牌*发生时并非*差两张以上可打出*，那么显然这张*弃牌位已移过*的牌不可能是*飞牌*目标。他们应该跳过这张牌并打出下一*飞牌位*的牌。
 
-## General Principles
+## 一般原则 \{#general-principles}
 
-### A Flowchart for Cluing 5's
+### 提示 5 的流程图 \{#a-flowchart-for-cluing-5s}
 
-- Differentiating between a _5 Stall_ and a _5 Pull_ can sometimes be confusing. Here is a flowchart that steps you through how you can tell the difference:
+- 有时区分 *5 停顿*和 *5 拉*可能会令人困惑。以下是一个流程图，可以逐步告诉你如何区分：
 
 ```mermaid
 flowchart TD;
 
-S(It is the _Early Game_ and one or more 5's are clued with number 5.)
-D1[/Was the right-most 5 on chop?\]
-D1Y([Yes])
-D1N([No])
-D1YL("It is a _**Save Clue**_ on the 5.")
-D2[/Did the cluer have a play or a safe discard?\]
-D2Y([Yes])
-D2N([No])
-D3[/Was there any other _Play Clue_ or _Save Clue_ that the cluer could have given instead?\]
-D3Y([Yes])
-D3N([No])
-D4[/Was the only thing left to do was to give a _Play Clue_ to a finesseable card on _Finesse Position_?\]
-D4Y([Yes])
-D4N([No])
-D5[/Were there any other 5's that were closer to chop than this one?\]
-D5Y([Yes])
-D5N([No])
-D5NL("It is a _**5 Stall**_.<br/ ><br/ >(It is an early save on the 5 and nothing special should happen.)")
-D6[/Was the right-most 5 one-away from chop?\]
-D6Y([Yes])
-D6N([No])
-D6YL("It is an _**Early 5's Chop Move**_.<br/ ><br/ >(They should _Chop Move_ the card to the right of the 5.)")
-D6NL("It is a _**5 Pull**_.<br/ ><br/ >(They should blind-play the card to the right of the 5.)")
+S(现在是*游戏早期*，一张或以上 5 被数字 5 提示。)
+D1[/最右侧的 5 在弃牌位上吗？\]
+D1Y([是])
+D1N([否])
+D1YL("这是对 5 的***留牌提示***。")
+D2[/提示者当时有可打的牌或安全的弃牌吗？\]
+D2Y([是])
+D2N([否])
+D3[/提示者当时有其他*出牌提示*或*留牌提示*可以给吗？\]
+D3Y([是])
+D3N([否])
+D4[/唯一剩下可做的事是对*飞牌位*上一张可能可以*飞*的牌给出*出牌提示*吗？\]
+D4Y([是])
+D4N([否])
+D5[/有其他 5 比这张更靠近弃牌位吗？\]
+D5Y([是])
+D5N([否])
+D5NL("这是 ***5 停顿***。<br/ ><br/ >（这是对 5 的提前保留，不应发生任何特殊事情。）")
+D6[/最右侧的 5 距离弃牌位差一张牌吗？\]
+D6Y([是])
+D6N([否])
+D6YL("这是 ***早期 5 弃牌位移动***。<br/ ><br/ >（他们应该*将弃牌位移过* 5 右侧的牌。）")
+D6NL("这是 ***5 拉***。<br/ ><br/ >（他们应该盲打 5 右侧的牌。）")
 
 class D1Y,D2Y,D3Y,D4Y,D5Y,D6Y node-yes
 class D1N,D2N,D3N,D4N,D5N,D6N node-no
@@ -264,19 +264,19 @@ D6Y --> D6YL;
 D6N --> D6NL;
 ```
 
-### Interaction Between 2 Saves & 5 Stalls
+### 留 2 提示与 5 停顿的互动 \{#interaction-between-2-saves--5-stalls}
 
-- Normally, players are only allowed to _5 Stall_ if there is nothing else to do. If there is something else to do, then the number 5 clue signals a more advanced move.
-- Sometimes, a player can receive a _5 Stall_ clue when:
-  1. A _2 Save_ still needs to be done to another player
-  1. That _2 Save_ is the only clue left
-- In this situation, players should assume the least complicated thing: a _5 Stall_. Because of the _[Visible Rule](level-1.mdx#the-visible-rule)_, the player who gave the _5 Stall_ clue was not allowed to perform the _2 Save_ because the other copy was visible.
-- In this situation, the player who received the _5 Stall_ should write _Elimination Notes_ on their hand for the other copy of the 2. Furthermore, they are not allowed to _2 Save_ the other copy of the 2, so they must give some other clue or discard.
-- For example, in a 4-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Alice clues number 5 to Bob, touching a 5 on slot 1.
-  - From Bob's perspective, he does not see any other _Play Clues_ or _Save Clues_ that Alice could have given, with the exception of a _2 Save_ on a red 2 on Cathy's chop.
-  - Thus, Alice's number 5 clue could be either a _5 Pull_ or a _5 Stall_, depending on whether or not Bob has the other copy of the red 2 in his hand.
-  - Bob knows that in this situation, _5 Stalls_ take precedence over _5 Pulls_, so he marks his hand for the other copy of red 2 and discards.
+- 通常，只有在没有其他事情可做时，玩家才允许执行 _5 停顿_。如果有其他事情可做，那么数字 5 提示表示更高级的行动。
+- 有时，玩家会在以下情况下收到 *5 停顿*提示：
+  1. 仍然需要对另一名玩家作*留 2 提示*
+  1. 该*留 2 提示*是唯一剩下的提示
+- 在这种情况下，玩家应假定是最简单的情况：_5 停顿_。有可能出于*可见规则*，给出 *5 停顿*提示的玩家无法执行*留 2 提示*，因为另外一张相同的 2 可见。
+- 在这种情况下，收到 *5 停顿*的玩家应在手牌上为另一张相同的 2 写下*排除笔记*。此外，他们不允许对这张 2 作出*留 2 提示*，他们必须给出其他提示或弃牌。
+- 例如在 4 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Alice 提示 Bob 数字 5，提示到 1 号位的一张 5。
+  - 从 Bob 的视角来看，除了对 Cathy 弃牌位上的红 2 作出*留 2 提示*，他看不到 Alice 可以给任何其他*出牌提示*或*留牌提示*。
+  - 因此，Alice 的数字 5 提示可能是 *5 拉*或 _5 停顿_，取决于 Bob 手中是否有另一张红 2。
+  - Bob 知道在这种情况下，*5 停顿*优先于 _5 拉_，因此他标记自己的手牌有另一张红 2 并弃牌。
 
 <InteractionsBetween2SavesAnd5Stalls />

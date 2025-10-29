@@ -5,7 +5,7 @@ stacks:
   - b: 1
   - p: 1
 bigText:
-  text: low score
+  text: 低分数阶段
   color: black
 players:
   - clueGiver: true
@@ -19,24 +19,23 @@ players:
       - type: x
       - type: x
       - type: x
-        above: Blue 2
-        below: plays
+        above: 蓝 2
+        below: 打出
       - type: x
       - type: x
   - cards:
       - type: 5
         clue: 5
-        above: Blue 5
+        above: 蓝 5
       - type: x
-        above: Red 1
-        middleNote: kt
+        above: 红 1
+        trash: true
         below:
           text:
-            - globally
-            - known
+            - 全员已知
       - type: x
-        above: Green 2
+        above: 绿 2
       - type: x
-        above: Green 4
+        above: 绿 4
       - type: x
-        above: Yellow 1
+        above: 黄 1

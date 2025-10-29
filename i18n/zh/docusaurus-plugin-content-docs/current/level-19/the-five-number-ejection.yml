@@ -5,7 +5,7 @@ stacks:
   - b: 0
   - p: 0
 bigText:
-  text: first turn
+  text: 第一回合
   color: black
 players:
   - clueGiver: true
@@ -18,21 +18,21 @@ players:
   - cards:
       - type: x
       - type: x
-        above: Red 1
-        below: plays
+        above: 红 1
+        below: 打出
       - type: x
       - type: x
       - type: x
   - cards:
       - type: 5
         clue: 5
-        above: Red 5
+        above: 红 5
       - type: x
-        above: Red 3
-        middleNote: 3,4
+        above: 红 3
+        middleNote: 3､4
       - type: x
-        above: Green 2
+        above: 绿 2
       - type: x
-        above: Green 1
+        above: 绿 1
       - type: x
-        above: Green 2
+        above: 绿 2
