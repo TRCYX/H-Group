@@ -26,14 +26,14 @@ import InteractionsBetween2SavesAnd5Stalls from "./level-19/interaction-between-
 
 - 正常情况下，如果玩家用数字 5 来提示一张距离弃牌位差两张牌以上的 5，且该玩家不处于停顿局面，那么这会是对 5 的*出牌提示*。
 - 然而，在*低分数阶段*，**任何**数字 5 提示都**不应**解读为直接的*出牌提示*。
-- 相反，它们应解读为更高级的行动。（参见下面 _[5 拉](#the-5-pull)_ 的章节。）
+- 相反，它们应解读为更高级的行动。（参见下面 [_5 拉_](#the-5-pull)的章节。）
 - 这意味着如果需要给可打出的 5 作*出牌提示*，而分数低于平均每花色 2 分，那么此时**必须**使用颜色提示，或者等到之后。
 
 ## 特殊行动 \{#special-moves\}
 
 ### 早期 5 弃牌位移动 \{#the-early-5s-chop-move}
 
-- 首先，请参阅 _[5 停顿](level-9.mdx#the-5-stall-intermediate-section)_ 的章节。
+- 首先，请参阅 [_5 停顿_](level-9.mdx#the-5-stall-intermediate-section)的章节。
 - 在*游戏早期*，只有在没有其他事可做时，玩家才允许执行 _5 停顿_。（或者作为特殊例外，如果只有一个可给的*出牌提示*，而其目标牌在*飞牌位*。）
 - 因此，如果有人提示了 5，而**有**其他事情可做，那么他们一定是在尝试传达额外的信息。
 - 如果这张 5 距离弃牌位差一张牌，那么他们想要做的是*早期 5 弃牌位移动*。这和普通的 *5 弃牌位移动*工作方式完全相同（只不过它是在*游戏早期*完成的，通常是不可能的）。
@@ -87,15 +87,15 @@ import InteractionsBetween2SavesAnd5Stalls from "./level-19/interaction-between-
 
 ### 5 拉双重飞牌 \{#the-5-pull-double-finesse}
 
-- 首先，请参阅[5 拉飞牌](#the-5-pull-prompt--the-5-pull-finesse)的章节。
+- 首先，请参阅 [_5 拉飞牌_](#the-5-pull-prompt--the-5-pull-finesse)的章节。
 - 如你所料，也可以以与 *5 拉飞牌*完全相同的方式执行 _5 拉双重飞牌_。
 - “被拉”的牌必须与最后的盲打相连。
 - 例如在 4 人游戏中：
   - 现在是第一回合，还没有打出过任何牌。
   - Donald 的手牌如下，从新到老：`蓝 4、蓝 5、红 3、黄 1`
   - Alice 提示 Donald 数字 5，提示到 2 号位的蓝 5。
-  - Bob 盲打出红 1（因为他知道这不可能是 _5 停顿_）。
-  - Cathy 盲打出红 2（因为她知道需要响应*双重飞牌*）。
+  - Bob 盲打红 1（因为他知道这不可能是 _5 停顿_）。
+  - Cathy 盲打红 2（因为她知道需要响应*双重飞牌*）。
   - Donald 知道 *5 拉*出的牌是红 3（与红 1 和红 2 相连）。
 
 <TheFivePullDoubleFinesse />
@@ -105,7 +105,7 @@ import InteractionsBetween2SavesAnd5Stalls from "./level-19/interaction-between-
 
 ### 5 拉暗飞牌 \{#the-5-pull-clandestine-finesse}
 
-- 首先，请参阅[5 拉飞牌](#the-5-pull-prompt--the-5-pull-finesse)的章节。
+- 首先，请参阅 [_5 拉飞牌_](#the-5-pull-prompt--the-5-pull-finesse)的章节。
 - _5 拉飞牌_**必须**是*正向飞牌*。
 - 然而，被 *5 拉*的玩家**必须**考虑到该*飞牌*可能是*暗飞牌*。
 - 例如在 3 人游戏中：
@@ -192,7 +192,7 @@ import InteractionsBetween2SavesAnd5Stalls from "./level-19/interaction-between-
 
 ### 5 数字饵牌的飞牌位跳过 \{#the-5-number-ejection-finesse-position-skips}
 
-- 首先，请参阅 _[5 数字饵牌](#the-5-number-ejection-5ne)_ 和 _[5 数字钓牌](#the-5-number-discharge-5nd)_ 的章节。
+- 首先，请参阅 [_5 数字饵牌_](#the-5-number-ejection-5ne)和 [_5 数字钓牌_](#the-5-number-discharge-5nd)的章节。
 - 在 *5 数字饵牌*之后，5 旁边的牌将被标记为*已被弃牌位移过*的*差两步以上可打出*的牌。
 - 通常，*弃牌位已移过*的牌不会在*飞牌位*上，因为它们处于手牌的右侧。然而，在 *5 数字饵牌*之后，*弃牌位已移过*的牌有可能在*飞牌位*上。
 - 如果在这种情况下发生*飞牌*，持有*弃牌位已移过*的牌的玩家应该视具体情况，**要么**打出这张牌，**要么**跳过它：
