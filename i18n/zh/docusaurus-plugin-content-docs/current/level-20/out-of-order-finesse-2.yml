@@ -5,7 +5,7 @@ stacks:
   - b: 0
   - p: 0
 bigText:
-  text: first turn
+  text: 第一回合
   color: black
 players:
   - cards:
@@ -16,25 +16,25 @@ players:
       - type: x
   - cards:
       - type: x
-        middleNote: r3
+        middleNote: 红3
       - type: x
       - type: x
       - type: x
       - type: x
-  - text: Bob gives a fix clue to Cathy
+  - text: Bob 向 Cathy 给出修正提示
   - text: ""
   - name: Cathy
     cards:
       - type: r
-        above: Red 5
+        above: 红 5
         clue: r
       - type: r
-        above: Red 1
+        above: 红 1
         clue: r
       - type: r
-        above: Red 2
+        above: 红 2
         clue: r
       - type: r
-        above: Red 4
+        above: 红 4
         clue: r
       - type: x

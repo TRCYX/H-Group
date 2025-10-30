@@ -14,7 +14,7 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Blue 1
+        above: 蓝 1
       - type: x
       - type: x
       - type: x
@@ -23,11 +23,11 @@ players:
       - type: x
       - type: x
       - type: x
-        above: Red 3
+        above: 红 3
         clue: 3
       - type: x
       - type: x
-  - text: Next turn
+  - text: 下一回合
   - name: Alice
     clueGiver: true
     cards:
@@ -39,19 +39,19 @@ players:
   - name: Bob
     cards:
       - type: x
-        above: Red 1
+        above: 红 1
       - type: x
-        above: Red 2
+        above: 红 2
       - type: x
       - type: x
       - type: x
   - name: Cathy
     cards:
       - type: x
-        middleNote: r2?
+        middleNote: 红2?
       - type: x
       - type: x
       - type: 3
         clue: 3
-        above: Red 3
+        above: 红 3
       - type: x

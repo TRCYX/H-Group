@@ -14,24 +14,24 @@ players:
       - type: x
   - cards:
       - type: x
-        above: Blue 1
+        above: 蓝 1
       - type: x
       - type: x
       - type: x
       - type: x
-  - text: Bob blind-plays slot 1
+  - text: Bob 盲打 1 号位
   - name: Cathy
     cards:
       - type: x
       - type: x
       - type: x
         clue: 3
-        above: Red 3
+        above: 红 3
       - type: x
       - type: x
-  - text: Cathy discards
+  - text: Cathy 弃牌
   - text: ""
-  - text: Next turn
+  - text: 下一回合
   - name: Alice
     clueGiver: true
     cards:
@@ -43,7 +43,7 @@ players:
   - name: Bob
     cards:
       - type: x
-        above: Green 1
+        above: 绿 1
       - type: x
       - type: x
       - type: x
@@ -51,11 +51,11 @@ players:
   - name: Cathy
     cards:
       - type: x
-        above: Yellow 1
+        above: 黄 1
         middleNote: g2
       - type: x
       - type: x
       - type: 3
         clue: 3
-        above: Red 3
+        above: 红 3
       - type: x

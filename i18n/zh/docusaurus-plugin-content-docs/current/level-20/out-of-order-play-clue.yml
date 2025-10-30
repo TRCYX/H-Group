@@ -5,7 +5,7 @@ stacks:
   - b: 0
   - p: 0
 bigText:
-  text: first turn
+  text: 第一回合
   color: black
 players:
   - cards:
@@ -14,7 +14,7 @@ players:
       - type: x
       - type: x
       - type: x
-  - text: Alice clues Red to Cathy, touching slots 1-4
+  - text: Alice 提示 Cathy 红色，触及 1-4 号位
   - name: Bob
     clueGiver: true
     cards:
@@ -23,20 +23,20 @@ players:
       - type: x
       - type: x
       - type: x
-  - text: Bob gives a fix clue to Cathy, touching slots 1 and 5
+  - text: Bob 向 Cathy 给出修正提示，触及 1 和 5 号位
   - text: ""
   - name: Cathy
     cards:
       - type: r
-        above: Red 4
+        above: 红 4
         clue: 4
       - type: r
-        above: Red 1
+        above: 红 1
       - type: r
-        above: Red 2
+        above: 红 2
       - type: r
-        above: Red 3
+        above: 红 3
       - type: x
         clue: 4
-        above: Blue 4
-  - text: Cathy will play slot 2
+        above: 蓝 4
+  - text: Cathy 将打出 2 号位

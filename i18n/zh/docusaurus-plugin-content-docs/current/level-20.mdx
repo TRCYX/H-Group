@@ -1,5 +1,5 @@
 ---
-title: Level 20 - Advanced Moves
+title: 等级 20 - 高级行动
 ---
 
 import OccupiedFinesse from "./level-20/occupied-finesse.yml";
@@ -11,158 +11,158 @@ import OutOfOrderFinesse2 from "./level-20/out-of-order-finesse-2.yml";
 import NoInformationDoubleFinesse from "./level-20/no-information-double-finesse.yml";
 import NoInformationDoubleBluff from "./level-20/no-information-double-bluff.yml";
 
-## Special Moves
+## 特殊行动 \{#special-moves\}
 
-### The Occupied Play Clue & The Occupied Finesse (OPC)
+### 繁忙出牌提示与繁忙飞牌（OPC） \{#the-occupied-play-clue--the-occupied-finesse-opc\}
 
-- Often, players will have a choice between playing a card and giving a clue. By default, it makes more sense for players to play the card and let some other teammate give the clue. That's just good teamwork!
-- On the other hand, in a lot of situations, players who have a playable card will _still_ need to give a clue. Since Hanabi has asymmetric information, it is common that only one player will have the necessary knowledge to perform a _Finesse_ or _Prompt_ (or some other time-sensitive clue). Thus, if a player with a playable card is the only one who can reasonably give a certain type of clue, then it makes sense for them to perform the clue now, and then play their playable card later.
-- Similarly, if there are two or more clues that need to be given, then it makes sense for Alice and Bob to team up and perform the two actions in sequence. (If Alice has a playable card, this isn't really relevant; the two things would need to be clued regardless of whether Alice had a playable card or not.)
-- This section does not apply to those situations. Rather, it **only** applies when a clue really could have been given by two or more players, but a player with a playable card "stole" the clue, leaving the next player with nothing to do but to discard.
-- If a player "steals" a clue in this way, we would say that the player was _Occupied_. When an _Occupied_ player gives a clue, it has a special meaning:
-  - If the clue would normally be interpreted as a _Save Clue_, then it transforms into an _Occupied Play Clue_.
-  - If the clue would normally be interpreted as a _Play Clue_, then it transforms into an _Occupied Finesse_.
-  - And so on. In general, an _Occupied_ move does one "extra" thing than would it normally would do.
-- For example, in a 3-player game:
-  - Red 2 and blue 1 are played on the stacks.
-  - Alice has a globally known playable red 3 in her hand and Bob has nothing to do.
-  - Alice clues number 2 to Cathy, which touches a green 2 on her chop. This would normally be a _2-Save_.
-  - However, since Alice is _Occupied_ and Bob could have given the exact same clue, and Bob has nothing to do on his turn but to discard, the _2 Save_ transforms into an _Occupied Play Clue_.
-  - Next, Bob sees that Alice's clue was _Occupied_. Thus, Bob knows that Cathy will go on to play the card.
-  - If Bob does nothing, Cathy will think that this is an _Occupied Play Clue_ on the blue 2. Since she really has a green 2, it will misplay.
-  - Thus, Alice must intend for an _Occupied Finesse_. Bob plays his _Finesse Position_. It is a green 1 and it successfully plays.
+- 时常玩家会在打牌和给出提示之间做出选择。默认情况下，打牌并让其他队友给出提示更合理。这就是良好的合作！
+- 另一方面，在很多情况下，持有可打出牌的玩家**仍然**需要给出提示。由于花火信息不对称，只有一名玩家拥有足够信息来执行某个*飞牌*或*引牌*（或其他一些有时效性的提示），是十分常见的。因此，如果一名持有可打出牌的玩家是唯一能够合理给出某种提示的人，那么他们现在作出提示，然后再打可打出的牌很合理。
+- 类似地，如果有给出两个或以上提示的需要，那么 Alice 和 Bob 合作并依次作出这两个行动也是合理的。（如果是 Alice 有可打出的牌，这其实并不太相关；无论 Alice 是否有可打出的牌，这两件事都需要提示。）
+- 本节不适用于这些情况。相反，它**仅**适用于一个提示确实可以由两名以上玩家给出，但一名持有可打出牌的玩家“偷走”了提示，导致下一名玩家除了弃牌外无事可做的情况。
+- 如果一名玩家以这种方式“偷走”提示，我们会说该玩家原先处于*繁忙（Occupied）*状态。当一名*繁忙*的玩家给出提示时，会具有特殊含义：
+  - 如果该提示通常会被解读为*留牌提示*，则它会转变为*繁忙出牌提示（Occupied Play Clue, OPC）*。
+  - 如果该提示通常会被解读为*出牌提示*，则它会转变为*繁忙飞牌（Occupied Finesse）*。
+  - 依此类推。一般来说，*繁忙*行动会比正常多做一件“额外”的事情。
+- 例如在 3 人游戏中：
+  - 红 2 和蓝 1 已经打出。
+  - Alice 手中有一张全员已知的可打出的红 3，而 Bob 无事可做。
+  - Alice 提示 Cathy 数字 2，提示到弃牌位上的一张绿 2。这通常是*留 2 提示*。
+  - 然而，由于 Alice 处于*繁忙*之中，而 Bob 本可以给出完全相同的提示，且 Bob 在他的回合除了弃牌无事可做，所以这个*留 2 提示*转变为*繁忙出牌提示*。
+  - 接下来，Bob 看到 Alice 的提示是*繁忙*的。因此，Bob 知道 Cathy 将会打出这张牌。
+  - 如果 Bob 什么都不做，Cathy 会认为这是对蓝 2 的*繁忙出牌提示*。由于她实际上有一张绿 2，这会导致误打。
+  - 因此，Alice 一定是想要*繁忙飞牌*。Bob 打出*飞牌位*。结果是一张绿 1，成功打出。
 
 <OccupiedFinesse />
 
-- For example, in a 3-player game:
-  - Blue 1 is played on the stacks.
-  - Alice has a globally known playable red 1 in her hand and Bob has nothing to do.
-  - Alice clues number 2 to Cathy, which touches a 2 in slot 2.
-  - Bob discards.
-  - Normally, Cathy would interpret Alice's clue as a normal _Play Clue_ on the blue 2.
-  - However, since Alice is _Occupied_ and Bob could have given the same clue, Cathy knows that it must be an _Occupied Self-Finesse_ instead.
-  - Cathy blind-plays her _Finesse Position_. It is a red 1 and it successfully plays on the stacks.
-  - Cathy now knows that her 2 is the connecting red 2.
+- 例如在 3 人游戏中：
+  - 蓝 1 已经打出。
+  - Alice 手中有一张全员已知可打出的红 1，而 Bob 无事可做。
+  - Alice 提示 Cathy 数字 2，提示到 2 号位的一张 2。
+  - Bob 弃牌。
+  - 通常，Cathy 会将 Alice 的提示解读为对蓝 2 的普通*出牌提示*。
+  - 然而，由于 Alice 处于*繁忙*状态，而 Bob 本可以给出相同的提示，Cathy 知道这一定是在*繁忙自我飞牌*。
+  - Cathy 盲打*飞牌位*。结果是一张红 1，成功打出。
+  - Cathy 现在知道她的 2 是相连的红 2。
 
 <OccupiedSelfFinesse />
 
-### The Out-of-Order Play Clue (Triple O / OOO)
+### 乱序出牌提示（3O / OOO） \{#the-out-of-order-play-clue-triple-o--ooo\}
 
-- Sometimes, a player will have two playable cards in their hand of the same suit, but they will be "blocked", meaning that both a color clue and a number clue will not be able to focus the first playable card.
-- One technique to get around this is to give a clue that focuses the wrong card, and then have the next player give a _Fix Clue_. This is called an _Out-of-Order Play Clue_ because the cards were originally out-of-order, but the original focus is still playable.
-- For example, in a 3-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Cathy hand is as follows, from left to right: `red 4, red 1, red 2, red 3, blue 4`
-  - Alice clues red to Cathy, touching slot 1, slot 2, slot 3, and slot 4.
-  - Bob sees that Alice has indicated to Cathy that she has the red 1 on slot 1. Cathy will go on to misplay the red 4 as the red 1.
-  - Normally, Bob would think this is a _Finesse_ and try to play the red 1 into the red 4. However, that doesn't make any sense, because Cathy has the red 1, and then Alice would be violating _Good Touch Principle_.
-  - Instead, Bob knows that the team should be using Cathy's red 1. Thus, Bob knows that he needs to give a _Fix Clue_ to Cathy, because Alice intends for her and Bob to work together.
-  - Bob clues number 4 to Cathy, touching the blue 4 and "filling in" the red 4.
-  - Cathy is surprised because the card that she thought was red 1 is actually a red 4. Cathy knows that since the red 4 was the original focus of Alice's clue, then it must actually be playable right now. Thus, Cathy must have the red 1, the red 2, and the red 3.
-  - Cathy plays the red 1 from slot 2 (the leftmost red card that could be the red 1). She will go on to play the red 2, the red 3, and the red 4.
-  - Cathy (and everyone else on the team) knows that even though the blue 4 was the focus of Bob's clue, it is not actually playable right now, and was just "collateral damage" of Bob's required _Fix Clue_.
+- 有时，一名玩家手中有两张同一花色的可打出的牌，但它们“阻塞”住了，意味着无论是颜色提示还是数字提示都无法聚焦于第一张可打出的牌。
+- 解决这个问题的一种方法是给出一个聚焦错误的牌的提示，然后让下一名玩家作出*修正提示*。这称为*乱序出牌提示（Out-of-Order Play Clue）*，因为牌原本是乱序的，但原始的焦点牌仍然可打出。
+- 例如在 3 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Cathy 的手牌如下，从左到右：`红 4、红 1、红 2、红 3、蓝 4`
+  - Alice 提示 Cathy 红色，提示到 1 号位、2 号位、3 号位和 4 号位。
+  - Bob 看到 Alice 向 Cathy 表明她的 1 号位是红 1。Cathy 将会把红 4 当作红 1 误打。
+  - 通常，Bob 会认为这是一次*飞牌*，并尝试打出红 1 来连上红 4。但这并不合理，因为 Cathy 持有红 1，从而 Alice 会违反*良触原则*。
+  - 相比之下，Bob 知道要用到的红 1 是 Cathy 的红 1。于是，Bob 知道他需要给 Cathy 一个*修正提示*。Alice 的意图是让 Bob 和自己合作。
+  - Bob 提示 Cathy 数字 4，提示到蓝 4 并“填补”了红 4。
+  - Cathy 感到惊讶，因为她以为是红 1 的牌实际上是红 4。Cathy 知道，既然红 4 是 Alice 提示的原始焦点，那么它现在一定实际上是可打出的。所以，Cathy 一定持有红 1、红 2 和红 3。
+  - Cathy 从 2 号位打出红 1（最左边的可能是 1 的红牌）。她将继续打出红 2、红 3 和红 4。
+  - Cathy（以及其他人）知道，即使蓝 4 是 Bob 提示的焦点，它现在其实并不可打出，只是 Bob 必要的*修正提示*带来的“附带损害”。
 
 <OutOfOrderPlayClue />
 
-### The Out-of-Order Finesse
+### 乱序飞牌 \{#the-out-of-order-finesse\}
 
-- Sometimes, a _Finesse_ is initiated by giving a color clue that focuses the wrong card.
-- When this happens, the _Finesse_ will still work: a player will blind-play a connecting card. However, a _Fix Clue_ must then be given to the player who received the clue, or they will go on to misplay.
-- Normally, after receiving a _Fix Clue_, a player would "stop" and not assume anything else about his hand. However, when an _Out-of-Order_ clue is given, the player should always go on to play the original focus of the clue.
-- For example, in a 3-player game:
-  - It is the first turn and nothing is played on the stacks.
-  - Bob has a red 3 and a red 2 (on slots 1 and 2 respectively).
-  - Cathy has a red 1 on slot 1 (on _Finesse Position_).
-  - Alice clues Bob red (as an _Out-of-Order Reverse Finesse_). The focus of the clue is the red 3 on slot 1.
-  - Bob sees the red 1 on Cathy's _Finesse Position_, so he has to respect that it could be _Reverse Finesse_. Bob discards.
-  - Cathy blind-plays red 1.
-  - Alice must now give a _Fix Clue_ to Bob, or else red 3 will be misplayed as red 2.
-  - Alice clues number 2 to Bob.
-  - Bob plays red 2.
-  - Bob knows that his other red card **must** be red 3, since it was originally clued as playable and it caused a _Reverse Finesse_.
+- 有时，*飞牌*是由一个聚焦于错误的牌的颜色提示发起的。
+- 这种情况发生时，*飞牌*仍然有效：会有玩家盲打相连的牌。然而，随后必须给收到提示的玩家一个*修正提示*，否则他们将误打。
+- 通常，收到*修正提示*后，玩家会“止住”并且不再对自己手牌做任何其他假设。然而，当给出*乱序*提示时，玩家应该继续打出提示的原始焦点。
+- 例如在 3 人游戏中：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Bob 有一张红 3 和一张红 2（分别在 1 号位和 2 号位）。
+  - Cathy 的 1 号位（_飞牌位_）有一张红 1。
+  - Alice 提示 Bob 红色（作为*乱序反向飞牌*）。提示的焦点是 1 号位的红 3。
+  - Bob 看到 Cathy *飞牌位*上的红 1，所以他需要考虑到这可能是*反向飞牌*。Bob 弃牌。
+  - Cathy 盲打红 1。
+  - Alice 现在必须给 Bob 一个*修正提示*，否则红 3 将被当作红 2 误打。
+  - Alice 提示 Bob 数字 2。
+  - Bob 打出红 2。
+  - Bob 知道他的另一张红牌**一定**是红 3，因为它原先被提示为可打出，并且引发了一次*反向飞牌*。
 
 <OutOfOrderFinesse />
 
-#### Interaction Between the Out-of-Order Finesse and the 5 Color Ejection
+#### 乱序飞牌与 5 颜色饵牌的相互作用 \{#interaction-between-the-out-of-order-finesse-and-the-5-color-ejection\}
 
-- The _5 Color Ejection_ takes precedence over the _Out-of-Order Finesse_ as long as the two-or-more-blind-plays rule is satisfied.
-- For example, in a 3-player game, this would be a _5 Color Ejection_:
-  - It is the first turn of the game and nothing is played on the stacks.
-  - Alice clues red to Cathy, touching a red 5 on slot 1, a red 1 on slot 2, and a red 2 on slot 3.
-  - Bob knows that this could be an _Out-of-Order Finesse_. Specifically, if Bob gives a follow-up number 5 _Fix Clue_ to Cathy, then Cathy would play the red 1, Cathy would play the red 2, and Bob would blind-play the red 3, Bob would blind-play the red 4, into Cathy's red 5.
-  - However, this line would require Bob to blind-play 2 cards, so Bob knows that he should prefer a _5 Color Ejection_ instead.
+- 只要满足“两张以上盲打”的规则，*5 颜色饵牌*就优先于*乱序飞牌*。
+- 例如在 3 人游戏中，这会是*5 颜色饵牌*：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Alice 提示 Cathy 红色，提示到 1 号位的红 5、2 号位的红 1 和 3 号位的红 2。
+  - Bob 知道这可能是*乱序飞牌*。具体来说，如果 Bob 给 Cathy 一个后续的数字 5 _修正提示_，那么 Cathy 将打出红 1，Cathy 将打出红 2，Bob 将盲打出红 3，Bob 将盲打出红 4，接上 Cathy 的红 5。
+  - 然而，这条路线需要 Bob 盲打 2 张牌，所以 Bob 知道他应该优先考虑是 _5 颜色饵牌_。
 
 <FiveColorEjectionInteraction />
 
-- For example, in a 3-player game, this would be an _Out-of-Order Finesse_:
-  - It is the first turn of the game and nothing is played on the stacks.
-  - Alice clues red to Cathy, touching a red 5 on slot 1, a red 1 on slot 2, a red 2 on slot 3, and a red 4 on slot 4.
-  - Bob knows that this could be an _Out-of-Order Finesse_. Specifically, if Bob gives a follow-up number 5 _Fix Clue_ to Cathy, then Cathy would play the red 1, Cathy would play the red 2, Bob would blind-play the red 3, Cathy would play the red 4, and then Cathy would play the red 5.
-  - Since this line only requires that Bob blind-plays 1 card, he knows that it cannot be a _5 Color Ejection_, so Bob performs the _Fix Clue_ to allow for the _Out-of-Order Finesse_.
+- 例如在 3 人游戏中，这会是*乱序飞牌*：
+  - 现在是第一回合，还没有打出过任何牌。
+  - Alice 提示 Cathy 红色，提示到 1 号位的红 5、2 号位的红 1、3 号位的红 2 和 4 号位的红 4。
+  - Bob 知道这可能是*乱序飞牌*。具体来说，如果 Bob 给 Cathy 一个后续的数字 5 _修正提示_，那么 Cathy 将打出红 1，Cathy 将打出红 2，Bob 将盲打出红 3，Cathy 将打出红 4，然后 Cathy 将打出红 5。
+  - 由于这条路线只需要 Bob 盲打 1 张牌，他知道这不可能是 _5 颜色饵牌_，所以 Bob 执行*修正提示*，以完成*乱序飞牌*。
 
 <OutOfOrderFinesse2 />
 
-### The Out-of-Order Corollary
+### 乱序推论 \{#the-out-of-order-corollary\}
 
-- First, see the section on the _[Out-of-Order Play Clue](#the-out-of-order-play-clue-triple-o--ooo)_.
-- Normally, if Alice gives a clue to Cathy touching the next playable card, but the focus is wrong, Bob would treat it as an _Out-of-Order Play Clue_. He would then give a _Out-of-Order Fix Clue_ (instead of blind-playing a card).
-- Thus, if Alice gives a clue to Cathy, and Bob does blind-play a card, then by default, Cathy can mark all the cards that were touched with a note of not being the next playable card.
-- For example, in a 3-player game:
-  - Red 2 is played on the stacks.
-  - Alice clues red to Cathy, touching two cards on slot 1 and slot 2.
-  - Bob blind-plays an unrelated card.
-  - Cathy marks her slot 1 card as the red 4. (Cathy knows that Alice performed a _Bluff_ and slot 1 was the focus of the clue.)
-  - Cathy also marks her slot 2 card as the red 5. (Cathy knows that if it was a red 3, then Bob would be forced to give a _Fix Clue_.)
+- 首先，请参阅[_乱序出牌提示_](#the-out-of-order-play-clue-triple-o--ooo)的章节。
+- 通常，如果 Alice 给 Cathy 一个提示，触及下一张可打出的牌，但焦点错误，Bob 会将其视为*乱序出牌提示*。然后他会给出一个*乱序修正提示*（而不是盲打一张牌）。
+- 因此，如果 Alice 给 Cathy 一个提示，而 Bob 确实盲打了一张牌，那么 Cathy 可以默认将所有提示触及的牌标记为不是下一张可打出的牌。
+- 例如在 3 人游戏中：
+  - 红 2 已经打出。
+  - Alice 提示 Cathy 红色，提示到 1 号位和 2 号位的两张牌。
+  - Bob 盲打一张不相关的牌。
+  - Cathy 将她的 1 号位标记为红 4。（Cathy 知道 Alice 执行了*诈飞*，而 1 号位是提示的焦点。）
+  - Cathy 还将她的 2 号位标记为红 5。（Cathy 知道如果是红 3，那么 Bob 会必须给出*修正提示*。）
 
-### The Suboptimal Prompt & The Suboptimal Finesse & The Suboptimal Bluff
+### 拙劣引牌、拙劣飞牌与拙劣诈飞 \{#the-suboptimal-prompt--the-suboptimal-finesse--the-suboptimal-bluff\}
 
-- If the other copy of a card is in the trash, then the remaining copy is critical and needs to be saved. Critical cards of this nature can be saved with either a color clue or a number clue.
-- If both types of clues will **only** introduce one new card, then it is said that that there is a _Free Choice_ between the two clue types.
-- In this situation, the clue type will be chosen that "fills in" other ancillary cards in the hand or gives important negative information.
-- If a clue type is chosen that is **clearly worse** than the other one, then the clue giver must be trying to communicate something extra.
-- The means that this innocent-looking _Save Clue_ is really a _Play Clue_, and all of the in-between cards are called for.
-- Note that for a _Suboptimal Save Finesse_ to work, the clue has to be **really bad**, not just technically suboptimal in some slight way.
+- 如果一种牌一张在弃牌堆中，那么剩下的那张就是关键牌，需要保留。这样关键牌既可以用颜色提示也可以用数字提示保留。
+- 如果两类提示都**只**会引入一张新牌，那么就称在这两类提示之间存在*自由选择*。
+- 在这种情况下，应当选择能够填补其他手牌信息或提供重要否定信息的那一类提示。
+- 如果选择的提示类型**明显劣于**另一种，那么提示者一定是在试图传达额外的信息。
+- 这表示这个看似无害的*留牌提示*实际上是*出牌提示*，而且要求打出所有连上它的牌。
+- 注意，要使*拙劣飞牌*生效，该提示必须**非常糟糕**，而不仅仅是在细微之处稍显拙劣。
 
-### The No-Information Double Finesse
+### 无信息双重飞牌 \{#the-no-information-double-finesse\}
 
-- Sometimes, cards are re-clued to cause a _Finesse_ or _Bluff_. But most times, the re-clue will "fill in" or give extra information to the existing card.
-- Formally, a "no-information" clue is defined by having the following criteria:
-  - The re-clue gave no additional positive or negative information to the card.
-  - The elements in the superposition of the re-clued card were the same before and after the clue sequence.
-- Since "no-information" clues are not very valuable, we agree that a "no-information" clue on a two-away-from-playable card **must** "get" at least 2 new cards (as opposed to a single _Finesse_ that only gets 1 new card).
-- For example, in a 3-player game:
-  - Nothing is played on the stacks.
-  - Alice clues 3's to Cathy, which touches one 3, the red 3.
-  - Bob blind-plays blue 1. At this point, everyone knows that Alice has performed a _3 Bluff_, and from Cathy's perspective, her 3 can be any 3 at all.
-  - Cathy discards.
-  - Alice clues 3's to Cathy, which re-touches the red 3 (and gives no additional information to it).
-  - Bob blind-plays red 1. If this was a _3 Bluff_, then no-one would be promised the red 2. However, since no new information was given, it must be a _No-Information Double Finesse_. Bob sees that Cathy does not have the red 2, so he must have the red 2, and can blind-play it on his next turn.
+- 有时，牌会被重新提示以发起*飞牌*或*诈飞*。但其中大多数时候，重新提示时会“填补”这张牌或向其提供额外信息。
+- 正式来说，“无信息”提示由以下标准定义：
+  - 重新提示时没有给该牌带来任何额外的肯定或否定信息。
+  - 重新提示引起的事件序列前后，牌包含的可能性没有变化。
+- 由于“无信息”提示没有太多价值，我们约定对一张*差两步可打出*的牌作出“无信息”提示**必须**“获取”至少 2 张新牌（与仅获取 1 张新牌的单重*飞牌*相对）。
+- 例如在 3 人游戏中：
+  - 还没有打出过任何牌。
+  - Alice 提示 Cathy 3，提示到一张 3，它是红 3。
+  - Bob 盲打蓝 1。此时，每个人都知道 Alice 执行了 _3 诈飞_，且从 Cathy 的视角来看，她的 3 可以是任何 3。
+  - Cathy 弃牌。
+  - Alice 再次提示 Cathy 3，重新触及红 3（并且没有给它任何额外信息）。
+  - Bob 盲打红 1。如果这是 _3 诈飞_，那么没有人保证持有红 2。然而，由于提示没有给出新信息，这一定是*无信息双重飞牌*。Bob 看到 Cathy 没有红 2，所以他一定有红 2，并且可以在下一回合盲打。
 
 <NoInformationDoubleFinesse />
 
-- Even if a clue does not "fill-in" a card, it is not necessarily a "no-information" clue.
-- For example, in a 3-player game:
-  - It is the first turn of the game.
-  - Alice clues red to Cathy, touching a card on slot 1 as a _Play Clue_.
-  - Bob blind-plays a blue 1.
-  - Cathy marks her red card as either a red 2 or a red 3.
-  - Later on in the game, red 1 is now played.
-  - Alice clues red to Cathy, re-touching the card that is in a superposition of red 2 and red 3.
-  - Bob blind-plays a blue 2.
-  - Cathy updates the note on her red card to be exactly red 3.
-  - Everyone at the table understands that this clue gave valuable information to Cathy's red card and would not be considered a "no-information" clue.
-- The "no-information" principle can also be used to perform a _No-Information Layered Finesse_ on the next player. (The next player will know that it is a _Layered Finesse_ instead of a _Bluff_ because some other more-useful clue could have been given to initiate the _Bluff_.)
+- 即使一个提示没有“填补”一张牌，它也不一定是“无信息”提示。
+- 例如在 3 人游戏中：
+  - 现在是第一回合。
+  - Alice 提示 Cathy 红色，提示到 1 号位的一张牌作为*出牌提示*。
+  - Bob 盲打蓝 1。
+  - Cathy 将她的红牌标记为红 2 或红 3。
+  - 后来在游戏中，红 1 打出了。
+  - Alice 提示 Cathy 红色，重新触及处于红 2 和红 3 叠加态的那张牌。
+  - Bob 盲打蓝 2。
+  - Cathy 将她红牌上的笔记更新为恰是红 3。
+  - 桌上的每个人都理解这个提示给 Cathy 的红牌提供了有价值的信息，不会被视为“无信息”提示。
+- “无信息”原则也可以用于对下一名玩家执行*无信息多层飞牌*。（下一名玩家会知道这是*多层飞牌*而不是*诈飞*，因为本可以给出其他更有用的提示来发起*诈飞*。）
 
-### The No-Information Double Bluff
+### 无信息双重诈飞 \{#the-no-information-double-bluff\}
 
-- Usually, a "no-information" clue conveys a _Double Finesse_. But you can also use it to perform a _Double Bluff_. For example, in a 3-player game:
-  - Nothing is played on the stacks.
-  - Alice clues 3's to Cathy, which touches one 3, the red 3.
-  - Bob blind-plays blue 1. At this point, everyone knows that Alice has performed a _3 Bluff_, and from Cathy's perspective, her 3 can be any 3 at all.
-  - Cathy discards.
-  - Alice clues 3's to Cathy, which re-touches the red 3 (and gives no additional information to it).
-  - Bob blind-plays green 1. If this was a _3 Bluff_, then no-one would be promised the green 2. However, since no new information was given, it must be a _No-Information Double Finesse_.
-  - Cathy sees that Bob does not have the green 2, so she must have the green 2, so she blind-plays her _Finesse Position_ card, and it is yellow 1 instead of green 2.
-  - Since two cards were blind-played (that did not connect to anything), everyone now knows that the _No-Information_ clue was a _Double Bluff_ instead of a _Double Finesse_. From Cathy's perspective, her 3 can (still) be any 3 at all.
+- 通常，“无信息”提示表示的是*双重飞牌*。但你也可以用它来执行*双重诈飞*。例如在 3 人游戏中：
+  - 还没有打出过任何牌。
+  - Alice 提示 Cathy 3，提示到一张 3，它是红 3。
+  - Bob 盲打蓝 1。此时，每个人都知道 Alice 执行了 _3 诈飞_，且从 Cathy 的视角来看，她的 3 可以是任何 3。
+  - Cathy 弃牌。
+  - Alice 再次提示 Cathy 3，重新触及红 3（并且没有给它任何额外信息）。
+  - Bob 盲打绿 1。如果这是 _3 诈飞_，那么没有人保证持有绿 2。然而，由于提示没有给出新信息，这一定是*无信息双重飞牌*。
+  - Cathy 看到 Bob 没有绿 2，所以她一定有绿 2，于是她盲打*飞牌位*，结果却是黄 1 而不是绿 2。
+  - 由于有两张牌盲打了（并且没有与任何牌相连），现在每个人都知道这个*无信息*提示是*双重诈飞*而不是*双重飞牌*。从 Cathy 的视角来看，她的 3 （仍然）可以是任何 3。
 
 <NoInformationDoubleBluff />

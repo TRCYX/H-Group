@@ -5,7 +5,7 @@ stacks:
   - b: 0
   - p: 0
 bigText:
-  text: first turn
+  text: 第一回合
   color: black
 players:
   - clueGiver: true
@@ -21,18 +21,18 @@ players:
       - type: x
       - type: x
       - type: x
-  - text: Bob blind-plays slot 2
+  - text: Bob 盲打 2 号位
   - text: ""
   - name: Cathy
     cards:
       - type: r
-        above: Red 5
+        above: 红 5
         clue: r
       - type: r
-        above: Red 1
+        above: 红 1
         clue: r
       - type: r
-        above: Red 2
+        above: 红 2
         clue: r
       - type: x
       - type: x
